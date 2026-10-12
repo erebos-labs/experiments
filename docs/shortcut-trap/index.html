@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="An offline traffic experiment: explore Braess’s paradox with exact toy-model equilibria and coordinated routing."><title>The shortcut trap · Erebos Labs</title><style>:root{--paper:#f5f3ec;--panel:#fffefa;--ink:#203a3c;--muted:#53686b;--line:#d6ddd5;--teal:#007c75;--rust:#b7462d;--gold:#9b6c00;--violet:#63518a;--soft:#e7eee6;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button,select{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}button{min-height:44px;border:1px solid var(--line);background:var(--panel);border-radius:7px;color:var(--ink);padding:9px 13px}button:hover{background:var(--soft)}button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:white}main{max-width:1200px;margin:0 auto;padding:28px 30px 45px}.eyebrow{display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;gap:15px}.eyebrow span{color:var(--muted);letter-spacing:.07em;font-weight:500}header{border-bottom:1px solid var(--line);padding-bottom:20px}h1{font-size:clamp(29px,4vw,43px);line-height:1.1;letter-spacing:-.04em;margin:19px 0 10px;font-weight:650}header p{font-size:16px;max-width:760px;margin:0;color:var(--muted);line-height:1.6}.lab{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(290px,1fr);gap:22px;margin-top:22px}.map-panel,.controls,.chart-panel{background:var(--panel);border:1px solid var(--line);border-radius:12px}.map-panel{padding:19px 20px 15px;display:flex;flex-direction:column;min-width:0}.panel-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.panel-top h2,h2{font-size:16px;margin:0;font-weight:650}.tag{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);font-weight:700}.map{width:100%;height:auto;margin:10px 0 0;display:block;overflow:visible}.road{fill:none;stroke:var(--line);stroke-width:9;stroke-linecap:round;transition:stroke .15s,stroke-width .15s}.road.active{stroke:#6a8d89}.road.short{stroke:var(--gold)}.road.closed{stroke:#c8cec7;stroke-dasharray:6 10;stroke-width:4}.node{fill:var(--ink);stroke:var(--panel);stroke-width:4}.node-label{fill:white;font-weight:650;font-size:15px;text-anchor:middle}.edge-label{fill:var(--panel);stroke:var(--line)}.edge-text{font-size:15px;fill:var(--ink);font-weight:650;text-anchor:middle}.edge-sub{font-size:12px;fill:var(--muted);text-anchor:middle}.node-caption{font-size:12px;fill:var(--muted);text-anchor:middle}.map-note{font-size:12px;color:var(--muted);line-height:1.5;margin:0}.map-note button{font-size:12px;min-height:34px;margin-right:6px;padding:4px 8px}.routes{margin-top:14px;display:grid;gap:7px}.route-row{display:grid;grid-template-columns:1fr 82px 88px;gap:7px;font-size:13px;padding:7px 0;border-bottom:1px solid var(--line);align-items:center}.route-row:last-child{border:0}.route-header{color:var(--muted);font-size:11px;padding-bottom:4px}.route-row span:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums}.route-name{display:flex;align-items:center;gap:8px}.swatch{width:9px;height:9px;border-radius:50%;flex-shrink:0;background:var(--teal)}.lower{background:var(--violet)}.cross{background:var(--gold)}.unused{color:var(--muted)}.controls{padding:20px}.control{margin-top:18px}.control:first-child{margin-top:0}.control label,.control .label{display:block;font-size:13px;font-weight:650;margin-bottom:8px}.select{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:10px;color:var(--ink);min-height:44px}.toggle{width:100%;display:flex;align-items:center;justify-content:space-between;text-align:left}.switch{height:21px;width:37px;border-radius:15px;background:#9cadac;display:inline-block;position:relative;flex-shrink:0;margin-left:9px}.switch:after{content:'';position:absolute;width:15px;height:15px;top:3px;left:3px;border-radius:50%;background:white}button[aria-pressed=true] .switch{background:var(--teal)}button[aria-pressed=true] .switch:after{left:19px}.segmented{display:flex;gap:5px}.segmented button{flex:1;font-size:13px;padding:9px}.caption{font-size:12px;line-height:1.5;color:var(--muted);margin:8px 0 0}.demand-title{display:flex;align-items:center;justify-content:space-between}.demand-title output{font-weight:700;font-size:22px;font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:var(--teal);margin:9px 0;height:28px;cursor:pointer}.range-ends{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.presets{display:flex;gap:5px;margin-top:10px}.presets button{flex:1;padding:7px 4px;font-size:11px;min-height:39px}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px;border-top:1px solid var(--line);padding-top:16px;margin-top:19px}.metric-label{font-size:11px;color:var(--muted);line-height:1.5}.metric-value{font-size:27px;line-height:1.1;font-weight:650;letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-top:5px}.metric-value small{font-size:11px;letter-spacing:0;font-weight:500;color:var(--muted)}.delta{border-radius:6px;font-size:13px;line-height:1.5;background:var(--soft);padding:10px;margin-top:14px}.delta.hurt{background:#fae9df;color:#87331f}.delta.help{background:#e0f0e9;color:#176046}.reset{border:0;background:none;padding:0;font-size:12px;min-height:35px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;margin-top:10px}.chart-panel{margin-top:22px;padding:19px 20px}.chart-head{display:flex;justify-content:space-between;gap:16px;align-items:center}.legend{display:flex;gap:15px;font-size:11px;flex-wrap:wrap;color:var(--muted)}.legend span{display:flex;align-items:center;gap:5px}.legend i{display:inline-block;width:17px;height:3px;background:var(--ink)}.legend .on{background:var(--rust)}.legend .opt{background:var(--teal)}.chart{width:100%;height:auto;display:block;touch-action:pan-y}.chart-text{font-size:12px;fill:var(--muted)}.chart-line{fill:none;stroke-width:3;stroke-linejoin:round}.chart-note{margin:0;font-size:12px;line-height:1.5;color:var(--muted)}.insight{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin:25px 0}.insight h2{font-size:15px;margin:7px 0}.insight p{font-size:13px;line-height:1.65;color:var(--muted);margin:0}.number{font-family:ui-monospace,monospace;font-size:12px;color:var(--teal)}details{border-top:1px solid var(--line);padding:14px 0;font-size:13px;line-height:1.7}summary{cursor:pointer;font-weight:650;min-height:30px}details p{max-width:900px;color:var(--muted);margin:10px 0}code{font-size:12px;font-family:ui-monospace,monospace;background:#e7ebe3;padding:2px 4px;border-radius:3px}.formula{overflow-wrap:anywhere}.diagnostic{display:grid;grid-template-columns:1fr 1fr;gap:15px;background:var(--soft);border-radius:6px;padding:12px;margin:12px 0}.diagnostic div{font-size:12px}.diagnostic strong{display:block;font-size:14px;margin-bottom:4px}.foot{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;line-height:1.6}a{color:var(--teal);text-underline-offset:3px}noscript{display:block;padding:20px;background:#fae9df}@media(max-width:760px){main{padding:20px 16px 30px}.eyebrow{font-size:10px}.eyebrow span{font-size:9px}.lab{grid-template-columns:1fr;gap:14px}.controls{grid-row:1;padding:17px}.map-panel{padding:16px 12px}.control{margin-top:14px}.metrics{margin-top:15px}.map{margin:8px 0}.chart-head{align-items:flex-start;flex-direction:column;gap:10px}.chart-panel{padding:16px 12px}.chart-text{font-size:12px}.edge-text{font-size:22px}.edge-sub{font-size:20px}.node-label{font-size:22px}.node-caption{font-size:20px}.insight{grid-template-columns:1fr;gap:18px}.diagnostic{grid-template-columns:1fr}.route-row{grid-template-columns:1fr 80px 78px}header p{font-size:14px}}@media(prefers-reduced-motion:reduce){.road{transition:none}}
+
+.collection-nav{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;margin-bottom:18px}.collection-nav a{display:inline-flex;min-height:44px;align-items:center}
+</style></head>
+<body><main>
+<nav class="collection-nav" aria-label="Experiment navigation"><a href="../index.html">← All experiments</a><a href="index.html" download="erebos-shortcut-trap.html">Download standalone HTML</a></nav><header><div class="eyebrow">Erebos Labs / experiments <span>01 · Braess’s paradox · offline experiment</span></div><h1>The shortcut trap</h1><p>A road can be faster for the driver who takes it, yet slower for everyone once they all follow. Build the shortcut, change demand, then try coordinating the same traffic.</p></header>
+<noscript>This experiment needs JavaScript. All code is included in this file; no network connection is needed.</noscript>
+<div class="lab">
+<section class="map-panel" aria-labelledby="map-heading"><div class="panel-top"><h2 id="map-heading">One origin. One destination.</h2><span class="tag" id="map-state">Shortcut closed</span></div>
+<svg class="map" viewBox="0 0 640 375" role="img" aria-labelledby="network-title network-description"><title id="network-title">Traffic network from S to T</title><desc id="network-description">Directed roads S to A to T, S to B to T, and optional A to B. Road labels show travel time and flow.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M 1 1 L 9 5 L 1 9 z" fill="#203a3c"/></marker></defs>
+<path id="e0" class="road" d="M 57 187 L 320 61"/><path id="e1" class="road" d="M 320 61 L 583 187"/><path id="e2" class="road" d="M 57 187 L 320 313"/><path id="e3" class="road" d="M 320 313 L 583 187"/><path id="e4" class="road closed" d="M 320 61 L 320 313"/>
+<g fill="none" stroke="#203a3c" stroke-width="1.5" marker-end="url(#arrow)"><path d="M155 140 L179 128"/><path d="M435 116 L459 128"/><path d="M155 234 L179 246"/><path d="M435 258 L459 246"/><path id="shortcut-arrow" d="M320 169 L320 193"/></g>
+<g id="dots" aria-hidden="true"></g>
+<g transform="translate(166 72)"><rect class="edge-label" x="-72" y="-22" width="144" height="54" rx="6"/><text id="et0" class="edge-text" y="0"></text><text id="ef0" class="edge-sub" y="20"></text></g>
+<g transform="translate(474 72)"><rect class="edge-label" x="-72" y="-22" width="144" height="54" rx="6"/><text id="et1" class="edge-text" y="0"></text><text id="ef1" class="edge-sub" y="20"></text></g>
+<g transform="translate(166 302)"><rect class="edge-label" x="-72" y="-22" width="144" height="54" rx="6"/><text id="et2" class="edge-text" y="0"></text><text id="ef2" class="edge-sub" y="20"></text></g>
+<g transform="translate(474 302)"><rect class="edge-label" x="-72" y="-22" width="144" height="54" rx="6"/><text id="et3" class="edge-text" y="0"></text><text id="ef3" class="edge-sub" y="20"></text></g>
+<g transform="translate(378 187)"><rect class="edge-label" x="-3" y="-27" width="147" height="66" rx="6"/><text id="et4" class="edge-text" x="70" y="-3"></text><text id="ef4" class="edge-sub" x="70" y="16"></text><text class="edge-sub" x="70" y="32">one way: A → B</text></g>
+<g><circle class="node" cx="57" cy="187" r="22"/><text class="node-label" x="57" y="192">S</text><text class="node-caption" x="57" y="224">start</text><circle class="node" cx="320" cy="61" r="20"/><text class="node-label" x="320" y="66">A</text><circle class="node" cx="320" cy="313" r="20"/><text class="node-label" x="320" y="318">B</text><circle class="node" cx="583" cy="187" r="22"/><text class="node-label" x="583" y="192">T</text><text class="node-caption" x="583" y="224">finish</text></g>
+</svg>
+<p class="map-note"><button id="motion" type="button" aria-pressed="false">Pause dots</button>Dots illustrate the solved route shares. They do not simulate queues, travel time, or convergence. Original model map labels use “t.u.” for time units.</p>
+<div class="routes" role="table" aria-label="Route allocation and travel times"><div class="route-row route-header" role="row"><span role="columnheader">Route</span><span role="columnheader">Flow</span><span role="columnheader" id="cost-head">Time · min</span></div>
+<div class="route-row" role="row"><span role="cell" class="route-name"><i class="swatch"></i>S → A → T</span><span id="f0" role="cell"></span><span id="c0" role="cell"></span></div>
+<div class="route-row" role="row"><span role="cell" class="route-name"><i class="swatch lower"></i>S → B → T</span><span id="f1" role="cell"></span><span id="c1" role="cell"></span></div>
+<div class="route-row" role="row"><span role="cell" class="route-name"><i class="swatch cross"></i>S → A → B → T</span><span id="f2" role="cell"></span><span id="c2" role="cell"></span></div></div>
+<p class="caption">Unused routes show the time an infinitesimal entrant would face. Their time does not count toward the mean.</p></section>
+<section class="controls" aria-label="Experiment controls and result">
+<div class="control"><label for="model">Congestion model</label><select id="model" class="select"><option value="teaching">Teaching model · 45 & 10x</option><option value="original">1968 original · 50 + x & 10x</option></select><p class="caption" id="model-caption"></p></div>
+<div class="control"><button id="shortcut" class="toggle" aria-pressed="false"><span id="shortcut-label">Build the A → B shortcut</span><span class="switch" aria-hidden="true"></span></button></div>
+<div class="control"><span class="label">How do drivers choose?</span><div class="segmented" role="group" aria-label="Routing policy"><button id="selfish" aria-pressed="true">Selfish</button><button id="coordinated" aria-pressed="false">Coordinated</button></div><p id="policy-caption" class="caption"></p></div>
+<div class="control"><div class="demand-title"><label for="demand">Demand</label><output id="demand-value" for="demand">4.0</output></div><input id="demand" type="range" min="0" max="12" value="4" step="0.05" aria-describedby="demand-unit"><div class="range-ends"><span>0</span><span id="max-demand">12</span></div><p id="demand-unit" class="caption"></p><div class="presets" id="presets" role="group" aria-label="Demand examples"></div></div>
+<div class="metrics" aria-live="polite" aria-atomic="true"><div><div class="metric-label">Current mean journey</div><div class="metric-value" id="mean"></div></div><div><div class="metric-label">Same demand, shortcut closed</div><div class="metric-value" id="baseline"></div></div></div><div id="delta" class="delta"></div><button class="reset" id="reset">Reset experiment</button>
+</section></div>
+<section class="chart-panel" aria-labelledby="chart-heading"><div class="chart-head"><h2 id="chart-heading">Where the shortcut helps, hurts, or fades away</h2><div class="legend"><span><i></i>Closed</span><span><i class="on"></i>Open · selfish</span><span><i class="opt"></i>Open · coordinated</span></div></div><svg id="chart" class="chart" viewBox="0 0 1040 280" role="img" aria-labelledby="chart-title chart-desc"><title id="chart-title">Mean journey time versus demand</title><desc id="chart-desc"></desc><g id="chart-content"></g></svg><p id="chart-note" class="chart-note"></p></section>
+<div class="insight"><section><span class="number">01 / THE LURE</span><h2>Two cheap pieces, one costly crowd</h2><p id="lure"></p></section><section><span class="number">02 / THE CATCH</span><h2>Stable needn’t mean best</h2><p>Selfish routing balances the times of used routes; no tiny driver can gain by switching alone. Coordinated routing minimizes the sum of everyone’s travel time. It can assign different journey times and needs cooperation or incentives. A lower average can still leave some drivers worse off.</p></section><section><span class="number">03 / THE ESCAPE</span><h2>More choice still can help</h2><p id="escape"></p></section></div>
+<details><summary>Read the model, assumptions, and exact calculation</summary><p id="model-detail"></p><p>The demand stays fixed when the shortcut is toggled. Roads are directed; every stream goes from S to T. All drivers are identical and infinitesimally small (a stationary, nonatomic Wardrop model). Flows are continuous, so fractional allocations are allowed. The animation is decorative; controls immediately recompute an analytic solution.</p><p>The two congestible edges have time <code>a × flow</code>, the outer edges <code>b + k × flow</code>, and the shortcut <code>s + h × flow</code>. If upper and lower route flows are both u and shortcut-route flow is z, then <code>2u + z = q</code>. Symmetry and convexity give equal upper/lower flow in these two models.</p><p class="formula">Selfish: <code>z = clamp((2(b − s) − (a − k)q)/(a + k + 2h), 0, q)</code>.<br>Coordinated: <code>z = clamp((b − s − (a − k)q)/(a + k + 2h), 0, q)</code>.<br>Shortcut closed: <code>z = 0; u = q/2</code>.</p><p class="formula">The selfish formula equalizes used-route travel times, with inequalities for unused routes. The coordinated formula minimizes <code>C(z) = a(q+z)²/2 + b(q−z) + k(q−z)²/2 + sz + hz²</code>. Mean time is <code>C/q</code> for q &gt; 0. At q = 0 there is no mean journey; plotted lines show only their limiting values.</p><div class="diagnostic"><div><strong id="conservation"></strong>Flow conservation at every node</div><div><strong id="residual"></strong><span id="residual-caption"></span></div></div><p id="incentive"></p><p>One numerical trap from the original paper was reproduced separately: greedily adding demand in 100,000 tiny batches, without revising earlier assignments, left 3.6364 flow units on the shortcut at demand 20. Its mean was 189.7524 and its switching incentive 73.6366 time units; the exact equilibrium has no shortcut flow and mean 160. More batches did not repair the frozen early choices. That loading heuristic is neither a solver used here nor a model of actual drivers.</p><p>These are toy costs, not measured roads. No signals, spillback, junction capacity, heterogeneous trips, induced demand, or route-learning dynamics are modeled. This experiment cannot recommend opening or closing a real road.</p></details>
+<details><summary>Primary sources and what has been adapted</summary><p><a href="https://homepage.rub.de/Dietrich.Braess/Paradox-BNW.pdf" target="_blank" rel="noopener">Braess, Nagurney & Wakolbinger (2005), On a Paradox of Traffic Planning</a>: English translation of the 1968 paper. Sections 3–4 supply the original costs and the 6-unit example. Section 6 warns that adding traffic greedily without revising earlier assignments need not converge to the equilibrium. Braess first emphasizes minimizing the worst used-route time; our coordinated control explicitly minimizes the mean (also discussed in his paper).</p><p><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch08.pdf" target="_blank" rel="noopener">Easley & Kleinberg (2010), Networks, Crowds, and Markets, chapter 8</a>: the simpler 45-minute / x÷100 example with 4,000 drivers. Here we rescale 1,000 drivers to one flow unit and use continuous stationary flows rather than individual finite players.</p><p><a href="https://supernet.isenberg.umass.edu/articles/braess-encyc.pdf" target="_blank" rel="noopener">Anna & Ladimer Nagurney (2020), The Braess Paradox</a>: author-hosted account of Wardrop equilibrium, system optimization, and demand dependence. The closed-form demand curves here are derived from the displayed toy costs; they are not empirical traffic estimates.</p></details>
+<footer class="foot">Erebos Labs · Experiments · Runs entirely in this HTML file. No dependencies, data collection, or network requests are needed. Source links open only when selected.</footer>
+</main><script>/* Exact stationary, nonatomic symmetric Braess models. No iterative solver. */
+(function (root) {
+  'use strict';
+  const MODELS = Object.freeze({
+    teaching: Object.freeze({id:'teaching', name:'Teaching model', a:10, b:45, k:0, s:0, h:0, max:12, initial:4, unit:'min', demandUnit:'thousand modeled drivers', presets:[2,4,4.5,10]}),
+    original: Object.freeze({id:'original', name:'Braess’s original model', a:10, b:50, k:1, s:10, h:1, max:20, initial:6, unit:'time units', demandUnit:'abstract flow units', presets:[2,6,8,20]})
+  });
+  const clamp = (x,lo,hi) => Math.max(lo,Math.min(hi,x));
+  function measure(model, flows, shortcut) {
+    const [u,v,z] = flows;
+    const {a,b,k,s,h} = model;
+    const edges = [u+z,u,v,v+z,z]; // S→A, A→T, S→B, B→T, A→B
+    const edgeTimes = [a*edges[0],b+k*edges[1],b+k*edges[2],a*edges[3],s+h*z];
+    const costs = [edgeTimes[0]+edgeTimes[1],edgeTimes[2]+edgeTimes[3],shortcut ? edgeTimes[0]+edgeTimes[4]+edgeTimes[3] : null];
+    const demand = u+v+z;
+    const total = flows.reduce((sum,f,i)=>sum+f*(costs[i] ?? 0),0);
+    const minimum = Math.min(...costs.filter(x=>x !== null));
+    const regret = demand === 0 ? 0 : Math.max(0,...flows.map((f,i)=>f>1e-10 ? costs[i]-minimum : 0));
+    const gap = demand === 0 ? 0 : (total-demand*minimum)/demand;
+    const marginal = [2*a*edges[0]+b+2*k*edges[1], b+2*k*edges[2]+2*a*edges[3], shortcut ? 2*a*(edges[0]+edges[3])+s+2*h*z : null];
+    const mmin = Math.min(...marginal.filter(x=>x!==null));
+    const optimalResidual = demand===0 ? 0 : Math.max(0,...flows.map((f,i)=>f>1e-10 ? marginal[i]-mmin : 0));
+    return {flows,edges,edgeTimes,costs,demand,total,mean:demand===0?null:total/demand,regret,gap,optimalResidual};
+  }
+  function solve(model,demand,shortcut,policy='selfish') {
+    if (!model || !Number.isFinite(demand) || demand<0 || !['selfish','coordinated'].includes(policy)) throw new RangeError('Invalid model, demand or policy');
+    const {a,b,k,s,h} = model;
+    const divisor = a+k+2*h;
+    const z = shortcut ? clamp(((policy==='selfish'?2:1)*(b-s)-(a-k)*demand)/divisor,0,demand) : 0;
+    const side = (demand-z)/2;
+    return measure(model,[side,side,z],shortcut);
+  }
+  function harmInterval(model) {
+    // Compare all-shortcut cost (2a+h)q+s to old b+(a+k)q/2.
+    const lower = (model.b-model.s)/((3*model.a-model.k)/2+model.h);
+    const upper = 2*(model.b-model.s)/(model.a-model.k);
+    return [lower,upper];
+  }
+  const api = {MODELS,solve,measure,harmInterval};
+  if (typeof module!=='undefined' && module.exports) module.exports=api;
+  else root.Braess=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script><script>(function(){
+  'use strict';
+  const {MODELS,solve,harmInterval}=Braess;
+  const $=id=>document.getElementById(id);
+  const state={model:'teaching',demand:4,shortcut:false,policy:'selfish',paused:matchMedia('(prefers-reduced-motion: reduce)').matches};
+  const num=(x,d=2)=>Number(x).toLocaleString('en-US',{maximumFractionDigits:d});
+  const paths=['M57 187 L320 61 L583 187','M57 187 L320 313 L583 187','M57 187 L320 61 L320 313 L583 187'];
+  const colors=['#007c75','#63518a','#9b6c00'];
+  const ns='http://www.w3.org/2000/svg';
+  function drawDots(result){
+    $('dots').replaceChildren();
+    if(state.paused||result.demand===0)return;
+    result.flows.forEach((flow,i)=>{
+      const count=Math.min(36,Math.round(flow/result.demand*36));
+      for(let j=0;j<count;j++){
+        const dot=document.createElementNS(ns,'circle');dot.setAttribute('r','3.1');dot.setAttribute('fill',colors[i]);
+        const motion=document.createElementNS(ns,'animateMotion');
+        motion.setAttribute('path',paths[i]);motion.setAttribute('dur','10s');motion.setAttribute('begin',`-${j*10/count}s`);motion.setAttribute('repeatCount','indefinite');motion.setAttribute('calcMode','paced');
+        dot.append(motion);$('dots').append(dot);
+      }
+    });
+  }
+  function drawChart(m){
+    const narrow=innerWidth<=760;
+    const W=narrow?Math.max(280,Math.min(360,innerWidth-50)):1040,H=narrow?255:280,L=narrow?38:64,R=narrow?12:27,T=31,B=47,w=W-L-R,h=H-T-B;
+    $('chart').setAttribute('viewBox',`0 0 ${W} ${H}`);
+    $('chart').dataset.geometry=JSON.stringify({W,L,R});
+    const [lo,hi]=harmInterval(m);
+    const ymax=Math.ceil((m.b+(m.a+m.k)*m.max/2)/20)*20;
+    const x=q=>L+q/m.max*w, y=t=>H-B-t/ymax*h;
+    const line=(shortcut,policy)=>Array.from({length:241},(_,i)=>{
+      const q=m.max*i/240;
+      const t=q===0 ? (shortcut?m.s:m.b) : solve(m,q,shortcut,policy).mean;
+      return `${i?'L':'M'}${x(q).toFixed(2)} ${y(t).toFixed(2)}`;
+    }).join(' ');
+    let html=`<rect x="${x(lo)}" y="${T}" width="${x(Math.min(hi,m.max))-x(lo)}" height="${h}" fill="#fae9df"/><text class="chart-text" x="${x((lo+Math.min(hi,m.max))/2)}" y="19" text-anchor="middle" style="fill:#87331f">${narrow?'Selfish harm':'Shortcut hurts at selfish equilibrium'}</text>`;
+    for(let t=0;t<=ymax;t+=ymax/4) html+=`<line x1="${L}" x2="${W-R}" y1="${y(t)}" y2="${y(t)}" stroke="#d6ddd5" stroke-width="1"/><text class="chart-text" x="${L-12}" y="${y(t)+4}" text-anchor="end">${num(t,0)}</text>`;
+    for(let q=0;q<=m.max;q+=m.max/4)html+=`<text class="chart-text" x="${x(q)}" y="${H-B+23}" text-anchor="middle">${num(q)}</text>`;
+    html+=`<text class="chart-text" x="${L}" y="19">${narrow&&m.id==='original'?'t.u.':m.unit}</text><text class="chart-text" x="${W-R}" y="${H-5}" text-anchor="end">demand · flow units</text>`;
+    html+=`<path class="chart-line" stroke="#203a3c" stroke-dasharray="7 5" d="${line(false,'selfish')}"/><path class="chart-line" stroke="#b7462d" d="${line(true,'selfish')}"/><path class="chart-line" stroke="#007c75" d="${line(true,'coordinated')}"/>`;
+    html+=`<line x1="${x(state.demand)}" x2="${x(state.demand)}" y1="${T}" y2="${H-B}" stroke="#53686b" stroke-dasharray="3 5"/>`;
+    for(const [s,p,c] of [[false,'selfish','#203a3c'],[true,'selfish','#b7462d'],[true,'coordinated','#007c75']]){
+      const r=solve(m,state.demand,s,p);if(r.mean!==null)html+=`<circle cx="${x(state.demand)}" cy="${y(r.mean)}" r="5" fill="${c}" stroke="#fffefa" stroke-width="2"/>`;
+    }
+    $('chart-content').innerHTML=html;
+    $('chart-desc').textContent=`${m.name}. The closed shortcut curve rises steadily. With selfish routing the shortcut worsens mean time for demand strictly between ${num(lo)} and ${num(hi)} flow units. Coordinated routing never exceeds the closed shortcut curve. Current demand ${num(state.demand)}.`;
+    $('chart-note').textContent=`Shading: ${num(lo)} < demand < ${num(hi)}. Boundaries tie. At high demand the selfish flow abandons the shortcut. All three curves are analytic. At zero, the curves show limits, not an observed journey. Tap the plot to set demand.`;
+  }
+  function render(){
+    const m=MODELS[state.model],q=state.demand;
+    const current=solve(m,q,state.shortcut,state.policy),base=solve(m,q,false,'selfish');
+    $('model').value=state.model;$('demand').max=m.max;$('demand').value=q;
+    $('demand-value').value=num(q);$('max-demand').textContent=m.max;
+    $('demand').setAttribute('aria-valuetext',`${num(q)} ${m.demandUnit}`);
+    $('demand-unit').textContent=m.id==='teaching' ? `${num(q*1000,0)} modeled drivers in a fixed window. One flow unit = 1,000; not a measured road capacity.` : 'Abstract stationary flow, in the original paper’s arbitrary units. These units are not thousands of real cars.';
+    $('model-caption').textContent=m.id==='teaching'?'Cornell chapter 8, rescaled to thousands. Shortcut: 0 minutes.':'Original affine costs, in abstract time units. Shortcut: 10 + its flow.';
+    $('shortcut').setAttribute('aria-pressed',state.shortcut);
+    $('shortcut-label').textContent=state.shortcut?'A → B shortcut is open':'Build the A → B shortcut';
+    $('map-state').textContent=state.shortcut?'Shortcut open':'Shortcut closed';
+    ['selfish','coordinated'].forEach(id=>$(id).setAttribute('aria-pressed',state.policy===id));
+    $('policy-caption').textContent=state.policy==='selfish'?'Exact user equilibrium: no infinitesimal driver can switch to a quicker route.':'Exact minimum mean journey: a controller assigns flows to minimize total travel time.';
+    $('motion').textContent=state.paused?'Animate dots':'Pause dots';$('motion').setAttribute('aria-pressed',state.paused);
+    $('cost-head').textContent=`Time · ${m.unit}`;
+    for(let i=0;i<5;i++){
+      const closed=i===4&&!state.shortcut;
+      $('e'+i).classList.toggle('active',!closed&&current.edges[i]>1e-10);
+      $('e'+i).classList.toggle('closed',closed);
+      $('et'+i).textContent=closed?'Closed':`${num(current.edgeTimes[i])} ${m.id==='original'?'t.u.':m.unit}`;
+      $('ef'+i).textContent=closed?'no flow':`flow ${num(current.edges[i])}`;
+    }
+    $('shortcut-arrow').style.display=state.shortcut?'':'none';
+    $('network-description').textContent=`${m.name}, demand ${num(q)}. Directed routes S to A to T, S to B to T, and ${state.shortcut?'open':'closed'} A to B shortcut. ${state.policy} routing. Road times ${current.edgeTimes.map(x=>num(x)).join(', ')} ${m.unit}; flows ${current.edges.map(x=>num(x)).join(', ')}. Detailed route allocations follow the map.`;
+    for(let i=0;i<3;i++){
+      $('f'+i).textContent=num(current.flows[i]);
+      $('c'+i).textContent=current.costs[i]===null?'closed':num(current.costs[i]);
+      $('f'+i).classList.toggle('unused',current.flows[i]<1e-10);
+      $('c'+i).classList.toggle('unused',current.flows[i]<1e-10);
+    }
+    const metric=x=>x===null?'—':`${num(x)} <small>${m.unit}</small>`;
+    $('mean').innerHTML=metric(current.mean);$('baseline').innerHTML=metric(base.mean);
+    const d=$('delta');d.className='delta';
+    if(q===0)d.textContent='No traffic, no journey average. All flows are zero.';
+    else if(!state.shortcut)d.textContent='Shortcut closed. The traffic splits evenly over the two outer routes.';
+    else{
+      const diff=current.mean-base.mean;
+      if(diff>1e-8){d.classList.add('hurt');d.textContent=`${num(diff)} ${m.unit} slower per driver (+${num(diff/base.mean*100,1)}%). The extra road hurts at this demand.`;}
+      else if(diff< -1e-8){d.classList.add('help');d.textContent=`${num(-diff)} ${m.unit} faster on average (${num(-diff/base.mean*100,1)}% saved). The shortcut helps at this demand.`;}
+      else d.textContent=`Same mean journey as before. ${current.flows[2]<1e-10?'The shortcut carries no flow.':'The shortcut carries flow, but there is no net benefit.'}`;
+    }
+    const lohi=harmInterval(m);
+    $('lure').textContent=m.id==='teaching'?'At demand 4, the closed road gives 65 minutes. The empty shortcut route initially offers 40. Once all 4 units take it, both congestible roads carry the whole crowd: the new equilibrium is 80 minutes.':'At demand 6, the closed road gives 83 time units. An empty shortcut route offers 70. At the new equilibrium, 2 units use each route and every driver takes 92 time units.';
+    $('escape').textContent=`At low demand the shortcut saves time. At demand ${num(lohi[1])} or more, selfish drivers avoid it. Under coordinated routing, adding an optional road can never raise the best mean: the controller can always keep the old allocation.`;
+    $('model-detail').textContent=m.id==='teaching'?'Teaching costs: S→A and B→T take 10x minutes, where x is edge flow in thousands; S→B and A→T take 45 minutes regardless of flow; A→B takes 0. Demand range: 0–12 thousand modeled drivers. The zero-time road and zero free-flow time on congestible roads are deliberate simplifications.':'Original costs: S→A and B→T take 10x; S→B and A→T take 50+x; A→B takes 10+x. Values are abstract time units and x is abstract stationary flow. Demand range: 0–20. This preserves the original numerical example, while the coordinated objective below is explicitly total/mean time.';
+    const errors=[Math.abs(current.flows.reduce((s,x)=>s+x,0)-q),Math.abs(current.edges[0]+current.edges[2]-q),Math.abs(current.edges[1]+current.edges[3]-q),Math.abs(current.edges[0]-current.edges[1]-current.edges[4]),Math.abs(current.edges[2]+current.edges[4]-current.edges[3])];
+    $('conservation').textContent=`Largest mismatch: ${Math.max(...errors).toExponential(1)} flow units`;
+    $('residual').textContent=`${(state.policy==='selfish'?current.regret:current.optimalResidual).toExponential(1)} ${m.unit}`;
+    $('residual-caption').textContent=state.policy==='selfish'?'Equilibrium residual: largest used-route time minus the cheapest available route.':'Optimality residual: largest used-route marginal total cost minus the cheapest available marginal total cost.';
+    $('incentive').textContent=q===0?'At zero demand, equilibrium and optimality conditions have no used routes to test.':state.policy==='selfish'?`No used stream has a faster alternative at these fixed edge flows (largest possible infinitesimal gain: ${num(current.regret,6)} ${m.unit}).`:`A driver assigned to the slowest used route could save up to ${num(current.regret)} ${m.unit} by switching alone. This personal incentive is why coordination may need enforcement or incentives. The optimized average is not a guarantee of equal journey times.`;
+    drawDots(current);drawChart(m);
+  }
+  function presets(){
+    const m=MODELS[state.model];$('presets').replaceChildren();
+    const labels=m.id==='teaching'?['Low · 2','Classic · 4','Peak · 4.5','High · 10']:['Low · 2','Classic · 6','Mixed · 8','High · 20'];
+    m.presets.forEach((q,i)=>{const b=document.createElement('button');b.textContent=labels[i];b.type='button';b.addEventListener('click',()=>{state.demand=q;render();});$('presets').append(b);});
+  }
+  $('model').addEventListener('change',()=>{state.model=$('model').value;state.demand=MODELS[state.model].initial;presets();render();});
+  $('demand').addEventListener('input',()=>{state.demand=Number($('demand').value);render();});
+  $('shortcut').addEventListener('click',()=>{state.shortcut=!state.shortcut;render();});
+  ['selfish','coordinated'].forEach(id=>$(id).addEventListener('click',()=>{state.policy=id;render();}));
+  $('motion').addEventListener('click',()=>{state.paused=!state.paused;render();});
+  $('reset').addEventListener('click',()=>{Object.assign(state,{model:'teaching',demand:4,shortcut:false,policy:'selfish',paused:matchMedia('(prefers-reduced-motion: reduce)').matches});presets();render();});
+  $('chart').addEventListener('click',event=>{
+    const bounds=$('chart').getBoundingClientRect(),{W,L,R}=JSON.parse($('chart').dataset.geometry),vx=(event.clientX-bounds.left)/bounds.width*W;
+    if(vx<L||vx>W-R)return;
+    const m=MODELS[state.model];state.demand=Math.max(0,Math.min(m.max,Math.round((vx-L)/(W-L-R)*m.max*20)/20));render();
+  });
+  addEventListener('resize',()=>drawChart(MODELS[state.model]));
+  presets();render();
+})();
+</script></body></html>

@@ -1,0 +1,25 @@
+name: Experiment checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  models-and-package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Build and check generated pages
+        run: |
+          python3 build.py
+          git diff --exit-code -- docs
+      - name: Model, sequence, and audio lifecycle checks
+        run: |
+          node tests/test_clocks.js
+          node tests/test_sequence.js "$RUNNER_TEMP/erebos-midi-check"
+          node tests/test_synth.js
+          python3 tests/parse_midi.py "$RUNNER_TEMP/erebos-midi-check"
+          python3 tests/verify_traffic.py "$RUNNER_TEMP/erebos-traffic-check"
+          python3 tests/check_package.py

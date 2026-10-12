@@ -1,0 +1,205 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local clocks, audible tension · Erebos Labs</title><style>
+:root{color-scheme:dark;font:16px system-ui;background:#141815;color:#e8e9dc}*{box-sizing:border-box}body{margin:0}main{max-width:1040px;margin:auto;padding:30px 22px}h1{font-size:32px;font-weight:550;letter-spacing:-1px;margin:6px 0 12px}h2{font-size:17px;font-weight:550;margin:0 0 14px}.eyebrow{color:#b9d28a;font:12px monospace;letter-spacing:2px}.intro{color:#b9bfb1;max-width:740px;line-height:1.6}section{border:1px solid #384033;border-radius:10px;padding:20px;margin:20px 0}.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}button,select{font:inherit;background:#242d22;border:1px solid #536347;color:inherit;border-radius:6px;padding:10px 14px}button{cursor:pointer}button:hover:not(:disabled){background:#3b4830}button:disabled{opacity:.4;cursor:default}button.primary{background:#b9d28a;color:#1b2217;font-weight:600}label{display:flex;gap:8px;align-items:center;font-size:14px}label.vertical{align-items:flex-start;flex-direction:column}input{accent-color:#b9d28a}#status{font:14px monospace;color:#c9e0a0;min-height:22px;margin:16px 0 4px}#exportStatus{font:13px monospace;line-height:1.6;min-height:24px;color:#c9e0a0}.grid{display:grid;grid-template-columns:300px 1fr;gap:24px}.numbers{display:flex;gap:28px;margin-bottom:14px}.numbers strong{display:block;font:24px monospace}.numbers span,small{font-size:12px;color:#a9b39f}nav{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:22px;font-size:13px}nav a{color:#c7dfa5;min-height:44px;display:inline-flex;align-items:center}button,select,input,summary,a{outline-offset:4px}button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid #e0af72}input[type=checkbox]{min-width:20px;min-height:20px}button{min-height:44px}canvas{width:100%;display:block;background:#1b211b;border-radius:6px}#ring{aspect-ratio:1}#score{height:225px}.copy{font-size:14px;color:#bec5b5;line-height:1.65}.copy a{color:#c7dfa5}summary{cursor:pointer}#diagnostics{font:12px monospace;white-space:pre-wrap;overflow-wrap:anywhere}footer{color:#89977c;font:12px monospace;margin-top:24px}@media(max-width:720px){main{padding:20px 14px}h1{font-size:27px}.grid{grid-template-columns:1fr}#ring{max-width:320px;margin:auto}section{padding:16px}.numbers{gap:18px}}
+</style></head><body><main>
+<nav aria-label="Experiment navigation"><a href="../index.html">← All experiments</a><a href="index.html" download="erebos-local-clocks.html">Download standalone HTML</a></nav><div class="eyebrow">EREBOS LABS / EXPERIMENTS</div><h1>Local clocks, audible tension</h1><p class="intro">Try Ring, Cut ring, and All-to-all. A stable traveling wave can keep its shape while global alignment stays low.</p>
+<p class="intro">A restrained techno sketch made from phase crossings. Hear a traveling wave around a ring, then try a cut link or all-to-all coupling. Sound starts off. Everything is synthesized locally.</p>
+<section><h2>Listen · one eight-bar pass</h2><div class="row"><button id="start" class="primary">Start audio</button><button id="pause" disabled>Pause</button><button id="stop">Stop / reset</button><button id="mute" disabled>Mute</button><label>Level <input id="level" aria-label="Level" type="range" min="0" max="0.6" step="0.02" value="0.42"></label></div><p id="status" role="status">Sound OFF · ready · 130 BPM</p><small>Pause preserves the playhead. Stop resets it and silences every voice. No automatic looping.</small></section>
+<section><div class="row"><label class="vertical">Coupling<select id="topology" aria-label="Coupling"><option value="ring">Ring · traveling wave</option><option value="open">Cut ring · open chain</option><option value="complete">All-to-all · alignment</option></select></label><label><input id="quantize" type="checkbox">Quantize to 1/16 notes</label><label><input id="kick" type="checkbox" checked>Steady reference kick</label></div><p class="copy">Changing a setting stops and rebuilds the same seeded eight bars. The kick is a central musical reference; it does not couple the model clocks.</p><div class="grid"><canvas id="ring" width="560" height="560" role="img" aria-label="Oscillator phases around a ring" aria-describedby="phaseDescription">Your browser does not support canvas. The numeric alignment and beat values remain available.</canvas><p id="phaseDescription" class="copy">Each dot is one phase oscillator. Its pointer shows phase; eight highlighted dots trigger the sounds. The global alignment R summarizes phase agreement. With reduced motion enabled, diagrams stay still during playback while numeric position and alignment update.</p><div><div class="numbers"><div><strong id="coherence">—</strong><span>global alignment R</span></div><div><strong id="position">0.00</strong><span>beat / 32</span></div><div><strong id="eventCount">—</strong><span>onsets</span></div></div><canvas id="score" width="1000" height="360" role="img" aria-label="Note onset score" aria-describedby="mapping">Note onsets are plotted by beat and instrument. Use the textual mapping and MIDI export as alternatives.</canvas><p id="mapping" class="copy"></p></div></div></section>
+<section><h2>Keep the sequence</h2><div class="row"><button id="midi">Export MIDI</button><button id="wav">Render WAV</button></div><p id="exportStatus" role="status">MIDI carries notes and tempo; its sound depends on your instrument. WAV renders these exact synthesized voices at the fixed preset level.</p><small>Offline render · 44.1 kHz mono PCM16 · about 15 seconds · no playback required</small></section>
+<section class="copy"><h2>What is being mapped?</h2><p>32 dimensionless phase oscillators use the a Kuramoto-style phase-only toy equation, with K = 1, seed = 7, no noise, and RK4 step 0.025. An upward crossing of an integer multiple of 2π triggers a note. Eight clocks (0, 4, …, 28) are voiced; six become a D-minor pluck palette, two become short metallic sine pings. The clock phase selects onset, not pitch.</p><p>One natural cycle (2π model units) becomes one quarter-note beat: seconds = model time × (60 / 130) / (2π). Raw mode keeps interpolated crossing times. Quantized mode rounds those onsets to the nearest sixteenth note; it may shift an onset by up to 57.7 ms. MIDI adds tick rounding at 480 ticks per quarter note, even in raw mode. Grid-rounded onsets at beat 32 are omitted; MIDI note-offs are clamped at that boundary, while WAV keeps a short decay tail.</p><p>This is an artistic mapping of a phase-only model, not a biologically accurate firefly simulation, a physical metronome, or evidence that nature has a musical tempo. The eight-bar horizon is a composition boundary. The open chain needs much longer than this short excerpt to align fully. Synthesis uses no recordings or copyrighted samples.</p><details><summary>Timing, limits and sources</summary><p>Audio uses the Web Audio clock and 120 ms lookahead, independently of drawing. Missed onsets after a stalled timer are skipped rather than replayed in a burst. Hiding this tab pauses the pass. Resume cancels and requeues future notes; a paused note’s tail is cut. Voices end within 220 ms, with a live cap of 24. The simple dry patch has no reverb or feedback.</p><p>The synchronization ideas are established, not new discoveries here. See <a href="https://doi.org/10.1016/S0167-2789(00)00094-4">Steven H. Strogatz (2000), From Kuramoto to Crawford</a> for the broader phase-oscillator framework. Our ring/open/complete toy and musical mapping are not a reproduction of a biological experiment. Technical references: <a href="https://www.w3.org/TR/webaudio-1.1/">Web Audio specification</a> and <a href="https://midi.org/standard-midi-files">Standard MIDI files</a>.</p><pre id="diagnostics"></pre></details></section>
+<footer>EREBOS LABS · EXPERIMENTS · OFFLINE · SOUND OFF UNTIL YOU START</footer></main>
+<script>/* A phase-only toy model, not a biological or mechanical simulation.
+   dθ_i = [ω_i + Σ_j w_ij sin(θ_j − θ_i)]dt + √(2D)dW_i.
+   Undirected weighted edges; ring edge weight K/2, complete edge K/(N−1).
+   Deterministic RK4; Euler–Maruyama with additive independent/common noise.
+   Phases stay unwrapped. All units are dimensionless. */
+(function(root) {
+'use strict';
+const TAU = 2*Math.PI;
+function rng(seed) {
+  let s=seed>>>0;
+  return () => {s+=0x6D2B79F5; let t=s; t=Math.imul(t^(t>>>15),t|1); t^=t+Math.imul(t^(t>>>7),t|61); return ((t^(t>>>14))>>>0)/4294967296;};
+}
+function gaussian(random) {return Math.sqrt(-2*Math.log(Math.max(random(),Number.MIN_VALUE)))*Math.cos(TAU*random());}
+function edges(n,kind='ring',K=1) {
+  const e=[];
+  if(kind==='complete') { for(let i=0;i<n;i++) for(let j=i+1;j<n;j++) e.push([i,j,K/(n-1)]); }
+  else { for(let i=0;i<n-1;i++) e.push([i,i+1,K/2]); if(kind!=='open') e.push([n-1,0,K/2]); }
+  return e;
+}
+function drift(theta,edge,omega) {
+  const v=theta.map((_,i)=>Array.isArray(omega)?omega[i]:omega);
+  for(const [i,j,w] of edge) {const force=w*Math.sin(theta[j]-theta[i]);v[i]+=force;v[j]-=force;}
+  return v;
+}
+function step(theta,edge,omega,dt,D=0,random=Math.random,noiseKind='independent') {
+  if(D>0) {
+    const v=drift(theta,edge,omega), scale=Math.sqrt(2*D*dt);
+    const common=noiseKind==='common'?scale*gaussian(random):0;
+    return theta.map((x,i)=>x+dt*v[i]+(noiseKind==='common'?common:scale*gaussian(random)));
+  }
+  const k1=drift(theta,edge,omega);
+  const k2=drift(theta.map((x,i)=>x+dt*k1[i]/2),edge,omega);
+  const k3=drift(theta.map((x,i)=>x+dt*k2[i]/2),edge,omega);
+  const k4=drift(theta.map((x,i)=>x+dt*k3[i]),edge,omega);
+  return theta.map((x,i)=>x+dt*(k1[i]+2*k2[i]+2*k3[i]+k4[i])/6);
+}
+function wrap(x) {return ((x+Math.PI)%TAU+TAU)%TAU-Math.PI;}
+function metrics(theta,edge,omega=1) {
+  const n=theta.length;
+  const re=theta.reduce((s,x)=>s+Math.cos(x),0)/n, im=theta.reduce((s,x)=>s+Math.sin(x),0)/n;
+  const ringGaps=theta.map((x,i)=>wrap(theta[(i+1)%n]-x));
+  const weightedSum=edge.reduce((s,e)=>s+e[2],0);
+  const C=weightedSum?edge.reduce((s,[i,j,w])=>s+w*Math.cos(theta[j]-theta[i]),0)/weightedSum:null;
+  const energy=edge.reduce((s,[i,j,w])=>s+w*(1-Math.cos(theta[j]-theta[i])),0);
+  const v=drift(theta,edge,omega), mean=v.reduce((s,x)=>s+x,0)/n;
+  return {R:Math.hypot(re,im),C,q:ringGaps.reduce((s,x)=>s+x,0)/TAU,
+    maxGap:Math.max(...ringGaps.map(Math.abs)),energy,
+    driftSpread:Math.sqrt(v.reduce((s,x)=>s+(x-mean)**2,0)/n)};
+}
+function initial(n,kind,seed=7,q=1,perturb=.12) {
+  const random=rng(seed);
+  return Array.from({length:n},(_,i)=>(kind==='random'?TAU*random():TAU*q*i/n)+perturb*(random()-.5));
+}
+function simulate({theta,edge,omega=1,dt=.025,T=400,D=0,seed=1,noiseKind='independent',sampleEvery=1,noiseUntil=Infinity}) {
+  theta=theta.slice();const random=rng(seed), steps=Math.round(T/dt),stride=Math.max(1,Math.round(sampleEvery/dt));
+  const samples=[{t:0,...metrics(theta,edge,omega),theta:theta.slice()}];
+  let slips=0, oldQ=Math.round(samples[0].q),lastSlip=0;
+  for(let i=1;i<=steps;i++) {
+    theta=step(theta,edge,omega,dt,((i-1)*dt<noiseUntil)?D:0,random,noiseKind);
+    const q=Math.round(theta.reduce((s,x,j)=>s+wrap(theta[(j+1)%theta.length]-x),0)/TAU);
+    if(q!==oldQ){slips+=Math.abs(q-oldQ);lastSlip=i*dt;oldQ=q;}
+    if(i%stride===0||i===steps) samples.push({t:i*dt,...metrics(theta,edge,omega),theta:theta.slice()});
+  }
+  return {theta,samples,slips,lastSlip,final:samples.at(-1)};
+}
+const api={TAU,rng,gaussian,edges,drift,step,wrap,metrics,initial,simulate};
+if(typeof module!=='undefined'&&module.exports)module.exports=api;
+else root.Clocks=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script><script>/* Musical derivative; the dimensionless phase model itself is unchanged. */
+(function(root){'use strict';
+const M=typeof module!=='undefined'?require('./model.js'):root.Clocks;
+const PPQ=480, BEATS=32, NOTES=[50,57,62,65,69,62,42,46];
+function crossings(a,b,start,dt){
+ const out=[]; if(b<=a)return out;
+ for(let k=Math.floor(a/M.TAU)+1;k<=Math.floor(b/M.TAU);k++)out.push(start+dt*(k*M.TAU-a)/(b-a));
+ return out;
+}
+function build({topology='ring',quantize=false,kick=true,bpm=130,dt=.025}={}){
+ if(!['ring','open','complete'].includes(topology)||bpm<80||bpm>180||dt<.001||dt>.05)throw Error('Invalid configuration');
+ const edge=M.edges(32,topology,1), end=BEATS*M.TAU, sec=60/bpm;
+ let theta=M.initial(32,'wave',7,1,.12),t=0,events=[],frames=[{beat:0,theta:theta.slice()}],serial=0;
+ while(t<end-1e-10){
+  const h=Math.min(dt,end-t), next=M.step(theta,edge,1,h);
+  for(let voice=0;voice<8;voice++){
+   const clock=voice*4;
+   for(const modelTime of crossings(theta[clock],next[clock],t,h)){
+    const rawBeat=modelTime/M.TAU, beat=quantize?Math.round(rawBeat*4)/4:rawBeat;
+    if(beat>=0&&beat<BEATS)events.push({id:serial++,beat,rawBeat,time:beat*sec,voice,clock,note:NOTES[voice],channel:voice<6?voice:9,velocity:voice<6?52:38,duration:voice<6?.22:.065,kind:voice<6?'pluck':'hat'});
+   }
+  }
+  t+=h;theta=next;
+  if(Math.floor(t/.3)>Math.floor((t-h)/.3)||t>=end-1e-10)frames.push({beat:t/M.TAU,theta:theta.slice()});
+ }
+ if(kick)for(let beat=0;beat<BEATS;beat++)events.push({id:serial++,beat,rawBeat:beat,time:beat*sec,voice:8,clock:null,note:36,channel:9,velocity:65,duration:.22,kind:'kick'});
+ events.sort((a,b)=>a.time-b.time||a.id-b.id);
+ return {events,frames,bpm,topology,quantize,kick,beats:BEATS,duration:BEATS*sec,ppq:PPQ,final:M.metrics(theta,edge),maxShiftSeconds:Math.max(0,...events.map(e=>Math.abs(e.beat-e.rawBeat)*sec))};
+}
+function vlq(n){if(!Number.isInteger(n)||n<0||n>0x0fffffff)throw Error('Invalid MIDI delta');let b=[n&127];while(n>>>=7)b.unshift((n&127)|128);return b;}
+function midi(seq){
+ const tempo=Math.round(60000000/seq.bpm), end=seq.beats*PPQ;
+ const list=[{tick:0,order:0,data:[255,81,3,(tempo>>>16)&255,(tempo>>>8)&255,tempo&255]},{tick:0,order:1,data:[255,88,4,4,2,24,8]}];
+ for(const e of seq.events){
+  const on=Math.round(e.beat*PPQ),off=Math.min(end,on+Math.max(1,Math.round(e.duration*seq.bpm/60*PPQ)));
+  if(off<=on)continue;
+  list.push({tick:on,order:3,data:[144|e.channel,e.note,e.velocity]},{tick:off,order:2,data:[128|e.channel,e.note,0]});
+ }
+ list.sort((a,b)=>a.tick-b.tick||a.order-b.order);
+ let data=[],last=0;for(const e of list){data.push(...vlq(e.tick-last),...e.data);last=e.tick;}
+ data.push(...vlq(end-last),255,47,0);
+ const be32=n=>[(n>>>24)&255,(n>>>16)&255,(n>>>8)&255,n&255];
+ return new Uint8Array([77,84,104,100,0,0,0,6,0,0,0,1,PPQ>>>8,PPQ&255,77,84,114,107,...be32(data.length),...data]);
+}
+/* Clock is the audio timeline, never animation frames. One bounded pass.
+   Cancel future scheduled voices before calling pause. Late events are skipped. */
+class Transport{
+ constructor(seq){this.seq=seq;this.reset();}
+ reset(){this.running=false;this.pos=0;this.cursor=0;this.sent=new Map();this.skipped=0;}
+ start(now){if(this.pos>=this.seq.duration)this.reset();this.anchor=now+.06-this.pos;this.running=true;this.cursor=0;}
+ position(now){return this.running?Math.max(0,Math.min(this.seq.duration,now-this.anchor)):this.pos;}
+ pause(now){this.pos=this.position(now);this.running=false;for(const [id,time]of this.sent)if(time>now)this.sent.delete(id);}
+ tick(now){
+  if(!this.running)return [];
+  const out=[];
+  while(this.cursor<this.seq.events.length){const e=this.seq.events[this.cursor],at=this.anchor+e.time;
+   if(at>now+.12)break;this.cursor++;
+   if(this.sent.has(e.id))continue;
+   if(at<now+.003){if(e.time>=this.pos)this.skipped++;continue;}
+   this.sent.set(e.id,at);out.push({event:e,at});
+  }
+  if(now>=this.anchor+this.seq.duration+.3){this.pos=this.seq.duration;this.running=false;}
+  return out;
+ }
+}
+function peakVoices(seq){let x=[];for(const e of seq.events)x.push([e.time,1],[e.time+e.duration,-1]);x.sort((a,b)=>a[0]-b[0]||a[1]-b[1]);let n=0,max=0;for(const [,d]of x){n+=d;max=Math.max(max,n);}return max;}
+const api={build,crossings,midi,vlq,Transport,peakVoices,PPQ,BEATS};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.ClockMusic=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script><script>(function(root){'use strict';
+/* Every voice is generated, bounded, dry, and finite. No samples or feedback. */
+function voice(ctx,bus,e,at){
+ const source=ctx.createOscillator(),gain=ctx.createGain(), nodes=[source,gain];
+ source.type=e.kind==='pluck'?'triangle':'sine';
+ if(e.kind==='kick'){source.frequency.setValueAtTime(118,at);source.frequency.exponentialRampToValueAtTime(46,at+.08);}
+ else source.frequency.setValueAtTime(e.kind==='hat'?6100+e.voice*240:440*2**((e.note-69)/12),at);
+ const amplitude=e.kind==='kick'?.24:e.kind==='hat'?.027:.055;
+ gain.gain.setValueAtTime(0,at);gain.gain.linearRampToValueAtTime(amplitude*e.velocity/65,at+.003);
+ gain.gain.exponentialRampToValueAtTime(.00001,at+e.duration-.005);gain.gain.linearRampToValueAtTime(0,at+e.duration);
+ source.connect(gain);gain.connect(bus);source.start(at);source.stop(at+e.duration);
+ const handle={at,end:at+e.duration,cancel(now){gain.gain.cancelScheduledValues(now);gain.gain.setValueAtTime(0,now);try{source.stop(now);}catch(_){}nodes.forEach(n=>n.disconnect());}};
+ source.onended=()=>nodes.forEach(n=>n.disconnect());return handle;
+}
+function wav(buffer){
+ const samples=buffer.getChannelData(0), ab=new ArrayBuffer(44+samples.length*2),v=new DataView(ab);
+ const str=(offset,s)=>{for(let i=0;i<s.length;i++)v.setUint8(offset+i,s.charCodeAt(i));};
+ str(0,'RIFF');v.setUint32(4,ab.byteLength-8,true);str(8,'WAVE');str(12,'fmt ');v.setUint32(16,16,true);v.setUint16(20,1,true);v.setUint16(22,1,true);v.setUint32(24,buffer.sampleRate,true);v.setUint32(28,buffer.sampleRate*2,true);v.setUint16(32,2,true);v.setUint16(34,16,true);str(36,'data');v.setUint32(40,samples.length*2,true);
+ let peak=0,energy=0;for(let i=0;i<samples.length;i++){const s=samples[i];if(!Number.isFinite(s)||Math.abs(s)>=1)throw Error('Render contains nonfinite/clipped samples');peak=Math.max(peak,Math.abs(s));energy+=s*s;v.setInt16(44+i*2,Math.round(s*32767),true);}
+ return {bytes:new Uint8Array(ab),peak,rms:Math.sqrt(energy/samples.length)};
+}
+async function render(seq){const ctx=new OfflineAudioContext(1,Math.ceil((seq.duration+.3)*44100),44100),bus=ctx.createGain();bus.gain.value=.42;bus.connect(ctx.destination);for(const e of seq.events)voice(ctx,bus,e,e.time);return wav(await ctx.startRendering());}
+root.ClockSynth={voice,wav,render};
+})(globalThis);
+</script><script>
+'use strict';
+const $=id=>document.getElementById(id);let seq,transport,ctx,bus,voices=[],timer=null,muted=false,raf=null,rendering=false,maxLive=0,voiceDrops=0,starting=false,startToken=0,audioError='';
+function cancelVoices(){if(ctx)voices.forEach(v=>v.cancel(ctx.currentTime));voices=[];}
+function stop(){audioError='';startToken++;clearInterval(timer);timer=null;cancelVoices();if(transport)transport.reset();muted=false;$('mute').textContent='Mute';draw();controls();}
+function pause(){if(!transport.running)return;transport.pause(ctx.currentTime);clearInterval(timer);timer=null;cancelVoices();controls();draw();}
+function controls(){const running=transport.running;$('start').disabled=running||rendering||starting;$('start').textContent=transport.pos>=seq.duration?'Replay audio':transport.pos>0?'Resume audio':'Start audio';$('pause').disabled=!running;$('mute').disabled=!running;$('status').textContent=audioError?'Sound OFF · '+audioError:running?(muted?'MUTED · ':'Sound ON · ')+ctx.state+' · '+transport.skipped+' missed onsets skipped':transport.pos>=seq.duration?'Sound OFF · pass complete':transport.pos>0?'Sound OFF · paused':'Sound OFF · ready · 130 BPM';}
+function tick(){
+ const now=ctx.currentTime;voices=voices.filter(v=>v.end>now);
+ for(const {event,at}of transport.tick(now))if(!muted){if(voices.length>=24){voiceDrops++;continue;}voices.push(ClockSynth.voice(ctx,bus,event,at));maxLive=Math.max(maxLive,voices.length);}
+ if(!transport.running){clearInterval(timer);timer=null;controls();}draw();
+}
+async function start(){
+ if(starting||transport.running)return;starting=true;audioError='';const token=++startToken;controls();
+ try{if(!ctx){ctx=new AudioContext({latencyHint:'interactive'});bus=ctx.createGain();bus.gain.value=Number($('level').value);bus.connect(ctx.destination);}await ctx.resume();if(token!==startToken||document.hidden)return;if(ctx.state!=='running')throw Error('Audio context did not start');muted=false;bus.gain.setValueAtTime(Number($('level').value),ctx.currentTime);$('mute').textContent='Mute';transport.start(ctx.currentTime);timer=setInterval(tick,25);tick();controls();animate();}catch(e){if(token===startToken)audioError=e.message;}finally{starting=false;controls();}
+}
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)');
+function animate(){cancelAnimationFrame(raf);if(transport.running&&!reduceMotion.matches)raf=requestAnimationFrame(animate);draw();}
+function rebuild(){stop();seq=ClockMusic.build({topology:$('topology').value,quantize:$('quantize').checked,kick:$('kick').checked});transport=new ClockMusic.Transport(seq);maxLive=0;voiceDrops=0;draw();controls();$('exportStatus').textContent='Ready to export this '+seq.topology+' / '+(seq.quantize?'quantized':'raw')+' pass.';}
+function draw(){if(!seq||!transport)return;const seconds=ctx?transport.position(ctx.currentTime):transport.pos,beat=seconds*seq.bpm/60;let frame=seq.frames[0];for(const f of seq.frames){if(f.beat>beat)break;frame=f;}const R=Clocks.metrics(frame.theta,Clocks.edges(32,seq.topology)).R;$('coherence').textContent=R.toFixed(3);$('position').textContent=beat.toFixed(2);$('eventCount').textContent=seq.events.length;if(reduceMotion.matches&&transport.running)return;
+ const c=$('ring'),g=c.getContext('2d'),w=c.width,h=c.height;g.clearRect(0,0,w,h);g.strokeStyle='#485540';g.lineWidth=2;for(const [i,j]of Clocks.edges(32,seq.topology)){const a=i*Clocks.TAU/32-Math.PI/2,b=j*Clocks.TAU/32-Math.PI/2;g.beginPath();g.moveTo(w/2+205*Math.cos(a),h/2+205*Math.sin(a));g.lineTo(w/2+205*Math.cos(b),h/2+205*Math.sin(b));g.stroke();}for(let i=0;i<32;i++){const a=i*Clocks.TAU/32-Math.PI/2,x=w/2+205*Math.cos(a),y=h/2+205*Math.sin(a),p=frame.theta[i];g.fillStyle=i%4===0?'#c4d992':'#6f8260';g.beginPath();g.arc(x,y,i%4===0?12:7,0,Clocks.TAU);g.fill();g.strokeStyle='#141815';g.beginPath();g.moveTo(x,y);g.lineTo(x+10*Math.cos(p),y+10*Math.sin(p));g.stroke();}g.fillStyle='#c4d992';g.textAlign='center';g.font='25px monospace';g.fillText(seq.topology==='ring'?'traveling wave':seq.topology==='open'?'one link cut':'all-to-all',w/2,h/2);g.font='17px monospace';g.fillText('8 audible / 32 clocks',w/2,h/2+32);
+ const s=$('score'),p=s.getContext('2d');p.clearRect(0,0,s.width,s.height);for(let b=0;b<=32;b++){p.strokeStyle=b%4===0?'#4c5c41':'#2e382a';p.beginPath();p.moveTo(b/32*s.width,0);p.lineTo(b/32*s.width,s.height);p.stroke();}for(const e of seq.events){p.fillStyle=e.kind==='kick'?'#e0af72':e.kind==='hat'?'#8eabbe':'#b9d28a';p.fillRect(e.beat/32*s.width,16+e.voice*36,Math.max(2,e.duration*seq.bpm/60/32*s.width),20);}p.strokeStyle='#fff5da';p.beginPath();p.moveTo(beat/32*s.width,0);p.lineTo(beat/32*s.width,s.height);p.stroke();$('mapping').textContent=(seq.quantize?'Quantized 1/16':'Raw phase crossings')+' · maximum grid shift '+(seq.maxShiftSeconds*1000).toFixed(2)+' ms · green plucks / blue pings / amber kick';$('diagnostics').textContent='Audio context: '+(ctx?ctx.state:'not created')+'\nActive/scheduled voices: '+voices.length+'; maximum '+maxLive+'; cap drops '+voiceDrops+'\nScheduled IDs: '+transport.sent.size+'; late skips '+transport.skipped+'\nSequence peak simultaneous voices: '+ClockMusic.peakVoices(seq)+'\nModel step: 0.025; sequence '+seq.duration.toFixed(6)+' s';
+}
+function download(bytes,name,type){const url=URL.createObjectURL(new Blob([bytes],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('start').onclick=start;$('pause').onclick=pause;$('stop').onclick=stop;
+$('mute').onclick=()=>{muted=!muted;cancelVoices();bus.gain.setValueAtTime(muted?0:Number($('level').value),ctx.currentTime);$('mute').textContent=muted?'Unmute':'Mute';controls();};
+$('level').oninput=()=>{if(ctx&&!muted)bus.gain.setTargetAtTime(Number($('level').value),ctx.currentTime,.015);};
+for(const id of ['topology','quantize','kick'])$(id).onchange=rebuild;
+$('midi').onclick=()=>{download(ClockMusic.midi(seq),'erebos-clocks-'+seq.topology+'-'+(seq.quantize?'grid':'raw')+'.mid','audio/midi');$('exportStatus').textContent='MIDI exported · 480 ticks/quarter · 130 BPM · 32 beats · explicit note-offs';};
+$('wav').onclick=async()=>{pause();rendering=true;$('wav').disabled=true;$('midi').disabled=true;for(const id of ['topology','quantize','kick'])$(id).disabled=true;controls();$('exportStatus').textContent='Rendering offline…';try{const result=await ClockSynth.render(seq);download(result.bytes,'erebos-clocks-'+seq.topology+'-'+(seq.quantize?'grid':'raw')+'.wav','audio/wav');$('exportStatus').textContent='WAV rendered · peak '+result.peak.toFixed(6)+' · RMS '+result.rms.toFixed(6)+' · '+result.bytes.length+' bytes';}catch(e){$('exportStatus').textContent='Render failed: '+e.message;}finally{rendering=false;$('wav').disabled=false;$('midi').disabled=false;for(const id of ['topology','quantize','kick'])$(id).disabled=false;controls();}};
+document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
+window.addEventListener('pagehide',()=>{stop();if(ctx)ctx.close();});
+seq=ClockMusic.build();transport=new ClockMusic.Transport(seq);draw();controls();
+</script></body></html>
