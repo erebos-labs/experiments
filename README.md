@@ -33,7 +33,7 @@ python3 tests/check_package.py
 
 ## Important limits
 
-Clocks are dimensionless identical phase oscillators. Onsets are phase crossings; pitch, tempo, and kick are artistic choices. A low global order parameter does not rule out a stable traveling wave. This is not a biological or mechanical simulation. MIDI instruments can sound different from the synthesized patch. Offline audio output is numerically checked; no listening evaluation is claimed.
+Clocks are dimensionless identical phase oscillators. Onsets are phase crossings; pitch, tempo, and kick are artistic choices. A low global order parameter does not rule out a stable traveling wave. This is not a biological or mechanical simulation. MIDI instruments can sound different from the synthesized patch. Offline audio output is numerically checked; tiny browser rounding differences mean exact WAV bytes are not guaranteed across renders. No listening evaluation is claimed.
 
 Traffic has fixed demand, directed edges, identical infinitesimal drivers, continuous flow and toy costs. Animation illustrates route shares; it does not model queues or learning. Coordinated routing minimizes the average and can assign unequal individual journey times. The experiment is not a recommendation for real road policy.
 
