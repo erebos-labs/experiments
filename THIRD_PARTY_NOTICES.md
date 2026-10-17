@@ -18,6 +18,35 @@ No third-party executable code, fonts, images, recordings, samples, paper text, 
 
 The cited publications and specifications retain their respective copyrights and licenses. Links and mathematical model descriptions do not sublicense those works. No PDFs or substantial copied passages are bundled, so no paper-reproduction permission is relied upon.
 
+## Riffle shuffles and carries
+
+The explorer is an educational implementation of established mathematics with
+AI assistance. No new shuffle theorem, carries identity or randomness metric is
+claimed.
+
+- Dave Bayer and Persi Diaconis (1992), *Trailing the Dovetail Shuffle to its Lair*,
+  The Annals of Applied Probability 2(2), 294–313,
+  [primary paper](https://www.stat.berkeley.edu/~aldous/157/Papers/bayer_diaconis.pdf).
+  The ideal GSR model, composition law, arrangement probability (Theorems 1/3),
+  and 52-card reference TV table are attributed to this work. Its rising-sequence
+  count corresponds here to one plus the inverse-permutation descent count.
+- Persi Diaconis and Jason Fulman (2009), *Carries, Shuffling, and Symmetric Functions*,
+  [arXiv v1](https://arxiv.org/html/0902.0179v1), Section 2, for the bivariate
+  Eulerian identity used for joint visible/inverse descent counts and conditioning.
+- Persi Diaconis and Jason Fulman (2008), *Carries, Shuffling and An Amazing Matrix*,
+  [arXiv v1](https://arxiv.org/html/0806.3583v1), for the carries/descent connection
+  and constructive interpretation. Equality in distribution is distinguished
+  from equality on the same untransformed random digit word.
+- Mark Sellke, Jialu Shi and Jiamin Wang (2025), *Universality of Cutoff for Riffle Shuffling*,
+  [arXiv v1](https://arxiv.org/html/2510.22783v1), for the general-cut asymptotic
+  question mentioned in the explorer. No asymptotic threshold is used as a
+  finite 52-card guarantee; no correction claim about that paper is made.
+
+The random-rotation example is an elementary illustration: uniform on the n
+cyclic rotations has uniform top label and full-order TV `1 − n/n!`.
+Descriptions use original words. No paper files, substantial source text or
+third-party executable code are bundled. The existing copyright terms apply.
+
 ## Repository tooling
 
 The check workflow uses the official GitHub `actions/checkout` action, pinned to an immutable commit. That action remains hosted by its upstream project under its [MIT license](https://github.com/actions/checkout/blob/v4/LICENSE); its source is not bundled here. The application itself has no package dependencies.

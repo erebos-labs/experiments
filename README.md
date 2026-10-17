@@ -4,6 +4,7 @@ A small static collection of interactive educational and artistic experiments:
 
 - **Local clocks, audible tension** — a Kuramoto-style phase model mapped to a finite eight-bar synthesized instrument, with MIDI/WAV export.
 - **The shortcut trap** — Braess’s paradox, using exact stationary continuous-flow solutions for two attributed congestion models.
+- **Random enough for what?** — ideal riffle shuffles, comparing the top card, visible neighboring descents and the complete deck order.
 
 The mathematical ideas are established work. Sources, assumptions, objective choices, and limitations are visible within each experiment and in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Built with AI assistance; models and outputs are checked by reproducible tests.
 
@@ -27,6 +28,8 @@ node tests/test_synth.js
 python3 tests/parse_midi.py /tmp/erebos-midi-check
 python3 tests/verify_traffic.py /tmp/erebos-traffic-check
 python3 tests/check_package.py
+python3 src/riffle/test_model.py -v
+python3 tests/verify_riffle.py
 ```
 
 `src/` contains the original model, UI, and synthesis implementations. `docs/` contains the self-contained generated pages for GitHub Pages. `tests/` contains model checks, scheduler/envelope checks, and an independent MIDI parser and traffic KKT oracle. The continuous integration workflow rebuilds and checks that generated pages match the checked-in version.
@@ -40,3 +43,48 @@ Traffic has fixed demand, directed edges, identical infinitesimal drivers, conti
 Browser checks cover Chromium desktop and mobile emulation. Physical phones, other browser engines, and assistive-technology combinations remain untested. Download/render behavior can differ across browsers.
 
 No express open-source reuse license has been selected; see [COPYRIGHT.txt](COPYRIGHT.txt). Source citations retain their original copyrights and licenses.
+
+## Why the top card is not the whole deck
+
+Choose one of the 52 rotations of a sorted deck uniformly. Every card is equally
+likely to be on top, yet the circular order never changes. Only 52 of the 52!
+possible orders can occur. A random-looking top card therefore does not imply
+a well-shuffled full deck.
+
+The riffle explorer applies that distinction to the established ideal
+Gilbert–Shannon–Reeds model. After five ideal riffles from sorted order, top-card
+total variation distance is about 0.020, while whole-deck distance is about 0.924.
+These are different probability distributions, not probabilities that the deck
+is “still unshuffled.” Total variation is the largest probability gap for any
+yes/no question about the selected observation. Displayed values are rounded.
+
+The deck convention is `deck[position] = original zero-based label`. Visible
+descents and inverse-permutation descents are different counts. The latter
+determines the forward GSR likelihood and preserves whole-deck TV exactly.
+The carries connection and joint conditioning follow attributed established
+work. This is an educational implementation with AI assistance, not new research.
+
+`src/riffle/data.json` contains every displayed numerical table. To regenerate it
+without network access or third-party dependencies, run:
+
+```sh
+python3 src/riffle/rebuild_data.py
+python3 build.py
+python3 src/riffle/test_model.py -v
+python3 tests/verify_riffle.py
+```
+
+The recomputation includes bounded exhaustive eight-card cut comparisons and
+can take about a minute, depending on hardware. `verify_riffle.py` independently
+enumerates repeated small-deck cut/interleave laws and uses an explicit
+Eulerian-number sum to check all 15 displayed 52-card whole-deck TV values.
+It also checks the top-card marginal and the rotation example. General results
+come from the cited papers; finite code checks do not prove new theorems.
+
+Riffle limits: 52 distinct labels, initially sorted, ideal binomial cuts and
+uniform random interleaving. Human hand technique and game-specific fairness
+were not measured. The eight-card comparison does not certify 52-card mixing
+under other cut rules. The illustrated sample deck is deterministic. The
+interaction script was browser-tested in a private playtest before release;
+the public wording and package were source-checked without claiming a second
+browser run.

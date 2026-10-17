@@ -23,3 +23,5 @@ jobs:
           python3 tests/parse_midi.py "$RUNNER_TEMP/erebos-midi-check"
           python3 tests/verify_traffic.py "$RUNNER_TEMP/erebos-traffic-check"
           python3 tests/check_package.py
+          python3 src/riffle/test_model.py -v
+          python3 tests/verify_riffle.py

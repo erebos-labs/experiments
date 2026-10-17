@@ -19,3 +19,39 @@ The live-control test set hardware output gain to zero, preserving scheduling an
 The tests use standard Node.js and Python libraries and can be rerun from README instructions. The repository check workflow runs these model and packaging checks and verifies that rebuilding leaves the generated pages unchanged. Actual hosted-page and CI status should be checked for the exact commit being reviewed.
 
 Untested: physical phones, Safari/Firefox/Edge engines, screen-reader combinations, browser download permission differences, and empirical biological/traffic validity. Browser emulation does not establish physical-device compatibility. On a downloaded standalone page, the back-to-collection link requires retaining the collection folder; the experiment itself is self-contained.
+# Riffle-shuffle addition — 15 October 2026
+
+This educational addition reproduces established GSR shuffle and carries
+calculations; no new research result is claimed. Fresh data regeneration took
+17.992 seconds in the release review environment. Every regenerated table
+matches the earlier checked explorer data after removing runtime-only fields.
+
+Checks actually run for this addition:
+
+- `python3 src/riffle/test_model.py -v`: 13 methods pass (24.845 seconds).
+- `python3 tests/verify_riffle.py`: 15 literal repeated-riffle laws, 15 independently
+  recomputed 52-card full-deck TV values, the five-riffle top marginal, random
+  rotation counterexample, embedded data equality and JavaScript syntax pass.
+- `python3 tests/check_package.py`: four pages pass language, viewport, label,
+  ID, local link and dependency-free structure checks.
+- Existing clocks (10), sequence (14), synthesis (4), six-file independent MIDI
+  parsing and 17,940 traffic KKT cases pass unchanged.
+
+The independent release checker does not import the production model. It uses
+literal cut/interleave evolution and an explicit Eulerian-number sum. The
+headline top marginal check rederives its finite rank-mixture formula; it is
+not independent evidence that the ideal model describes real hand shuffling.
+
+The first release-check attempt failed only at a script-attribute-order
+assumption while locating embedded JSON. The parser was corrected and the
+complete check passed. A prepared documentation patch initially failed to match
+the remote baseline README; it was corrected without touching a separate staged
+traffic edit. Reference checking corrected the full names of the 2025 authors
+before publication.
+
+Browser interaction checks on the unchanged script were completed during the
+preceding private playtest: presets, keyboard endpoints, sample regeneration,
+separation toggle, methods and narrow layout. This release adds clearer copy
+and rounded-number explanations. Those copy changes were source-checked;
+no second browser pass, physical-phone check or assistive-technology audit is
+claimed. Chrome was reserved for separate work during release review.
