@@ -18,3 +18,9 @@ data=json.loads((src/'data.json').read_text())
 html=html.replace('__DATA__',json.dumps(data,separators=(',',':'))).replace('__SCRIPT__',(src/'ui.js').read_text())
 (base/'docs/riffle-shuffles/index.html').write_text(html)
 print('Built docs/riffle-shuffles/index.html')
+
+# Keep the independently scoped standalone module reproducible in this collection.
+import subprocess, sys, shutil
+subprocess.run([sys.executable, '-B', str(base/'src/phantom/scripts/build.py')], check=True)
+shutil.copyfile(base/'src/phantom/index.html', base/'docs/phantom-sound/index.html')
+print('Built docs/phantom-sound/index.html')

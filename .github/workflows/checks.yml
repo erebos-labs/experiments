@@ -14,7 +14,7 @@ jobs:
       - name: Build and check generated pages
         run: |
           python3 build.py
-          git diff --exit-code -- docs
+          git diff --exit-code -- docs src/phantom/index.html
       - name: Model, sequence, and audio lifecycle checks
         run: |
           node tests/test_clocks.js
@@ -25,3 +25,4 @@ jobs:
           python3 tests/check_package.py
           python3 src/riffle/test_model.py -v
           python3 tests/verify_riffle.py
+          python3 -B src/phantom/scripts/verify.py

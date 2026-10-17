@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="A quiet, local experiment about binaural delay, front–back ambiguity, and head turns. No tracking, no external assets.">
+<title>Two ears. More than one place.</title>
+<style>:root {color-scheme: light; --paper:#f7f6f0;--ink:#192b2b;--muted:#526564;--line:#cbd4ce;--a:#087c70;--b:#ad4b29;--wash:#e7eee8;--white:#fffefa;--mono:ui-monospace,SFMono-Regular,Consolas,monospace;}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1240px;margin:auto;padding:40px 40px 80px}header{max-width:900px;margin-bottom:32px}h1{font:500 clamp(35px,4.3vw,62px)/1.09 Georgia,serif;letter-spacing:-1.6px;margin:0 0 20px}h2{font:500 30px/1.2 Georgia,serif;letter-spacing:-.4px;margin:0 0 12px}h3{font-size:18px;margin:0 0 10px}p{margin:0 0 16px}.intro{font-size:19px;max-width:760px}.local{display:flex;align-items:center;gap:8px;margin-bottom:18px;font:12px var(--mono);text-transform:uppercase;letter-spacing:1px;color:var(--muted)}.local:before{content:"";height:7px;width:7px;background:var(--a);border-radius:50%}.lesson{border-top:1px solid var(--ink);padding-top:24px;margin-top:36px}.lesson-title{display:flex;align-items:baseline;gap:18px}.number{font:13px var(--mono);color:var(--muted)}.split{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.95fr);gap:38px;align-items:start}.visual{min-width:0}svg{width:100%;height:auto;display:block}figure{margin:0}figcaption,.caption,.note{font-size:14px;color:var(--muted)}figcaption{margin-top:8px}.map{background:var(--white);border:1px solid var(--line);border-radius:6px}.control{margin:20px 0}.control-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:4px}.control label,.control-label{font-size:15px;font-weight:600}.value{font:15px var(--mono);white-space:nowrap}input[type=range]{width:100%;margin:12px 0;accent-color:var(--a);cursor:pointer;min-height:24px}input[type=range]:disabled{cursor:default}.range-ends{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.readouts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}.readout{border-top:3px solid var(--a);padding:12px 0}.readout.b{border-color:var(--b)}.big{display:block;font:26px var(--mono);letter-spacing:-1px;margin:5px 0}.a-text{color:var(--a)}.b-text{color:var(--b)}.verdict{padding:14px 16px;background:var(--wash);border-left:3px solid var(--a);margin:18px 0;font-size:16px}.buttons{display:flex;gap:8px;flex-wrap:wrap}button,select{font:500 14px/1.3 system-ui;min-height:42px;padding:10px 14px;border:1px solid var(--line);border-radius:4px;color:var(--ink);background:var(--white);cursor:pointer}button:hover:not(:disabled){background:var(--wash);border-color:var(--ink)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #b18d00;outline-offset:3px}button.primary{background:var(--ink);color:white;border-color:var(--ink)}button:disabled{opacity:.45;cursor:default}.compact{font-size:13px;min-height:34px;padding:7px 11px}.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;margin:10px 0}.legend span{display:inline-flex;align-items:center;gap:8px}.swatch{width:22px;height:3px;background:var(--a);display:inline-block}.swatch.b{background:var(--b)}.swatch.faint{background:#b9c7bd;height:7px}.swatch.dark{background:var(--a);height:7px}.chart{background:var(--white);border:1px solid var(--line);border-radius:6px}.equation{font:15px/1.8 var(--mono);padding:18px;background:var(--wash);overflow-wrap:anywhere}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:32px}.audio-box{border:1px solid var(--line);padding:20px;border-radius:5px;margin-top:22px}.audio-state{font:13px/1.6 var(--mono);margin:12px 0 0;min-height:42px}.pill{display:inline-block;background:var(--wash);padding:3px 8px;border-radius:3px;font:12px var(--mono)}.source-list{padding-left:22px;font-size:14px}.source-list li{margin:12px 0}a{color:var(--a);text-underline-offset:3px}summary{cursor:pointer;font-weight:600;padding:12px 0}details{border-top:1px solid var(--line);margin-top:20px}table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}td,th{border-bottom:1px solid var(--line);padding:8px;text-align:left}th{font-size:12px;color:var(--muted)}.fine{font-size:12px;color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted)}.mono{font-family:var(--mono)}.check{padding:12px;background:var(--white);border:1px solid var(--line)}
+@media(max-width:900px){main{padding:28px 24px 64px}.split{gap:24px;grid-template-columns:minmax(0,1fr) minmax(275px,.9fr)}h1{font-size:46px}.big{font-size:23px}}
+@media(max-width:700px){main{padding:24px 18px 50px}h1{font-size:39px;letter-spacing:-1px}h2{font-size:27px}.intro{font-size:17px}.split,.two-col{grid-template-columns:1fr;gap:22px}.lesson-title{gap:12px}.readouts{margin:10px 0}.control{margin:16px 0}body{font-size:16px}.lesson{margin-top:28px}.audio-box{padding:16px}.big{font-size:26px}.source-list{overflow-wrap:anywhere}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+/* Keep diagram labels legible on narrow screens without widening the document. */
+figure{min-width:0}
+@media(max-width:700px){.split,.two-col{grid-template-columns:minmax(0,1fr)}figure{overflow-x:auto}.map,.chart{min-width:560px}.big{font-size:clamp(20px,6vw,26px)}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="local">Erebos Labs · interactive educational experiment</div>
+<h1>Two ears.<br>More than one place.</h1>
+<p class="intro">A sound can seem to occupy a place where no speaker exists. The trick is to supply cues compatible with that place. But one cue can fit several places at once.</p>
+<p class="note">Explore the geometry silently. Optional audio is muted by default. This is a model of signals, not a listening test. On narrow screens, diagrams can scroll sideways.</p>
+</header>
+<noscript><p class="check">JavaScript is needed for the interactive model. The explanations and source links below remain readable.</p></noscript>
+<section class="lesson" aria-labelledby="same-title">
+<div class="lesson-title"><span class="number">01</span><h2 id="same-title">One delay, two directions</h2></div>
+<p>Start with two hypothetical source positions on the same side when the head faces forward: <strong class="a-text">A in the world-front half</strong> and <strong class="b-text">B in the world-back half</strong>. With the head facing forward, their left–right arrival-time differences match.</p>
+<div class="split">
+<figure class="visual">
+<svg id="map" class="map" viewBox="0 0 640 480" role="img" aria-labelledby="map-title map-desc"><title id="map-title">Top view of two possible sources around a head</title><desc id="map-desc">Source A and its front–back mirror B; lines show modeled routes to two point receivers. This schematic is not to scale.</desc></svg>
+<figcaption>Top view. Source positions stay fixed in the world; the head turns. Lines are schematic, without a head obstacle.</figcaption>
+</figure>
+<div>
+<div class="control"><div class="control-head"><label for="bearing">A’s world direction</label><output id="bearing-value" for="bearing" class="value">30° right</output></div><input id="bearing" type="range" min="-80" max="80" step="1" value="30"><div class="range-ends"><span>80° left</span><span>front</span><span>80° right</span></div></div>
+<div class="control"><div class="control-head"><label for="yaw">Simulated head turn</label><output id="yaw-value" for="yaw" class="value">0°</output></div><input id="yaw" type="range" min="-45" max="45" step="1" value="0"><div class="range-ends"><span>45° left</span><span>forward</span><span>45° right</span></div><p class="fine">This slider is the only head tracking. Physically turning your head does not update the model.</p></div>
+<div class="buttons"><button id="turn" class="primary">Try a 20° right turn</button><button id="reset">Reset</button></div>
+<div class="readouts" aria-live="polite" aria-atomic="true"><div class="readout"><span class="a-text">A · world front</span><strong class="big" id="delay-a">+262.4 μs</strong><span class="caption" id="arrival-a">right ear earlier</span></div><div class="readout b"><span class="b-text">B · world back</span><strong class="big" id="delay-b">+262.4 μs</strong><span class="caption" id="arrival-b">right ear earlier</span></div></div>
+<p id="verdict" class="verdict">Same delay. This cue alone cannot choose front or back.</p>
+<p class="caption">Positive delay = left channel arrives later. Microseconds (μs) are millionths of a second.</p>
+</div>
+</div>
+</section>
+<section class="lesson" aria-labelledby="turn-title">
+<div class="lesson-title"><span class="number">02</span><h2 id="turn-title">A movement becomes another measurement</h2></div>
+<div class="split">
+<figure><svg id="curves" class="chart" viewBox="0 0 640 330" role="img" aria-labelledby="curves-title curves-desc"><title id="curves-title">How the two candidate delays change with head turn</title><desc id="curves-desc">At zero turn, the curves meet. At nonzero turns, the front and back candidate delays differ.</desc></svg><div class="legend"><span><i class="swatch"></i>A · world front</span><span><i class="swatch b"></i>B · world back</span></div><figcaption>The graph is calculated, not recorded from ears. The vertical line follows your simulated head turn.</figcaption></figure>
+<div><p>At rest the candidates agree. When you turn toward A, its delay moves toward zero. B’s delay changes the other way near the starting pose.</p><p>Wightman and Kistler’s 1999 experiments found far fewer front–back confusions when head movements were encouraged. Their experiment also tested source motion; the details matter. <a href="https://doi.org/10.1121/1.426899" target="_blank" rel="noreferrer">Read the research abstract ↗</a></p><p class="note">Here we test only whether two ideal measurements differ. We do not model how a person weighs those cues.</p></div>
+</div>
+<div class="split" style="margin-top:26px">
+<figure><svg id="candidates" class="chart" viewBox="0 0 640 240" role="img" aria-labelledby="candidates-title candidates-desc"><title id="candidates-title">Compatible azimuths before and after a turn</title><desc id="candidates-desc">Light marks satisfy the initial delay. Dark marks also satisfy the delay at the selected head turn, within the model tolerance.</desc></svg><div class="legend"><span><i class="swatch faint"></i>Initial delay only</span><span><i class="swatch dark"></i>Initial + turned delay</span></div><figcaption>Each mark is a 0.25° grid cell. These are consistency sets, not probabilities.</figcaption></figure>
+<div><div class="control"><div class="control-head"><label for="tolerance">Allowed model mismatch</label><output id="tolerance-value" for="tolerance" class="value">±15 μs</output></div><input id="tolerance" type="range" min="0" max="40" step="5" value="15"></div><p class="note">An invented error allowance for each measurement. It is not a human detection threshold.</p><p id="candidate-summary" class="verdict"></p><p class="caption">A is the synthetic source used to make the observations. At zero tolerance, only exact grid matches remain.</p></div>
+</div>
+</section>
+<section class="lesson" aria-labelledby="cone-title">
+<div class="lesson-title"><span class="number">03</span><h2 id="cone-title">In three dimensions, a whole ring agrees</h2></div>
+<div class="split"><figure><svg id="cone" class="map" viewBox="0 0 640 365" role="img" aria-labelledby="cone-svg-title cone-desc"><title id="cone-svg-title">A ring of directions sharing the same lateral component</title><desc id="cone-desc">The unit sphere is shown in a fixed oblique projection. The marked ring shares the same left–right coordinate and therefore the same initial delay.</desc></svg><figcaption>A ring on a unit sphere; rays from the center form the far-field “cone of confusion.” Projection is oblique, not a room map.</figcaption></figure><div>
+<div class="control"><div class="control-head"><label for="orbit">Move around the equal-delay ring</label><output id="orbit-value" for="orbit" class="value">0°</output></div><input id="orbit" type="range" min="0" max="360" step="1" value="0"><div class="range-ends"><span>front</span><span>back</span><span>front</span></div></div>
+<p id="cone-readout" class="verdict"></p>
+<p>Yaw measurements constrain the horizontal components. For a stationary unit direction and exact known poses, they also constrain the magnitude of elevation. Its above/below sign remains ambiguous through every yaw turn in this model.</p><p class="note">Ear-specific filtering, other motion, and the acoustic environment add information that this two-point model omits. Real heads do not let sound travel straight through them.</p>
+</div></div>
+</section>
+<section class="lesson" aria-labelledby="audio-title">
+<div class="lesson-title"><span class="number">04</span><h2 id="audio-title">Optional: send the cue to two channels</h2></div>
+<div class="two-col"><div><p>A headphone driver need not sit at the apparent source position. Researchers have synthesized virtual sources by matching direction-specific waveforms at the ears, including head and outer-ear filtering and headphone correction.</p><p>This demo sends only a timing cue. You may hear a left–right image inside the head; a convincing front/back or external location is not promised. The A and B labels identify the calculation, not what you should hear.</p><p class="note">Use headphones at low device volume if you choose to listen. Digital amplitude does not determine sound pressure at your ears. No microphone, motion sensor, or listening data is collected.</p></div>
+<div class="audio-box"><h3>Short, quiet tone · 2.5 seconds</h3><p class="caption">Each playback is a snapshot at the selected pose. Move amplitude above zero, then press A or B. Any control change stops playback; this is not continuously tracked audio.</p><div class="control"><div class="control-head"><label for="gain">Digital amplitude</label><output id="gain-value" for="gain" class="value">0.000 · muted</output></div><input id="gain" type="range" min="0" max="0.04" step="0.005" value="0"></div><div class="buttons"><button id="play-a" disabled>Play A</button><button id="play-b" disabled>Play B</button><button id="stop" disabled>Stop / mute</button></div><p id="audio-state" class="audio-state" role="status">Muted. Audio has not been initialized.</p><p class="fine">No autoplay. Fixed 220–550 Hz tone mixture, smooth fades, no gain above 0.04 peak digital amplitude. Changing tabs stops playback and resets amplitude to zero.</p></div></div>
+</section>
+<section class="lesson" aria-labelledby="limits-title">
+<div class="lesson-title"><span class="number">05</span><h2 id="limits-title">What the model can establish</h2></div>
+<div class="two-col"><div><h3>Calculated here</h3><p>A single delay cannot uniquely identify a direction. Two nonparallel receiver poses resolve the horizontal front/back pair in ideal noiseless geometry when the source stays fixed and pose changes are known. Small turns are poorly conditioned when timing errors are added. Yaw alone leaves a vertical mirror ambiguity.</p><h3>Not measured here</h3><p>Perceived location, externalization, localization accuracy, device output level, and individual differences. No human listening study was run.</p></div><div><h3>Model contract</h3><div class="equation">τ = t<sub>L</sub> − t<sub>R</sub><br>τ(θ, ψ, ε) = (d / c) sin(θ − ψ) cos ε<br>d = 0.18 m · c = 343 m/s<br>|τ| ≤ 524.8 μs</div><p class="caption" style="margin-top:12px">θ: world azimuth, positive to the right. ψ: yaw, positive to the right. ε: elevation. Far-field plane wave; unobstructed point receivers; equal channel amplitudes. The numerical maximum belongs to this model, not a human head.</p></div></div>
+<details open><summary>Two corrections that make the model more precise</summary>
+<p><strong>Elevation magnitude is information.</strong> Given exact yaw measurements of a stationary source, the recovered horizontal components determine cos(elevation). A +60° and a −60° source still agree, but they can differ from a source on the horizon. “Yaw provides no elevation information” would be incorrect.</p>
+<p><strong>Source motion changes the inverse problem.</strong> A fixed source at world azimuth 30° has the same ideal delay throughout a yaw turn as a second source following world azimuth 150° + 2 × yaw. The moving alternative mirrors the first direction relative to the head at every instant. A head turn alone cannot uniquely locate an unconstrained moving source.</p>
+<p>A related primary experiment by <a href="https://journals.sagepub.com/doi/pdf/10.1068/i7173sas?download=true">Brimijoin &amp; Akeroyd (2012)</a> used a source moving at twice the head rotation rate. Seven listeners reported front/back reversals whose strength depended on the signal spectrum. The mathematical construction here is a simplified instance of that established geometry.</p><p class="note">The counterexample tests an assumption, not human listening performance. Real direction-specific spectral cues and expectations about motion are outside this delay-only model. See README.md and the reproducible counterexample checks accompanying this file. This is static-pose geometry, not a time-domain moving-source or Doppler simulation.</p>
+</details>
+<details><summary>Why two measurements help, and where they still fail</summary><p>For sources on the horizon, write A = d/c, m₀ = A sin θ and m<sub>h</sub> = A sin(θ − h). Then sin θ = m₀/A and cos θ = (m₀ cos h − m<sub>h</sub>)/(A sin h). Together they recover horizontal azimuth with atan2. At h = 0° or 180° the denominator vanishes. Near those poses, timing error is magnified.</p><p>In 3D, yaw-only measurements determine horizontal components x and y. The unit-vector condition gives z² = 1 − x² − y², leaving the sign of height unresolved. This is an identifiability result for the model, not a general statement that people cannot locate height.</p><p>At finite range the delay surfaces are hyperboloids; the cone description is a far-field limit. Front/back reflection still preserves both path lengths in the symmetric two-point geometry.</p></details>
+<details><summary>What changes if the head is a rigid obstacle?</summary>
+<p>A companion calculation replaces the empty space between receivers with a perfectly rigid sphere of radius 9 cm, with diametrically opposite receivers. Its frequency response changes both level and phase. Yet front/back mirrors still produce the same pair of complex responses: every point on an equal-incidence ring remains equivalent. More cue values do not add a missing coordinate when they share the same symmetry. This exact result requires the stated receiver placement: moving both receivers rearward on the sphere breaks the front/back spectral match in a companion sensitivity check, while the above/below mirror remains.</p>
+<table><caption>Calculated at 30° azimuth; different definitions of delay</caption><thead><tr><th>Frequency</th><th>Point model: time delay</th><th>Rigid sphere: phase delay</th></tr></thead><tbody><tr><td>500 Hz</td><td>262.4 μs</td><td>409.0 μs</td></tr><tr><td>1,000 Hz</td><td>262.4 μs</td><td>325.5 μs</td></tr><tr><td>4,000 Hz</td><td>262.4 μs</td><td>287.0 μs</td></tr></tbody></table>
+<p class="note">Sphere values use frequency-unwrapped interaural phase divided by angular frequency; they are not pulse-onset times or measured human delays. Series degrees 64 and 80 agreed on the checked grid. No sphere-filtered audio is played here. Method: <a href="https://3d3a.princeton.edu/document/276" target="_blank" rel="noreferrer">Sridhar &amp; Choueiri (2021), equations 5–6</a>.</p>
+</details>
+<details><summary>Sources and reproducibility</summary><p class="note">Primary research is linked below. Ideal calculations, published participant results and inference are distinct. The 1999 source is abstract-only; no replication of a participant experiment or listening result is claimed.</p><ol class="source-list"><li>Wightman &amp; Kistler (1990), <a href="https://ntrs.nasa.gov/citations/19910004658" target="_blank" rel="noreferrer">Hearing in three dimensions: Sound localization</a>. Virtual-source synthesis, headphone correction, and the distinction between lateralization and localization. <a href="https://ntrs.nasa.gov/api/citations/19910004658/downloads/19910004658.pdf" target="_blank" rel="noreferrer">Report PDF</a>.</li><li>Wightman &amp; Kistler (1999), <a href="https://pubs.aip.org/asa/jasa/article/105/5/2841/554518/Resolution-of-front-back-ambiguity-in-spatial" target="_blank" rel="noreferrer">Resolution of front–back ambiguity in spatial hearing by listener and source movement</a>. Experimental head/source movement conditions.</li><li>Macpherson &amp; Middlebrooks (2002), <a href="https://pubs.aip.org/asa/jasa/article/111/5/2219/551392/Listener-weighting-of-cues-for-lateral-angle-The" target="_blank" rel="noreferrer">Listener weighting of cues for lateral angle</a>. Cue weights depend on the stimulus; no universal delay-only rule.</li><li>W3C, <a href="https://www.w3.org/TR/webaudio/" target="_blank" rel="noreferrer">Web Audio API</a>. Browser audio buffers and playback lifecycle.</li><li>Sridhar &amp; Choueiri (2021), <a href="https://3d3a.princeton.edu/document/276" target="_blank" rel="noreferrer">Optimal series truncation of the rigid-sphere head-related transfer function</a>. Far-field series formulation and numerical convergence issues.</li><li>McAnally &amp; Martin (2014), <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2014.00210/full">Sound localization with head movement</a>. Absolute-elevation information and experiment-specific motion conditions.</li><li>McLachlan et al. (2023), <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1027827/full">Dynamic spectral cues during small head movements</a>. Static versus dynamic spectra; seven participants and 10° acoustic rotations.</li><li>Langendijk &amp; Bronkhorst (2002), <a href="https://www.researchgate.net/publication/11065918_Contribution_of_spectral_cues_to_human_sound_localization">Contribution of spectral cues to human sound localization</a>, author-uploaded primary text. Spectral-band perturbations and individual cues.</li><li>Kim, Barnett-Cowan &amp; Macpherson (2013), <a href="https://doi.org/10.1121/1.4799748">Integration of auditory input with motion information</a>. Preliminary active/passive/counter-rotation study, with limitations in the original discussion.</li></ol><p class="fine">No external scripts, fonts, audio files, or network requests. Source code and reproducibility notes accompany this standalone file. User-opened source links navigate to public sites.</p></details>
+</section>
+<footer>Erebos Labs · Educational model, built with AI assistance. Established geometry; no new research claim. All acoustic constants and error allowances are explicit assumptions.</footer>
+</main>
+<script>/* Two unobstructed point receivers; far-field plane waves, no HRTF. */
+(function (root) {
+  'use strict';
+  const C = 343, D = 0.18, MAX_US = 1e6 * D / C;
+  const rad = d => d * Math.PI / 180;
+  const deg = r => r * 180 / Math.PI;
+  const wrap = d => ((d + 180) % 360 + 360) % 360 - 180;
+  function direction(azimuth, elevation = 0) {
+    const a = rad(azimuth), e = rad(elevation);
+    return [Math.sin(a) * Math.cos(e), Math.cos(a) * Math.cos(e), Math.sin(e)];
+  }
+  function delayVector(v, yaw = 0, baselineTilt = 0) {
+    // baselineTilt tilts the receiver baseline upward (a roll-like rotation), not pitch.
+    // Standard yaw-only receiver axis is [cos(yaw), -sin(yaw), 0].
+    const y = rad(yaw), p = rad(baselineTilt);
+    return MAX_US * (v[0] * Math.cos(y) * Math.cos(p) - v[1] * Math.sin(y) * Math.cos(p) + v[2] * Math.sin(p));
+  }
+  function delay(azimuth, yaw = 0, elevation = 0) {
+    return delayVector(direction(azimuth, elevation), yaw);
+  }
+  function mirror(azimuth) { return wrap(180 - azimuth); }
+  function exactDelay(azimuth, yaw = 0, range = 2, elevation = 0) {
+    if (!(range > D / 2)) throw new RangeError('range must exceed half the receiver separation');
+    const v = direction(azimuth, elevation), h = rad(yaw);
+    const right = [D / 2 * Math.cos(h), -D / 2 * Math.sin(h), 0];
+    const distance = sign => Math.hypot(...v.map((x, i) => range * x - sign * right[i]));
+    return 1e6 * (distance(-1) - distance(1)) / C;
+  }
+  function candidates(azimuth, yaw, tolerance = 15, step = 0.25) {
+    // These are deterministic consistency sets, not probabilities or perceptual thresholds.
+    if (![azimuth, yaw, tolerance, step].every(Number.isFinite) || tolerance < 0 || step < 0.025 || step > 360) throw new RangeError('finite inputs and a grid step from 0.025 to 360 degrees required');
+    const first = delay(azimuth), second = delay(azimuth, yaw), single = [], both = [];
+    const count = Math.ceil(360 / step); // At most 14,400 samples, independent of floating-point progress.
+    for (let i = 0; i < count; i++) {
+      const a = -180 + i * step;
+      if (a >= 180 - step * 1e-8) break;
+      const pass = Math.abs(delay(a) - first) <= tolerance + 1e-9;
+      if (pass) single.push(a);
+      if (pass && Math.abs(delay(a, yaw) - second) <= tolerance + 1e-9) both.push(a);
+    }
+    return { single, both, first, second, step, tolerance };
+  }
+  function reconstruct(first, second, yaw) {
+    const h = rad(yaw), s = Math.sin(h);
+    if (Math.abs(s) < 1e-12) return null;
+    const x = first / MAX_US;
+    const y = (x * Math.cos(h) - second / MAX_US) / s;
+    return { azimuth: wrap(deg(Math.atan2(x, y))), x, y, norm: Math.hypot(x, y) };
+  }
+  function cone(q, around) {
+    const r = Math.sqrt(Math.max(0, 1 - q * q)), a = rad(around);
+    return [q, r * Math.cos(a), r * Math.sin(a)];
+  }
+  function envelope(t, duration = 2.5) {
+    if (t < 0 || t >= duration) return 0;
+    const fade = 0.025;
+    const gate = Math.min(1, t / fade, (duration - t) / fade);
+    // A smooth on/off pattern makes the shifted waveform inspectable at the onset.
+    const pulse = t % 0.5;
+    const p = pulse < 0.36 ? Math.min(1, pulse / fade, (0.36 - pulse) / fade) : 0;
+    return Math.sin(Math.PI / 2 * Math.max(0, gate)) ** 2 * Math.sin(Math.PI / 2 * Math.max(0, p)) ** 2;
+  }
+  function signal(t, duration = 2.5) {
+    if (t < 0 || t >= duration) return 0;
+    return envelope(t, duration) * (
+      0.34 * Math.sin(2 * Math.PI * 220 * t) +
+      0.28 * Math.sin(2 * Math.PI * 330 * t + 0.7) +
+      0.22 * Math.sin(2 * Math.PI * 440 * t + 1.3) +
+      0.16 * Math.sin(2 * Math.PI * 550 * t + 2.1)
+    );
+  }
+  function stereo(tauUs, gain = 0, sampleRate = 48000, duration = 2.5) {
+    if (!Number.isFinite(tauUs) || Math.abs(tauUs) > MAX_US + 1e-6) throw new RangeError('delay outside model');
+    if (!Number.isFinite(gain) || gain < 0 || gain > 0.04) throw new RangeError('gain outside conservative digital bound');
+    if (!Number.isInteger(sampleRate) || sampleRate < 8000 || sampleRate > 192000 || !Number.isFinite(duration) || duration < 0.1 || duration > 3) throw new RangeError('bounded synthesis only');
+    const tau = tauUs * 1e-6, leftDelay = 0.02 + Math.max(tau, 0), rightDelay = 0.02 + Math.max(-tau, 0);
+    const n = Math.ceil((duration + 0.021) * sampleRate), left = new Float32Array(n), right = new Float32Array(n);
+    for (let i = 0; i < n; i++) {
+      left[i] = gain * signal(i / sampleRate - leftDelay, duration);
+      right[i] = gain * signal(i / sampleRate - rightDelay, duration);
+    }
+    return { left, right, sampleRate, duration: n / sampleRate, leftDelay, rightDelay, gain, tauUs };
+  }
+  const api = { C, D, MAX_US, rad, deg, wrap, direction, delayVector, delay, mirror, exactDelay, candidates, reconstruct, cone, signal, envelope, stereo };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  root.SoundModel = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+</script>
+<script>(() => {
+  'use strict';
+  const M = SoundModel, $ = id => document.getElementById(id);
+  const state = { bearing: 30, yaw: 0, tolerance: 15, orbit: 0, gain: 0 };
+  let context = null, source = null, master = null, generation = 0, pendingResume = null;
+  const colors = { a: '#087c70', b: '#ad4b29', ink: '#192b2b', muted: '#526564', line: '#cbd4ce' };
+  const signed = n => `${n < -0.05 ? '−' : n > 0.05 ? '+' : ''}${Math.abs(n).toFixed(1)}`;
+  const angle = n => n === 0 ? '0° · forward' : `${Math.abs(n)}° ${n < 0 ? 'left' : 'right'}`;
+  const worldAngle = n => Math.abs(n) < 1e-10 ? '0° · world front' : Math.abs(Math.abs(n)-180) < 1e-10 ? '180° · world back' : `${Math.abs(n)}° ${n < 0 ? 'left' : 'right'} of world front`;
+  const arrival = n => Math.abs(n) < 0.05 ? 'simultaneous in this model' : `${n > 0 ? 'right' : 'left'} ear earlier`;
+  const currentHalf = az => { const c = Math.cos(M.rad(az - state.yaw)); return Math.abs(c) < 1e-10 ? 'front/back boundary' : c > 0 ? 'currently head-front' : 'currently head-back'; };
+  const text = (x, y, content, extra = '') => `<text x="${x}" y="${y}" fill="${colors.muted}" font-family="system-ui,sans-serif" ${/\bfont-size=/.test(extra) ? '' : 'font-size="14"'} ${extra}>${content}</text>`;
+  const circle = (x, y, r, extra = '') => `<circle cx="${x}" cy="${y}" r="${r}" ${extra}/>`;
+  const line = (x1, y1, x2, y2, extra = '') => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" ${extra}/>`;
+  const path = points => points.map((p, i) => `${i ? 'L' : 'M'}${p[0].toFixed(3)},${p[1].toFixed(3)}`).join(' ');
+  function svg(id, title, description, body) {
+    $(id).innerHTML = `<title>${title}</title><desc>${description}</desc>${body}`;
+    $(id).setAttribute('aria-label', title + '. ' + description);
+    $(id).removeAttribute('aria-labelledby');
+  }
+  function drawMap() {
+    const cx = 320, cy = 240, radius = 166;
+    const point = a => [cx + radius * Math.sin(M.rad(a)), cy - radius * Math.cos(M.rad(a))];
+    const h = M.rad(state.yaw), a = point(state.bearing), b = point(M.mirror(state.bearing));
+    const ears = [[cx - 40 * Math.cos(h), cy - 40 * Math.sin(h)], [cx + 40 * Math.cos(h), cy + 40 * Math.sin(h)]];
+    let body = circle(cx, cy, radius, `fill="none" stroke="${colors.line}" stroke-dasharray="3 6"`);
+    body += line(cx, 53, cx, 428, `stroke="${colors.line}"`) + line(120, cy, 520, cy, `stroke="${colors.line}"`);
+    body += text(320, 28, 'WORLD FRONT · 0°', 'text-anchor="middle" font-size="12" letter-spacing="1"');
+    body += text(320, 463, 'WORLD BACK · ±180°', 'text-anchor="middle" font-size="12" letter-spacing="1"');
+    body += text(68, cy + 5, 'LEFT', 'text-anchor="middle" font-size="12"');
+    body += text(572, cy + 5, 'RIGHT', 'text-anchor="middle" font-size="12"');
+    for (const [p, color, label, bearing] of [[a, colors.a, 'A', state.bearing], [b, colors.b, 'B', M.mirror(state.bearing)]]) {
+      for (const e of ears) body += line(...p, ...e, `stroke="${color}" stroke-width="1.6" opacity=".42"`);
+      body += circle(...p, 12, `fill="${color}" stroke="#fffefa" stroke-width="3"`);
+      body += text(p[0], p[1] + (label === 'A' ? -23 : 33), `${label} · ${worldAngle(bearing)}`, 'text-anchor="middle" font-weight="600"');
+    }
+    body += `<g transform="translate(${cx} ${cy}) rotate(${state.yaw})">`;
+    body += circle(0, 0, 35, `fill="#e7eee8" stroke="${colors.ink}" stroke-width="1.5"`);
+    body += `<path d="M-8,-34 L0,-49 L8,-34" fill="#e7eee8" stroke="${colors.ink}" stroke-width="1.5"/>`;
+    body += line(-40, 0, 40, 0, `stroke="${colors.ink}" stroke-width="2"`);
+    body += circle(-40, 0, 5, `fill="${colors.ink}"`) + circle(40, 0, 5, `fill="${colors.ink}"`);
+    body += text(-49, 22, 'L', 'text-anchor="middle"') + text(49, 22, 'R', 'text-anchor="middle"');
+    body += `</g>`;
+    svg('map', 'Top view: two possible source directions', `A at ${state.bearing} degrees, B at ${M.mirror(state.bearing)} degrees, head turned ${state.yaw} degrees. Schematic, not to scale.`, body);
+  }
+  function drawCurves(a, b) {
+    const x = h => 58 + (h + 45) / 90 * 554, y = us => 275 - (us + 550) / 1100 * 245;
+    let body = '';
+    for (const us of [-500, 0, 500]) body += line(58, y(us), 612, y(us), `stroke="${colors.line}"`) + text(47, y(us) + 4, `${us}`, 'text-anchor="end" font-size="12"');
+    for (const h of [-45, 0, 45]) body += text(x(h), 303, `${h > 0 ? '+' : ''}${h}°`, 'text-anchor="middle" font-size="12"');
+    body += text(58, 18, 'DELAY · μs', 'font-size="11" letter-spacing="1"') + text(612, 324, 'SIMULATED YAW', 'text-anchor="end" font-size="11" letter-spacing="1"');
+    body += line(x(0), 30, x(0), 275, `stroke="${colors.line}" stroke-dasharray="3 4"`);
+    for (const [az, color] of [[state.bearing, colors.a], [M.mirror(state.bearing), colors.b]]) {
+      const points = []; for (let h = -45; h <= 45; h += 0.5) points.push([x(h), y(M.delay(az, h))]);
+      body += `<path d="${path(points)}" fill="none" stroke="${color}" stroke-width="2.5"/>`;
+    }
+    body += line(x(state.yaw), 30, x(state.yaw), 275, `stroke="${colors.ink}" stroke-width="1"`);
+    body += circle(x(state.yaw), y(a), 5, `fill="${colors.a}" stroke="#fffefa" stroke-width="1.5"`);
+    body += circle(x(state.yaw), y(b), 5, `fill="${colors.b}" stroke="#fffefa" stroke-width="1.5"`);
+    svg('curves', 'Calculated delay as the head turns', `Current A delay ${signed(a)} microseconds and B delay ${signed(b)} microseconds.`, body);
+  }
+  function drawCandidates() {
+    const c = M.candidates(state.bearing, state.yaw, state.tolerance);
+    const x = az => 58 + (az + 180) / 360 * 554, width = 554 / 1440 + 0.05;
+    let body = text(58, 26, 'COMPATIBLE WORLD DIRECTIONS', 'font-size="11" letter-spacing="1"');
+    body += text(58, 60, 'Initial measurement', 'font-size="13"') + text(58, 130, 'Initial + turned measurement', 'font-size="13"');
+    body += `<rect x="58" y="74" width="554" height="25" fill="#f0f2ec"/><rect x="58" y="144" width="554" height="25" fill="#f0f2ec"/>`;
+    for (const a of c.single) body += `<rect x="${x(a)}" y="74" width="${width}" height="25" fill="#b9c7bd"/>`;
+    for (const a of c.both) body += `<rect x="${x(a)}" y="144" width="${width}" height="25" fill="${colors.a}"/>`;
+    for (const [a, label] of [[-180,'back'],[-90,'left'],[0,'front'],[90,'right'],[180,'back']]) {
+      body += line(x(a), 174, x(a), 180, `stroke="${colors.muted}"`) + text(x(a), 199, `${a}°`, 'text-anchor="middle" font-size="11"') + text(x(a), 221, label, 'text-anchor="middle" font-size="11"');
+    }
+    for (const [az, label, color] of [[state.bearing,'A',colors.a],[M.mirror(state.bearing),'B',colors.b]]) body += line(x(az), 70, x(az), 171, `stroke="${color}" stroke-width="1" stroke-dasharray="2 3"`) + text(x(az), 49, label, 'text-anchor="middle" font-size="13" font-weight="600"');
+    svg('candidates', 'Grid directions compatible with the synthetic observations', `${c.single.length} initial directions and ${c.both.length} directions after both measurements, out of 1440 tested directions.`, body);
+    $('candidate-summary').textContent = `${c.single.length} → ${c.both.length} compatible grid directions out of 1,440, using ±${state.tolerance} μs per measurement.`;
+  }
+  function drawCone() {
+    const q = Math.sin(M.rad(state.bearing));
+    const projection = v => [320 + 174 * v[0] + 64 * v[1], 185 + 52 * v[1] - 139 * v[2]];
+    const origin = projection([0,0,0]);
+    const ring = []; for (let t = 0; t <= 360; t += 2) ring.push(projection(M.cone(q,t)));
+    let body = '';
+    for (const [v,label] of [[[1.25,0,0],'right'],[[0,1.25,0],'front'],[[0,0,1.12],'up']]) {
+      const end = projection(v), neg = projection(v.map(x => -x));
+      body += line(...neg, ...end, `stroke="${colors.line}"`) + text(end[0] + 8, end[1] + 4, label, 'font-size="12"');
+    }
+    for (const plane of ['xy','xz','yz']) {
+      const points=[];for(let d=0;d<=360;d+=3){const t=M.rad(d);points.push(projection(plane==='xy'?[Math.cos(t),Math.sin(t),0]:plane==='xz'?[Math.cos(t),0,Math.sin(t)]:[0,Math.cos(t),Math.sin(t)]));}
+      body += `<path d="${path(points)}" fill="none" stroke="${colors.line}" stroke-dasharray="3 5"/>`;
+    }
+    for (const d of [0,60,120,180,240,300]) body += line(...origin,...projection(M.cone(q,d)), `stroke="${colors.a}" opacity=".14"`);
+    body += `<path d="${path(ring)}" fill="none" stroke="${colors.a}" stroke-width="2.5"/>`;
+    const v=M.cone(q,state.orbit), p=projection(v), mirror=projection([v[0],v[1],-v[2]]);
+    body += line(...origin,...p,`stroke="${colors.a}" stroke-width="2"`) + circle(...origin,4,`fill="${colors.ink}"`);
+    if(Math.abs(v[2])>0.03)body += circle(...mirror,7,`fill="#fffefa" stroke="${colors.b}" stroke-width="2"`) + text(mirror[0]+12,mirror[1]+4,'height mirror','font-size="12"');
+    body += circle(...p,8,`fill="${colors.a}" stroke="#fffefa" stroke-width="2"`);
+    body += text(20,340,`Fixed lateral component x = ${q.toFixed(3)}`,'font-size="12"');
+    svg('cone','Equal-delay ring in a fixed oblique projection',`The selected direction has initial delay ${signed(M.delayVector(v))} microseconds; its height mirror has the same delay for every yaw.`,body);
+    $('cone-readout').textContent = `Initial: ${signed(M.delayVector(v))} μs everywhere on this ring. At your ${state.yaw}° yaw: ${signed(M.delayVector(v,state.yaw))} μs. Above/below mirrors still match; elevation magnitude can be constrained.`;
+  }
+  function suspendIfIdle(audio = context) {
+    if (audio && audio.state === 'running' && !source && pendingResume === null) void audio.suspend().catch(() => {});
+  }
+  function stop(resetGain = false, message = null) {
+    generation++;
+    pendingResume=null;
+    if (source) {
+      if (master && context) { master.gain.cancelScheduledValues(context.currentTime); master.gain.setValueAtTime(0, context.currentTime); }
+      source.onended=null;try{source.stop();}catch{}source.disconnect();source=null;
+      if(master){master.disconnect();master=null;}
+    }
+    if (resetGain) { state.gain=0;$('gain').value='0'; }
+    suspendIfIdle();
+    updateAudioControls();
+    if (message) $('audio-state').textContent=message;
+  }
+  function updateAudioControls() {
+    $('gain-value').textContent = state.gain===0 ? '0.000 · muted' : state.gain.toFixed(3);
+    $('play-a').disabled = state.gain===0;
+    $('play-b').disabled = state.gain===0;
+    $('stop').disabled = state.gain===0 && !source;
+  }
+  async function play(which) {
+    if (state.gain===0) return;
+    stop(false);
+    const token=++generation, az=which==='A'?state.bearing:M.mirror(state.bearing), tau=M.delay(az,state.yaw), gain=state.gain;
+    pendingResume=token;
+    let audio=null;
+    try {
+      const AudioCtor=window.AudioContext||window.webkitAudioContext;
+      if (!AudioCtor) throw new Error('Web Audio is unavailable in this browser.');
+      if(!context || context.state === 'closed')context=new AudioCtor();
+      audio=context;
+      await audio.resume();
+      if(pendingResume===token)pendingResume=null;
+      if(token!==generation||document.hidden||state.gain===0){suspendIfIdle(audio);return;}
+      const data=M.stereo(tau,gain,context.sampleRate), buffer=context.createBuffer(2,data.left.length,data.sampleRate);
+      buffer.copyToChannel(data.left,0);buffer.copyToChannel(data.right,1);
+      source=context.createBufferSource();master=context.createGain();master.gain.value=1;
+      source.buffer=buffer;source.connect(master);master.connect(context.destination);
+      source.onended=()=>{if(token!==generation)return;source.disconnect();source=null;master.disconnect();master=null;suspendIfIdle(audio);updateAudioControls();$('audio-state').textContent=`Finished ${which}. No sound is playing. Digital amplitude remains ${state.gain.toFixed(3)} for the next press.`;};
+      source.start();updateAudioControls();
+      $('audio-state').textContent=`Playing ${which}: ${signed(tau)} μs; digital amplitude ${gain.toFixed(3)}; stops in ${data.duration.toFixed(2)} s.`;
+    } catch(error) { if(pendingResume===token)pendingResume=null;if(token===generation)stop(true,`Audio unavailable: ${error.message}`);else suspendIfIdle(audio); }
+  }
+  function render() {
+    const a=M.delay(state.bearing,state.yaw),b=M.delay(M.mirror(state.bearing),state.yaw),difference=Math.abs(a-b);
+    $('bearing-value').textContent=angle(state.bearing);$('yaw-value').textContent=angle(state.yaw);
+    $('tolerance-value').textContent=`±${state.tolerance} μs`;$('orbit-value').textContent=`${state.orbit}°`;
+    $('delay-a').textContent=`${signed(a)} μs`;$('delay-b').textContent=`${signed(b)} μs`;
+    $('arrival-a').textContent=arrival(a)+' · '+currentHalf(state.bearing);$('arrival-b').textContent=arrival(b)+' · '+currentHalf(M.mirror(state.bearing));
+    $('verdict').textContent=difference<0.05?'Same delay. This cue alone cannot choose front or back.':`The delays differ by ${difference.toFixed(1)} μs. Two measurements can separate this horizontal pair if the source stays fixed and poses are known.`;
+    drawMap();drawCurves(a,b);drawCandidates();drawCone();updateAudioControls();
+  }
+  for(const id of ['bearing','yaw','tolerance','orbit','gain'])$(id).addEventListener('input',()=>{
+    stop(false,'Stopped after a control change. Press A or B to play the new cue.');state[id]=Number($(id).value);render();
+    if(state.gain===0)$('audio-state').textContent='Muted. No sound is playing.';
+  });
+  $('turn').addEventListener('click',()=>{stop(false,'Stopped after a control change.');state.yaw=20;$('yaw').value='20';render();});
+  $('reset').addEventListener('click',()=>{stop(true,'Reset to silence. No sound is playing.');Object.assign(state,{bearing:30,yaw:0,tolerance:15,orbit:0,gain:0});for(const id of Object.keys(state))$(id).value=state[id];render();});
+  $('play-a').addEventListener('click',()=>play('A'));$('play-b').addEventListener('click',()=>play('B'));
+  $('stop').addEventListener('click',()=>stop(true,'Muted. No sound is playing.'));
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop(true,'Muted because the tab was hidden.');});
+  window.addEventListener('pagehide',()=>{stop(true);const audio=context;context=null;if(audio && audio.state!=='closed')void audio.close().catch(()=>{});});
+  render();
+})();
+</script>
+</body>
+</html>

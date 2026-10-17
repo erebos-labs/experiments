@@ -55,3 +55,11 @@ separation toggle, methods and narrow layout. This release adds clearer copy
 and rounded-number explanations. Those copy changes were source-checked;
 no second browser pass, physical-phone check or assistive-technology audit is
 claimed. Chrome was reserved for separate work during release review.
+
+# Phantom places validation
+
+The Phantom module bounds grid work, reads UTF-8, writes LF output, uses standard-library UTC handling, declares referrer metadata and requests idle audio-context cleanup. These code changes have numerical and mock-event checks; no device or listening validation is inferred.
+The build copies its self-contained page into `docs/phantom-sound/index.html`.
+Numerical replay, collection packaging and browser checks for this integration
+are separate from the historical collection results above. No new listening,
+physical-device or assistive-technology claim follows from integration.

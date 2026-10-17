@@ -5,6 +5,7 @@ A small static collection of interactive educational and artistic experiments:
 - **Local clocks, audible tension** — a Kuramoto-style phase model mapped to a finite eight-bar synthesized instrument, with MIDI/WAV export.
 - **The shortcut trap** — Braess’s paradox, using exact stationary continuous-flow solutions for two attributed congestion models.
 - **Random enough for what?** — ideal riffle shuffles, comparing the top card, visible neighboring descents and the complete deck order.
+- **Phantom places** — explore what a pair of ideal arrival-time cues can and cannot distinguish, with a finite optional synthesized comparison.
 
 The mathematical ideas are established work. Sources, assumptions, objective choices, and limitations are visible within each experiment and in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Built with AI assistance; models and outputs are checked by reproducible tests.
 
@@ -88,3 +89,23 @@ under other cut rules. The illustrated sample deck is deterministic. The
 interaction script was browser-tested in a private playtest before release;
 the public wording and package were source-checked without claiming a second
 browser run.
+
+## Phantom places
+
+The self-contained sound-localization explorer is built from the original module
+in `src/phantom/`. Sources, model assumptions and numerical checks are retained
+there, including [source references](src/phantom/SOURCES.md). This is an educational
+cue-geometry model, not an individualized headphone or human-perception test.
+Sound is muted initially, requires a user gesture, and has finite playback.
+No listening, device calibration or physical-headphone result is claimed.
+
+Run its complete dependency-free checks with:
+
+```sh
+python3 -B src/phantom/scripts/verify.py
+```
+
+The earlier collection browser results do not extend automatically to this
+addition. Desktop controls received a separate preview check; collection
+integration, narrow layouts and assistive-technology coverage are reported
+separately when actually checked.

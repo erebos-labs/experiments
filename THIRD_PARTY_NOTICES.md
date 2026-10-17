@@ -50,3 +50,11 @@ third-party executable code are bundled. The existing copyright terms apply.
 ## Repository tooling
 
 The check workflow uses the official GitHub `actions/checkout` action, pinned to an immutable commit. That action remains hosted by its upstream project under its [MIT license](https://github.com/actions/checkout/blob/v4/LICENSE); its source is not bundled here. The application itself has no package dependencies.
+
+## Phantom places and spatial hearing
+
+The original educational module's [sources](src/phantom/SOURCES.md) and
+[attribution](src/phantom/THIRD_PARTY_NOTICES.md) accompany its source.
+No paper files, substantial copied passages, recordings or third-party HRTF
+data are bundled. Its ideal delay and rigid-sphere calculations do not claim
+human perceptual validity. Existing copyright terms remain in force.
