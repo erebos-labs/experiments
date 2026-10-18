@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A bounded day-to-day route-learning sequel to The shortcut trap.">
+  <title>The shortcut trap, one day later · Nyx traffic lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Nyx / traffic lab <span>02 · route learning · offline prototype</span></div>
+    <h1>The shortcut trap, one day later</h1>
+    <p>Yesterday’s quickest route becomes today’s temptation. Compare a crowd that switches in lockstep with one that adapts a fraction at a time—on the same toy costs as the original experiment.</p>
+  </header>
+  <noscript>This experiment needs JavaScript. All code is local; no network connection is needed.</noscript>
+
+  <section class="lab" aria-label="Route-learning controls and results">
+    <aside class="controls">
+      <h2>Set the thought experiment</h2>
+      <label>Cost model
+        <select id="model">
+          <option value="original">Braess’s original model</option>
+          <option value="teaching">Teaching model</option>
+        </select>
+      </label>
+      <label class="range-label" for="demand"><span>Fixed demand</span><output id="demand-out" for="demand">6</output>
+        <input id="demand" type="range" min="0" max="20" step="0.25" value="6">
+      </label>
+      <p class="caption" id="demand-caption"></p>
+      <label>Day 0 allocation
+        <select id="start">
+          <option value="pre">Even outer-route split; shortcut empty</option>
+          <option value="perturbed">Exact equilibrium, gently perturbed</option>
+          <option value="equilibrium">Exact stationary equilibrium</option>
+        </select>
+      </label>
+      <label class="range-label" for="step"><span>Gradual reconsideration share</span><output id="step-out" for="step">18%</output>
+        <input id="step" type="range" min="0.05" max="0.5" step="0.01" value="0.18">
+      </label>
+      <p class="caption">A share α moves toward yesterday’s fastest route set each day. The synchronous trace uses α = 100%.</p>
+      <label>Horizon
+        <select id="horizon">
+          <option value="20">20 days</option>
+          <option value="40" selected>40 days</option>
+          <option value="120">120 days</option>
+        </select>
+      </label>
+      <div class="button-row">
+        <button id="reset" type="button">Reset</button>
+        <button id="next" type="button">Next day</button>
+        <button id="play" type="button" aria-pressed="false">Play</button>
+      </div>
+      <p class="caption">Playback only advances the displayed recurrence. It does not simulate vehicles, roads, queues, or human behavior.</p>
+    </aside>
+
+    <div class="results">
+      <section class="chart-panel" aria-labelledby="trace-heading">
+        <div class="panel-head">
+          <div><span class="kicker">Shortcut-route flow</span><h2 id="trace-heading">Two update rules, same yesterday</h2></div>
+          <span class="day-badge">Day <strong id="day-label">0</strong></span>
+        </div>
+        <div class="chart-scroll" role="region" aria-label="Scrollable route-flow chart" tabindex="0">
+        <svg id="chart" class="chart" viewBox="0 0 820 340" role="img" aria-labelledby="chart-title chart-desc">
+          <title id="chart-title">Shortcut-route flow over days</title><desc id="chart-desc"></desc>
+          <g id="chart-content"></g>
+        </svg>
+        </div>
+        <div class="legend" aria-hidden="true"><span><i class="sync"></i>Synchronous</span><span><i class="gradual"></i>Gradual</span><span><i class="reference"></i>Exact stationary reference</span></div>
+        <label class="scrubber"><span>Inspect a day</span><input id="day" type="range" min="0" max="40" step="1" value="0"></label>
+      </section>
+
+      <section class="comparison" aria-label="State comparison at selected day">
+        <article class="rule-card sync-card">
+          <span class="kicker">100% reconsider</span><h2>Synchronous switching</h2>
+          <div class="route-bars" id="sync-bars"></div>
+          <dl><div><dt>Mean time</dt><dd id="sync-mean"></dd></div><div><dt>Largest switching gain</dt><dd id="sync-regret"></dd></div><div><dt>Late shortcut range</dt><dd id="sync-range"></dd></div></dl>
+        </article>
+        <article class="rule-card gradual-card">
+          <span class="kicker" id="gradual-kicker">18% reconsider</span><h2>Gradual switching</h2>
+          <div class="route-bars" id="gradual-bars"></div>
+          <dl><div><dt>Mean time</dt><dd id="gradual-mean"></dd></div><div><dt>Largest switching gain</dt><dd id="gradual-regret"></dd></div><div><dt>Late shortcut range</dt><dd id="gradual-range"></dd></div></dl>
+        </article>
+      </section>
+
+      <section class="reference-card">
+        <div><span class="kicker">Reference, not forecast</span><h2>Exact stationary nonatomic equilibrium</h2></div>
+        <p id="reference-copy"></p>
+      </section>
+    </div>
+  </section>
+
+  <section class="reading">
+    <article><span class="number">01 / LOCKSTEP</span><h2>Fastest yesterday can be crowded today</h2><p id="lockstep-copy"></p></article>
+    <article><span class="number">02 / STEP SIZE</span><h2>Compare the finite window</h2><p id="step-copy"></p></article>
+    <article><span class="number">03 / EQUILIBRIUM</span><h2>A fixed point is not a journey</h2><p>The exact Wardrop allocation is a stationary comparison: all used routes tie for minimum cost at those fixed flows. It does not specify how a population learns, whether it converges, or how quickly.</p></article>
+  </section>
+
+  <details>
+    <summary>Update rule, tie handling, and invariants</summary>
+    <p>Let <code>fᵗ</code> be the three route flows and <code>c(fᵗ)</code> the route costs generated by that day’s flow. Let <code>Mᵗ</code> contain every route whose cost is within <code>10⁻⁹ × max(1, |minimum cost|)</code> of the minimum. The target <code>bᵗ</code> moves all demand onto <code>Mᵗ</code>, preserving the current proportions among tied winners. If no flow is already on the tied winners, it splits demand evenly among them.</p>
+    <p class="formula">Synchronous: <code>fᵗ⁺¹ = bᵗ</code><br>Gradual: <code>fᵗ⁺¹ = (1 − α)fᵗ + αbᵗ</code>, with the displayed constant step <code>0 &lt; α ≤ 1</code>.</p>
+    <p>Both updates are convex combinations of nonnegative allocations with the same total demand, so they preserve nonnegativity and conservation. At zero demand every flow remains zero and mean journey time is undefined. A stationary Wardrop allocation stays fixed because all of its used flow is already on tied-fastest routes; near-ties outside the tolerance are not treated as ties.</p>
+    <p>This is a deliberately stark deterministic best-response recurrence. It omits perception errors, memory beyond one day, habit, heterogeneous information, finite travelers, within-day queues, signals, capacity, departure-time choice, spillback, and induced demand. Constant-step gradual switching can chatter around a discontinuous best-route boundary; a smaller step need not produce a smaller finite-window span or imply convergence.</p>
+  </details>
+
+  <details>
+    <summary>Primary sources and what this prototype borrows</summary>
+    <p><a href="https://eprints.whiterose.ac.uk/id/eprint/84674/1/Watling%20%26%20Hazelton%202003.pdf" target="_blank" rel="noopener">Watling &amp; Hazelton (2003), The Dynamics and Equilibria of Day-to-Day Assignment Models</a> distinguishes stationary equilibrium from explicit day-to-day processes based on prior experience and emphasizes that discrete-time convergence depends on adjustment rate, cost sensitivity, and the learning rule. See Section 3, PDF pages 10–16, especially equation (6) and the closing summary. Our recurrence is simpler than its perception-learning examples.</p>
+    <p><a href="https://doi.org/10.1016/0191-2615(84)90003-1" target="_blank" rel="noopener">Horowitz (1984), The Stability of Stochastic Equilibrium in a Two-Link Transportation Network</a> is a related two-link stochastic stability study. Its title, author and DOI are verified; its detailed equations and results are not reconstructed here. The displayed two-cycle is calculated from our explicitly stated recurrence.</p>
+    <p><a href="https://link.springer.com/article/10.1007/BF02031940" target="_blank" rel="noopener">Smith &amp; Wisten (1995), A Continuous Day-to-Day Traffic Assignment Model…</a> concerns continuous day-to-day assignment and existence of dynamic equilibrium, as its verified title states. Our discrete aggregate rule is an authored teaching simplification, not a replication of its model.</p>
+    <p><a href="https://homepage.rub.de/Dietrich.Braess/Paradox-BNW.pdf" target="_blank" rel="noopener">Braess, Nagurney &amp; Wakolbinger (2005 translation of 1968)</a> supplies the original affine toy costs (p. 448, equation (3.6), Figure 3) and stationary six-unit example (p. 449, Section 4). The day-to-day recurrence and visual comparison here are new adaptations; no claim of original traffic mathematics is made.</p>
+  </details>
+
+  <footer>Isolated local sequel prototype · 17 October 2026 · Runs offline after loading. Source links open only when selected.</footer>
+</main>
+<script src="model.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

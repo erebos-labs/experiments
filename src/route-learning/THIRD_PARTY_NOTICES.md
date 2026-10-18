@@ -1,0 +1,1 @@
+The cited publications and specifications retain their own rights. No paper PDF, copied research figure, font binary, browser runtime, account metadata or private session receipt is distributed. Generated figures/data and implementation are authored educational adaptations. See SOURCES.md and COPYRIGHT.txt.

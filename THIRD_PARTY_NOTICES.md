@@ -58,3 +58,9 @@ The original educational module's [sources](src/phantom/SOURCES.md) and
 No paper files, substantial copied passages, recordings or third-party HRTF
 data are bundled. Its ideal delay and rigid-sphere calculations do not claim
 human perceptual validity. Existing copyright terms remain in force.
+
+## Additional modules
+
+- Does a flower have an ear?: [references](src/flower-evidence/SOURCES.md), [rights and credit](src/flower-evidence/THIRD_PARTY_NOTICES.md). Original publications retain their rights; no paper bodies or raw Flower workbooks are distributed.
+- The shortcut trap, one day later: [references](src/route-learning/SOURCES.md), [rights and credit](src/route-learning/THIRD_PARTY_NOTICES.md). Original publications retain their rights; no paper bodies or raw Flower workbooks are distributed.
+- Square ice: boundaries, loops and counts: [references](src/square-ice/SOURCES.md), [rights and credit](src/square-ice/THIRD_PARTY_NOTICES.md). Original publications retain their rights; no paper bodies or raw Flower workbooks are distributed.

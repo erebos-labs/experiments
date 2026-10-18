@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-18T01:24:56.597894+00:00",
+  "record_kind": "Coordinator-observed local results, normalized for inspection; not independent release clearance, signed attestation, source verification or empirical calibration.",
+  "source_hash_scope": "Source files below exclude PROVENANCE.json and this receipt to avoid circular metadata hashes.",
+  "source_file_sha256": {
+    ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
+    "COPYRIGHT.txt": "aec2af079eaa192a66e2171862a25bee023e464cdf60f18899f55eba2b3eca91",
+    "DERIVATION.md": "9b0666805fd57def62b1b729f8cf76cf08343e9e9d514a846a8511e0e007da82",
+    "README.md": "ea5c9500d230551261db2de1cec318d1073fb41db252e189219c7a6dc71f27af",
+    "SOURCES.md": "7071593f56505f6f5b3f56a3ece5971cf1a5bc0fcddf0e0cb36c2cae85dbc45d",
+    "THIRD_PARTY_NOTICES.md": "f09052cae6fc5d0a9271bf6248d9ec3c67769b823c25080de976845076065e76",
+    "boundary_paths.py": "8d2512720ceaefef13f3044341cc250bc872c6d6e3251663fde1d65fcae09d1e",
+    "checks.py": "f095443fc153d6a67f7fde30c17fba96da44cef3a3a663913258c3510d77da65",
+    "data/domain-samples.json": "67220a82de71476291f48331032c4b687d378313efae2c3f5c58bddc2e69bd36",
+    "data/loops.jsonl": "97f5d4b634480cd1992de0b3f37d7cc1645a85f50c41e9d9df947f7c08acb990",
+    "generate_fixtures.py": "d0aa51348c30a80240555204cb6d272167938d9fdd3e6cb135a72f75d1d44d97",
+    "ice.py": "7b150fc29aa8aecd0850a9e581b76f0e2b4e64b6cddc3e995c47a16584b12aa9",
+    "loop_fixture.py": "19e300de9c367e5fcc166138281bf9fdc9cbc4e094cbda0f865bfc435d8413c4",
+    "loops.cpp": "049ef8565e9f8c0629a71d18b23dc8586ade603707c1678b769ae0019e7a8fdb",
+    "soft_ice.py": "1a6816afd2f89bcd310f5a6dc09f4a55b87ab30e14154912f21defb4e2495870",
+    "test_review.py": "1895b4030cf2b79b7be80265b3fb3753525f923dde7c32f7e5f7de7586274ba2",
+    "test_soft_bound.py": "1bcf75d46adc4593d5591ac7bc225b0678d85d27febdb858ffc4255f47c1b293",
+    "verify_loops.py": "ea18185a4a8d62b715421e49d67eca72487436d5eee23397c88788db57502254"
+  },
+  "runtime": {
+    "python": "3.14.7",
+    "node": "23.10.0",
+    "system": "darwin",
+    "architecture": "arm64",
+    "python_validation_mode": "nonoptimized; explicit negative controls as listed"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "checks.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "verify_loops.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "boundary_paths.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "test_soft_bound.py"
+      ],
+      "exit_code": 0,
+      "tests_run": 1,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "soft_ice.py",
+        "--max-n",
+        "8"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "test_review.py"
+      ],
+      "exit_code": 0,
+      "tests_run": 5,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "generate_fixtures.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "-std=c++20",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "loops.cpp",
+        "-o",
+        "output/loops"
+      ],
+      "exit_code": 0,
+      "expected_exit": "zero",
+      "acceptance": "PASS"
+    },
+    {
+      "argv": [
+        "./output/loops"
+      ],
+      "exit_code": 0,
+      "expected_exit": "zero",
+      "acceptance": "PASS"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "generate_fixtures.py",
+        "--loop-output",
+        "output/loops-run.jsonl",
+        "--check"
+      ],
+      "exit_code": 0,
+      "expected_exit": "zero",
+      "acceptance": "PASS"
+    }
+  ],
+  "observed": {
+    "regression_tests": 5,
+    "optimized_validation": "Five entry points reject -O/PYTHONOPTIMIZE before reporting PASS; core consistency checks always on",
+    "loop_matrix_verified": [
+      {
+        "boundary": "torus",
+        "n": 2,
+        "ice_count": "18"
+      },
+      {
+        "boundary": "torus",
+        "n": 3,
+        "ice_count": "148"
+      },
+      {
+        "boundary": "torus",
+        "n": 4,
+        "ice_count": "2970"
+      },
+      {
+        "boundary": "torus",
+        "n": 5,
+        "ice_count": "143224"
+      },
+      {
+        "boundary": "free",
+        "n": 2,
+        "ice_count": "82"
+      },
+      {
+        "boundary": "free",
+        "n": 3,
+        "ice_count": "2604"
+      },
+      {
+        "boundary": "free",
+        "n": 4,
+        "ice_count": "193662"
+      },
+      {
+        "boundary": "free",
+        "n": 5,
+        "ice_count": "33865632"
+      },
+      {
+        "boundary": "free",
+        "n": 6,
+        "ice_count": "13956665236"
+      }
+    ],
+    "loop_negative_controls": [
+      "duplicates rejected",
+      "omissions rejected",
+      "unexpected fields rejected",
+      "corrupt verifier inputs reject"
+    ],
+    "fresh_cpp_replay": "Compiled with Clang C++20; nine normalized scientific rows match byte for byte",
+    "domain_samples": {
+      "n": 14,
+      "seed": 1967,
+      "samples": 6,
+      "arrays_unchanged": true,
+      "generator_byte_check": "PASS",
+      "byte_reconstruction_tested_python": "3.14.7"
+    }
+  },
+  "browser": {
+    "status": "NOT_APPLICABLE",
+    "reason": "Source/derivation module; no interactive page selected."
+  },
+  "limits": [
+    "Declared minimum runtimes not matrix-tested",
+    "No assistive-technology, physical-device or listening claim",
+    "No current new primary-paper access; source facts retain stated limits",
+    "Full raw validation/account/session logs and raw data are intentionally not bundled; this record supplies inspectable counts and results."
+  ]
+}

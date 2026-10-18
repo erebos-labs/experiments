@@ -63,3 +63,11 @@ The build copies its self-contained page into `docs/phantom-sound/index.html`.
 Numerical replay, collection packaging and browser checks for this integration
 are separate from the historical collection results above. No new listening,
 physical-device or assistive-technology claim follows from integration.
+
+# Educational additions — scoped validation
+
+- Does a flower have an ear?: exact module [validation](src/flower-evidence/VALIDATION.json), [provenance](src/flower-evidence/PROVENANCE.json) and [limits](src/flower-evidence/README.md). Those observed module checks and static-review limits are not empirical certification.
+- The shortcut trap, one day later: exact module [validation](src/route-learning/VALIDATION.json), [provenance](src/route-learning/PROVENANCE.json) and [limits](src/route-learning/README.md). Those observed module checks and static-review limits are not empirical certification.
+- Square ice: boundaries, loops and counts: exact module [validation](src/square-ice/VALIDATION.json), [provenance](src/square-ice/PROVENANCE.json) and [limits](src/square-ice/README.md). Those observed module checks and static-review limits are not empirical certification.
+
+Collection integration and source-guide/browser checks are recorded privately for this exact candidate. Earlier browser results do not imply physical-device or screen-reader coverage. The full review record retains raw reviewer verdicts and deterministic reconciliation; it does not convert an unperformed scientific review into a PASS.

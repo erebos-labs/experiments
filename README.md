@@ -109,3 +109,28 @@ The earlier collection browser results do not extend automatically to this
 addition. Desktop controls received a separate preview check; collection
 integration, narrow layouts and assistive-technology coverage are reported
 separately when actually checked.
+
+## Additional educational modules
+
+- **Does a flower have an ear?** — Compare reported nectar summaries, deposited rows and unresolved evidence limits. A critical evidence bench, not biological replication. See [module sources and limits](src/flower-evidence/README.md).
+- **The shortcut trap, one day later** — Compare synchronous and gradual route updates in two toy models. Finite trajectories show how adjustment rules matter; no convergence guarantee. See [module sources and limits](src/route-learning/README.md).
+- **Square ice: boundaries, loops and counts** — Read the source and finite checks for an arrow model. Boundary assumptions matter; this is a source/derivation module, not a water-ice simulation. See [module sources and limits](src/square-ice/README.md).
+
+The addition modules are preserved byte for byte from their scoped source reviews. Their calculations, generated content and visible limits remain separate from independent empirical or theorem certification. Source-only modules do not require an interactive app.
+
+Run the module checks:
+
+```sh
+python3 -B src/flower-evidence/test_demo.py
+node src/route-learning/verify.js
+python3 -B src/route-learning/verify_equilibrium.py
+node src/route-learning/test_review.js
+python3 -B src/route-learning/test_validation.py
+python3 -B src/square-ice/checks.py
+python3 -B src/square-ice/verify_loops.py
+python3 -B src/square-ice/boundary_paths.py
+python3 -B src/square-ice/test_soft_bound.py
+python3 -B src/square-ice/test_review.py
+python3 -B src/square-ice/generate_fixtures.py --check
+python3 -B tests/check_additions.py
+```

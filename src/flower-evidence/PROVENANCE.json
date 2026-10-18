@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "recorded_utc": "2026-10-18T01:24:56.647836+00:00",
+  "content_revision_definition": "SHA-256 per relative file; this metadata file excluded, no invented Git revision. VALIDATION.json excludes both metadata files from its source hash scope.",
+  "source_file_sha256": {
+    ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
+    "COPYRIGHT.txt": "aec2af079eaa192a66e2171862a25bee023e464cdf60f18899f55eba2b3eca91",
+    "README.md": "daddaa9d80e157b4f677b4f7377014b3ce899f74201398afc8fa1d060df8a13c",
+    "SOURCES.md": "561bddaad76e07d3adc406d6f0e8495df192648f5b34676aaa34f2ebffd49dcb",
+    "THIRD_PARTY_NOTICES.md": "f09052cae6fc5d0a9271bf6248d9ec3c67769b823c25080de976845076065e76",
+    "VALIDATION.json": "d45cc5a3e21dee7c7e8e159b172815288efe99aaa8b239030d8da66dda6a4f6b",
+    "analyze.py": "b587ee5ccf0912f0fc9e753346d9f97ff77a223959ea322bd89bc675b15c2fe0",
+    "index.html": "4a2602b4f30560d86865fa1aab18b798b95c4c3951792a5d34ef0fd2d25e6e96",
+    "raw-summary.json": "d9a2a23121780ab20276683cdb16b4cb84fd3c48ac68bd2f0d0a5c9981b24ec0",
+    "raw_reanalysis.py": "e851d1f775f6f375246512ede81a2691043b54468bf04144005518991e509c76",
+    "summary.json": "e5724d8366edb02a2496b6cafc1ceab9f0ad4263c1d84631720f11ee7cbaf996",
+    "test_demo.py": "a7aded6720c6fa0447d3a68e5a7bd05042a06312c3b7d3c008d2249f7d61418e",
+    "test_raw_reanalysis.py": "0cfaf5a5a77a882888da9837e9b6441e8519e7b0f21e6bc69da9212c6975d94c"
+  },
+  "fixture_sha256": {
+    "raw-summary.json": "d9a2a23121780ab20276683cdb16b4cb84fd3c48ac68bd2f0d0a5c9981b24ec0",
+    "summary.json": "e5724d8366edb02a2496b6cafc1ceab9f0ad4263c1d84631720f11ee7cbaf996"
+  },
+  "expected_page_sha256": "4a2602b4f30560d86865fa1aab18b798b95c4c3951792a5d34ef0fd2d25e6e96",
+  "tested_runtime": {
+    "python": "3.14.7",
+    "node": "23.10.0",
+    "system": "darwin",
+    "architecture": "arm64",
+    "python_validation_mode": "nonoptimized; explicit negative controls as listed"
+  },
+  "validation_record": {
+    "path": "VALIDATION.json",
+    "sha256": "d45cc5a3e21dee7c7e8e159b172815288efe99aaa8b239030d8da66dda6a4f6b"
+  },
+  "scope": "Observed coordinator checks and exact content identities; no independent review clearance, cross-runtime byte guarantee, scientific-source or empirical attestation."
+}

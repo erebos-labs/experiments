@@ -14,7 +14,7 @@ jobs:
       - name: Build and check generated pages
         run: |
           python3 build.py
-          git diff --exit-code -- docs src/phantom/index.html
+          git diff --exit-code -- docs src/phantom/index.html src/flower-evidence/index.html src/route-learning/index.html
       - name: Model, sequence, and audio lifecycle checks
         run: |
           node tests/test_clocks.js
@@ -26,3 +26,17 @@ jobs:
           python3 src/riffle/test_model.py -v
           python3 tests/verify_riffle.py
           python3 -B src/phantom/scripts/verify.py
+      - name: Addition module checks
+        run: |
+          python3 -B src/flower-evidence/test_demo.py
+          node src/route-learning/verify.js
+          python3 -B src/route-learning/verify_equilibrium.py
+          node src/route-learning/test_review.js
+          python3 -B src/route-learning/test_validation.py
+          python3 -B src/square-ice/checks.py
+          python3 -B src/square-ice/verify_loops.py
+          python3 -B src/square-ice/boundary_paths.py
+          python3 -B src/square-ice/test_soft_bound.py
+          python3 -B src/square-ice/test_review.py
+          python3 -B src/square-ice/generate_fixtures.py --check
+          python3 -B tests/check_additions.py

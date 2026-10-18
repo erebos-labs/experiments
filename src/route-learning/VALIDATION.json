@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-18T01:24:56.569003+00:00",
+  "record_kind": "Coordinator-observed local results, normalized for inspection; not independent release clearance, signed attestation, source verification or empirical calibration.",
+  "source_hash_scope": "Source files below exclude PROVENANCE.json and this receipt to avoid circular metadata hashes.",
+  "source_file_sha256": {
+    ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
+    "COPYRIGHT.txt": "aec2af079eaa192a66e2171862a25bee023e464cdf60f18899f55eba2b3eca91",
+    "README.md": "ecfaec6e1edec4a6133f997e0c7bb7e38b7e1579815fcab7bde08cefbed5df93",
+    "SOURCES.md": "9ccafc5f457b86ebf2cefb4a691955dee6032730726591de158e3f9dbdc101b9",
+    "THIRD_PARTY_NOTICES.md": "f09052cae6fc5d0a9271bf6248d9ec3c67769b823c25080de976845076065e76",
+    "app.js": "1322e456a19585ffd43ffc80526600cb272a6461fa4592fb8f05aa9448f10f1d",
+    "build.py": "ea9be33abffa8b6d7152e910f8e76dcc06837e3f0ddd28f32ff5d5206fc2d4aa",
+    "index.html": "8c8b93093234758e8167097af983e400d57a9f5c396ca86d5d2731a410b73944",
+    "model.js": "0aa7f93c81d080833fc7ddaf71fd8dcff304a51a1769c6d01a0555184109ca0d",
+    "page.html": "6dd174526a82ac23bf63661666c30e2ddf4a2f49b5d087657d6ab027c3afe931",
+    "style.css": "259b0a42aa0f1a86fb4553e43c6ad2f508095dec18fcd97d0976b57fc6ff0632",
+    "test_review.js": "3eaf657b718f6a7a9f7522159c01da5dbcb751899c6181801a4d892ffe8aee98",
+    "test_validation.py": "7741331d328626b4fd5606fa46fe1dd96c8a8aba67da66f24b84615ae030b147",
+    "verify.js": "7c1218fc2977fef777901ed6100b5f4927e77325a983948b002fb787e71bde03",
+    "verify_equilibrium.py": "33591e2ae32b9c3cb6a3f5083e39c02e5f9c335b6bb95397c577a9e155949994"
+  },
+  "runtime": {
+    "python": "3.14.7",
+    "node": "23.10.0",
+    "system": "darwin",
+    "architecture": "arm64",
+    "python_validation_mode": "nonoptimized; explicit negative controls as listed"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "build.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "build.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "node",
+        "verify.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "verify_equilibrium.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "node",
+        "test_review.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "test_validation.py"
+      ],
+      "exit_code": 0,
+      "tests_run": 3,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    }
+  ],
+  "observed": {
+    "model_sweep": {
+      "status": "PASS",
+      "cases": 2424,
+      "statesChecked": 293506,
+      "demandGridPointsPerModel": 101,
+      "horizons": {
+        "broadSweep": 120,
+        "oscillationProbe": 400
+      },
+      "maxConservationError": 3.552713678800501e-15,
+      "minimumFlow": 0,
+      "maxStationaryFixedPointError": 1.7763568394002505e-15,
+      "canonicalOscillation": {
+        "model": "original",
+        "demand": 6,
+        "initial": [
+          3,
+          3,
+          0
+        ],
+        "synchronousShortcutRange": 6,
+        "gradualShortcutRangeAt018": 1.0642913149961044,
+        "gradualShortcutRangeAt005": 0.2997348899567063
+      },
+      "checks": [
+        "nonnegativity and finite values",
+        "demand conservation",
+        "zero-demand behavior",
+        "every sampled exact Wardrop allocation is fixed by both update rules",
+        "source numerical cases",
+        "canonical synchronous two-cycle",
+        "smaller constant steps reduce canonical late-window oscillation range",
+        "explicit invalid-call checks reject their enumerated inputs; arithmetic overflow is tested separately"
+      ],
+      "limitations": "Deterministic finite sweeps over two toy models; not empirical calibration or a proof for other networks."
+    },
+    "rational_oracle": {
+      "learning": {
+        "status": "PASS",
+        "independent_rational_KKT_cases": 162,
+        "maximum_flow_error": 4.440892098500626e-16,
+        "method": "Independent rational edge-incidence KKT oracle uses no production formula. The comparison harness imports production output."
+      }
+    },
+    "regression_tests": {
+      "validation_negative_tests": 3,
+      "normal_and_optimized": [
+        "stale generated page rejected",
+        "duplicate build token rejected",
+        "deliberately corrupt equilibrium rejected"
+      ],
+      "negative_flows": "Any negative input rejected; residual placed on largest nonnegative flow",
+      "counterexample": {
+        "model": "original",
+        "demand": 1,
+        "days": 20,
+        "alpha": 0.18,
+        "synchronous_late_span": 0,
+        "gradual_late_span": 0.11855607001782953,
+        "gradual_monotonic": true
+      },
+      "span_inputs": "At most2001states;route index0..2;finite values; oversized/malformed inputs rejected"
+    }
+  },
+  "browser": {
+    "status": "PASS",
+    "product": "HeadlessChrome/149.0.7827.55",
+    "protocol": "1.3",
+    "javascript": "14.9.207.21",
+    "platform": {
+      "system": "darwin",
+      "architecture": "arm64"
+    },
+    "method": "Isolated cached headless Chromium with platform sandbox; private CDP; exact local HTML data URL; external page requests blocked; no real phone/listening/screen-reader test.",
+    "page_sha256": "8c8b93093234758e8167097af983e400d57a9f5c396ca86d5d2731a410b73944",
+    "checks": [
+      "exact page identity, meaningful render and no framework overlay",
+      "demand-one narrative and non-color trace distinction",
+      "next-day control",
+      "narrow chart retains 12px labels and keyboard horizontal scrolling",
+      "390/320 root fits",
+      "no page warnings/exceptions or external page requests"
+    ],
+    "viewports": [
+      [
+        1200,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        844
+      ]
+    ],
+    "page_warning_or_exception_count": 0,
+    "external_page_request_count": 0,
+    "spans": {
+      "sync": "0",
+      "gradual": "0.12",
+      "copy": "With α = 0.18, the same late-window shortcut span is 0.12 units. The synchronous span is 0 units. A span can include a monotonic transient; it is not evidence of oscillation or convergence."
+    },
+    "dashes": [
+      "none",
+      "9px, 6px"
+    ],
+    "mobileChart": {
+      "chartWidth": 820,
+      "axisCssPixels": 12,
+      "scrollWidth": 820,
+      "clientWidth": 251,
+      "keyboardScrollLeft": 40
+    }
+  },
+  "limits": [
+    "Declared minimum runtimes not matrix-tested",
+    "No assistive-technology, physical-device or listening claim",
+    "No current new primary-paper access; source facts retain stated limits",
+    "Full raw validation/account/session logs and raw data are intentionally not bundled; this record supplies inspectable counts and results."
+  ]
+}

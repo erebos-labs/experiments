@@ -1,0 +1,94 @@
+{
+  "contrasts": {
+    "exp1_bee_minus_silence": {
+      "percentage_point_difference": 2.8,
+      "ratio": 1.1718,
+      "relative_percent": 17.18
+    },
+    "exp1_low_minus_silence": {
+      "percentage_point_difference": 3.5,
+      "ratio": 1.2147,
+      "relative_percent": 21.47
+    },
+    "exp2_low_minus_intermediate": {
+      "percentage_point_difference": 3.6,
+      "ratio": 1.2927,
+      "relative_percent": 29.27
+    }
+  },
+  "counterfactual_endpoint_demo": {
+    "flat_proxy_treatment_volume_ul": 0.82323,
+    "proxy_relative_percent": -0.39,
+    "reference": {
+      "concentration_pct": 16.3,
+      "volume_ul": 1.0
+    },
+    "reference_proxy": 0.163,
+    "treatment": {
+      "concentration_pct": 19.8,
+      "volume_ul": 0.82
+    },
+    "treatment_proxy": 0.16236,
+    "warning": "Teaching counterfactual only. The original paper reports no significant treatment decrease in mean nectar volume."
+  },
+  "experiments": {
+    "combined_2014_2015": {
+      "groups": {
+        "Bee": {
+          "mean_brix_pct": 19.1,
+          "n": 42,
+          "se": 0.7
+        },
+        "High": {
+          "mean_brix_pct": 16.0,
+          "n": 72,
+          "se": 0.4
+        },
+        "Low": {
+          "mean_brix_pct": 19.8,
+          "n": 72,
+          "se": 0.6
+        },
+        "Silence": {
+          "mean_brix_pct": 16.3,
+          "n": 71,
+          "se": 0.5
+        }
+      },
+      "label": "Experiment 1, outdoor 2014 + indoor 2015"
+    },
+    "fall_2016": {
+      "groups": {
+        "High": {
+          "mean_brix_pct": 12.8,
+          "n": 49,
+          "se": 0.7
+        },
+        "Intermediate": {
+          "mean_brix_pct": 12.3,
+          "n": 51,
+          "se": 0.77
+        },
+        "Low": {
+          "mean_brix_pct": 15.9,
+          "n": 81,
+          "se": 0.57
+        }
+      },
+      "label": "Experiment 2, indoor fall 2016"
+    }
+  },
+  "kind": "published-summary arithmetic, not raw-data reanalysis",
+  "limits": [
+    "This summary generator does not read flower-level records; raw_reanalysis.py is a separate descriptive archive audit.",
+    "SE values are transcribed from the original paper's figure captions.",
+    "The two experiment panels differ by season and should not be pooled.",
+    "The sugar proxy omits solution density and is not sugar mass in mg."
+  ],
+  "sources": {
+    "critique": "https://doi.org/10.1111/ele.13490",
+    "data": "https://doi.org/10.5061/dryad.6n5h0pb",
+    "original": "https://doi.org/10.1111/ele.13331",
+    "reply": "https://doi.org/10.1111/ele.13534"
+  }
+}

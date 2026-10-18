@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A bounded day-to-day route-learning sequel to The shortcut trap.">
+  <title>The shortcut trap, one day later · Nyx traffic lab</title>
+  <style>:root{--paper:#f3f1e9;--panel:#fffdfa;--ink:#183438;--muted:#5b6c6d;--line:#d7ddd5;--teal:#087c74;--rust:#b74c35;--gold:#805b00;--violet:#66528d;--soft:#e8eee8;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button,select,input[type=range]{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}main{max-width:1180px;margin:auto;padding:28px 30px 42px}header{border-bottom:1px solid var(--line);padding-bottom:20px}.eyebrow{display:flex;justify-content:space-between;gap:16px;font-size:11px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}.eyebrow span{color:var(--muted);font-weight:550;letter-spacing:.07em}h1{font-size:clamp(31px,4.5vw,52px);line-height:1.02;letter-spacing:-.045em;margin:20px 0 12px;max-width:760px}header p{color:var(--muted);font-size:16px;line-height:1.6;max-width:800px;margin:0}.lab{display:grid;grid-template-columns:285px 1fr;gap:20px;margin-top:22px}.controls,.chart-panel,.rule-card,.reference-card{background:var(--panel);border:1px solid var(--line);border-radius:12px}.controls{padding:19px;height:max-content;position:sticky;top:12px}.controls h2,.panel-head h2,.rule-card h2,.reference-card h2,.reading h2{font-size:16px;margin:3px 0 14px}.controls label{display:block;font-size:12px;font-weight:700;margin-top:17px}.controls label:first-of-type{margin-top:13px}select{display:block;width:100%;min-height:43px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);padding:8px;margin-top:7px}.range-label>span:first-child{display:inline-block}.range-label output{float:right;font-size:19px;font-weight:750;font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:var(--teal);margin-top:8px}.caption{font-size:11px;color:var(--muted);line-height:1.5;margin:5px 0 0}.button-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:18px}.button-row button{min-height:42px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);padding:7px 5px;font-size:12px}.button-row button:hover{background:var(--soft)}.button-row button[aria-pressed=true]{background:var(--ink);color:white}.results{min-width:0}.chart-panel{padding:18px 20px}.panel-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}.panel-head h2{margin-bottom:0}.kicker,.number{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--teal);font-size:11px;letter-spacing:.06em;text-transform:uppercase}.day-badge{background:var(--soft);border-radius:999px;padding:8px 12px;font-size:12px;white-space:nowrap}.day-badge strong{font-size:17px;margin-left:4px}.chart{width:100%;height:auto;display:block;margin-top:5px}.axis-text{fill:var(--muted);font-size:11px}.grid-line{stroke:var(--line);stroke-width:1}.trace{fill:none;stroke-width:3.5;stroke-linejoin:round;stroke-linecap:round}.trace.sync{stroke:var(--rust)}.trace.gradual{stroke:var(--teal)}.reference-line{stroke:var(--ink);stroke-width:2;stroke-dasharray:7 7}.selector-line{stroke:var(--gold);stroke-width:2;stroke-dasharray:3 5}.point{stroke:var(--panel);stroke-width:3}.legend{display:flex;gap:17px;flex-wrap:wrap;font-size:11px;color:var(--muted)}.legend span{display:flex;gap:6px;align-items:center}.legend i{display:block;width:18px;height:3px;background:var(--rust)}.legend i.gradual{background:var(--teal)}.legend i.reference{height:0;border-top:2px dashed var(--ink);background:none}.scrubber{display:grid;grid-template-columns:92px 1fr;align-items:center;margin-top:12px;color:var(--muted);font-size:11px}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.rule-card{padding:17px;border-top-width:5px}.sync-card{border-top-color:var(--rust)}.gradual-card{border-top-color:var(--teal)}.route-bars{display:grid;gap:9px;margin:14px 0}.bar-row{display:grid;grid-template-columns:84px 1fr 54px;gap:8px;align-items:center;font-size:11px}.bar-track{height:9px;background:var(--soft);border-radius:9px;overflow:hidden}.bar-fill{height:100%;background:var(--violet);border-radius:9px}.bar-row:nth-child(1) .bar-fill{background:var(--teal)}.bar-row:nth-child(3) .bar-fill{background:var(--gold)}.bar-value{text-align:right;font-variant-numeric:tabular-nums}.rule-card dl{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin:16px 0 0;border-top:1px solid var(--line);padding-top:13px}.rule-card dl div{min-width:0}.rule-card dt{font-size:10px;color:var(--muted);line-height:1.3}.rule-card dd{font-size:16px;font-weight:700;margin:5px 0 0;font-variant-numeric:tabular-nums}.reference-card{padding:16px 18px;margin-top:14px;display:grid;grid-template-columns:245px 1fr;gap:18px;align-items:center}.reference-card h2{margin-bottom:0}.reference-card p{color:var(--muted);font-size:12px;line-height:1.6;margin:0}.reading{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:25px 0}.reading h2{margin:8px 0}.reading p,details p{color:var(--muted);font-size:13px;line-height:1.65;margin:0}.number{color:var(--gold)}details{border-top:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font-size:13px;font-weight:750;min-height:31px}details p{max-width:920px;margin:9px 0}.formula{background:var(--soft);border-radius:6px;padding:11px 13px}code{background:#e5e9e1;border-radius:3px;padding:2px 4px;font-size:12px}a{color:var(--teal);text-underline-offset:3px}footer{border-top:1px solid var(--line);padding-top:17px;color:var(--muted);font-size:11px;line-height:1.5}noscript{display:block;background:#fae7df;padding:15px;margin-top:15px}@media(max-width:820px){main{padding:20px 16px 32px}.lab{grid-template-columns:1fr}.controls{position:static}.comparison{grid-template-columns:1fr}.reference-card{grid-template-columns:1fr}.reading{grid-template-columns:1fr;gap:17px}.rule-card dl{grid-template-columns:1fr 1fr 1fr}}@media(max-width:520px){.eyebrow{font-size:9px}.eyebrow span{font-size:8px}.chart-panel{padding:15px 10px}.button-row{grid-template-columns:1fr}.rule-card dl{grid-template-columns:1fr}.bar-row{grid-template-columns:76px 1fr 45px}.scrubber{grid-template-columns:1fr}.comparison{gap:10px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.chart-scroll{max-width:100%;overflow-x:auto}.chart{min-width:820px}.axis-text{font-size:12px}.trace.gradual{stroke-dasharray:9 6}.legend i.gradual{height:0;border-top:3px dashed var(--teal);background:none}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">Nyx / traffic lab <span>02 · route learning · offline prototype</span></div>
+    <h1>The shortcut trap, one day later</h1>
+    <p>Yesterday’s quickest route becomes today’s temptation. Compare a crowd that switches in lockstep with one that adapts a fraction at a time—on the same toy costs as the original experiment.</p>
+  </header>
+  <noscript>This experiment needs JavaScript. All code is local; no network connection is needed.</noscript>
+
+  <section class="lab" aria-label="Route-learning controls and results">
+    <aside class="controls">
+      <h2>Set the thought experiment</h2>
+      <label>Cost model
+        <select id="model">
+          <option value="original">Braess’s original model</option>
+          <option value="teaching">Teaching model</option>
+        </select>
+      </label>
+      <label class="range-label" for="demand"><span>Fixed demand</span><output id="demand-out" for="demand">6</output>
+        <input id="demand" type="range" min="0" max="20" step="0.25" value="6">
+      </label>
+      <p class="caption" id="demand-caption"></p>
+      <label>Day 0 allocation
+        <select id="start">
+          <option value="pre">Even outer-route split; shortcut empty</option>
+          <option value="perturbed">Exact equilibrium, gently perturbed</option>
+          <option value="equilibrium">Exact stationary equilibrium</option>
+        </select>
+      </label>
+      <label class="range-label" for="step"><span>Gradual reconsideration share</span><output id="step-out" for="step">18%</output>
+        <input id="step" type="range" min="0.05" max="0.5" step="0.01" value="0.18">
+      </label>
+      <p class="caption">A share α moves toward yesterday’s fastest route set each day. The synchronous trace uses α = 100%.</p>
+      <label>Horizon
+        <select id="horizon">
+          <option value="20">20 days</option>
+          <option value="40" selected>40 days</option>
+          <option value="120">120 days</option>
+        </select>
+      </label>
+      <div class="button-row">
+        <button id="reset" type="button">Reset</button>
+        <button id="next" type="button">Next day</button>
+        <button id="play" type="button" aria-pressed="false">Play</button>
+      </div>
+      <p class="caption">Playback only advances the displayed recurrence. It does not simulate vehicles, roads, queues, or human behavior.</p>
+    </aside>
+
+    <div class="results">
+      <section class="chart-panel" aria-labelledby="trace-heading">
+        <div class="panel-head">
+          <div><span class="kicker">Shortcut-route flow</span><h2 id="trace-heading">Two update rules, same yesterday</h2></div>
+          <span class="day-badge">Day <strong id="day-label">0</strong></span>
+        </div>
+        <div class="chart-scroll" role="region" aria-label="Scrollable route-flow chart" tabindex="0">
+        <svg id="chart" class="chart" viewBox="0 0 820 340" role="img" aria-labelledby="chart-title chart-desc">
+          <title id="chart-title">Shortcut-route flow over days</title><desc id="chart-desc"></desc>
+          <g id="chart-content"></g>
+        </svg>
+        </div>
+        <div class="legend" aria-hidden="true"><span><i class="sync"></i>Synchronous</span><span><i class="gradual"></i>Gradual</span><span><i class="reference"></i>Exact stationary reference</span></div>
+        <label class="scrubber"><span>Inspect a day</span><input id="day" type="range" min="0" max="40" step="1" value="0"></label>
+      </section>
+
+      <section class="comparison" aria-label="State comparison at selected day">
+        <article class="rule-card sync-card">
+          <span class="kicker">100% reconsider</span><h2>Synchronous switching</h2>
+          <div class="route-bars" id="sync-bars"></div>
+          <dl><div><dt>Mean time</dt><dd id="sync-mean"></dd></div><div><dt>Largest switching gain</dt><dd id="sync-regret"></dd></div><div><dt>Late shortcut range</dt><dd id="sync-range"></dd></div></dl>
+        </article>
+        <article class="rule-card gradual-card">
+          <span class="kicker" id="gradual-kicker">18% reconsider</span><h2>Gradual switching</h2>
+          <div class="route-bars" id="gradual-bars"></div>
+          <dl><div><dt>Mean time</dt><dd id="gradual-mean"></dd></div><div><dt>Largest switching gain</dt><dd id="gradual-regret"></dd></div><div><dt>Late shortcut range</dt><dd id="gradual-range"></dd></div></dl>
+        </article>
+      </section>
+
+      <section class="reference-card">
+        <div><span class="kicker">Reference, not forecast</span><h2>Exact stationary nonatomic equilibrium</h2></div>
+        <p id="reference-copy"></p>
+      </section>
+    </div>
+  </section>
+
+  <section class="reading">
+    <article><span class="number">01 / LOCKSTEP</span><h2>Fastest yesterday can be crowded today</h2><p id="lockstep-copy"></p></article>
+    <article><span class="number">02 / STEP SIZE</span><h2>Compare the finite window</h2><p id="step-copy"></p></article>
+    <article><span class="number">03 / EQUILIBRIUM</span><h2>A fixed point is not a journey</h2><p>The exact Wardrop allocation is a stationary comparison: all used routes tie for minimum cost at those fixed flows. It does not specify how a population learns, whether it converges, or how quickly.</p></article>
+  </section>
+
+  <details>
+    <summary>Update rule, tie handling, and invariants</summary>
+    <p>Let <code>fᵗ</code> be the three route flows and <code>c(fᵗ)</code> the route costs generated by that day’s flow. Let <code>Mᵗ</code> contain every route whose cost is within <code>10⁻⁹ × max(1, |minimum cost|)</code> of the minimum. The target <code>bᵗ</code> moves all demand onto <code>Mᵗ</code>, preserving the current proportions among tied winners. If no flow is already on the tied winners, it splits demand evenly among them.</p>
+    <p class="formula">Synchronous: <code>fᵗ⁺¹ = bᵗ</code><br>Gradual: <code>fᵗ⁺¹ = (1 − α)fᵗ + αbᵗ</code>, with the displayed constant step <code>0 &lt; α ≤ 1</code>.</p>
+    <p>Both updates are convex combinations of nonnegative allocations with the same total demand, so they preserve nonnegativity and conservation. At zero demand every flow remains zero and mean journey time is undefined. A stationary Wardrop allocation stays fixed because all of its used flow is already on tied-fastest routes; near-ties outside the tolerance are not treated as ties.</p>
+    <p>This is a deliberately stark deterministic best-response recurrence. It omits perception errors, memory beyond one day, habit, heterogeneous information, finite travelers, within-day queues, signals, capacity, departure-time choice, spillback, and induced demand. Constant-step gradual switching can chatter around a discontinuous best-route boundary; a smaller step need not produce a smaller finite-window span or imply convergence.</p>
+  </details>
+
+  <details>
+    <summary>Primary sources and what this prototype borrows</summary>
+    <p><a href="https://eprints.whiterose.ac.uk/id/eprint/84674/1/Watling%20%26%20Hazelton%202003.pdf" target="_blank" rel="noopener">Watling &amp; Hazelton (2003), The Dynamics and Equilibria of Day-to-Day Assignment Models</a> distinguishes stationary equilibrium from explicit day-to-day processes based on prior experience and emphasizes that discrete-time convergence depends on adjustment rate, cost sensitivity, and the learning rule. See Section 3, PDF pages 10–16, especially equation (6) and the closing summary. Our recurrence is simpler than its perception-learning examples.</p>
+    <p><a href="https://doi.org/10.1016/0191-2615(84)90003-1" target="_blank" rel="noopener">Horowitz (1984), The Stability of Stochastic Equilibrium in a Two-Link Transportation Network</a> is a related two-link stochastic stability study. Its title, author and DOI are verified; its detailed equations and results are not reconstructed here. The displayed two-cycle is calculated from our explicitly stated recurrence.</p>
+    <p><a href="https://link.springer.com/article/10.1007/BF02031940" target="_blank" rel="noopener">Smith &amp; Wisten (1995), A Continuous Day-to-Day Traffic Assignment Model…</a> concerns continuous day-to-day assignment and existence of dynamic equilibrium, as its verified title states. Our discrete aggregate rule is an authored teaching simplification, not a replication of its model.</p>
+    <p><a href="https://homepage.rub.de/Dietrich.Braess/Paradox-BNW.pdf" target="_blank" rel="noopener">Braess, Nagurney &amp; Wakolbinger (2005 translation of 1968)</a> supplies the original affine toy costs (p. 448, equation (3.6), Figure 3) and stationary six-unit example (p. 449, Section 4). The day-to-day recurrence and visual comparison here are new adaptations; no claim of original traffic mathematics is made.</p>
+  </details>
+
+  <footer>Isolated local sequel prototype · 17 October 2026 · Runs offline after loading. Source links open only when selected.</footer>
+</main>
+<script>/* Day-to-day route learning on the same three-route Braess toy models. */
+(function (root) {
+  'use strict';
+
+  const MODELS = Object.freeze({
+    teaching: Object.freeze({
+      id: 'teaching', name: 'Teaching model', a: 10, b: 45, k: 0, s: 0, h: 0,
+      max: 12, initial: 4, unit: 'min'
+    }),
+    original: Object.freeze({
+      id: 'original', name: 'Braess’s original model', a: 10, b: 50, k: 1, s: 10, h: 1,
+      max: 20, initial: 6, unit: 'time units'
+    })
+  });
+
+  const clamp = (value, low, high) => Math.max(low, Math.min(high, value));
+
+  function validate(model, demand, flows) {
+    if (!model || !Number.isFinite(demand) || demand < 0) {
+      throw new RangeError('Model and nonnegative finite demand are required');
+    }
+    if (!Array.isArray(flows) || flows.length !== 3 || flows.some(x => !Number.isFinite(x) || x < 0)) {
+      throw new RangeError('Three nonnegative finite route flows are required');
+    }
+    const total = flows.reduce((sum, x) => sum + x, 0);
+    if (Math.abs(total - demand) > 1e-8 * Math.max(1, demand)) {
+      throw new RangeError('Route flows must sum to demand');
+    }
+  }
+
+  function measure(model, demand, flows) {
+    validate(model, demand, flows);
+    const [upper, lower, cross] = flows.map(x => Math.max(0, x));
+    const {a, b, k, s, h} = model;
+    const edges = [upper + cross, upper, lower, lower + cross, cross];
+    const edgeTimes = [
+      a * edges[0], b + k * edges[1], b + k * edges[2], a * edges[3], s + h * edges[4]
+    ];
+    const costs = [
+      edgeTimes[0] + edgeTimes[1],
+      edgeTimes[2] + edgeTimes[3],
+      edgeTimes[0] + edgeTimes[4] + edgeTimes[3]
+    ];
+    const cheapest = Math.min(...costs);
+    const totalTime = upper * costs[0] + lower * costs[1] + cross * costs[2];
+    const regret = demand === 0 ? 0 : Math.max(0, ...[upper, lower, cross].map((flow, i) => (
+      flow > 1e-10 ? costs[i] - cheapest : 0
+    )));
+    if (![...edges, ...edgeTimes, ...costs, totalTime, regret].every(Number.isFinite)
+        || (demand > 0 && !Number.isFinite(totalTime / demand))) {
+      throw new RangeError('Derived traffic arithmetic exceeds finite numeric range');
+    }
+    return {
+      flows: [upper, lower, cross], edges, edgeTimes, costs, demand,
+      totalTime, mean: demand === 0 ? null : totalTime / demand, regret
+    };
+  }
+
+  function exactEquilibrium(model, demand) {
+    if (!model || !Number.isFinite(demand) || demand < 0) {
+      throw new RangeError('Model and nonnegative finite demand are required');
+    }
+    const {a, b, k, s, h} = model;
+    const cross = clamp((2 * (b - s) - (a - k) * demand) / (a + k + 2 * h), 0, demand);
+    const side = (demand - cross) / 2;
+    return measure(model, demand, [side, side, cross]);
+  }
+
+  function preShortcutSplit(demand) {
+    if (!Number.isFinite(demand) || demand < 0) throw new RangeError('Invalid demand');
+    return [demand / 2, demand / 2, 0];
+  }
+
+  function perturbedEquilibrium(model, demand) {
+    const flows = exactEquilibrium(model, demand).flows.slice();
+    if (demand === 0) return flows;
+    const donor = flows.indexOf(Math.max(...flows));
+    const receiver = (donor + 1) % flows.length;
+    const delta = Math.min(0.03 * demand, flows[donor] / 2);
+    flows[donor] -= delta;
+    flows[receiver] += delta;
+    return flows;
+  }
+
+  function fastestTarget(costs, demand, currentFlows, tieTolerance = 1e-9) {
+    if (!Array.isArray(costs) || costs.length !== 3 || costs.some(x => !Number.isFinite(x))) {
+      throw new RangeError('Three finite route costs are required');
+    }
+    if (!Array.isArray(currentFlows) || currentFlows.length !== 3 || currentFlows.some(x => !Number.isFinite(x) || x < 0)) {
+      throw new RangeError('Three nonnegative current flows are required');
+    }
+    if (!Number.isFinite(demand) || demand < 0 || !Number.isFinite(tieTolerance) || tieTolerance < 0) {
+      throw new RangeError('Invalid demand or tie tolerance');
+    }
+    const best = Math.min(...costs);
+    const tolerance = tieTolerance * Math.max(1, Math.abs(best));
+    const winners = costs.map((cost, i) => Math.abs(cost - best) <= tolerance ? i : -1).filter(i => i >= 0);
+    const winningFlow = winners.reduce((sum, i) => sum + currentFlows[i], 0);
+    if (winningFlow > 0) {
+      return costs.map((_, i) => winners.includes(i) ? demand * currentFlows[i] / winningFlow : 0);
+    }
+    const share = winners.length ? demand / winners.length : 0;
+    return costs.map((_, i) => winners.includes(i) ? share : 0);
+  }
+
+  function nextDay(model, demand, flows, mode, step = 0.18, tieTolerance = 1e-9) {
+    const current = measure(model, demand, flows);
+    if (!['synchronous', 'gradual'].includes(mode)) throw new RangeError('Unknown update mode');
+    if (!Number.isFinite(step) || step <= 0 || step > 1) throw new RangeError('Step must be in (0, 1]');
+    const target = fastestTarget(current.costs, demand, current.flows, tieTolerance);
+    const alpha = mode === 'synchronous' ? 1 : step;
+    const updated = current.flows.map((flow, i) => (1 - alpha) * flow + alpha * target[i]);
+    const mismatch = demand - updated.reduce((sum, x) => sum + x, 0);
+    updated[updated.indexOf(Math.max(...updated))] += mismatch;
+    return {state: measure(model, demand, updated), target, alpha};
+  }
+
+  function simulate(model, demand, initialFlows, options = {}) {
+    const days = options.days ?? 40;
+    const mode = options.mode ?? 'synchronous';
+    const step = options.step ?? 0.18;
+    const tieTolerance = options.tieTolerance ?? 1e-9;
+    if (!Number.isInteger(days) || days < 0 || days > 2000) throw new RangeError('Days must be an integer from 0 to 2000');
+    const states = [measure(model, demand, initialFlows)];
+    const targets = [];
+    for (let day = 0; day < days; day += 1) {
+      const result = nextDay(model, demand, states[states.length - 1].flows, mode, step, tieTolerance);
+      targets.push(result.target);
+      states.push(result.state);
+    }
+    return {mode, step: mode === 'synchronous' ? 1 : step, tieTolerance, states, targets};
+  }
+
+  function lateWindowSpan(trace, routeIndex = 2) {
+    if (!trace || !Array.isArray(trace.states) || trace.states.length > 2001
+        || !Number.isInteger(routeIndex) || routeIndex < 0 || routeIndex > 2) {
+      throw new RangeError('A trace of at most 2001 states and route index 0..2 is required');
+    }
+    let low = Infinity, high = -Infinity;
+    for (let i = Math.floor(trace.states.length / 2); i < trace.states.length; i += 1) {
+      const value = trace.states[i]?.flows?.[routeIndex];
+      if (!Number.isFinite(value)) throw new RangeError('Trace flows must be finite');
+      low = Math.min(low, value); high = Math.max(high, value);
+    }
+    return low === Infinity ? 0 : high - low;
+  }
+  // Compatibility alias; a range does not establish oscillation.
+  const oscillationRange = lateWindowSpan;
+
+  const api = {
+    MODELS, measure, exactEquilibrium, preShortcutSplit, perturbedEquilibrium,
+    fastestTarget, nextDay, simulate, lateWindowSpan, oscillationRange
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else root.RouteLearning = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+</script>
+<script>(function () {
+  'use strict';
+  const {
+    MODELS, exactEquilibrium, preShortcutSplit, perturbedEquilibrium, simulate, lateWindowSpan
+  } = RouteLearning;
+  const $ = id => document.getElementById(id);
+  const routeNames = ['S → A → T', 'S → B → T', 'S → A → B → T'];
+  const state = {model: 'original', demand: 6, step: 0.18, days: 40, start: 'pre', day: 0, timer: null};
+  const num = (x, digits = 2) => Number(x).toLocaleString('en-US', {maximumFractionDigits: digits});
+
+  function initialFlows(model) {
+    if (state.start === 'equilibrium') return exactEquilibrium(model, state.demand).flows;
+    if (state.start === 'perturbed') return perturbedEquilibrium(model, state.demand);
+    return preShortcutSplit(state.demand);
+  }
+
+  function traces() {
+    const model = MODELS[state.model];
+    const initial = initialFlows(model);
+    return {
+      model,
+      equilibrium: exactEquilibrium(model, state.demand),
+      sync: simulate(model, state.demand, initial, {days: state.days, mode: 'synchronous'}),
+      gradual: simulate(model, state.demand, initial, {days: state.days, mode: 'gradual', step: state.step})
+    };
+  }
+
+  function pathFor(trace, x, y) {
+    return trace.states.map((point, i) => `${i ? 'L' : 'M'}${x(i).toFixed(2)} ${y(point.flows[2]).toFixed(2)}`).join(' ');
+  }
+
+  function drawChart(data) {
+    const W = 820, H = 340, L = 52, R = 20, T = 25, B = 45;
+    const w = W - L - R, h = H - T - B;
+    const ymax = Math.max(1, state.demand);
+    const x = day => L + day / Math.max(1, state.days) * w;
+    const y = flow => T + h - flow / ymax * h;
+    let html = '';
+    for (let i = 0; i <= 4; i += 1) {
+      const flow = ymax * i / 4;
+      html += `<line class="grid-line" x1="${L}" x2="${W - R}" y1="${y(flow)}" y2="${y(flow)}"/><text class="axis-text" x="${L - 9}" y="${y(flow) + 4}" text-anchor="end">${num(flow)}</text>`;
+    }
+    for (let i = 0; i <= 4; i += 1) {
+      const day = Math.round(state.days * i / 4);
+      html += `<text class="axis-text" x="${x(day)}" y="${H - 15}" text-anchor="middle">${day}</text>`;
+    }
+    html += `<text class="axis-text" x="${L}" y="14">flow</text><text class="axis-text" x="${W - R}" y="${H - 4}" text-anchor="end">day</text>`;
+    html += `<line class="reference-line" x1="${L}" x2="${W - R}" y1="${y(data.equilibrium.flows[2])}" y2="${y(data.equilibrium.flows[2])}"/>`;
+    html += `<path class="trace sync" d="${pathFor(data.sync, x, y)}"/><path class="trace gradual" d="${pathFor(data.gradual, x, y)}"/>`;
+    html += `<line class="selector-line" x1="${x(state.day)}" x2="${x(state.day)}" y1="${T}" y2="${H - B}"/>`;
+    html += `<circle class="point" cx="${x(state.day)}" cy="${y(data.sync.states[state.day].flows[2])}" r="5" fill="#b74c35"/><circle class="point" cx="${x(state.day)}" cy="${y(data.gradual.states[state.day].flows[2])}" r="5" fill="#087c74"/>`;
+    $('chart-content').innerHTML = html;
+    $('chart-desc').textContent = `${data.model.name}; fixed demand ${num(state.demand)}. Shortcut-route flow over ${state.days} day-to-day updates. The solid synchronous trace uses a full step; the dashed gradual trace uses ${num(state.step * 100, 0)} percent. The exact stationary equilibrium shortcut flow is ${num(data.equilibrium.flows[2])}. Selected day ${state.day}.`;
+  }
+
+  function drawBars(id, point) {
+    $(id).innerHTML = point.flows.map((flow, i) => `<div class="bar-row"><span>${routeNames[i]}</span><span class="bar-track"><span class="bar-fill" style="width:${state.demand === 0 ? 0 : flow / state.demand * 100}%"></span></span><span class="bar-value">${num(flow)}</span></div>`).join('');
+  }
+
+  function metric(value, unit) {
+    return value === null ? '—' : `${num(value)} <small>${unit}</small>`;
+  }
+
+  function render() {
+    const data = traces();
+    state.day = Math.min(state.day, state.days);
+    $('model').value = state.model;
+    $('demand').max = data.model.max;
+    $('demand').value = state.demand;
+    $('demand-out').value = num(state.demand);
+    $('step').value = state.step;
+    $('step-out').value = `${num(state.step * 100, 0)}%`;
+    $('start').value = state.start;
+    $('horizon').value = String(state.days);
+    $('day').max = state.days;
+    $('day').value = state.day;
+    $('day-label').textContent = state.day;
+    $('gradual-kicker').textContent = `${num(state.step * 100, 0)}% reconsider`;
+    $('demand-caption').textContent = data.model.id === 'original' ? 'Abstract flow units; original affine costs. Not a count of real vehicles.' : 'One flow unit represents one thousand modeled drivers in the teaching rescaling.';
+    drawChart(data);
+    const syncPoint = data.sync.states[state.day], gradualPoint = data.gradual.states[state.day];
+    drawBars('sync-bars', syncPoint); drawBars('gradual-bars', gradualPoint);
+    $('sync-mean').innerHTML = metric(syncPoint.mean, data.model.unit);
+    $('gradual-mean').innerHTML = metric(gradualPoint.mean, data.model.unit);
+    $('sync-regret').innerHTML = metric(syncPoint.regret, data.model.unit);
+    $('gradual-regret').innerHTML = metric(gradualPoint.regret, data.model.unit);
+    $('sync-range').textContent = num(lateWindowSpan(data.sync));
+    $('gradual-range').textContent = num(lateWindowSpan(data.gradual));
+    $('reference-copy').textContent = state.demand === 0
+      ? 'Zero demand: every route flow is zero, and no mean journey time is defined.'
+      : `At demand ${num(state.demand)}, the exact equilibrium route flows are ${data.equilibrium.flows.map(x => num(x)).join(' / ')}, all used routes are cheapest, and mean time is ${num(data.equilibrium.mean)} ${data.model.unit}. This fixed point is computed analytically, not reached by silently replacing either learning trace.`;
+    $('lockstep-copy').textContent = `Over the latter half of this ${state.days}-day window, shortcut flow spans ${num(lateWindowSpan(data.sync))} units under synchronous switching. At the original six-unit example, the pre-shortcut split and all-shortcut allocation alternate exactly.`;
+    $('step-copy').textContent = `With α = ${num(state.step, 2)}, the same late-window shortcut span is ${num(lateWindowSpan(data.gradual))} units. The synchronous span is ${num(lateWindowSpan(data.sync))} units. A span can include a monotonic transient; it is not evidence of oscillation or convergence.`;
+  }
+
+  function stop() {
+    if (state.timer !== null) clearInterval(state.timer);
+    state.timer = null; $('play').textContent = 'Play'; $('play').setAttribute('aria-pressed', 'false');
+  }
+
+  $('model').addEventListener('change', () => {
+    stop(); state.model = $('model').value; state.demand = MODELS[state.model].initial; state.day = 0; render();
+  });
+  $('demand').addEventListener('input', () => { stop(); state.demand = Number($('demand').value); state.day = 0; render(); });
+  $('step').addEventListener('input', () => { stop(); state.step = Number($('step').value); render(); });
+  $('start').addEventListener('change', () => { stop(); state.start = $('start').value; state.day = 0; render(); });
+  $('horizon').addEventListener('change', () => { stop(); state.days = Number($('horizon').value); state.day = Math.min(state.day, state.days); render(); });
+  $('day').addEventListener('input', () => { stop(); state.day = Number($('day').value); render(); });
+  $('reset').addEventListener('click', () => { stop(); Object.assign(state, {model: 'original', demand: 6, step: 0.18, days: 40, start: 'pre', day: 0}); render(); });
+  $('next').addEventListener('click', () => { stop(); state.day = state.day >= state.days ? 0 : state.day + 1; render(); });
+  $('play').addEventListener('click', () => {
+    if (state.timer !== null) { stop(); return; }
+    $('play').textContent = 'Pause'; $('play').setAttribute('aria-pressed', 'true');
+    state.timer = setInterval(() => {
+      if (state.day >= state.days) { stop(); return; }
+      state.day += 1; render();
+    }, 550);
+  });
+  addEventListener('pagehide', stop);
+  render();
+})();
+</script>
+</body>
+</html>

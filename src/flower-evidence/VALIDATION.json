@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-18T01:24:56.624071+00:00",
+  "record_kind": "Coordinator-observed local results, normalized for inspection; not independent release clearance, signed attestation, source verification or empirical calibration.",
+  "source_hash_scope": "Source files below exclude PROVENANCE.json and this receipt to avoid circular metadata hashes.",
+  "source_file_sha256": {
+    ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
+    "COPYRIGHT.txt": "aec2af079eaa192a66e2171862a25bee023e464cdf60f18899f55eba2b3eca91",
+    "README.md": "daddaa9d80e157b4f677b4f7377014b3ce899f74201398afc8fa1d060df8a13c",
+    "SOURCES.md": "561bddaad76e07d3adc406d6f0e8495df192648f5b34676aaa34f2ebffd49dcb",
+    "THIRD_PARTY_NOTICES.md": "f09052cae6fc5d0a9271bf6248d9ec3c67769b823c25080de976845076065e76",
+    "analyze.py": "b587ee5ccf0912f0fc9e753346d9f97ff77a223959ea322bd89bc675b15c2fe0",
+    "index.html": "4a2602b4f30560d86865fa1aab18b798b95c4c3951792a5d34ef0fd2d25e6e96",
+    "raw-summary.json": "d9a2a23121780ab20276683cdb16b4cb84fd3c48ac68bd2f0d0a5c9981b24ec0",
+    "raw_reanalysis.py": "e851d1f775f6f375246512ede81a2691043b54468bf04144005518991e509c76",
+    "summary.json": "e5724d8366edb02a2496b6cafc1ceab9f0ad4263c1d84631720f11ee7cbaf996",
+    "test_demo.py": "a7aded6720c6fa0447d3a68e5a7bd05042a06312c3b7d3c008d2249f7d61418e",
+    "test_raw_reanalysis.py": "0cfaf5a5a77a882888da9837e9b6441e8519e7b0f21e6bc69da9212c6975d94c"
+  },
+  "runtime": {
+    "python": "3.14.7",
+    "node": "23.10.0",
+    "system": "darwin",
+    "architecture": "arm64",
+    "python_validation_mode": "nonoptimized; explicit negative controls as listed"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "test_demo.py"
+      ],
+      "exit_code": 0,
+      "tests_run": 8,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "test_raw_reanalysis.py",
+        "--require-data"
+      ],
+      "exit_code": 0,
+      "tests_run": 10,
+      "tests_failed": 0,
+      "tests_skipped": 0
+    }
+  ],
+  "observed": {
+    "demo_tests": 8,
+    "strict_raw_tests": 10,
+    "strict_raw_skips": 0,
+    "source_archive": {
+      "doi": "10.5061/dryad.6n5h0pb",
+      "bytes": 69019,
+      "md5": "a2a2e6a3252b023fe46ef46b507f1145",
+      "sha256": "2d870d1c4f909c4eda14baf656d46c441a97a738e8b34337604dd775840fe314",
+      "parsed_bytes_bound_to_archive": true
+    },
+    "cohort_rows": {
+      "summer_2014_outdoor_1a": 90,
+      "summer_2015_indoor_1b": 167,
+      "summer_2014_2015_combined": 257,
+      "fall_2016_indoor": 298,
+      "spring_2016_indoor": 112
+    },
+    "computed_statistic": "row_naive_se = sample SD / sqrt(row count); dependence unknown, not independent-plant uncertainty",
+    "numeric_continuity": 432,
+    "negative_controls": [
+      "Absent pinned input refuses evidence-validation PASS",
+      "Modified workbook rejected",
+      "Inspect uses bound bytes after deterministic path replacement"
+    ],
+    "summary_byte_parity": "test_demo.py compares exact sorted generator bytes"
+  },
+  "browser": {
+    "status": "PASS",
+    "product": "HeadlessChrome/149.0.7827.55",
+    "protocol": "1.3",
+    "javascript": "14.9.207.21",
+    "platform": {
+      "system": "darwin",
+      "architecture": "arm64"
+    },
+    "method": "Isolated cached headless Chromium with platform sandbox; private CDP; exact local HTML data URL; external page requests blocked; no real phone/listening/screen-reader test.",
+    "page_sha256": "4a2602b4f30560d86865fa1aab18b798b95c4c3951792a5d34ef0fd2d25e6e96",
+    "checks": [
+      "exact page identity, meaningful render and no framework overlay",
+      "row-naive versus published SE and unknown mechanical status",
+      "hypothetical endpoint still updates",
+      "390/320 root fits",
+      "no page warnings/exceptions or external page requests"
+    ],
+    "viewports": [
+      [
+        1200,
+        900
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        844
+      ]
+    ],
+    "page_warning_or_exception_count": 0,
+    "external_page_request_count": 0
+  },
+  "limits": [
+    "Declared minimum runtimes not matrix-tested",
+    "No assistive-technology, physical-device or listening claim",
+    "No current new primary-paper access; source facts retain stated limits",
+    "Full raw validation/account/session logs and raw data are intentionally not bundled; this record supplies inspectable counts and results."
+  ]
+}

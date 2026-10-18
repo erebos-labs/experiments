@@ -1,0 +1,1017 @@
+{
+  "kind": "descriptive raw-data reanalysis; no independence-assuming p-values",
+  "source_archive": {
+    "doi": "10.5061/dryad.6n5h0pb",
+    "bytes": 69019,
+    "md5": "a2a2e6a3252b023fe46ef46b507f1145",
+    "sha256": "2d870d1c4f909c4eda14baf656d46c441a97a738e8b34337604dd775840fe314",
+    "parsed_bytes_bound_to_archive": true
+  },
+  "limits": [
+    "The spreadsheets contain no stable plant identifier, so rows cannot safely be treated as independent plants for new hypothesis tests.",
+    "Means, medians, row-naive s/sqrt(row count), and unadjusted descriptive contrasts are reported. Clustering and repeated-measure effects are unknown; row-naive values are not independent-plant uncertainty estimates. No p-values are recomputed.",
+    "SugAmount fields are the deposited density-corrected sugar-mass values; formulas are not re-evaluated.",
+    "The original article and the 2020 critique used different inferential models; this summary does not adjudicate those models."
+  ],
+  "published_value_checks": [
+    {
+      "cohort": "summer_2014_2015_combined",
+      "group": "Low",
+      "raw_mean": 19.77083333,
+      "published_one_decimal": 19.8,
+      "matches_after_rounding": true
+    },
+    {
+      "cohort": "summer_2014_2015_combined",
+      "group": "Bee",
+      "raw_mean": 19.14285714,
+      "published_one_decimal": 19.1,
+      "matches_after_rounding": true
+    },
+    {
+      "cohort": "summer_2014_2015_combined",
+      "group": "Silent",
+      "raw_mean": 16.34507042,
+      "published_one_decimal": 16.3,
+      "matches_after_rounding": true
+    },
+    {
+      "cohort": "summer_2014_2015_combined",
+      "group": "High",
+      "raw_mean": 15.97222222,
+      "published_one_decimal": 16.0,
+      "matches_after_rounding": true
+    },
+    {
+      "cohort": "fall_2016_indoor",
+      "group": "Low",
+      "raw_mean": 15.90123457,
+      "published_one_decimal": 15.9,
+      "matches_after_rounding": true
+    },
+    {
+      "cohort": "fall_2016_indoor",
+      "group": "High",
+      "raw_mean": 12.2755102,
+      "published_one_decimal": 12.8,
+      "matches_after_rounding": false
+    },
+    {
+      "cohort": "fall_2016_indoor",
+      "group": "Intermediate",
+      "raw_mean": 12.7745098,
+      "published_one_decimal": 12.3,
+      "matches_after_rounding": false
+    }
+  ],
+  "caption_mismatch": {
+    "observation": "The deposited fall-2016 High and Intermediate numerical pairs cross-match the article's Figure 2 caption at its displayed precision.",
+    "raw_high_mean_row_naive_se": [
+      12.2755102,
+      0.77042224
+    ],
+    "raw_intermediate_mean_row_naive_se": [
+      12.7745098,
+      0.70116342
+    ],
+    "caption_high_mean_se": [
+      12.8,
+      0.7
+    ],
+    "caption_intermediate_mean_se": [
+      12.3,
+      0.77
+    ],
+    "caption_counts": {
+      "Low": 81,
+      "High": 49,
+      "Intermediate": 51
+    },
+    "archive_counts": {
+      "Low": 81,
+      "High": 49,
+      "Intermediate": 51,
+      "Low in Jar": 58,
+      "High in Jar": 59
+    },
+    "cross_pair_matches_display": {
+      "raw_high_to_caption_intermediate": true,
+      "raw_intermediate_to_caption_high": true
+    },
+    "se_display_note": "The caption's SE digits are consistent with truncation toward zero at the shown precision, not conventional rounding. The article does not state that display convention.",
+    "interpretation_limit": "This is a descriptive provenance mismatch, not proof of a label swap. The available record does not identify whether the caption, the deposited treatment labels, or an upstream export is wrong."
+  },
+  "cohorts": {
+    "summer_2014_outdoor_1a": {
+      "High": {
+        "rows": 30,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 30,
+            "mean": 31.22345667,
+            "median": 24.548875,
+            "row_naive_se": 2.99866992
+          },
+          "SugCon1": {
+            "n": 30,
+            "mean": 27.11666667,
+            "median": 29.0,
+            "row_naive_se": 1.10788276
+          },
+          "SugAmount1": {
+            "n": 30,
+            "mean": 8.5738806,
+            "median": 8.3068686,
+            "row_naive_se": 0.65690139
+          },
+          "TotVOL2": {
+            "n": 30,
+            "mean": 0.30208333,
+            "median": 0.25,
+            "row_naive_se": 0.03867686
+          },
+          "SugCon2": {
+            "n": 30,
+            "mean": 15.93333333,
+            "median": 14.5,
+            "row_naive_se": 0.76666667
+          },
+          "SugAmount2": {
+            "n": 30,
+            "mean": 0.05084136,
+            "median": 0.04530621,
+            "row_naive_se": 0.00760927
+          }
+        }
+      },
+      "Low": {
+        "rows": 30,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 30,
+            "mean": 22.746755,
+            "median": 20.315275,
+            "row_naive_se": 2.06641103
+          },
+          "SugCon1": {
+            "n": 30,
+            "mean": 27.9,
+            "median": 30.0,
+            "row_naive_se": 0.94728893
+          },
+          "SugAmount1": {
+            "n": 30,
+            "mean": 6.67106258,
+            "median": 6.58742641,
+            "row_naive_se": 0.45417944
+          },
+          "TotVOL2": {
+            "n": 30,
+            "mean": 0.34270833,
+            "median": 0.25,
+            "row_naive_se": 0.06485304
+          },
+          "SugCon2": {
+            "n": 30,
+            "mean": 19.98333333,
+            "median": 19.25,
+            "row_naive_se": 1.05031012
+          },
+          "SugAmount2": {
+            "n": 30,
+            "mean": 0.07311393,
+            "median": 0.05099163,
+            "row_naive_se": 0.01420062
+          }
+        }
+      },
+      "Silent": {
+        "rows": 30,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 30,
+            "mean": 27.82306167,
+            "median": 25.778525,
+            "row_naive_se": 2.49866047
+          },
+          "SugCon1": {
+            "n": 30,
+            "mean": 25.08333333,
+            "median": 25.5,
+            "row_naive_se": 1.13159519
+          },
+          "SugAmount1": {
+            "n": 30,
+            "mean": 7.44726484,
+            "median": 6.8147214,
+            "row_naive_se": 0.68315722
+          },
+          "TotVOL2": {
+            "n": 30,
+            "mean": 0.365625,
+            "median": 0.21875,
+            "row_naive_se": 0.06675781
+          },
+          "SugCon2": {
+            "n": 30,
+            "mean": 16.08333333,
+            "median": 15.0,
+            "row_naive_se": 0.86903412
+          },
+          "SugAmount2": {
+            "n": 30,
+            "mean": 0.06348669,
+            "median": 0.03110419,
+            "row_naive_se": 0.01139911
+          }
+        }
+      }
+    },
+    "summer_2015_indoor_1b": {
+      "Bee": {
+        "rows": 42,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 42,
+            "mean": 8.63750774,
+            "median": 8.666175,
+            "row_naive_se": 0.65754884
+          },
+          "SugCon1": {
+            "n": 42,
+            "mean": 25.85714286,
+            "median": 25.75,
+            "row_naive_se": 0.67480924
+          },
+          "SugAmount1": {
+            "n": 42,
+            "mean": 2.56964899,
+            "median": 2.33771053,
+            "row_naive_se": 0.23270148
+          },
+          "TotVOL2": {
+            "n": 42,
+            "mean": 0.28013393,
+            "median": 0.21875,
+            "row_naive_se": 0.02680744
+          },
+          "SugCon2": {
+            "n": 42,
+            "mean": 19.14285714,
+            "median": 18.0,
+            "row_naive_se": 0.74554147
+          },
+          "SugAmount2": {
+            "n": 42,
+            "mean": 0.05595298,
+            "median": 0.04494047,
+            "row_naive_se": 0.00523147
+          }
+        }
+      },
+      "High": {
+        "rows": 42,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 42,
+            "mean": 8.06466488,
+            "median": 6.764075,
+            "row_naive_se": 0.84313352
+          },
+          "SugCon1": {
+            "n": 42,
+            "mean": 24.39285714,
+            "median": 24.5,
+            "row_naive_se": 0.79970518
+          },
+          "SugAmount1": {
+            "n": 42,
+            "mean": 2.28148643,
+            "median": 1.71996347,
+            "row_naive_se": 0.28546739
+          },
+          "TotVOL2": {
+            "n": 42,
+            "mean": 0.22321429,
+            "median": 0.1875,
+            "row_naive_se": 0.01959628
+          },
+          "SugCon2": {
+            "n": 42,
+            "mean": 16.0,
+            "median": 15.0,
+            "row_naive_se": 0.6202637
+          },
+          "SugAmount2": {
+            "n": 42,
+            "mean": 0.03724759,
+            "median": 0.03240792,
+            "row_naive_se": 0.00330739
+          }
+        }
+      },
+      "Low": {
+        "rows": 42,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 42,
+            "mean": 9.86887262,
+            "median": 9.262625,
+            "row_naive_se": 0.72653842
+          },
+          "SugCon1": {
+            "n": 42,
+            "mean": 25.6547619,
+            "median": 25.25,
+            "row_naive_se": 0.63472128
+          },
+          "SugAmount1": {
+            "n": 42,
+            "mean": 2.87902536,
+            "median": 2.77944796,
+            "row_naive_se": 0.24219263
+          },
+          "TotVOL2": {
+            "n": 42,
+            "mean": 0.25818452,
+            "median": 0.21875,
+            "row_naive_se": 0.02172332
+          },
+          "SugCon2": {
+            "n": 42,
+            "mean": 19.61904762,
+            "median": 19.75,
+            "row_naive_se": 0.73761739
+          },
+          "SugAmount2": {
+            "n": 42,
+            "mean": 0.0516252,
+            "median": 0.04542646,
+            "row_naive_se": 0.00415077
+          }
+        }
+      },
+      "Silent": {
+        "rows": 41,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 41,
+            "mean": 8.67545671,
+            "median": 7.75385,
+            "row_naive_se": 0.89529716
+          },
+          "SugCon1": {
+            "n": 41,
+            "mean": 24.74390244,
+            "median": 25.0,
+            "row_naive_se": 0.73999875
+          },
+          "SugAmount1": {
+            "n": 41,
+            "mean": 2.40311247,
+            "median": 2.01814071,
+            "row_naive_se": 0.26437579
+          },
+          "TotVOL2": {
+            "n": 41,
+            "mean": 0.24542683,
+            "median": 0.21875,
+            "row_naive_se": 0.01898233
+          },
+          "SugCon2": {
+            "n": 41,
+            "mean": 16.53658537,
+            "median": 16.0,
+            "row_naive_se": 0.73051733
+          },
+          "SugAmount2": {
+            "n": 41,
+            "mean": 0.04231012,
+            "median": 0.03698656,
+            "row_naive_se": 0.00383342
+          }
+        }
+      }
+    },
+    "summer_2014_2015_combined": {
+      "Bee": {
+        "rows": 42,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 42,
+            "mean": 8.63750774,
+            "median": 8.666175,
+            "row_naive_se": 0.65754884
+          },
+          "SugCon1": {
+            "n": 42,
+            "mean": 25.85714286,
+            "median": 25.75,
+            "row_naive_se": 0.67480924
+          },
+          "SugAmount1": {
+            "n": 42,
+            "mean": 2.56964899,
+            "median": 2.33771053,
+            "row_naive_se": 0.23270148
+          },
+          "TotVOL2": {
+            "n": 42,
+            "mean": 0.28013393,
+            "median": 0.21875,
+            "row_naive_se": 0.02680744
+          },
+          "SugCon2": {
+            "n": 42,
+            "mean": 19.14285714,
+            "median": 18.0,
+            "row_naive_se": 0.74554147
+          },
+          "SugAmount2": {
+            "n": 42,
+            "mean": 0.05595298,
+            "median": 0.04494047,
+            "row_naive_se": 0.00523147
+          }
+        }
+      },
+      "High": {
+        "rows": 72,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 72,
+            "mean": 17.71416146,
+            "median": 12.99015,
+            "row_naive_se": 1.89889971
+          },
+          "SugCon1": {
+            "n": 72,
+            "mean": 25.52777778,
+            "median": 25.0,
+            "row_naive_se": 0.67060813
+          },
+          "SugAmount1": {
+            "n": 72,
+            "mean": 4.90331734,
+            "median": 3.82367385,
+            "row_naive_se": 0.48624455
+          },
+          "TotVOL2": {
+            "n": 72,
+            "mean": 0.25607639,
+            "median": 0.1875,
+            "row_naive_se": 0.02013044
+          },
+          "SugCon2": {
+            "n": 72,
+            "mean": 15.97222222,
+            "median": 15.0,
+            "row_naive_se": 0.47921273
+          },
+          "SugAmount2": {
+            "n": 72,
+            "mean": 0.04291166,
+            "median": 0.03580759,
+            "row_naive_se": 0.00376449
+          }
+        }
+      },
+      "Low": {
+        "rows": 72,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 72,
+            "mean": 15.23465694,
+            "median": 12.698675,
+            "row_naive_se": 1.21336104
+          },
+          "SugCon1": {
+            "n": 72,
+            "mean": 26.59027778,
+            "median": 27.5,
+            "row_naive_se": 0.55288813
+          },
+          "SugAmount1": {
+            "n": 72,
+            "mean": 4.45904087,
+            "median": 3.84576842,
+            "row_naive_se": 0.32263118
+          },
+          "TotVOL2": {
+            "n": 72,
+            "mean": 0.29340278,
+            "median": 0.234375,
+            "row_naive_se": 0.02998692
+          },
+          "SugCon2": {
+            "n": 72,
+            "mean": 19.77083333,
+            "median": 19.5,
+            "row_naive_se": 0.60948565
+          },
+          "SugAmount2": {
+            "n": 72,
+            "mean": 0.06057884,
+            "median": 0.04760226,
+            "row_naive_se": 0.00645787
+          }
+        }
+      },
+      "Silent": {
+        "rows": 71,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 71,
+            "mean": 16.76599401,
+            "median": 14.25095,
+            "row_naive_se": 1.62337794
+          },
+          "SugCon1": {
+            "n": 71,
+            "mean": 24.88732394,
+            "median": 25.0,
+            "row_naive_se": 0.63659345
+          },
+          "SugAmount1": {
+            "n": 71,
+            "mean": 4.53444446,
+            "median": 4.10949052,
+            "row_naive_se": 0.43982818
+          },
+          "TotVOL2": {
+            "n": 71,
+            "mean": 0.29621479,
+            "median": 0.21875,
+            "row_naive_se": 0.03081219
+          },
+          "SugCon2": {
+            "n": 71,
+            "mean": 16.34507042,
+            "median": 15.0,
+            "row_naive_se": 0.55588959
+          },
+          "SugAmount2": {
+            "n": 71,
+            "mean": 0.05125797,
+            "median": 0.03656537,
+            "row_naive_se": 0.00539984
+          }
+        }
+      }
+    },
+    "fall_2016_indoor": {
+      "High": {
+        "rows": 49,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 49,
+            "mean": 6.82748383,
+            "median": 6.223375,
+            "row_naive_se": 0.57235638
+          },
+          "SugCon1": {
+            "n": 49,
+            "mean": 20.80612245,
+            "median": 21.0,
+            "row_naive_se": 0.78053165
+          },
+          "SugAmount1": {
+            "n": 49,
+            "mean": 1.58387083,
+            "median": 1.34801548,
+            "row_naive_se": 0.16159626
+          },
+          "TotVOL2": {
+            "n": 49,
+            "mean": 0.33181958,
+            "median": 0.25,
+            "row_naive_se": 0.04259464
+          },
+          "SugCon2": {
+            "n": 49,
+            "mean": 12.2755102,
+            "median": 12.0,
+            "row_naive_se": 0.77042224
+          },
+          "SugAmount2": {
+            "n": 49,
+            "mean": 0.04746203,
+            "median": 0.02810212,
+            "row_naive_se": 0.00924706
+          }
+        }
+      },
+      "High in Jar": {
+        "rows": 59,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 59,
+            "mean": 9.50044576,
+            "median": 8.5025,
+            "row_naive_se": 0.76085043
+          },
+          "SugCon1": {
+            "n": 59,
+            "mean": 20.61016949,
+            "median": 20.0,
+            "row_naive_se": 0.63860188
+          },
+          "SugAmount1": {
+            "n": 59,
+            "mean": 2.10850077,
+            "median": 1.85845577,
+            "row_naive_se": 0.17978769
+          },
+          "TotVOL2": {
+            "n": 59,
+            "mean": 0.38479873,
+            "median": 0.1875,
+            "row_naive_se": 0.05173256
+          },
+          "SugCon2": {
+            "n": 59,
+            "mean": 13.1440678,
+            "median": 13.0,
+            "row_naive_se": 0.5544637
+          },
+          "SugAmount2": {
+            "n": 59,
+            "mean": 0.05523816,
+            "median": 0.02509545,
+            "row_naive_se": 0.00839831
+          }
+        }
+      },
+      "Intermediate": {
+        "rows": 51,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 51,
+            "mean": 6.57937564,
+            "median": 5.2743,
+            "row_naive_se": 0.81120674
+          },
+          "SugCon1": {
+            "n": 51,
+            "mean": 20.90196078,
+            "median": 21.0,
+            "row_naive_se": 0.77813498
+          },
+          "SugAmount1": {
+            "n": 51,
+            "mean": 1.50165521,
+            "median": 1.19010303,
+            "row_naive_se": 0.19737772
+          },
+          "TotVOL2": {
+            "n": 51,
+            "mean": 0.32100448,
+            "median": 0.21875,
+            "row_naive_se": 0.03580128
+          },
+          "SugCon2": {
+            "n": 51,
+            "mean": 12.7745098,
+            "median": 11.5,
+            "row_naive_se": 0.70116342
+          },
+          "SugAmount2": {
+            "n": 51,
+            "mean": 0.04322104,
+            "median": 0.03134175,
+            "row_naive_se": 0.00576419
+          }
+        }
+      },
+      "Low": {
+        "rows": 81,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 81,
+            "mean": 7.83682594,
+            "median": 6.84915,
+            "row_naive_se": 0.57436325
+          },
+          "SugCon1": {
+            "n": 81,
+            "mean": 20.54938272,
+            "median": 21.0,
+            "row_naive_se": 0.55351047
+          },
+          "SugAmount1": {
+            "n": 81,
+            "mean": 1.78447379,
+            "median": 1.45471016,
+            "row_naive_se": 0.15953519
+          },
+          "TotVOL2": {
+            "n": 81,
+            "mean": 0.46354167,
+            "median": 0.25,
+            "row_naive_se": 0.06374837
+          },
+          "SugCon2": {
+            "n": 81,
+            "mean": 15.90123457,
+            "median": 15.0,
+            "row_naive_se": 0.57751194
+          },
+          "SugAmount2": {
+            "n": 81,
+            "mean": 0.07376068,
+            "median": 0.04588025,
+            "row_naive_se": 0.00975504
+          }
+        }
+      },
+      "Low in Jar": {
+        "rows": 58,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 58,
+            "mean": 8.1500931,
+            "median": 6.9111625,
+            "row_naive_se": 0.82911069
+          },
+          "SugCon1": {
+            "n": 58,
+            "mean": 20.55172414,
+            "median": 20.75,
+            "row_naive_se": 0.88011659
+          },
+          "SugAmount1": {
+            "n": 58,
+            "mean": 1.8750856,
+            "median": 1.49084242,
+            "row_naive_se": 0.21555792
+          },
+          "TotVOL2": {
+            "n": 58,
+            "mean": 0.38119612,
+            "median": 0.2578125,
+            "row_naive_se": 0.05094695
+          },
+          "SugCon2": {
+            "n": 58,
+            "mean": 12.81896552,
+            "median": 12.0,
+            "row_naive_se": 0.62462309
+          },
+          "SugAmount2": {
+            "n": 58,
+            "mean": 0.05282903,
+            "median": 0.03001591,
+            "row_naive_se": 0.00806305
+          }
+        }
+      }
+    },
+    "spring_2016_indoor": {
+      "High": {
+        "rows": 57,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 57,
+            "mean": 6.54552851,
+            "median": 6.56095,
+            "row_naive_se": 0.40331733
+          },
+          "SugCon1": {
+            "n": 57,
+            "mean": 22.8245614,
+            "median": 23.0,
+            "row_naive_se": 0.71684127
+          },
+          "SugAmount1": {
+            "n": 57,
+            "mean": 1.62668886,
+            "median": 1.61850042,
+            "row_naive_se": 0.10767663
+          },
+          "TotVOL2": {
+            "n": 57,
+            "mean": 0.27028509,
+            "median": 0.1875,
+            "row_naive_se": 0.02759494
+          },
+          "SugCon2": {
+            "n": 57,
+            "mean": 13.64035088,
+            "median": 13.5,
+            "row_naive_se": 0.37269643
+          },
+          "SugAmount2": {
+            "n": 57,
+            "mean": 0.03825779,
+            "median": 0.02930298,
+            "row_naive_se": 0.00412978
+          }
+        }
+      },
+      "Low": {
+        "rows": 55,
+        "outcomes": {
+          "TotVOL1": {
+            "n": 55,
+            "mean": 6.89728045,
+            "median": 6.24845,
+            "row_naive_se": 0.45470585
+          },
+          "SugCon1": {
+            "n": 55,
+            "mean": 23.30909091,
+            "median": 23.5,
+            "row_naive_se": 0.65911007
+          },
+          "SugAmount1": {
+            "n": 55,
+            "mean": 1.8408823,
+            "median": 1.49790282,
+            "row_naive_se": 0.15725369
+          },
+          "TotVOL2": {
+            "n": 55,
+            "mean": 0.26761364,
+            "median": 0.1875,
+            "row_naive_se": 0.0368353
+          },
+          "SugCon2": {
+            "n": 55,
+            "mean": 15.84545455,
+            "median": 15.5,
+            "row_naive_se": 0.6257484
+          },
+          "SugAmount2": {
+            "n": 55,
+            "mean": 0.04637668,
+            "median": 0.03029056,
+            "row_naive_se": 0.00773165
+          }
+        }
+      }
+    }
+  },
+  "descriptive_contrasts": {
+    "summer_combined_low_vs_high": [
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "SugCon2",
+        "mean_difference": 3.79861111,
+        "relative_percent": 23.7826
+      },
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "TotVOL2",
+        "mean_difference": 0.03732639,
+        "relative_percent": 14.5763
+      },
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "SugAmount2",
+        "mean_difference": 0.01766718,
+        "relative_percent": 41.171
+      }
+    ],
+    "summer_combined_low_vs_silent": [
+      {
+        "left": "Low",
+        "right": "Silent",
+        "outcome": "SugCon2",
+        "mean_difference": 3.42576291,
+        "relative_percent": 20.959
+      },
+      {
+        "left": "Low",
+        "right": "Silent",
+        "outcome": "TotVOL2",
+        "mean_difference": -0.00281201,
+        "relative_percent": -0.9493
+      },
+      {
+        "left": "Low",
+        "right": "Silent",
+        "outcome": "SugAmount2",
+        "mean_difference": 0.00932087,
+        "relative_percent": 18.1842
+      }
+    ],
+    "summer_combined_bee_vs_silent": [
+      {
+        "left": "Bee",
+        "right": "Silent",
+        "outcome": "SugCon2",
+        "mean_difference": 2.79778672,
+        "relative_percent": 17.117
+      },
+      {
+        "left": "Bee",
+        "right": "Silent",
+        "outcome": "TotVOL2",
+        "mean_difference": -0.01608086,
+        "relative_percent": -5.4288
+      },
+      {
+        "left": "Bee",
+        "right": "Silent",
+        "outcome": "SugAmount2",
+        "mean_difference": 0.00469501,
+        "relative_percent": 9.1596
+      }
+    ],
+    "fall_low_vs_high": [
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "SugCon2",
+        "mean_difference": 3.62572437,
+        "relative_percent": 29.5362
+      },
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "TotVOL2",
+        "mean_difference": 0.13172209,
+        "relative_percent": 39.6969
+      },
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "SugAmount2",
+        "mean_difference": 0.02629865,
+        "relative_percent": 55.4099
+      }
+    ],
+    "fall_low_vs_intermediate": [
+      {
+        "left": "Low",
+        "right": "Intermediate",
+        "outcome": "SugCon2",
+        "mean_difference": 3.12672477,
+        "relative_percent": 24.4763
+      },
+      {
+        "left": "Low",
+        "right": "Intermediate",
+        "outcome": "TotVOL2",
+        "mean_difference": 0.14253719,
+        "relative_percent": 44.4035
+      },
+      {
+        "left": "Low",
+        "right": "Intermediate",
+        "outcome": "SugAmount2",
+        "mean_difference": 0.03053964,
+        "relative_percent": 70.6592
+      }
+    ],
+    "fall_low_vs_low_in_jar": [
+      {
+        "left": "Low",
+        "right": "Low in Jar",
+        "outcome": "SugCon2",
+        "mean_difference": 3.08226905,
+        "relative_percent": 24.0446
+      },
+      {
+        "left": "Low",
+        "right": "Low in Jar",
+        "outcome": "TotVOL2",
+        "mean_difference": 0.08234555,
+        "relative_percent": 21.6019
+      },
+      {
+        "left": "Low",
+        "right": "Low in Jar",
+        "outcome": "SugAmount2",
+        "mean_difference": 0.02093165,
+        "relative_percent": 39.6215
+      }
+    ],
+    "spring_low_vs_high": [
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "SugCon2",
+        "mean_difference": 2.20510367,
+        "relative_percent": 16.166
+      },
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "TotVOL2",
+        "mean_difference": -0.00267145,
+        "relative_percent": -0.9884
+      },
+      {
+        "left": "Low",
+        "right": "High",
+        "outcome": "SugAmount2",
+        "mean_difference": 0.00811889,
+        "relative_percent": 21.2215
+      }
+    ]
+  }
+}
