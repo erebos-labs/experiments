@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive geometric model of the 120-degree rule at an equal-tension three-way junction.">
+  <title>The 120° compromise</title>
+  <style>
+    :root { color-scheme: dark; --ink:#f7f3e8; --muted:#b9b3a5; --paper:#131718; --panel:#202728; --line:#e9c46a; --node:#f4a261; --anchor:#2a9d8f; --danger:#e76f51; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:radial-gradient(circle at 20% 0%,#253132 0,#131718 48rem); color:var(--ink); font:16px/1.55 ui-sans-serif,system-ui,-apple-system,sans-serif; }
+    main { width:min(1040px,calc(100% - 2rem)); margin:0 auto; padding:3rem 0 4rem; }
+    header { max-width:760px; margin-bottom:1.5rem; }
+    .eyebrow { color:var(--line); letter-spacing:.12em; text-transform:uppercase; font-size:.74rem; font-weight:700; }
+    h1 { font-size:clamp(2.6rem,7vw,5.8rem); line-height:.92; margin:.35rem 0 1.2rem; letter-spacing:-.055em; }
+    header p { color:var(--muted); font-size:1.08rem; }
+    .bench { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(250px,.75fr); gap:1rem; align-items:stretch; }
+    .stage,.readout,.note { background:color-mix(in srgb,var(--panel) 88%,transparent); border:1px solid #394546; border-radius:18px; box-shadow:0 18px 60px #0005; }
+    .stage { padding:.75rem; min-height:490px; }
+    svg { display:block; width:100%; height:auto; min-height:460px; touch-action:none; }
+    .readout { padding:1.2rem; }
+    .readout h2,.note h2 { margin:.1rem 0 .8rem; font-size:1.05rem; }
+    dl { display:grid; grid-template-columns:1fr auto; gap:.55rem .8rem; margin:1rem 0; }
+    dt { color:var(--muted); } dd { margin:0; font-variant-numeric:tabular-nums; }
+    .status { padding:.75rem; border-radius:12px; background:#121718; border-left:4px solid var(--anchor); }
+    .status.boundary { border-left-color:var(--danger); }
+    .controls { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1rem; }
+    button { appearance:none; border:1px solid #536263; border-radius:999px; color:var(--ink); background:#293233; padding:.55rem .8rem; cursor:pointer; }
+    button:hover,button:focus-visible { border-color:var(--line); outline:none; }
+    .hint { color:var(--muted); font-size:.82rem; margin:.8rem 0 0; }
+    .slider { margin-top:1.2rem; padding-top:1rem; border-top:1px solid #394546; }
+    .slider label { display:flex; justify-content:space-between; gap:1rem; color:var(--muted); font-size:.9rem; }
+    .slider output { color:var(--ink); font-variant-numeric:tabular-nums; }
+    input[type="range"] { width:100%; accent-color:var(--node); }
+    .note { margin-top:1rem; padding:1.2rem 1.4rem; }
+    .note p { max-width:78ch; color:var(--muted); }
+    .note strong { color:var(--ink); }
+    .sources { display:grid; gap:.7rem; padding-left:1.2rem; max-width:82ch; color:var(--muted); }
+    a { color:#9fe0d5; text-underline-offset:.2em; }
+    .network { stroke:var(--line); stroke-width:5; stroke-linecap:round; }
+    .anchor { fill:var(--anchor); stroke:#d9fff8; stroke-width:2; cursor:grab; }
+    .junction { fill:var(--node); stroke:#fff0d0; stroke-width:2; }
+    .angle { fill:none; stroke:#f8f3e6aa; stroke-width:2; }
+    .label { fill:var(--ink); font-size:14px; paint-order:stroke; stroke:#131718; stroke-width:4px; stroke-linejoin:round; }
+    .grid { stroke:#61707122; stroke-width:1; }
+    footer { color:#817b70; margin-top:1.2rem; font-size:.82rem; }
+    @media (max-width:760px) { .bench { grid-template-columns:1fr; } .stage { min-height:360px; } svg { min-height:330px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">A geometric cross-section</div>
+    <h1>The 120° compromise</h1>
+    <p>Drag the three green boundary points. The orange point computes the minimum-length junction within this model’s numerical resolution. When an interior compromise exists, its three branches settle at 120°—the same equal-tension balance seen in a cross-section through a soap-film triple line.</p>
+  </header>
+  <section class="bench" aria-label="Interactive Steiner junction">
+    <div class="stage">
+      <svg id="canvas" viewBox="0 0 640 480" role="group" aria-label="Three draggable boundary points connected to their minimum-length junction">
+        <g id="grid"></g><g id="network"></g><g id="angles"></g><g id="nodes"></g>
+      </svg>
+    </div>
+    <aside class="readout">
+      <h2>What the junction is doing</h2>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <dl>
+        <dt>Triangle angles</dt><dd id="triangleAngles"></dd>
+        <dt>Junction angles</dt><dd id="junctionAngles"></dd>
+        <dt>Total branch length</dt><dd id="length"></dd>
+        <dt>Gain vs best corner</dt><dd id="advantage"></dd>
+        <dt>Force residual</dt><dd id="residual"></dd>
+      </dl>
+      <div class="controls">
+        <button data-preset="balanced">Balanced</button>
+        <button data-preset="skewed">Skewed</button>
+        <button data-preset="collapse">Past 120°</button>
+      </div>
+      <p class="hint">Keyboard: focus A, B, or C and use the arrow keys; hold Shift for a larger step.</p>
+      <div class="slider">
+        <label for="cornerAngle"><span>Symmetric corner sweep</span><output id="angleValue" for="cornerAngle">110°</output></label>
+        <input id="cornerAngle" type="range" min="80" max="150" value="110" step="1" aria-label="Symmetric corner angle in degrees">
+      </div>
+    </aside>
+  </section>
+  <section class="note">
+    <h2>Why 120°, and when it disappears</h2>
+    <p>This is the classical Fermat–Torricelli point for three terminals, or three-terminal Steiner-tree problem. For the broader planar shortest-network setting, see <a href="https://doi.org/10.1137/0116001">Gilbert &amp; Pollak, <cite>Steiner Minimal Trees</cite> (1968)</a>.</p>
+    <p><strong>Inside the triangle,</strong> moving the junction changes three lengths at once. Vector balance plus convexity determines the minimum: the three equal-magnitude unit vectors along the branches must sum to zero, which requires 120° separation.</p>
+    <p><strong>But topology has a boundary case.</strong> If one boundary angle reaches 120°, no interior point can maintain the three-way balance. The shortest network collapses to that corner in a sharp topological transition. This simple model explains the local force balance; it does not simulate film curvature, pressure differences, drainage, or full three-dimensional foam dynamics.</p>
+    <p><strong>The energy gap fades first.</strong> In the symmetric sweep, if δ is the shortfall from 120° in radians, the junction’s distance from the corner is approximately proportional to δ, while its length advantage over the collapsed network is proportional to δ². The preferred geometry can still move visibly even when the energetic preference is already shallow.</p>
+  </section>
+  <section class="note">
+    <h2>Where the ideal rule meets real foam</h2>
+    <p>The 120° angle is exact for an equilibrium dry junction with equal film tensions. Finite wet borders require a different geometric model; unequal tensions, surfactant gradients, disjoining pressure, or motion can produce departures. These local angle laws also do not guarantee global stability: small faces can still collapse. The famous 109.47° rule for four Plateau borders is a distinct three-dimensional tetrahedral singularity—not a four-branch version of this planar construction.</p>
+    <ul class="sources">
+      <li>Joseph Plateau’s 1873 experimental synthesis: <a href="https://archive.org/details/statiqueexprime01platgoog">volume I</a>, especially §§173, 181, and 184–185, and <a href="https://archive.org/details/statiqueexprime00platgoog">volume II</a> (French, public-domain scans).</li>
+      <li>Jean E. Taylor’s 1976 classification of soap-film-like minimal singularities: <a href="https://annals.math.princeton.edu/1976/103-3/p08"><cite>Annals of Mathematics</cite> 103, 489–539</a>.</li>
+      <li>A modern treatment that distinguishes dry films from wet Plateau borders: <a href="https://arxiv.org/abs/2310.20169">Maggi, Novack &amp; Restrepo (2023)</a>.</li>
+      <li>Physical limits: <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.42.5049">Stavans (1990)</a> observed no angle deviation in thin, nearly constant borders; <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.51.788">Neimark &amp; Vignes-Adler (1995)</a> modeled several-degree departures in black films.</li>
+      <li>Local rules versus global stability: <a href="https://doi.org/10.1016/j.colsurfa.2007.11.060">Hutzler et al. (2008)</a> report spontaneous collapse of sufficiently small triangular faces.</li>
+    </ul>
+  </section>
+  <footer>Standalone educational model. Calculations run locally in this page; no application data is collected. Opening a source link sends a request to that site; the hosting provider may log visits. Prepared with AI assistance; numerical behavior was checked with a deterministic standard-library test suite, which is not bundled with this standalone page. For an interior solution, junction angles and force residuals are marked not resolved when a branch falls below the display threshold. A collapsed boundary junction is labelled collapsed, with an undefined force residual.</footer>
+</main>
+<script>
+const svg = document.querySelector('#canvas');
+const groups = {grid:document.querySelector('#grid'),network:document.querySelector('#network'),angles:document.querySelector('#angles'),nodes:document.querySelector('#nodes')};
+const presets = {
+  balanced:[[115,370],[525,370],[320,90]],
+  skewed:[[90,385],[555,330],[410,75]],
+  collapse:[[110,390],[545,390],[198,330]]
+};
+let points = presets.balanced.map(p=>[...p]); let dragging = -1; let activePointerId = null;
+const angleSlider=document.querySelector('#cornerAngle'),angleValue=document.querySelector('#angleValue');
+const ns='http://www.w3.org/2000/svg';
+function el(name,attrs,parent){const node=document.createElementNS(ns,name); for(const [k,v] of Object.entries(attrs)) node.setAttribute(k,v); parent.appendChild(node); return node;}
+for(let x=40;x<640;x+=40) el('line',{x1:x,y1:0,x2:x,y2:480,class:'grid'},groups.grid);
+for(let y=40;y<480;y+=40) el('line',{x1:0,y1:y,x2:640,y2:y,class:'grid'},groups.grid);
+function dist(a,b){return Math.hypot(a[0]-b[0],a[1]-b[1]);}
+function angles(ps){return ps.map((p,i)=>{const a=ps[(i+1)%3],b=ps[(i+2)%3],u=[a[0]-p[0],a[1]-p[1]],v=[b[0]-p[0],b[1]-p[1]]; return Math.acos(Math.max(-1,Math.min(1,(u[0]*v[0]+u[1]*v[1])/(Math.hypot(...u)*Math.hypot(...v)))))*180/Math.PI;});}
+function median(ps){const area=Math.abs((ps[1][0]-ps[0][0])*(ps[2][1]-ps[0][1])-(ps[1][1]-ps[0][1])*(ps[2][0]-ps[0][0])),separations=[dist(ps[0],ps[1]),dist(ps[1],ps[2]),dist(ps[2],ps[0])];if(area<1e-6||Math.min(...separations)<1e-6){const totals=ps.map(p=>ps.reduce((sum,q)=>sum+dist(p,q),0)),index=totals.indexOf(Math.min(...totals));return{p:[...ps[index]],boundary:true,degenerate:true};}const tri=angles(ps),high=Math.max(...tri);if(high>=120-1e-9)return{p:[...ps[tri.indexOf(high)]],boundary:true,degenerate:false};const sides=[dist(ps[1],ps[2]),dist(ps[0],ps[2]),dist(ps[0],ps[1])],raw=tri.map((a,i)=>sides[i]/Math.sin((a+60)*Math.PI/180)),scale=Math.max(...raw),ws=raw.map(w=>w/scale),total=ws.reduce((a,b)=>a+b);return{p:[ps.reduce((s,q,i)=>s+ws[i]*q[0],0)/total,ps.reduce((s,q,i)=>s+ws[i]*q[1],0)/total],boundary:false,degenerate:false};}
+function symmetric(theta){const half=theta*Math.PI/360,origin=[120,240],radius=220,x=origin[0]+radius*Math.cos(half),dy=radius*Math.sin(half);return[origin,[x,origin[1]+dy],[x,origin[1]-dy]];}
+function metrics(j){const ds=points.map(p=>dist(j,p)); if(Math.min(...ds)<1e-7) return {as:[],res:null}; const us=points.map((p,i)=>[(p[0]-j[0])/ds[i],(p[1]-j[1])/ds[i]]),pairs=[[0,1],[1,2],[2,0]],as=pairs.map(([a,b])=>Math.acos(Math.max(-1,Math.min(1,us[a][0]*us[b][0]+us[a][1]*us[b][1])))*180/Math.PI); return {as,res:Math.hypot(us.reduce((s,u)=>s+u[0],0),us.reduce((s,u)=>s+u[1],0))};}
+function draw(){groups.network.replaceChildren();groups.angles.replaceChildren();groups.nodes.replaceChildren(); const result=median(points),tri=result.degenerate?[]:angles(points),j=result.p,m=metrics(j); points.forEach((p,i)=>{el('line',{x1:j[0],y1:j[1],x2:p[0],y2:p[1],class:'network'},groups.network); const c=el('circle',{cx:p[0],cy:p[1],r:12,class:'anchor','data-index':i,tabindex:0,'aria-label':`Boundary point ${String.fromCharCode(65+i)}`},groups.nodes); c.addEventListener('pointerdown',e=>{if(activePointerId!==null)return;dragging=i;activePointerId=e.pointerId;svg.setPointerCapture(e.pointerId)}); c.addEventListener('keydown',e=>{const delta=e.shiftKey?20:5,moves={ArrowLeft:[-delta,0],ArrowRight:[delta,0],ArrowUp:[0,-delta],ArrowDown:[0,delta]};if(!moves[e.key])return;e.preventDefault();points[i]=[Math.max(18,Math.min(622,p[0]+moves[e.key][0])),Math.max(18,Math.min(462,p[1]+moves[e.key][1]))];angleValue.textContent='custom';draw();groups.nodes.querySelector(`[data-index="${i}"]`).focus();}); el('text',{x:p[0]+15,y:p[1]-15,class:'label'},groups.nodes).textContent=String.fromCharCode(65+i);}); el('circle',{cx:j[0],cy:j[1],r:9,class:'junction'},groups.nodes);
+  const limited=!result.boundary&&m.as.length===0; const totalLength=points.reduce((s,p)=>s+dist(j,p),0),bestCorner=Math.min(...points.map(p=>points.reduce((s,q)=>s+dist(p,q),0))),advantage=Math.max(0,bestCorner-totalLength); document.querySelector('#triangleAngles').textContent=tri.length?tri.map(x=>x.toFixed(1)+'°').join(' · '):'degenerate'; document.querySelector('#junctionAngles').textContent=m.as.length?m.as.map(x=>x.toFixed(2)+'°').join(' · '):result.boundary?'collapsed':'not resolved'; document.querySelector('#length').textContent=totalLength.toFixed(2); document.querySelector('#advantage').textContent=advantage.toPrecision(4); document.querySelector('#residual').textContent=m.res===null?(result.boundary?'not defined':'not resolved'):m.res.toExponential(2); const status=document.querySelector('#status'),headline=document.createElement('strong'),lineBreak=document.createElement('br'),detail=document.createTextNode(limited?'The analytic solution is interior, but one branch is too short for reliable displayed angles or force residual.':result.degenerate?'The anchors are coincident, nearly collinear, or below the model’s numerical resolution; a corner fallback is shown.':result.boundary?'The shortest network has collapsed to the corner whose angle is at least 120°.':'Equal branch tensions cancel and the three angles converge to 120°.'); headline.textContent=limited?'Near-boundary numerical limit.':result.degenerate?'Numerically degenerate geometry.':result.boundary?'Boundary solution.':'Interior junction.'; status.classList.toggle('boundary',result.boundary); const state=result.degenerate?'degenerate':result.boundary?'boundary':limited?'limited':'interior';if(status.dataset.state!==state){status.dataset.state=state;status.replaceChildren(headline,lineBreak,detail);}
+}
+svg.addEventListener('pointermove',e=>{if(dragging<0||e.pointerId!==activePointerId)return; const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const q=p.matrixTransform(svg.getScreenCTM().inverse());points[dragging]=[Math.max(18,Math.min(622,q.x)),Math.max(18,Math.min(462,q.y))];angleValue.textContent='custom';draw();});
+function endDrag(e){if(e.pointerId!==activePointerId)return;const id=activePointerId;dragging=-1;activePointerId=null;if(svg.hasPointerCapture(id))svg.releasePointerCapture(id);}
+svg.addEventListener('pointerup',endDrag);svg.addEventListener('pointercancel',endDrag);svg.addEventListener('lostpointercapture',endDrag);
+document.querySelectorAll('button[data-preset]').forEach(button=>button.addEventListener('click',()=>{points=presets[button.dataset.preset].map(p=>[...p]);angleValue.textContent='preset';draw();}));
+angleSlider.addEventListener('input',()=>{const theta=Number(angleSlider.value);points=symmetric(theta);angleValue.textContent=theta+'°';draw();});
+points=symmetric(Number(angleSlider.value));
+draw();
+</script>
+</body>
+</html>

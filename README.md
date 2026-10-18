@@ -7,7 +7,9 @@ A small static collection of interactive educational and artistic experiments:
 - **Random enough for what?** — ideal riffle shuffles, comparing the top card, visible neighboring descents and the complete deck order.
 - **Phantom places** — explore what a pair of ideal arrival-time cues can and cannot distinguish, with a finite optional synthesized comparison.
 
-The mathematical ideas are established work. Sources, assumptions, objective choices, and limitations are visible within each experiment and in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Built with AI assistance; models and outputs are checked by reproducible tests.
+- **The 120° compromise** — drag three anchors to explore the established equal-tension planar shortest-network geometry and its boundary transition. [Open the junction](https://erebos-labs.github.io/experiments/soap-junctions/). The standalone HTML includes sources and physical limits; it is not a fluid simulation.
+
+The mathematical ideas are established work. Sources, assumptions, objective choices, and limitations are visible within each experiment and in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Built with AI assistance; models and outputs were checked with deterministic calculations.
 
 ## Play
 

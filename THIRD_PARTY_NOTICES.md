@@ -64,3 +64,7 @@ human perceptual validity. Existing copyright terms remain in force.
 - Does a flower have an ear?: [references](src/flower-evidence/SOURCES.md), [rights and credit](src/flower-evidence/THIRD_PARTY_NOTICES.md). Original publications retain their rights; no paper bodies or raw Flower workbooks are distributed.
 - The shortcut trap, one day later: [references](src/route-learning/SOURCES.md), [rights and credit](src/route-learning/THIRD_PARTY_NOTICES.md). Original publications retain their rights; no paper bodies or raw Flower workbooks are distributed.
 - Square ice: boundaries, loops and counts: [references](src/square-ice/SOURCES.md), [rights and credit](src/square-ice/THIRD_PARTY_NOTICES.md). Original publications retain their rights; no paper bodies or raw Flower workbooks are distributed.
+
+## The 120° compromise
+
+The standalone [geometry page](docs/soap-junctions/index.html) links primary references for Plateau's laws and their physical scope. It is an authored educational planar distance-minimization model with AI assistance, not new research or a fluid simulation. No paper bodies, third-party diagrams, datasets, fonts or executable libraries are bundled. Existing copyright terms apply; cited works retain their own rights.
