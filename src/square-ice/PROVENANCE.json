@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "recorded_utc": "2026-10-18T01:24:56.622961+00:00",
+  "recorded_utc": "2026-10-18T06:10:06.132581+00:00",
   "content_revision_definition": "SHA-256 per relative file; this metadata file excluded, no invented Git revision. VALIDATION.json excludes both metadata files from its source hash scope.",
   "source_file_sha256": {
     ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
@@ -8,8 +8,8 @@
     "DERIVATION.md": "9b0666805fd57def62b1b729f8cf76cf08343e9e9d514a846a8511e0e007da82",
     "README.md": "ea5c9500d230551261db2de1cec318d1073fb41db252e189219c7a6dc71f27af",
     "SOURCES.md": "7071593f56505f6f5b3f56a3ece5971cf1a5bc0fcddf0e0cb36c2cae85dbc45d",
-    "THIRD_PARTY_NOTICES.md": "f09052cae6fc5d0a9271bf6248d9ec3c67769b823c25080de976845076065e76",
-    "VALIDATION.json": "d92694684413772d02ce4b7a542f92218fe26973b77258094d143f651281341e",
+    "THIRD_PARTY_NOTICES.md": "47cd69a552070b6fd0c1b56f6d0658b205ad96e5219271ae8eaf5ab1d2d60566",
+    "VALIDATION.json": "6f0f2e82bbf79fda4f3d1b4b27053dc4869e103c848307e2f4143538b896ce7c",
     "boundary_paths.py": "8d2512720ceaefef13f3044341cc250bc872c6d6e3251663fde1d65fcae09d1e",
     "checks.py": "f095443fc153d6a67f7fde30c17fba96da44cef3a3a663913258c3510d77da65",
     "data/domain-samples.json": "67220a82de71476291f48331032c4b687d378313efae2c3f5c58bddc2e69bd36",
@@ -37,7 +37,7 @@
   },
   "validation_record": {
     "path": "VALIDATION.json",
-    "sha256": "d92694684413772d02ce4b7a542f92218fe26973b77258094d143f651281341e"
+    "sha256": "6f0f2e82bbf79fda4f3d1b4b27053dc4869e103c848307e2f4143538b896ce7c"
   },
-  "scope": "Observed coordinator checks and exact content identities; no independent review clearance, cross-runtime byte guarantee, scientific-source or empirical attestation."
+  "scope": "Current content identities and documented local checks; no cross-runtime byte guarantee, scientific-source verification or empirical attestation."
 }

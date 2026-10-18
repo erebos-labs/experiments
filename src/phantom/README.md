@@ -2,7 +2,7 @@
 
 A self-contained interactive explanation of timing cues and spatial ambiguity. Built with AI assistance; the geometry and cited psychoacoustic research are established work.
 
-Open index.html manually or serve it through your approved static hosting workflow. JavaScript updates the diagrams. The page makes no app network requests, loads no external assets and collects no data. User-clicked primary-source links navigate to external sites, which receive the visitor’s request and IP address. The page requests no referrer on those navigations. The hosting provider may have its own logs.
+Open index.html manually or serve it with a static web server. JavaScript updates the diagrams. The page makes no app network requests, loads no external assets and collects no data. User-clicked primary-source links navigate to external sites, which receive the visitor’s request and IP address. The page requests no referrer on those navigations. The hosting provider may have its own logs.
 
 Audio starts muted. Optional playback needs an amplitude adjustment and an explicit Play press, has a 0.04 digital-peak limit and finite duration, and resets to silence on tab hiding. Idle playback requests suspension of the audio context; page exit requests closure. Playback stops independently of these best-effort cleanup requests. Forced mute stops immediately, so an interruption transient remains possible and is not acoustically tested. Use low device volume. No acoustic calibration or listening evaluation is claimed.
 
@@ -24,6 +24,6 @@ python3 -B scripts/verify.py
 
 This builds index.html and runs existing numerical/signal checks, a deliberately small DOM/WebAudio mock, finite-series checks and bounded synthetic counterexamples. Results go only to results/. Seeds and parameters are explicit. No browser, audio device or person is involved in verification. Real rendering, device channel order, sound pressure, physical phones and assistive technology remain unverified.
 
-The exported bundle contains no research journals, private delivery records, absolute operator paths, hosting identity, account identifiers, signed PDFs or existing private project content. This is a selected educational module, not a dump of a working directory.
+This educational module includes its implementation, source references and model checks. No paper PDFs or third-party figures are bundled.
 
 See SOURCES.md for primary attribution. No third-party paper text, datasets or media are redistributed. No express open-source reuse license is selected; follow the collection's COPYRIGHT.txt policy. No new license grant is implied.

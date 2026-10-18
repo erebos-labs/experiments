@@ -1,25 +1,8 @@
 {
   "schema_version": 1,
   "recorded_utc": "2026-10-18T01:24:56.569003+00:00",
-  "record_kind": "Coordinator-observed local results, normalized for inspection; not independent release clearance, signed attestation, source verification or empirical calibration.",
-  "source_hash_scope": "Source files below exclude PROVENANCE.json and this receipt to avoid circular metadata hashes.",
-  "source_file_sha256": {
-    ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
-    "COPYRIGHT.txt": "aec2af079eaa192a66e2171862a25bee023e464cdf60f18899f55eba2b3eca91",
-    "README.md": "ecfaec6e1edec4a6133f997e0c7bb7e38b7e1579815fcab7bde08cefbed5df93",
-    "SOURCES.md": "9ccafc5f457b86ebf2cefb4a691955dee6032730726591de158e3f9dbdc101b9",
-    "THIRD_PARTY_NOTICES.md": "f09052cae6fc5d0a9271bf6248d9ec3c67769b823c25080de976845076065e76",
-    "app.js": "1322e456a19585ffd43ffc80526600cb272a6461fa4592fb8f05aa9448f10f1d",
-    "build.py": "ea9be33abffa8b6d7152e910f8e76dcc06837e3f0ddd28f32ff5d5206fc2d4aa",
-    "index.html": "8c8b93093234758e8167097af983e400d57a9f5c396ca86d5d2731a410b73944",
-    "model.js": "0aa7f93c81d080833fc7ddaf71fd8dcff304a51a1769c6d01a0555184109ca0d",
-    "page.html": "6dd174526a82ac23bf63661666c30e2ddf4a2f49b5d087657d6ab027c3afe931",
-    "style.css": "259b0a42aa0f1a86fb4553e43c6ad2f508095dec18fcd97d0976b57fc6ff0632",
-    "test_review.js": "3eaf657b718f6a7a9f7522159c01da5dbcb751899c6181801a4d892ffe8aee98",
-    "test_validation.py": "7741331d328626b4fd5606fa46fe1dd96c8a8aba67da66f24b84615ae030b147",
-    "verify.js": "7c1218fc2977fef777901ed6100b5f4927e77325a983948b002fb787e71bde03",
-    "verify_equilibrium.py": "33591e2ae32b9c3cb6a3f5083e39c02e5f9c335b6bb95397c577a9e155949994"
-  },
+  "record_kind": "Observed local check results, normalized for inspection; not scientific-source verification or empirical calibration.",
+  "source_hash_scope": "Historical check identities are retained separately. Current source identities exclude PROVENANCE.json and VALIDATION.json to avoid circular hashes.",
   "runtime": {
     "python": "3.14.7",
     "node": "23.10.0",
@@ -153,7 +136,7 @@
       "system": "darwin",
       "architecture": "arm64"
     },
-    "method": "Isolated cached headless Chromium with platform sandbox; private CDP; exact local HTML data URL; external page requests blocked; no real phone/listening/screen-reader test.",
+    "method": "Headless Chromium with an isolated temporary profile; local HTML; external page requests blocked; no physical-device, listening or screen-reader test.",
     "page_sha256": "8c8b93093234758e8167097af983e400d57a9f5c396ca86d5d2731a410b73944",
     "checks": [
       "exact page identity, meaningful render and no framework overlay",
@@ -182,7 +165,7 @@
     "spans": {
       "sync": "0",
       "gradual": "0.12",
-      "copy": "With α = 0.18, the same late-window shortcut span is 0.12 units. The synchronous span is 0 units. A span can include a monotonic transient; it is not evidence of oscillation or convergence."
+      "copy": "With \u03b1 = 0.18, the same late-window shortcut span is 0.12 units. The synchronous span is 0 units. A span can include a monotonic transient; it is not evidence of oscillation or convergence."
     },
     "dashes": [
       "none",
@@ -200,6 +183,41 @@
     "Declared minimum runtimes not matrix-tested",
     "No assistive-technology, physical-device or listening claim",
     "No current new primary-paper access; source facts retain stated limits",
-    "Full raw validation/account/session logs and raw data are intentionally not bundled; this record supplies inspectable counts and results."
-  ]
+    "This record supplies normalized counts and results. Raw data are not bundled; see the documented primary sources and input requirements."
+  ],
+  "historical_source_file_sha256": {
+    ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
+    "COPYRIGHT.txt": "aec2af079eaa192a66e2171862a25bee023e464cdf60f18899f55eba2b3eca91",
+    "README.md": "ecfaec6e1edec4a6133f997e0c7bb7e38b7e1579815fcab7bde08cefbed5df93",
+    "SOURCES.md": "9ccafc5f457b86ebf2cefb4a691955dee6032730726591de158e3f9dbdc101b9",
+    "THIRD_PARTY_NOTICES.md": "f09052cae6fc5d0a9271bf6248d9ec3c67769b823c25080de976845076065e76",
+    "app.js": "1322e456a19585ffd43ffc80526600cb272a6461fa4592fb8f05aa9448f10f1d",
+    "build.py": "ea9be33abffa8b6d7152e910f8e76dcc06837e3f0ddd28f32ff5d5206fc2d4aa",
+    "index.html": "8c8b93093234758e8167097af983e400d57a9f5c396ca86d5d2731a410b73944",
+    "model.js": "0aa7f93c81d080833fc7ddaf71fd8dcff304a51a1769c6d01a0555184109ca0d",
+    "page.html": "6dd174526a82ac23bf63661666c30e2ddf4a2f49b5d087657d6ab027c3afe931",
+    "style.css": "259b0a42aa0f1a86fb4553e43c6ad2f508095dec18fcd97d0976b57fc6ff0632",
+    "test_review.js": "3eaf657b718f6a7a9f7522159c01da5dbcb751899c6181801a4d892ffe8aee98",
+    "test_validation.py": "7741331d328626b4fd5606fa46fe1dd96c8a8aba67da66f24b84615ae030b147",
+    "verify.js": "7c1218fc2977fef777901ed6100b5f4927e77325a983948b002fb787e71bde03",
+    "verify_equilibrium.py": "33591e2ae32b9c3cb6a3f5083e39c02e5f9c335b6bb95397c577a9e155949994"
+  },
+  "source_file_sha256": {
+    ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
+    "COPYRIGHT.txt": "aec2af079eaa192a66e2171862a25bee023e464cdf60f18899f55eba2b3eca91",
+    "README.md": "ecfaec6e1edec4a6133f997e0c7bb7e38b7e1579815fcab7bde08cefbed5df93",
+    "SOURCES.md": "eee3d9314859d2b491dd675745de8839d6a06700c49d9b922b2b7c24fece87cb",
+    "THIRD_PARTY_NOTICES.md": "47cd69a552070b6fd0c1b56f6d0658b205ad96e5219271ae8eaf5ab1d2d60566",
+    "app.js": "1322e456a19585ffd43ffc80526600cb272a6461fa4592fb8f05aa9448f10f1d",
+    "build.py": "ea9be33abffa8b6d7152e910f8e76dcc06837e3f0ddd28f32ff5d5206fc2d4aa",
+    "index.html": "38e7381747c3a501a4b4263a716a3d68ecf2296cfd9dd5a39b9524fb01a0d2bc",
+    "model.js": "0aa7f93c81d080833fc7ddaf71fd8dcff304a51a1769c6d01a0555184109ca0d",
+    "page.html": "adb8eef9607b1435888e69412fb5db6c3aa5547e8065aa803ff35e2604df52bb",
+    "style.css": "259b0a42aa0f1a86fb4553e43c6ad2f508095dec18fcd97d0976b57fc6ff0632",
+    "test_review.js": "3eaf657b718f6a7a9f7522159c01da5dbcb751899c6181801a4d892ffe8aee98",
+    "test_validation.py": "7741331d328626b4fd5606fa46fe1dd96c8a8aba67da66f24b84615ae030b147",
+    "verify.js": "7c1218fc2977fef777901ed6100b5f4927e77325a983948b002fb787e71bde03",
+    "verify_equilibrium.py": "33591e2ae32b9c3cb6a3f5083e39c02e5f9c335b6bb95397c577a9e155949994"
+  },
+  "description_revision_note": "Presentation and documentation revised after the recorded checks. Historical source and browser page hashes identify those earlier runs; current hashes identify the included files. No scientific calculation was changed."
 }

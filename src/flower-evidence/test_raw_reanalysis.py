@@ -15,7 +15,6 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-SESSION = "2026-10-17-165111-flower-hearing"
 RAW = ROOT / "raw-data"
 SCRIPT = ROOT / "raw_reanalysis.py"
 EXPECTED_FILES = {

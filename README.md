@@ -86,7 +86,7 @@ Riffle limits: 52 distinct labels, initially sorted, ideal binomial cuts and
 uniform random interleaving. Human hand technique and game-specific fairness
 were not measured. The eight-card comparison does not certify 52-card mixing
 under other cut rules. The illustrated sample deck is deterministic. The
-interaction script was browser-tested in a private playtest before release;
+interaction script was browser-tested before release;
 the public wording and package were source-checked without claiming a second
 browser run.
 
@@ -116,7 +116,7 @@ separately when actually checked.
 - **The shortcut trap, one day later** — Compare synchronous and gradual route updates in two toy models. Finite trajectories show how adjustment rules matter; no convergence guarantee. See [module sources and limits](src/route-learning/README.md).
 - **Square ice: boundaries, loops and counts** — Read the source and finite checks for an arrow model. Boundary assumptions matter; this is a source/derivation module, not a water-ice simulation. See [module sources and limits](src/square-ice/README.md).
 
-The addition modules are preserved byte for byte from their scoped source reviews. Their calculations, generated content and visible limits remain separate from independent empirical or theorem certification. Source-only modules do not require an interactive app.
+The modules include source code, reproducible checks and documented limits. Presentation revisions preserve the numerical models and fixtures. These checks do not establish empirical validity or prove new theorems. Square Ice is a source guide with command-line checks.
 
 Run the module checks:
 

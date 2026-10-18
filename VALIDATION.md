@@ -42,19 +42,12 @@ literal cut/interleave evolution and an explicit Eulerian-number sum. The
 headline top marginal check rederives its finite rank-mixture formula; it is
 not independent evidence that the ideal model describes real hand shuffling.
 
-The first release-check attempt failed only at a script-attribute-order
-assumption while locating embedded JSON. The parser was corrected and the
-complete check passed. A prepared documentation patch initially failed to match
-the remote baseline README; it was corrected without touching a separate staged
-traffic edit. Reference checking corrected the full names of the 2025 authors
-before publication.
-
 Browser interaction checks on the unchanged script were completed during the
-preceding private playtest: presets, keyboard endpoints, sample regeneration,
+earlier browser checks: presets, keyboard endpoints, sample regeneration,
 separation toggle, methods and narrow layout. This release adds clearer copy
 and rounded-number explanations. Those copy changes were source-checked;
 no second browser pass, physical-phone check or assistive-technology audit is
-claimed. Chrome was reserved for separate work during release review.
+claimed.
 
 # Phantom places validation
 
@@ -70,4 +63,4 @@ physical-device or assistive-technology claim follows from integration.
 - The shortcut trap, one day later: exact module [validation](src/route-learning/VALIDATION.json), [provenance](src/route-learning/PROVENANCE.json) and [limits](src/route-learning/README.md). Those observed module checks and static-review limits are not empirical certification.
 - Square ice: boundaries, loops and counts: exact module [validation](src/square-ice/VALIDATION.json), [provenance](src/square-ice/PROVENANCE.json) and [limits](src/square-ice/README.md). Those observed module checks and static-review limits are not empirical certification.
 
-Collection integration and source-guide/browser checks are recorded privately for this exact candidate. Earlier browser results do not imply physical-device or screen-reader coverage. The full review record retains raw reviewer verdicts and deterministic reconciliation; it does not convert an unperformed scientific review into a PASS.
+The collection includes source checks and a static Square Ice guide. Earlier browser results do not imply physical-device or screen-reader coverage. Code checks do not establish scientific validity or empirical calibration.
