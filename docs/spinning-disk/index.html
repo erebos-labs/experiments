@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore why a rolling disk chirps as it loses energy, and why fitted exponents alone do not identify the loss mechanism.">
+  <meta name="referrer" content="no-referrer">
+  <title>The vanishing wobble</title>
+  <style>
+    :root { color-scheme: dark; --ink:#f5f1e8; --muted:#aaa69c; --air:#67d7ff; --roll:#ff9b6a; --gold:#ffd166; --panel:#171b24; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; color:var(--ink); background:radial-gradient(circle at 70% 0%,#26334c 0,#10131a 42%,#090b10 100%); font:16px/1.45 ui-sans-serif,system-ui,sans-serif; }
+    main { max-width:1120px; margin:auto; padding:34px 22px 52px; }
+    h1 { margin:0; max-width:850px; font:700 clamp(2.3rem,6vw,5.2rem)/.95 ui-serif,Georgia,serif; letter-spacing:-.045em; }
+    .dek { color:#cbc6ba; max-width:760px; font-size:1.08rem; margin:20px 0 28px; }
+    .grid { display:grid; grid-template-columns:minmax(260px,340px) 1fr; gap:18px; }
+    .panel { background:color-mix(in srgb,var(--panel) 92%,transparent); border:1px solid #303746; border-radius:18px; box-shadow:0 24px 80px #0006; }
+    .controls { padding:22px; }
+    label { display:block; margin:0 0 20px; color:var(--muted); font-size:.87rem; }
+    label output { float:right; color:var(--ink); font-variant-numeric:tabular-nums; }
+    input[type=range] { width:100%; accent-color:var(--gold); margin-top:8px; }
+    .stats { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:8px; }
+    .stat { padding:12px; background:#0d1118; border:1px solid #282f3c; border-radius:12px; }
+    .stat small { display:block; color:var(--muted); }
+    .stat b { display:block; margin-top:3px; font-size:1.12rem; font-variant-numeric:tabular-nums; }
+    .viz { padding:14px 14px 9px; min-width:0; }
+    canvas { width:100%; height:410px; display:block; border-radius:12px; background:#0a0d13; }
+    .legend { display:flex; flex-wrap:wrap; gap:14px; color:var(--muted); font-size:.82rem; padding:10px 4px 0; }
+    .legend i { width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px; }
+    .scrub { margin-top:18px; padding:18px; display:grid; grid-template-columns:1fr auto; gap:8px 18px; align-items:center; }
+    .scrub input { grid-column:1/-1; width:100%; accent-color:var(--gold); }
+    .disk-stage { display:flex; align-items:center; gap:18px; }
+    .disk { width:72px;height:72px;border-radius:50%; background:radial-gradient(circle at 35% 28%,#fff9,#9da9b8 22%,#353d49 66%,#0d1015 70%); border:2px solid #dfe7f1; transform-origin:50% 100%; box-shadow:0 14px 16px #000b; }
+    .readout { font-variant-numeric:tabular-nums; }
+    .readout strong { color:var(--gold); }
+    .note { color:var(--muted); font-size:.84rem; max-width:900px; margin:22px 3px 0; }
+    .story { margin-top:18px; padding:20px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .story h2 { grid-column:1/-1; margin:0; font:700 1.45rem ui-serif,Georgia,serif; }
+    .story h3 { margin:0 0 7px; color:var(--gold); font-size:.95rem; }
+    .story p { margin:0; color:#c3bfb5; font-size:.9rem; }
+    .fitbox { margin-top:18px; padding:20px; display:grid; grid-template-columns:1fr minmax(280px,400px); gap:22px; align-items:start; }
+    .fitbox h2 { margin:0 0 8px; font:700 1.45rem ui-serif,Georgia,serif; }
+    .fitbox p { color:#c3bfb5; margin:0; }
+    .fit-control { padding:15px; background:#0d1118; border:1px solid #282f3c; border-radius:14px; }
+    .fit-control select { width:100%; margin-top:8px; padding:8px; color:var(--ink); background:#171b24; border:1px solid #40495a; border-radius:8px; }
+    #fitPlot { height:250px; margin-top:15px; }
+    .fit-answer { display:grid; grid-template-columns:1fr 1fr; gap:12px 18px; margin-top:10px; color:var(--muted); }
+    .fit-answer b { color:var(--gold); font-size:1.25rem; }
+    .fit-note { grid-column:1/-1; color:var(--muted); font-size:.84rem; }
+    a { color:#9fe1ff; }
+    @media (max-width:800px){ .grid{grid-template-columns:1fr} canvas{height:350px} .story,.fitbox{grid-template-columns:1fr}.story h2{grid-column:auto} }
+    @media (max-width:480px){ .scrub{grid-template-columns:1fr}.disk-stage{min-width:0}.readout{overflow-wrap:anywhere}#regime{justify-self:start} }
+  </style>
+</head>
+<body>
+<main>
+  <h1>The vanishing wobble</h1>
+  <p class="dek">A rolling disk loses energy while its contact point races faster. This explorer combines rolling resistance with boundary-layer air drag—the two-regime account tested in a 2026 preprint by Thorne and colleagues.</p>
+  <section class="grid">
+    <div class="panel controls">
+      <label>Disk mass <output id="massOut"></output><input id="mass" type="range" min="40" max="800" value="445"></label>
+      <label>Disk radius <output id="radiusOut"></output><input id="radius" type="range" min="25" max="60" value="37.5" step="0.5"></label>
+      <label>Air density <output id="densityOut"></output><input id="density" type="range" min="0.1" max="1.2" value="1.18" step="0.01"></label>
+      <label>Rolling coefficient μ <output id="muOut"></output><input id="mu" type="range" min="-5" max="-3" value="-4" step="0.02"></label>
+      <div class="stats" aria-live="polite">
+        <div class="stat"><small>Crossover tilt</small><b id="crossAngle"></b></div>
+        <div class="stat"><small>Crossover tone</small><b id="crossHz"></b></div>
+        <div class="stat"><small>14.3° → cutoff</small><b id="duration"></b></div>
+        <div class="stat"><small>Air share now</small><b id="airShare"></b></div>
+        <div class="stat"><small>Thin-layer limit</small><b id="gapAngle"></b></div>
+        <div class="stat"><small>At scrub point</small><b id="validity"></b></div>
+      </div>
+    </div>
+    <div class="panel viz">
+      <canvas id="plot" aria-label="Log-log plot of tilt and precession frequency versus modeled time remaining"></canvas>
+      <div class="legend"><span><i style="background:var(--air)"></i>tilt angle</span><span><i style="background:var(--gold)"></i>precession frequency</span><span><i style="background:var(--roll)"></i>equal-loss crossover</span><span><i style="background:#b895ff"></i>thin-layer limit</span></div>
+    </div>
+  </section>
+  <section class="panel scrub">
+    <div class="disk-stage"><div class="disk" id="disk" aria-hidden="true"></div><div class="readout" aria-live="polite"><strong id="nowHz"></strong> precession<br><span id="nowTilt"></span> tilt · <span id="nowTime"></span> model time remaining</div></div>
+    <div id="regime"></div>
+    <input id="time" type="range" min="0" max="1000" value="760" aria-label="Scrub through modeled motion">
+  </section>
+  <section class="panel story">
+    <h2>A useful relay model—and where it breaks</h2>
+    <div><h3>1 · Geometry makes the chirp</h3><p>For steady rolling, Ω² sin θ = 4g/R. Losing tilt therefore raises the precession frequency even while total mechanical energy falls.</p></div>
+    <div><h3>2 · Parameters identify the loss</h3><p>A power-law exponent alone is ambiguous: 4/9 and 1/2 are hard to separate experimentally. Mass, radius, pressure, surface, and a hollow-ring control distinguish competing mechanisms.</p></div>
+    <div><h3>3 · Contact is not merely the finale</h3><p>Contact can be lost intermittently during the motion as well as near rest. A fluid layer, impacts, roughness, deformation, and face friction make a clean sequence an approximation, not an observed universal script.</p></div>
+  </section>
+  <section class="panel fitbox">
+    <div><h2>The fit can trade exponent for end time</h2><p>Generate a known power law, choose the sampling window and deterministic log-noise, then either fix or estimate the collapse time. The gold curve shows the exponent fitted at every assumed endpoint. Purple markers identify endpoints whose residual RMS is within 5% of the best; the selected fit’s RMS is reported beside the controls.</p><canvas id="fitPlot" aria-label="Fitted exponent against assumed collapse-time offset; purple markers indicate residual RMS within five percent of the best"></canvas></div>
+    <div class="fit-control">
+      <label>True synthetic exponent
+        <select id="trueN"><option value="0.4444444444444444">4/9 · boundary-layer candidate</option><option value="0.5">1/2 · Ω²-loss candidate</option></select>
+      </label>
+      <label>Earliest time before collapse <output id="windowOut"></output><input id="windowMin" type="range" min="2" max="30" value="5" step="1"></label>
+      <label>Log-noise σ <output id="noiseOut"></output><input id="noise" type="range" min="0" max="0.05" value="0.02" step="0.005"></label>
+      <label>Sampling pattern
+        <select id="sampling"><option value="log">log-spaced · more late samples</option><option value="linear">linear-spaced</option></select>
+      </label>
+      <label>Collapse-time treatment
+        <select id="fitMode"><option value="joint">estimate jointly</option><option value="correct">fix at true time</option><option value="shifted">fix at chosen offset</option></select>
+      </label>
+      <label id="offsetLabel">Chosen collapse-time offset <output id="offsetOut"></output><input id="offset" type="range" min="-1" max="8" value="3" step="0.1"></label>
+      <div class="fit-answer" aria-live="polite">
+        <span>fitted exponent<br><b id="fitN"></b></span><span>looks closer to<br><b id="fitCloser"></b></span>
+        <span>fitted endpoint<br><b id="fitTf"></b></span><span>log residual RMS<br><b id="fitRms"></b></span>
+      </div>
+    </div>
+    <p class="fit-note">Synthetic demonstration only: the browser noise sequence is fixed for repeatability, the data obey one exact power law, and the endpoint search is bounded. It shows estimator ambiguity under controlled assumptions; it is not evidence that any particular dissipation mechanism governs a real disk. In a separate offline zero-noise check using 100 log-spaced samples, forcing one power law onto this page’s mixed-loss model over 5–100 ms gives 0.472 with the model endpoint fixed and 0.481 when the endpoint is estimated—even though air supplies 77.01% of modeled loss on average in that window. In a separate seeded ensemble with true exponent 4/9, 80 samples over 20–100 ms, 5% independent Gaussian log-noise, and both log- and linear-spaced sampling, candidate-specific endpoint searches from -19 to +50 ms raised wrong selections from 0.5–1% to 31% (200 repetitions per sampling pattern).</p>
+  </section>
+  <p class="note">This is a transparent scaling-model visualization, not a contact-dynamics simulation. It numerically integrates the combined loss law in Eq. 5 of <a href="https://arxiv.org/abs/2603.14520v1">Thorne et al. (2026)</a>, using Ω² sin θ = 4g/R. Below the violet thin-layer limit, the boundary layer is estimated to fill the disk–table gap, so the plotted continuation is explicitly an extrapolation. The v1 preprint’s displayed boundary-layer thickness and printed transition formula differ by a factor of 4 algebraically; this page uses the direct, more conservative consequence of its displayed thickness convention. That choice affects only the validity marker, not the integrated loss law. The plot stops at θ = 10⁻⁴ rad. Experiments report intermittent and terminal contact loss on apparatus-dependent scales from fractions of a millisecond to tens of milliseconds, with longer intervals in some base-plate conditions; the ideal rolling endpoint is therefore not an observed universal event. μ is a fitted effective rolling coefficient, and changing it is exploratory rather than a material prediction.</p>
+  <p class="note">Primary sources: <a href="https://doi.org/10.1038/35009017">Moffatt (2000)</a> introduced the air-viscosity finite-time model; <a href="https://arxiv.org/abs/gr-qc/0102046">Bildsten (2001/2002)</a> added the finite boundary-layer scaling; <a href="https://doi.org/10.1098/rspa.2014.0191">Ma et al. (2014)</a> found rolling-friction scaling for a sharp-edged steel disk over their measured final three seconds but could not resolve extremely small tilt; <a href="https://doi.org/10.1007/s11071-014-1811-5">Borisov, Mamaev &amp; Karavaev (2015)</a> measured intermittent and terminal contact loss; the <a href="https://arxiv.org/abs/2603.14520v1">Thorne et al. (2026) v1 preprint</a> tested a late boundary-layer regime with stereo high-speed imaging, partial vacuum, mass/radius variation, and an annulus control; <a href="https://doi.org/10.1137/24M1711741">Collins &amp; Hogan (2026)</a> studied base-plate dependence and motion after falling flat.</p>
+</main>
+<script>
+const G=9.81, ETA=1.85e-5, $=id=>document.getElementById(id);
+const controls=['mass','radius','density','mu']; let curve=[];
+function params(){return{m:+$('mass').value/1000,R:+$('radius').value/1000,rho:+$('density').value,mu:10**(+$('mu').value)}}
+function omega(th,p){return Math.sqrt(4*G/(p.R*Math.sin(th)))}
+function rates(th,p){const air=(8/3)*G**.25*p.R**1.75*Math.sqrt(ETA*p.rho)/p.m*th**-1.25;const roll=(2/3)*p.mu*Math.cos(th)*omega(th,p);return{air,roll}}
+function crossover(p){return(2*p.R**2.25*Math.sqrt(ETA*p.rho)/(p.mu*p.m*G**.25))**(4/3)}
+function thinLayerLimit(p){return(ETA**2/(G*p.R**3*p.rho**2))**(1/3)}
+function build(p){const n=1400,lo=1e-4,hi=.25,out=[];let tau=0,prev=lo,pr=rates(lo,p),pinv=1/(pr.air+pr.roll);for(let i=0;i<n;i++){const th=lo*(hi/lo)**(i/(n-1)),r=rates(th,p),inv=1/(r.air+r.roll);if(i)tau+=(inv+pinv)*(th-prev)/2;out.push({th,tau,hz:omega(th,p)/(2*Math.PI),air:r.air/(r.air+r.roll)});prev=th;pinv=inv}return out}
+function fmtTime(s){return s<1?`${(s*1000).toFixed(1)} ms`:`${s.toFixed(2)} s`}
+function update(){const p=params(),tc=crossover(p),tl=thinLayerLimit(p),inside=tc>=1e-4&&tc<=.25;curve=build(p);$('massOut').textContent=`${(p.m*1000).toFixed(0)} g`;$('radiusOut').textContent=`${(p.R*100).toFixed(2)} cm`;$('densityOut').textContent=`${p.rho.toFixed(2)} kg/m³`;$('muOut').textContent=p.mu.toExponential(2);$('crossAngle').textContent=tc<1e-4?'<0.01°':tc>.25?'>14.3°':`${(tc*180/Math.PI).toFixed(2)}°`;$('crossHz').textContent=inside?`${(omega(tc,p)/(2*Math.PI)).toFixed(1)} Hz`:'outside range';$('gapAngle').textContent=`${(tl*180/Math.PI).toFixed(2)}°`;$('duration').textContent=fmtTime(curve.at(-1).tau);draw();scrub()}
+function draw(){const c=$('plot'),dpr=devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;const x=c.getContext('2d');x.scale(dpr,dpr);x.clearRect(0,0,w,h);const pad={l:57,r:58,t:28,b:44},pw=w-pad.l-pad.r,ph=h-pad.t-pad.b;const valid=curve.filter(q=>q.tau>1e-5),xmin=Math.log10(valid[0].tau),xmax=Math.log10(valid.at(-1).tau),thmin=Math.log10(1e-4),thmax=Math.log10(.25),hzmin=Math.log10(valid.at(-1).hz),hzmax=Math.log10(valid[0].hz);const X=v=>pad.l+(Math.log10(v)-xmin)/(xmax-xmin)*pw,Yt=v=>pad.t+(thmax-Math.log10(v))/(thmax-thmin)*ph,Yh=v=>pad.t+(hzmax-Math.log10(v))/(hzmax-hzmin)*ph;x.strokeStyle='#27303e';x.fillStyle='#8e96a4';x.font='12px system-ui';for(let i=0;i<=5;i++){const yy=pad.t+i*ph/5;x.beginPath();x.moveTo(pad.l,yy);x.lineTo(w-pad.r,yy);x.stroke()}for(let i=0;i<=5;i++){const xx=pad.l+i*pw/5;x.beginPath();x.moveTo(xx,pad.t);x.lineTo(xx,h-pad.b);x.stroke();const v=10**(xmin+i*(xmax-xmin)/5),lab=v<.001?`${Math.round(v*1e6)}µs`:v<1?`${Math.round(v*1000)}ms`:`${v.toFixed(1)}s`;x.fillText(lab,xx-14,h-17)}function line(key,Y,color){x.beginPath();valid.forEach((q,i)=>{const xx=X(q.tau),yy=Y(q[key]);i?x.lineTo(xx,yy):x.moveTo(xx,yy)});x.strokeStyle=color;x.lineWidth=2.5;x.stroke()}function marker(theta,color,dash){if(theta<valid[0].th||theta>valid.at(-1).th)return;const q=valid.reduce((a,b)=>Math.abs(b.th-theta)<Math.abs(a.th-theta)?b:a);x.setLineDash(dash);x.strokeStyle=color;x.beginPath();x.moveTo(X(q.tau),pad.t);x.lineTo(X(q.tau),h-pad.b);x.stroke()}line('th',Yt,'#67d7ff');line('hz',Yh,'#ffd166');const p=params();marker(crossover(p),'#ff9b6a',[5,5]);marker(thinLayerLimit(p),'#b895ff',[2,5]);x.setLineDash([]);x.fillStyle='#9da6b6';x.fillText('time remaining →',w/2-45,h-3);x.fillStyle='#67d7ff';x.fillText('tilt (log)',8,18);x.fillStyle='#ffd166';x.fillText('Hz (log)',w-51,18)}
+function scrub(){const p=params(),q=curve[Math.round(+$('time').value/1000*(curve.length-1))],thin=q.th>=thinLayerLimit(p);$('nowHz').textContent=`${q.hz.toFixed(1)} Hz`;$('nowTilt').textContent=`${(q.th*180/Math.PI).toFixed(2)}°`;$('nowTime').textContent=fmtTime(q.tau);$('airShare').textContent=`${(q.air*100).toFixed(0)}%`;$('validity').textContent=thin?'thin layer':'extrapolated';$('validity').style.color=thin?'#9be0b0':'#b895ff';$('regime').textContent=q.air>.55?'air-drag led':q.air<.45?'rolling led':'crossover';$('regime').style.color=q.air>.55?'#67d7ff':q.air<.45?'#ff9b6a':'#ffd166';$('disk').style.transform=`rotate(${Math.max(2,Math.min(78,q.th*180/Math.PI))}deg)`}
+function normalAt(i){const u1=Math.max(1e-9,((Math.sin((i+1)*12.9898+78.233)*43758.5453)%1+1)%1),u2=((Math.sin((i+1)*93.9898+11.733)*12741.1543)%1+1)%1;return Math.sqrt(-2*Math.log(u1))*Math.cos(2*Math.PI*u2)}
+function synthetic(){const n=+$('trueN').value,lo=+$('windowMin').value/1000,hi=.1,sigma=+$('noise').value,mode=$('sampling').value,N=80,tau=[],y=[];for(let i=0;i<N;i++){const q=i/(N-1),t=mode==='log'?lo*(hi/lo)**q:lo+(hi-lo)*q;tau.push(t);y.push(Math.log(.1)+n*Math.log(t)+sigma*normalAt(i))}return{n,tau,y}}
+function powerFit(data,off){const x=data.tau.map(t=>Math.log(t+off));if(x.some(v=>!Number.isFinite(v)))return{n:NaN,rms:Infinity};const N=x.length,mx=x.reduce((a,b)=>a+b)/N,my=data.y.reduce((a,b)=>a+b)/N,den=x.reduce((s,v)=>s+(v-mx)**2,0),n=x.reduce((s,v,i)=>s+(v-mx)*(data.y[i]-my),0)/den,a=my-n*mx,rms=Math.sqrt(data.y.reduce((s,v,i)=>s+(v-a-n*x[i])**2,0)/N);return{n,rms}}
+function fitProfile(data){const lo=-.95*Math.min(...data.tau),hi=Math.min(.012,.5*Math.max(...data.tau)),out=[];for(let i=0;i<=240;i++){const off=lo+(hi-lo)*i/240,outcome=powerFit(data,off);out.push({off,...outcome})}out.push({off:0,...powerFit(data,0)});out.sort((a,b)=>a.off-b.off);return out}
+function drawFit(profile,selected){const c=$('fitPlot'),dpr=devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;const x=c.getContext('2d');x.scale(dpr,dpr);x.clearRect(0,0,w,h);const pad={l:48,r:15,t:18,b:37},pw=w-pad.l-pad.r,ph=h-pad.t-pad.b,xmin=profile[0].off*1000,xmax=profile.at(-1).off*1000,ymin=.28,ymax=.72,X=v=>pad.l+(v*1000-xmin)/(xmax-xmin)*pw,Y=v=>pad.t+(ymax-v)/(ymax-ymin)*ph,best=Math.min(...profile.map(q=>q.rms));x.strokeStyle='#27303e';x.fillStyle='#8e96a4';x.font='11px system-ui';[4/9,.5,.6,.7].forEach(v=>{const yy=Y(v);x.beginPath();x.moveTo(pad.l,yy);x.lineTo(w-pad.r,yy);x.stroke();x.fillText(v===4/9?'4/9':v.toFixed(1),5,yy+4)});x.beginPath();profile.forEach((q,i)=>i?x.lineTo(X(q.off),Y(q.n)):x.moveTo(X(q.off),Y(q.n)));x.strokeStyle='#ffd166';x.lineWidth=2.5;x.stroke();profile.filter(q=>q.rms<=best*1.05).forEach(q=>{x.fillStyle='#b895ff55';x.fillRect(X(q.off)-1,pad.t,2,ph)});x.fillStyle='#fff';x.beginPath();x.arc(X(selected.off),Y(selected.n),5,0,Math.PI*2);x.fill();x.fillStyle='#9da6b6';x.fillText('assumed endpoint offset (ms)',w/2-66,h-7);x.fillText(`${xmin.toFixed(1)}`,pad.l-8,h-20);x.fillText(`+${xmax.toFixed(1)}`,w-pad.r-28,h-20)}
+function fitUpdate(){const data=synthetic(),profile=fitProfile(data),mode=$('fitMode').value,chosen=+$('offset').value/1000,best=profile.reduce((a,b)=>b.rms<a.rms?b:a),selected=mode==='joint'?best:mode==='correct'?{off:0,...powerFit(data,0)}:{off:chosen,...powerFit(data,chosen)};$('windowOut').textContent=`${(Math.min(...data.tau)*1000).toFixed(0)}–100 ms`;$('noiseOut').textContent=`${(+$('noise').value*100).toFixed(1)}%`;$('offsetOut').textContent=`${chosen>=0?'+':''}${(chosen*1000).toFixed(1)} ms`;$('offsetLabel').style.opacity=mode==='shifted'?'1':'.45';$('offset').disabled=mode!=='shifted';$('fitN').textContent=selected.n.toFixed(3);$('fitCloser').textContent=Math.abs(selected.n-.5)<Math.abs(selected.n-4/9)?'1/2':'4/9';$('fitTf').textContent=`${selected.off>=0?'+':''}${(selected.off*1000).toFixed(2)} ms`;$('fitRms').textContent=selected.rms.toFixed(4);drawFit(profile,selected)}
+controls.forEach(id=>$(id).addEventListener('input',update));$('time').addEventListener('input',scrub);['offset','trueN','windowMin','noise','sampling','fitMode'].forEach(id=>$(id).addEventListener('input',fitUpdate));addEventListener('resize',()=>{draw();fitUpdate()});update();fitUpdate();
+</script>
+</body>
+</html>

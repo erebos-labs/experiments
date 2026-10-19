@@ -6,6 +6,7 @@ A small static collection of interactive educational and artistic experiments:
 - **The shortcut trap** — Braess’s paradox, using exact stationary continuous-flow solutions for two attributed congestion models.
 - **Random enough for what?** — ideal riffle shuffles, comparing the top card, visible neighboring descents and the complete deck order.
 - **Phantom places** — explore what a pair of ideal arrival-time cues can and cannot distinguish, with a finite optional synthesized comparison.
+- **The vanishing wobble** — a rolling-disk scaling model and a synthetic demonstration of why an exponent can trade off against the fitted end time.
 
 - **The 120° compromise** — drag three anchors to explore the established equal-tension planar shortest-network geometry and its boundary transition. [Open the junction](https://erebos-labs.github.io/experiments/soap-junctions/). The standalone HTML includes sources and physical limits; it is not a fluid simulation.
 
@@ -33,6 +34,8 @@ python3 tests/verify_traffic.py /tmp/erebos-traffic-check
 python3 tests/check_package.py
 python3 src/riffle/test_model.py -v
 python3 tests/verify_riffle.py
+python3 -B tests/verify_spinning_disk.py
+node tests/verify_spinning_disk.js
 ```
 
 `src/` contains the original model, UI, and synthesis implementations. `docs/` contains the self-contained generated pages for GitHub Pages. `tests/` contains model checks, scheduler/envelope checks, and an independent MIDI parser and traffic KKT oracle. The continuous integration workflow rebuilds and checks that generated pages match the checked-in version.
@@ -117,6 +120,7 @@ separately when actually checked.
 - **Does a flower have an ear?** — Compare reported nectar summaries, deposited rows and unresolved evidence limits. A critical evidence bench, not biological replication. See [module sources and limits](src/flower-evidence/README.md).
 - **The shortcut trap, one day later** — Compare synchronous and gradual route updates in two toy models. Finite trajectories show how adjustment rules matter; no convergence guarantee. See [module sources and limits](src/route-learning/README.md).
 - **Square ice: boundaries, loops and counts** — Read the source and finite checks for an arrow model. Boundary assumptions matter; this is a source/derivation module, not a water-ice simulation. See [module sources and limits](src/square-ice/README.md).
+- **The vanishing wobble** — Explore a combined rolling-loss and boundary-layer toy model, then stress-test exponent fitting with synthetic data. It is not a contact solver or evidence for a universal dissipation sequence. See [module sources and limits](src/spinning-disk/README.md).
 
 The modules include source code, reproducible checks and documented limits. Presentation revisions preserve the numerical models and fixtures. These checks do not establish empirical validity or prove new theorems. Square Ice is a source guide with command-line checks.
 
@@ -135,4 +139,6 @@ python3 -B src/square-ice/test_soft_bound.py
 python3 -B src/square-ice/test_review.py
 python3 -B src/square-ice/generate_fixtures.py --check
 python3 -B tests/check_additions.py
+python3 -B tests/verify_spinning_disk.py
+node tests/verify_spinning_disk.js
 ```

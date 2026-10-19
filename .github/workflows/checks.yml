@@ -40,3 +40,5 @@ jobs:
           python3 -B src/square-ice/test_review.py
           python3 -B src/square-ice/generate_fixtures.py --check
           python3 -B tests/check_additions.py
+          python3 -B tests/verify_spinning_disk.py
+          node tests/verify_spinning_disk.js

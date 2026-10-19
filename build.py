@@ -28,6 +28,9 @@ print('Built docs/phantom-sound/index.html')
 shutil.copyfile(base/'src/flower-evidence/index.html',base/'docs/flower-evidence/index.html')
 print('Built docs/flower-evidence/index.html')
 
+shutil.copyfile(base/'src/spinning-disk/index.html',base/'docs/spinning-disk/index.html')
+print('Built docs/spinning-disk/index.html')
+
 subprocess.run([sys.executable, '-B', str(base/'src/route-learning/build.py'), '--check'], check=True)
 shutil.copyfile(base/'src/route-learning/index.html',base/'docs/route-learning/index.html')
 print('Built docs/route-learning/index.html')

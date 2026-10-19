@@ -68,3 +68,7 @@ human perceptual validity. Existing copyright terms remain in force.
 ## The 120° compromise
 
 The standalone [geometry page](docs/soap-junctions/index.html) links primary references for Plateau's laws and their physical scope. It is an authored educational planar distance-minimization model with AI assistance, not new research or a fluid simulation. No paper bodies, third-party diagrams, datasets, fonts or executable libraries are bundled. Existing copyright terms apply; cited works retain their own rights.
+
+## The vanishing wobble
+
+The rolling-disk explorer's [source list](src/spinning-disk/SOURCES.md), [limits](src/spinning-disk/README.md), and [module notices](src/spinning-disk/THIRD_PARTY_NOTICES.md) accompany its source. The page is an original educational scaling-model implementation with AI assistance, not a rigid-body/contact solver or a claim of a universal dissipation sequence. No paper bodies, datasets, third-party code, images, fonts, audio, or other assets are bundled. Existing copyright terms apply; cited works retain their own rights.
