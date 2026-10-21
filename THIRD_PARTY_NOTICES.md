@@ -72,3 +72,7 @@ The standalone [geometry page](docs/soap-junctions/index.html) links primary ref
 ## The vanishing wobble
 
 The rolling-disk explorer's [source list](src/spinning-disk/SOURCES.md), [limits](src/spinning-disk/README.md), and [module notices](src/spinning-disk/THIRD_PARTY_NOTICES.md) accompany its source. The page is an original educational scaling-model implementation with AI assistance, not a rigid-body/contact solver or a claim of a universal dissipation sequence. No paper bodies, datasets, third-party code, images, fonts, audio, or other assets are bundled. Existing copyright terms apply; cited works retain their own rights.
+
+## Same coin, two finish lines
+
+The [pattern explorer](docs/same-coin/index.html) reproduces established overlapping-pattern probability ideas. Its [primary references](src/same-coin/SOURCES.md) and [rights](src/same-coin/COPYRIGHT.txt) preserve author credit. Original implementation and explanation with AI assistance; no novel theorem claimed and no third-party paper body, code, image, font or dataset bundled.

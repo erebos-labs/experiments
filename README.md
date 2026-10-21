@@ -2,6 +2,8 @@
 
 A small static collection of interactive educational and artistic experiments:
 
+- **Same coin, two finish lines** — identical marginal waiting laws can coexist with an asymmetric first-arrival race. [Explore the patterns](https://erebos-labs.github.io/experiments/same-coin/); [source, checks and assumptions](src/same-coin/README.md).
+
 - **Local clocks, audible tension** — a Kuramoto-style phase model mapped to a finite eight-bar synthesized instrument, with MIDI/WAV export.
 - **The shortcut trap** — Braess’s paradox, using exact stationary continuous-flow solutions for two attributed congestion models.
 - **Random enough for what?** — ideal riffle shuffles, comparing the top card, visible neighboring descents and the complete deck order.
@@ -36,6 +38,7 @@ python3 src/riffle/test_model.py -v
 python3 tests/verify_riffle.py
 python3 -B tests/verify_spinning_disk.py
 node tests/verify_spinning_disk.js
+python3 -B src/same-coin/verify.py
 ```
 
 `src/` contains the original model, UI, and synthesis implementations. `docs/` contains the self-contained generated pages for GitHub Pages. `tests/` contains model checks, scheduler/envelope checks, and an independent MIDI parser and traffic KKT oracle. The continuous integration workflow rebuilds and checks that generated pages match the checked-in version.

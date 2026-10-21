@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>Same coin, two finish lines</title>
+<style>
+:root{color-scheme:light;--paper:#f6f3eb;--ink:#173338;--secondary:#4c6263;--a:#206f87;--b:#c25a30;--tie:#c8cdc7;--line:#d3dad4}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:48px 36px 40px}header{max-width:760px}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:600}h1{font:clamp(34px,6vw,60px)/1.08 Georgia,serif;letter-spacing:-.03em;margin:18px 0}p{max-width:760px}.lede{font-size:20px;color:var(--secondary)}h2{font:26px/1.2 Georgia,serif;margin:0 0 8px}h3{font-size:17px;margin:0}section{margin-top:34px;padding-top:28px;border-top:1px solid var(--line)}.controls{display:grid;grid-template-columns:1fr 1fr 2fr;gap:24px;margin-top:30px}label{display:block;font-size:14px;font-weight:600}select,input[type=text]{display:block;width:100%;font:17px/1.4 ui-monospace,monospace;padding:10px;margin-top:6px;border:1px solid #879c96;border-radius:5px;background:#fffdfa;color:var(--ink)}input[type=range]{display:block;width:100%;margin:12px 0;accent-color:var(--ink)}output{font-variant-numeric:tabular-nums}.coin-detail{font-size:13px;color:var(--secondary);margin:0}.row-head{display:flex;gap:16px;align-items:baseline;justify-content:space-between;margin:24px 0 12px}.row-head p{font-size:14px;color:var(--secondary);margin:0}.bar{height:36px;display:flex;width:100%;overflow:hidden;border-radius:4px;background:var(--tie)}.segment.a{background:var(--a)}.segment.b{background:var(--b)}.segment.tie{background:var(--tie)}.legend{display:flex;flex-wrap:wrap;gap:12px 28px;margin:12px 0}.legend span{display:inline-flex;gap:8px;align-items:center;font-size:15px}.swatch{width:12px;height:12px;display:inline-block;border-radius:2px}.swatch.a{background:var(--a)}.swatch.b{background:var(--b)}.swatch.tie{background:var(--tie)}.value{font-variant-numeric:tabular-nums;font-weight:650}.horizon-control{width:240px;max-width:100%;margin-top:20px}.means{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin:25px 0}.means div{padding:12px 0}.means dt{font-size:13px;color:var(--secondary)}.means dd{margin:3px 0;font:25px/1.2 Georgia,serif}.means dd small{font:13px system-ui,sans-serif}.note{color:var(--secondary);font-size:15px}details{margin-top:18px}summary{font-size:14px;cursor:pointer}pre{font:12px/1.7 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere}#sequence-view{display:flex;flex-wrap:wrap;gap:4px;margin-top:18px}#sequence-view span{padding:3px 7px;font:16px/1.5 ui-monospace,monospace}.highlight-a{background:#c9e4eb;border-radius:3px}.highlight-b{background:#f4d9c7;border-radius:3px}.small{font-size:14px}.error{color:#9c2520;min-height:1em;font-size:14px}footer{margin-top:35px;border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:var(--secondary)}a{color:var(--a)}a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px}.source-list{padding-left:20px}.source-list li{margin:8px 0}@media(max-width:650px){main{padding:28px 20px}.controls{grid-template-columns:1fr 1fr;gap:18px}.coin-control{grid-column:1/-1}.row-head{display:block}.row-head p{margin-top:6px}.means{grid-template-columns:1fr;gap:0}.means div{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line)}.means dd{font-size:22px}.lede{font-size:18px}}
+</style></head><body><main>
+<header><div class="eyebrow">Probability · overlapping patterns</div><h1>Same coin,<br>two finish lines.</h1><p class="lede">With a fair coin, HHT and THH each take eight flips on average to appear alone. Yet THH wins their first-arrival race three times out of four. Change the finish line, and the advantage disappears.</p></header>
+<div class="controls"><label>Pattern A<select id="pattern-a" aria-label="Pattern A"></select></label><label>Pattern B<select id="pattern-b" aria-label="Pattern B"></select></label><div class="coin-control"><label for="heads">Chance of heads <output id="heads-value">50%</output></label><input id="heads" type="range" min="1" max="19" step="1" value="10"><p class="coin-detail">Independent flips · 5% steps · overlapping matches count</p></div></div>
+<p id="error" class="error" role="alert"></p>
+<div id="results" aria-live="polite">
+<div class="row-head"><h2>First arrival</h2><p>Stop as soon as either pattern appears.</p></div><div id="race-bar" class="bar" role="img" aria-label="First-arrival probabilities"></div><div class="legend"><span><i class="swatch a"></i><b data-pattern-a>HHT</b> <output class="value" id="race-a"></output></span><span><i class="swatch b"></i><b data-pattern-b>THH</b> <output class="value" id="race-b"></output></span></div>
+<div class="row-head"><h2>Most occurrences</h2><p>Keep flipping, then compare total counts.</p></div><div id="count-bar" class="bar" role="img" aria-label="Fixed-horizon score probabilities"></div><div class="legend"><span><i class="swatch a"></i><b data-pattern-a>HHT</b> more <output class="value" id="count-a"></output></span><span><i class="swatch tie"></i>Tie <output class="value" id="count-tie"></output></span><span><i class="swatch b"></i><b data-pattern-b>THH</b> more <output class="value" id="count-b"></output></span></div>
+<div class="horizon-control"><label for="horizon">Fixed horizon <output id="horizon-value">40</output> flips</label><input id="horizon" type="range" min="3" max="100" step="1" value="40"></div>
+<dl class="means"><div><dt><span data-pattern-a>HHT</span> alone</dt><dd><output id="mean-a"></output> <small>mean flips</small></dd></div><div><dt><span data-pattern-b>THH</span> alone</dt><dd><output id="mean-b"></output> <small>mean flips</small></dd></div><div><dt>First-arrival race</dt><dd><output id="race-mean"></output> <small>mean flips</small></dd></div></dl><p class="note" id="special-note"></p>
+<details><summary>Exact fractions and overlap values</summary><pre id="exact-results"></pre></details></div>
+<section><h2>Read the same flips two ways</h2><p class="small">The highlighted window is the first arrival. Counts use every overlapping window in the whole sequence.</p><label for="flips">A sequence of heads and tails<input id="flips" type="text" value="HHTHH" maxlength="240" spellcheck="false" autocomplete="off"></label><p id="sequence-error" class="error" role="alert"></p><div id="sequence-view" aria-label="Flips; first matching window highlighted"></div><div aria-live="polite"><p id="sequence-race" class="small"></p><p id="sequence-count" class="small"></p><p id="boundary" class="note"></p></div></section>
+<section><h2>What changes?</h2><p class="small">For HHT versus THH, HHT wins the race exactly when the sequence starts HH. Otherwise, the first eventual HH follows a tail and completes THH first. With a fair coin, those initial HH flips have probability 1/4.</p><p class="small">For a fixed number of flips, subtracting the two pattern counts makes the interior terms cancel. Only the first and last HH indicators remain. With a fair coin and at least four flips, each pattern has a 3/16 chance to outscore the other, and a tie has probability 5/8.</p><details><summary>Assumptions, method, and primary sources</summary><p class="small">All calculations assume independent, identically distributed coin flips and empty starting history. First-arrival races have no time cap. Fixed-horizon ties are retained. The displayed decimals are rounded; the fractions use integer arithmetic.</p><p class="small">Race results use weighted suffix/prefix overlaps, checked separately against an exact absorbing state machine. Fixed-horizon scores use an exact dynamic program over the last two flips and score difference. This is a mathematical model, with no measured physical coin data.</p><ul class="source-list"><li><a href="https://www.combinatorics.org/ojs/index.php/eljc/article/download/v13i1r35/pdf">Daniel Felix (2006), Optimal Penney Ante Strategy via Correlation Polynomial Identities</a> — overlap direction and fair-coin strategy.</li><li><a href="https://arxiv.org/html/1904.09888v3">Joshua B. Miller, Penney’s Game Odds From No-Arbitrage, v3</a> — weighted race probabilities and mean duration.</li><li><a href="https://arxiv.org/html/2406.20049v2">Basdevant, Hénard, Maurel-Ségala &amp; Singh (2025), On cases where Litt’s game is fair</a> — fixed-horizon score symmetry; its footnote identifies this boundary-dependent family.</li></ul></details></section>
+<footer>Equal frequency, mean waiting time, first arrival, and final score describe different questions.</footer>
+</main><script>/* Standalone, exact arithmetic. No libraries, requests, storage, or randomness. */
+'use strict';
+function gcd(a,b){a=a<0n?-a:a;b=b<0n?-b:b;while(b){[a,b]=[b,a%b];}return a;}
+function rat(n,d=1n){n=BigInt(n);d=BigInt(d);if(!d)throw Error('Zero denominator');if(d<0n){n=-n;d=-d;}const g=gcd(n,d);return {n:n/g,d:d/g};}
+const plus=(a,b)=>rat(a.n*b.d+b.n*a.d,a.d*b.d);
+const minus=(a,b)=>rat(a.n*b.d-b.n*a.d,a.d*b.d);
+const times=(a,b)=>rat(a.n*b.n,a.d*b.d);
+const over=(a,b)=>rat(a.n*b.d,a.d*b.n);
+const exact=a=>a.d===1n?String(a.n):`${a.n}/${a.d}`;
+const decimal=a=>Number(a.n)/Number(a.d);
+const percent=a=>(decimal(a)*100).toFixed(2)+'%';
+function validate(a,b,h,d){
+  if(!/^[HT]{3}$/.test(a)||!/^[HT]{3}$/.test(b)||a===b)throw Error('Choose two distinct three-flip patterns.');
+  if(!Number.isInteger(h)||!Number.isInteger(d)||h<=0||h>=d)throw Error('Coin probability must be between zero and one.');
+}
+function wordProbability(w,h,d){
+  const heads=[...w].filter(x=>x==='H').length,tails=w.length-heads;
+  return rat(BigInt(h)**BigInt(heads)*BigInt(d-h)**BigInt(tails),BigInt(d)**BigInt(w.length));
+}
+function overlap(a,b,h,d){
+  let value=rat(0);
+  for(let k=1;k<=Math.min(a.length,b.length);k++)if(a.slice(-k)===b.slice(0,k)){
+    const p=wordProbability(b.slice(0,k),h,d);value=plus(value,rat(p.d,p.n));
+  }
+  return value;
+}
+function race(a,b,h=10,d=20){
+  validate(a,b,h,d);
+  const aa=overlap(a,a,h,d),ab=overlap(a,b,h,d),ba=overlap(b,a,h,d),bb=overlap(b,b,h,d);
+  const denominator=plus(minus(aa,ab),minus(bb,ba));
+  const pb=over(minus(aa,ab),denominator);
+  return {a:minus(rat(1),pb),b:pb,meanA:aa,meanB:bb,
+    mean:over(minus(times(aa,bb),times(ab,ba)),denominator),overlaps:[aa,ab,ba,bb]};
+}
+function fixed(a,b,n,h=10,d=20){
+  validate(a,b,h,d);
+  if(!Number.isInteger(n)||n<3||n>100)throw Error('Use a fixed horizon from 3 to 100 flips.');
+  let live=new Map([['|0',1n]]);
+  for(let t=0;t<n;t++){
+    const next=new Map();
+    for(const [key,mass] of live){
+      const [tail,deltaText]=key.split('|'),delta=Number(deltaText);
+      for(const [symbol,weight] of [['H',h],['T',d-h]]){
+        const s=tail+symbol,change=Number(s.endsWith(a))-Number(s.endsWith(b));
+        const following=s.slice(-2)+'|'+(delta+change);
+        next.set(following,(next.get(following)||0n)+mass*BigInt(weight));
+      }
+    }
+    live=next;
+  }
+  let am=0n,bm=0n,tie=0n;
+  for(const [key,mass] of live){const delta=Number(key.split('|')[1]);if(delta>0)am+=mass;else if(delta<0)bm+=mass;else tie+=mass;}
+  const denominator=BigInt(d)**BigInt(n);
+  return {a:rat(am,denominator),tie:rat(tie,denominator),b:rat(bm,denominator)};
+}
+function inspectSequence(raw,a,b){
+  const s=raw.toUpperCase().replace(/\s/g,'');
+  if(s.length>200||/[^HT]/.test(s))throw Error('Use up to 200 H/T letters; spaces are allowed.');
+  const hitsA=[],hitsB=[];let first=null;
+  for(let i=0;i<=s.length-3;i++){
+    const word=s.slice(i,i+3);
+    if(word===a){hitsA.push(i+3);if(!first)first={winner:'A',end:i+3};}
+    if(word===b){hitsB.push(i+3);if(!first)first={winner:'B',end:i+3};}
+  }
+  return {sequence:s,hitsA,hitsB,first};
+}
+function initialize(){
+  const id=x=>document.getElementById(x),a=id('pattern-a'),b=id('pattern-b'),p=id('heads'),n=id('horizon');
+  const choices=['HHH','HHT','HTH','HTT','THH','THT','TTH','TTT'];
+  for(const select of [a,b])for(const pattern of choices){const option=document.createElement('option');option.value=option.textContent=pattern;select.append(option);}
+  a.value='HHT';b.value='THH';
+  function bars(target,items){
+    target.replaceChildren();
+    for(const [label,value,cls] of items){
+      const segment=document.createElement('div');segment.className='segment '+cls;
+      segment.style.width=(100*decimal(value))+'%';segment.setAttribute('aria-hidden','true');target.append(segment);
+    }
+    target.setAttribute('aria-label',items.map(([label,q])=>label+' '+percent(q)).join('; '));
+  }
+  function renderSequence(){
+    try{
+      const result=inspectSequence(id('flips').value,a.value,b.value);
+      id('sequence-error').textContent='';
+      id('sequence-race').textContent=result.first?`First arrival: ${result.first.winner==='A'?a.value:b.value} at flip ${result.first.end}.`:'First arrival: neither pattern has appeared.';
+      id('sequence-count').textContent=`Whole sequence: ${a.value} ${result.hitsA.length}, ${b.value} ${result.hitsB.length}.`;
+      id('sequence-view').replaceChildren();
+      [...result.sequence].forEach((letter,i)=>{
+        const cell=document.createElement('span');cell.textContent=letter;
+        if(result.first&&i>=result.first.end-3&&i<result.first.end)cell.className=result.first.winner==='A'?'highlight-a':'highlight-b';
+        id('sequence-view').append(cell);
+      });
+      const special=a.value==='HHT'&&b.value==='THH'&&result.sequence.length>=3;
+      id('boundary').textContent=special?`Count difference = first pair HH (${Number(result.sequence.startsWith('HH'))}) − last pair HH (${Number(result.sequence.endsWith('HH'))}) = ${result.hitsA.length-result.hitsB.length}.`:'';
+    }catch(error){id('sequence-error').textContent=error.message;id('sequence-view').replaceChildren();id('sequence-race').textContent='';id('sequence-count').textContent='';id('boundary').textContent='';}
+  }
+  function render(){
+    try{
+      const h=Number(p.value),horizon=Number(n.value),r=race(a.value,b.value,h),f=fixed(a.value,b.value,horizon,h);
+      id('error').textContent='';
+      for(const option of a.options)option.disabled=option.value===b.value;
+      for(const option of b.options)option.disabled=option.value===a.value;
+      id('heads-value').textContent=(h*5)+'%';id('horizon-value').textContent=horizon;
+      for(const el of document.querySelectorAll('[data-pattern-a]'))el.textContent=a.value;
+      for(const el of document.querySelectorAll('[data-pattern-b]'))el.textContent=b.value;
+      bars(id('race-bar'),[[a.value,r.a,'a'],[b.value,r.b,'b']]);
+      bars(id('count-bar'),[[a.value,f.a,'a'],['Tie',f.tie,'tie'],[b.value,f.b,'b']]);
+      id('race-a').textContent=percent(r.a);id('race-b').textContent=percent(r.b);
+      id('count-a').textContent=percent(f.a);id('count-b').textContent=percent(f.b);id('count-tie').textContent=percent(f.tie);
+      id('mean-a').textContent=decimal(r.meanA).toFixed(3);id('mean-b').textContent=decimal(r.meanB).toFixed(3);
+      id('race-mean').textContent=decimal(r.mean).toFixed(3);
+      id('exact-results').textContent=`First arrival: A ${exact(r.a)}, B ${exact(r.b)}\nFixed horizon: A more ${exact(f.a)}, tie ${exact(f.tie)}, B more ${exact(f.b)}\nMean flips alone: A ${exact(r.meanA)}, B ${exact(r.meanB)}\nMean flips to first arrival: ${exact(r.mean)}\nWeighted overlaps AA, AB, BA, BB: ${r.overlaps.map(exact).join(', ')}`;
+      id('special-note').textContent=a.value==='HHT'&&b.value==='THH'?
+        'For this pair, HHT arrives first exactly when the first two flips are HH. With a fixed horizon of at least four flips, the score difference depends only on the first and last pairs.':
+        'Every overlapping window scores a point in the fixed-horizon game. First-arrival probabilities refer to an uncapped race from empty history.';
+      renderSequence();
+    }catch(error){id('error').textContent=error.message;}
+  }
+  for(const control of [a,b,p,n])control.addEventListener('input',render);
+  id('flips').addEventListener('input',renderSequence);
+  render();
+}
+if(typeof module!=='undefined')module.exports={rat,plus,minus,times,over,exact,decimal,race,fixed,inspectSequence};
+if(typeof document!=='undefined')initialize();
+</script></body></html>

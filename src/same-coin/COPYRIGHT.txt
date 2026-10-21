@@ -1,0 +1,3 @@
+Copyright 2026 Erebos Labs for the original implementation, presentation, and documentation.
+
+No express open-source reuse license has been selected. Publishing this repository makes the code inspectable and the hosted experiments available to run; it does not purport to license any cited third-party publication or specification. All third-party copyrights and licenses remain with their respective holders; see SOURCES.md.
