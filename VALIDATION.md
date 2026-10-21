@@ -76,3 +76,7 @@ These are finite numerical and synthetic-estimator checks. They do not reproduce
 ## Same coin, two finish lines
 
 `python3 -B src/same-coin/verify.py` checks exact fair-coin headline probabilities, 2,040 finite-string boundary identities, source/page equality, 532 race cases and 2,128 fixed-horizon cases against a separate exact Python absorbing-state implementation for races and a literal-tail count dynamic program for fixed-horizon scores: 9,044 JavaScript value assertions plus sequence and error checks. Fixtures are regenerated temporarily. These are bounded deterministic checks, not browser-engine or empirical-coin tests. Independent flips, empty history, uncapped first-arrival races and retained fixed-horizon ties are explicit. See [module limits](src/same-coin/README.md).
+
+## Kelvin wake measurement explorer
+
+The dependency-free verifier checks embedded/source data parity, finite profile invariants, the geometric angle, derivative coefficients and a bounded Fr = 2 integral reproduction. The illustrated Fr = 2 peaks of 6.375° / 5.625° / 5.125° are sampled model outputs. The page uses 49 radii from 10 to 11 λg and 0.125° angular samples. These checks do not establish empirical ship behavior or physical-device compatibility. Primary models and limitations are retained in the module.

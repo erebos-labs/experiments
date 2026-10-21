@@ -1,0 +1,3 @@
+Copyright (c) 2026 Erebos Labs. All rights reserved.
+
+Original educational code, diagrams, generated model data and explanation with AI assistance. No license to third-party works is granted. Cited papers and their authors retain their rights. No third-party paper body, image, code, font, recording or empirical dataset is bundled. Root COPYRIGHT.txt and THIRD_PARTY_NOTICES.md remain in force.

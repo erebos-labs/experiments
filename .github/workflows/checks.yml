@@ -14,7 +14,7 @@ jobs:
       - name: Build and check generated pages
         run: |
           python3 build.py
-          git diff --exit-code -- docs src/phantom/index.html src/flower-evidence/index.html src/route-learning/index.html src/same-coin/index.html
+          git diff --exit-code -- docs src/phantom/index.html src/flower-evidence/index.html src/route-learning/index.html src/same-coin/index.html src/kelvin-wakes/index.html
       - name: Model, sequence, and audio lifecycle checks
         run: |
           node tests/test_clocks.js
@@ -43,3 +43,4 @@ jobs:
           python3 -B tests/verify_spinning_disk.py
           node tests/verify_spinning_disk.js
           python3 -B src/same-coin/verify.py
+          node src/kelvin-wakes/verify.mjs

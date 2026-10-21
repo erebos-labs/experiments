@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import {profile,KELVIN,deg,derivativeCoefficient} from './model.mjs';
+const output=process.argv[2];if(!output)throw Error('Supply an output directory; checked-in data are not overwritten by default');
+const profiles=[.3,.4,.5,.7,1,1.5,2,3].map(fr=>profile(fr));
+const data={title:'The wake you measure',model:'Linear pure-gravity waves, infinite depth, axisymmetric Gaussian pressure; far-field residue term only',normalization:'Independent maximum per Froude number and observable; not comparable absolute brightness',metric:'Maximum absolute height / slope magnitude / absolute Laplacian over 49 radii r=10..11; r is distance divided by lambda_g=2*pi*U^2/g',kelvinDegrees:deg(KELVIN),coefficients:['height','slope','laplacian'].map((name,i)=>({name,C:derivativeCoefficient(i)})),profiles};
+fs.mkdirSync(output,{recursive:true});fs.writeFileSync(path.join(output,'data.json'),JSON.stringify(data,null,2)+'\n');console.log('Generated eight deterministic profiles');

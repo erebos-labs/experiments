@@ -48,3 +48,8 @@ print('Built docs/square-ice/index.html')
 subprocess.run([sys.executable, '-B', str(base/'src/same-coin/build.py')], check=True)
 shutil.copyfile(base/'src/same-coin/index.html',base/'docs/same-coin/index.html')
 print('Built docs/same-coin/index.html')
+
+# Kelvin wake measurement explorer: dependency-free linear-wave model.
+subprocess.run([sys.executable, '-B', str(base/'src/kelvin-wakes/build.py')], check=True)
+shutil.copyfile(base/'src/kelvin-wakes/index.html',base/'docs/kelvin-wakes/index.html')
+print('Built docs/kelvin-wakes/index.html')

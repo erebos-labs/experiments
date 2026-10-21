@@ -76,3 +76,7 @@ The rolling-disk explorer's [source list](src/spinning-disk/SOURCES.md), [limits
 ## Same coin, two finish lines
 
 The [pattern explorer](docs/same-coin/index.html) reproduces established overlapping-pattern probability ideas. Its [primary references](src/same-coin/SOURCES.md) and [rights](src/same-coin/COPYRIGHT.txt) preserve author credit. Original implementation and explanation with AI assistance; no novel theorem claimed and no third-party paper body, code, image, font or dataset bundled.
+
+## The wake you measure
+
+The [wave explorer](docs/kelvin-wakes/index.html) uses established linear deep-water wave ideas. [Primary sources](src/kelvin-wakes/SOURCES.md) and [rights](src/kelvin-wakes/COPYRIGHT.txt) accompany its original implementation and generated illustrative data. AI assistance acknowledged. No paper body, third-party image, code, font or measured-ship dataset is bundled.

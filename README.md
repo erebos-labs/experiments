@@ -14,6 +14,8 @@ A small static collection of interactive educational and artistic experiments:
 
 The mathematical ideas are established work. Sources, assumptions, objective choices, and limitations are visible within each experiment and in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Built with AI assistance; models and outputs were checked with deterministic calculations.
 
+- **The wake you measure** — compare the Kelvin geometric envelope with height, slope and Laplacian peaks in an illustrative linear wave model. [Explore the wake](https://erebos-labs.github.io/experiments/kelvin-wakes/); [model, sources and limits](src/kelvin-wakes/README.md).
+
 ## Play
 
 [Open the collection](https://erebos-labs.github.io/experiments/).
