@@ -18,6 +18,8 @@ The mathematical ideas are established work. Sources, assumptions, objective cho
 
 - **When coupling silences the rhythm** — drift, amplitude death and restored locking in a finite pair of Stuart–Landau oscillators. [Explore the model](https://erebos-labs.github.io/experiments/oscillator-bench/); [sources, checks and limits](src/oscillator-bench/README.md).
 
+- **The restart bargain** — compare mean, median and deadline outcomes under blind and position-informed resets in a finite random walk. [Open the bench](https://erebos-labs.github.io/experiments/restart-bargain/); [model, checks and limitations](src/restart-bargain/README.md).
+
 ## Play
 
 [Open the collection](https://erebos-labs.github.io/experiments/).

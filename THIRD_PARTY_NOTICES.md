@@ -84,3 +84,7 @@ The [wave explorer](docs/kelvin-wakes/index.html) uses established linear deep-w
 ## Oscillator bench
 
 The [oscillator explorer](docs/oscillator-bench/index.html) implements an established coupled Stuart–Landau model. [Primary sources and limitations](src/oscillator-bench/README.md) retain author credit. Original educational implementation and explanation with AI assistance; no source paper bodies, external code, fonts, images or recordings are bundled. No new discovery or calibrated mechanical experiment is claimed.
+
+## The restart bargain
+
+The [finite search bench](docs/restart-bargain/index.html) illustrates established stochastic-resetting and quantile-objective ideas. [Primary sources, assumptions and limitations](src/restart-bargain/README.md) retain attribution. Original educational implementation and explanation with AI assistance; no third-party paper bodies, code, fonts, images or external datasets bundled. No scientific novelty or real-world search recommendation claimed.

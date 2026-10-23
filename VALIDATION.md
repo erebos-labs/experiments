@@ -84,3 +84,7 @@ The dependency-free verifier checks embedded/source data parity, finite profile 
 ## Oscillator bench
 
 `node src/oscillator-bench/test-model.cjs` checks nine finite numerical and analytic references. The dimensionless solver uses RK4 h = 0.01 to t = 120, with fixed frequencies (2, 8). Phase is hidden below amplitude 1e-6. Analytic origin stability (1 < K < 5) is distinct from observed finite decay. Browser controls and narrow layouts received Chromium checks; physical devices, other engines and assistive technology remain untested. No physical-metronome, noise/delay or infinite-time claim is made.
+
+## The restart bargain
+
+`python3 -B src/restart-bargain/verify.py` runs 19 Python methods, 640 cross-language comparisons and exact small-certificate/source-generated parity checks. The page uses finite L = 40, deterministic probability propagation and full mean equations. Quantiles beyond 10,000 ticks remain censored; grid search is not a global-optimum proof. Selective resetting requires position information and its order guarantee excludes return delay. Browser controls and narrow layouts received Chromium checks; physical-device, cross-engine, assistive-technology and empirical validity are untested.

@@ -45,3 +45,4 @@ jobs:
           python3 -B src/same-coin/verify.py
           node src/kelvin-wakes/verify.mjs
           node src/oscillator-bench/test-model.cjs
+          python3 -B src/restart-bargain/verify.py

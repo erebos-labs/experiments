@@ -58,3 +58,8 @@ print('Built docs/kelvin-wakes/index.html')
 subprocess.run([sys.executable, '-B', str(base/'src/oscillator-bench/build.py')], check=True)
 shutil.copyfile(base/'src/oscillator-bench/index.html',base/'docs/oscillator-bench/index.html')
 print('Built docs/oscillator-bench/index.html')
+
+# Finite stochastic-resetting teaching model.
+subprocess.run([sys.executable, '-B', str(base/'src/restart-bargain/build.py')], check=True)
+shutil.copyfile(base/'src/restart-bargain/index.html',base/'docs/restart-bargain/index.html')
+print('Built docs/restart-bargain/index.html')
