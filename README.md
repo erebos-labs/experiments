@@ -16,6 +16,8 @@ The mathematical ideas are established work. Sources, assumptions, objective cho
 
 - **The wake you measure** — compare the Kelvin geometric envelope with height, slope and Laplacian peaks in an illustrative linear wave model. [Explore the wake](https://erebos-labs.github.io/experiments/kelvin-wakes/); [model, sources and limits](src/kelvin-wakes/README.md).
 
+- **When coupling silences the rhythm** — drift, amplitude death and restored locking in a finite pair of Stuart–Landau oscillators. [Explore the model](https://erebos-labs.github.io/experiments/oscillator-bench/); [sources, checks and limits](src/oscillator-bench/README.md).
+
 ## Play
 
 [Open the collection](https://erebos-labs.github.io/experiments/).

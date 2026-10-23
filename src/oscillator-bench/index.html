@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="color-scheme" content="light"><meta name="description" content="Explore drift, amplitude death, and restored oscillation in a bounded pair of coupled Stuart–Landau oscillators."><link rel="icon" href="data:,"><title>When coupling silences the rhythm · Oscillator bench</title><style>:root{--paper:#f4f1e9;--surface:#fcfaf5;--ink:#252e2b;--muted:#626c65;--line:#d8d9cd;--a:#ad512c;--b:#246b72;--green:#365a46}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1240px;margin:auto;padding:0 44px}a{color:inherit;text-underline-offset:4px}header{height:86px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}header>a:last-child{font-size:13px;text-decoration:none}.wordmark{display:flex;align-items:center;gap:11px;font-weight:650;text-decoration:none;letter-spacing:-.3px}.wordmark svg{fill:none;stroke:var(--ink);stroke-width:1.4}.intro{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:65px;margin:44px 0 36px}.intro h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4vw,51px);line-height:1.1;letter-spacing:-1.6px;font-weight:400;margin:0}.intro p{color:var(--muted);font-size:16px;max-width:450px;margin:0}.bench{display:grid;grid-template-columns:minmax(0,1fr) 300px;border:1px solid var(--line);background:var(--surface);border-radius:12px;overflow:hidden}.instrument{padding:24px 28px 16px;min-width:0}.plot-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.plot-heading h2{font-size:14px;font-weight:650;letter-spacing:-.15px;margin:0}.plot-heading>span{font:12px/1.5 ui-monospace,SFMono-Regular,monospace;color:var(--muted);white-space:nowrap}canvas{display:block;width:100%}#orbits{height:260px}.readouts{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:12px;border-top:1px solid var(--line);padding:16px 0 20px}.readouts>div{display:flex;flex-direction:column;gap:2px}.readouts span{font-size:11px;color:var(--muted)}.readouts strong{font:500 25px/1.4 ui-monospace,SFMono-Regular,monospace;letter-spacing:-1px}.legend:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px}.legend.a:before{background:var(--a)}.legend.b:before{background:var(--b)}.transport{display:flex;align-items:center;gap:8px}button,select{font-family:inherit;font-size:12px;font-weight:500;line-height:1.4;color:var(--ink);border:1px solid var(--line);background:transparent;border-radius:6px;padding:9px 13px;cursor:pointer}button:hover{background:#e9ede4}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #8eb8ba;outline-offset:3px}button.primary{background:var(--ink);color:#fff;border-color:var(--ink);min-width:77px}button.primary:hover{background:var(--green)}.speed{margin-left:auto;color:var(--muted);font-size:11px;display:flex;align-items:center;gap:7px}.speed select{padding:8px 5px}.time-label{display:flex;justify-content:space-between;margin-top:20px;font-size:11px;color:var(--muted)}input[type=range]{width:100%;height:18px;margin:7px 0 0;accent-color:var(--green);cursor:pointer}.micro{font-size:11px;color:var(--muted);line-height:1.5;margin:8px 0 0}.controls{padding:25px 24px;background:#edf0e7;border-left:1px solid var(--line)}.coupling-label{display:flex;justify-content:space-between;align-items:center;gap:12px}.coupling-label label{font-size:13px;font-weight:650}.coupling-label>span{font:500 20px ui-monospace,SFMono-Regular,monospace}.range-ends{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}.presets{display:flex;flex-direction:column;gap:7px;margin-top:23px}.presets button{text-align:left;display:grid;grid-template-columns:25px 1fr;gap:0 4px;padding:11px 12px;background:#f7f8f2}.presets button>span{grid-row:span 2;color:var(--muted);font:11px ui-monospace,monospace;padding-top:4px}.presets b{font-size:12px;font-weight:600}.presets small{font:11px ui-monospace,monospace;color:var(--muted)}.presets button[aria-pressed=true]{border-color:var(--green);box-shadow:inset 3px 0 var(--green);background:#fff}.prediction{margin-top:24px;border-top:1px solid #ccd2c5;padding-top:18px}.label{font-size:10px;text-transform:uppercase;letter-spacing:1.1px;color:var(--muted)}.prediction h3{font:400 25px Georgia,serif;margin:3px 0 9px}.prediction p:not(.micro){font-size:12px;line-height:1.6;margin:0;color:var(--muted)}.regime{display:flex;height:7px;position:relative;margin-top:19px;border-radius:3px}.regime span:nth-child(1){width:12.5%;background:#c7b48a}.regime span:nth-child(2){width:50%;background:#b8c6b2}.regime span:nth-child(3){width:37.5%;background:#91b8b8}.regime i{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink)}.regime-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--muted);margin:7px 0 11px}.charts{display:grid;grid-template-columns:1.15fr 1fr;gap:30px;margin-top:28px}.charts>div{min-width:0}.charts canvas{height:180px;margin-top:12px}.explanation{border-top:1px solid var(--line);margin-top:42px;padding:35px 0;display:grid;grid-template-columns:1fr 1fr;gap:70px}.explanation h2{font:400 30px/1.16 Georgia,serif;letter-spacing:-.5px;margin:0 0 16px}.explanation p{font-size:13px;color:var(--muted);max-width:500px}.equation{font:15px/1.8 ui-monospace,monospace!important;color:var(--ink)!important;overflow-wrap:anywhere}details{border-bottom:1px solid var(--line);padding:14px 0}details:first-child{padding-top:0}summary{cursor:pointer;font-weight:600;font-size:13px}details p,details li{font-size:12px!important}details ul{padding-left:18px}details li{margin-bottom:12px;color:var(--muted)}footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:20px 0 32px;font-size:11px;color:var(--muted)}
+@media(max-width:900px){main{padding:0 24px}.intro{gap:30px}.bench{grid-template-columns:minmax(0,1fr) 260px}.instrument{padding:20px}.controls{padding:21px 18px}.speed{display:none}.readouts strong{font-size:21px}.readouts span{font-size:10px}.explanation{gap:35px}}
+@media(max-width:680px){main{padding:0 18px}header{height:68px}.intro{display:block;margin:30px 0 25px}.intro h1{font-size:38px;letter-spacing:-1px}.intro p{font-size:14px;margin-top:19px}.bench{display:flex;flex-direction:column}.instrument{padding:18px 16px 13px}.plot-heading{gap:8px}.plot-heading h2{font-size:12px}.plot-heading>span{font-size:10px}#orbits{height:235px}.readouts{gap:8px;padding:14px 0 18px}.readouts strong{font-size:20px}.readouts span{font-size:9px;line-height:1.6}.transport{gap:6px}.transport button{padding:9px 10px;font-size:11px}.controls{border-left:0;border-top:1px solid var(--line);padding:22px 18px}.presets{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:18px}.presets button{display:flex;flex-direction:column;padding:10px 8px;gap:4px}.presets button>span{display:none}.presets b{font-size:10px;min-height:28px;line-height:1.35}.presets small{font-size:10px}.prediction{margin-top:20px}.prediction h3{font-size:24px}.charts{grid-template-columns:1fr;gap:24px;margin-top:25px}.charts canvas{height:180px}.explanation{grid-template-columns:1fr;gap:15px;margin-top:30px;padding:28px 0}.explanation h2{font-size:28px}footer{flex-direction:column;gap:5px}.wordmark{font-size:13px}header>a:last-child{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head>
+<body><main>
+<nav aria-label="Experiment navigation"><a href="../index.html">All experiments</a> · <a href="https://github.com/erebos-labs/experiments/tree/main/src/oscillator-bench">Source and checks</a></nav><header><a class="wordmark" href="index.html" aria-label="Oscillator bench home"><svg width="32" height="24" viewBox="0 0 32 24" aria-hidden="true"><circle cx="10" cy="12" r="8"/><circle cx="22" cy="12" r="8"/></svg>Oscillator bench</a><a href="#model">About the model <span aria-hidden="true">↗</span></a></header>
+<section class="intro"><h1>When coupling<br>silences the rhythm.</h1><p>Two self-sustaining mathematical oscillators. Link them gently and their rhythms drift. Link them more strongly and they can fall quiet. Stronger still, motion returns.</p></section>
+<section class="bench" aria-label="Interactive oscillator experiment">
+<div class="instrument"><div class="plot-heading"><h2>Two oscillators, one conversation</h2><span id="clock">t = 0.00</span></div><canvas id="orbits" aria-label="Complex state of oscillator A and oscillator B, with unit-amplitude reference circles" role="img"></canvas><div class="readouts"><div><span class="legend a">Oscillator A · ω = 2</span><strong id="ampA">1.020</strong><span>amplitude |z₁|</span></div><div><span class="legend b">Oscillator B · ω = 8</span><strong id="ampB">0.762</strong><span>amplitude |z₂|</span></div><div><span>Relative phase · B − A</span><strong id="phase">—</strong><span id="phaseHint">angle between the rhythms</span></div></div><div class="transport"><button id="play" class="primary" type="button">Pause</button><button id="reset" type="button">Reset</button><button id="outcome" type="button">Show outcome <span aria-hidden="true">→</span></button><label class="speed">Speed<select id="speed"><option value="2">2 units/s</option><option value="6" selected>6 units/s</option><option value="12">12 units/s</option></select></label></div><label class="time-label" for="time">Explore the run <output id="timeValue">0 / 120</output></label><input id="time" type="range" min="0" max="120" value="0" step=".05" aria-label="Simulation time"><p class="micro" id="playState" aria-live="polite">Playing · 120 model-time units per run</p></div>
+<aside class="controls"><div class="coupling-label"><label for="coupling">Coupling strength</label><span>K = <output id="kValue">0.50</output></span></div><input id="coupling" type="range" min="0" max="8" value=".5" step=".05"><div class="range-ends"><span>Independent · 0</span><span>Strong · 8</span></div><p class="micro">Changing coupling restarts from the same initial state.</p><div class="presets" aria-label="Reference presets"><button type="button" data-k="0.5" aria-pressed="true"><span>01</span><b>Drifting rhythms</b><small>K = 0.5</small></button><button type="button" data-k="2" aria-pressed="false"><span>02</span><b>Amplitude death</b><small>K = 2</small></button><button type="button" data-k="6" aria-pressed="false"><span>03</span><b>Motion returns</b><small>K = 6</small></button></div><div class="prediction"><span class="label">Rest-state stability</span><h3 id="predictionTitle">Unstable</h3><p id="predictionCopy"></p><div class="regime" aria-hidden="true"><span></span><span></span><span></span><i id="marker"></i></div><div class="regime-labels"><span>Drift</span><span>Stable rest</span><span>Locking</span></div><p class="micro">For this frequency pair, the origin is linearly stable for 1 &lt; K &lt; 5. The boundaries need separate treatment.</p></div></aside>
+</section>
+<section class="charts" aria-label="Simulation traces"><div><div class="plot-heading"><h2>The visible rhythm</h2><span>Re(z) · last 20 units</span></div><canvas id="signal" role="img" aria-label="Real parts of both oscillator states over the last twenty model-time units"></canvas><p class="micro">Flat traces mean the model’s oscillations have become very small.</p></div><div><div class="plot-heading"><h2>Amplitude over time</h2><span>|z| · full run</span></div><canvas id="amplitude" role="img" aria-label="Amplitudes of both oscillator states over the full run"></canvas><p class="micro">Fixed vertical scale. Quiet motion is not visually magnified.</p></div></section>
+<section id="model" class="explanation"><div><h2>A model with room<br>to go quiet.</h2><p>A phase-only model tracks where each rhythm is in its cycle. This Stuart–Landau model also tracks amplitude, so the oscillations can shrink toward rest.</p><p class="equation">żᵢ = (1 + iωᵢ − |zᵢ|²)zᵢ + K(zⱼ − zᵢ)</p><p>With K = 6, the two amplitudes settle near 0.442891 and the phase difference approaches 30°. They share a frequency without moving in exact unison.</p></div><div><details><summary>Assumptions & numerical limits</summary><p>All quantities are dimensionless. Intrinsic angular frequencies are fixed at 2 and 8; growth is 1; coupling is symmetric, instantaneous and linear. There is no noise, delay, escapement or moving platform.</p><p>Every run starts at z₁ = 1 + 0.2i and z₂ = −0.3 + 0.7i. The solver is fourth-order Runge–Kutta with step 0.01, bounded to 120 time units. Drawing uses stored samples every 0.05 units; playback speed does not change the integration step.</p><p>Close to K = 1 or K = 5, settling can be very slow. A finite run cannot establish a sharp transition, and timestep error can change the apparent sign of an extremely small growth rate. Phase is hidden when either amplitude is below 10⁻⁶ because phase at zero amplitude is undefined.</p><p>The stability label comes from the analytic eigenvalues at the origin, not from a visual threshold. “Show outcome” means the end of this bounded run, not a proof about infinite time.</p></details><details><summary>What about real metronomes?</summary><p>This is a generic oscillator model, not a calibrated metronome. In mechanical experiments, a metronome can stop ticking when its swing no longer engages its escapement. It may still move passively, driven by another metronome. That separate mechanism is context here; it is not simulated by this page.</p></details><details><summary>Primary sources</summary><ul><li><a href="https://sites.pitt.edu/~phase/bard/pubs/aek88.pdf" target="_blank" rel="noopener noreferrer">Aronson, Ermentrout & Kopell (1990) · Amplitude response of coupled oscillators</a></li><li><a href="https://arxiv.org/html/chao-dyn/9805029" target="_blank" rel="noopener noreferrer">Reddy, Sen & Johnston (1998) · Time delay induced death in coupled limit cycle oscillators</a> — the page implements the zero-delay case.</li><li><a href="https://arxiv.org/abs/2201.06161" target="_blank" rel="noopener noreferrer">Goldsztein et al. (2022) · Coupled metronomes on a moving platform with Coulomb friction</a> — mechanical context only.</li></ul></details></div></section>
+<footer><span>Two oscillators. Three possible stories.</span><span>Original educational implementation with AI assistance. Established model; no new discovery claimed. Runs locally; this page adds no telemetry. GitHub hosting may log visits.</span></footer>
+</main><script>(function(root){
+  'use strict';
+  const INITIAL=Object.freeze([1,.2,-.3,.7]);
+  const DT=.01, HORIZON=120;
+  function derivative(z,k){
+    const [x,y,u,v]=z, a=1-x*x-y*y, b=1-u*u-v*v;
+    return [a*x-2*y+k*(u-x),a*y+2*x+k*(v-y),b*u-8*v+k*(x-u),b*v+8*u+k*(y-v)];
+  }
+  function step(z,k,h=DT){
+    const a=derivative(z,k),b=derivative(z.map((v,i)=>v+h*a[i]/2),k);
+    const c=derivative(z.map((v,i)=>v+h*b[i]/2),k),d=derivative(z.map((v,i)=>v+h*c[i]),k);
+    return z.map((v,i)=>v+h*(a[i]+2*b[i]+2*c[i]+d[i])/6);
+  }
+  function radii(z){return [Math.hypot(z[0],z[1]),Math.hypot(z[2],z[3])];}
+  function phase(z){
+    if(Math.min(...radii(z))<1e-6)return null;
+    const a=Math.atan2(z[3],z[2])-Math.atan2(z[1],z[0]);
+    return Math.atan2(Math.sin(a),Math.cos(a));
+  }
+  function growth(k){return 1-k+(k>=3?Math.sqrt(k*k-9):0);}
+  function trajectory(k,h=DT,horizon=HORIZON,initial=INITIAL){
+    if(!Number.isFinite(k)||k<0||k>8)throw new RangeError('Coupling must be between 0 and 8.');
+    if(!Number.isFinite(h)||h<.0025||h>.02||!Number.isFinite(horizon)||horizon<0||horizon>120)throw new RangeError('Simulation bounds exceeded.');
+    let z=[...initial];const samples=[{t:0,z:[...z]}],n=Math.round(horizon/h);
+    const stride=Math.max(1,Math.round(.05/h));
+    for(let i=1;i<=n;i++){
+      z=step(z,k,h);
+      if(!z.every(Number.isFinite))throw new Error('Non-finite numerical state.');
+      if(i%stride===0||i===n)samples.push({t:i*h,z:[...z]});
+    }
+    return samples;
+  }
+  const api={INITIAL,DT,HORIZON,derivative,step,radii,phase,growth,trajectory};
+  if(typeof module==='object'&&module.exports)module.exports=api;
+  else root.OscillatorModel=Object.freeze(api);
+})(typeof window!=='undefined'?window:globalThis);
+</script><script>(()=>{
+  'use strict';
+  const M=window.OscillatorModel,$=id=>document.getElementById(id);
+  const colors=['#ad512c','#246b72'],grid='#dddcd2',muted='#68736b';
+  let k=.5,samples=[],t=0,playing=!matchMedia('(prefers-reduced-motion: reduce)').matches,last=0;
+  const canvases=['orbits','signal','amplitude'].map($);
+  function ctx(canvas){
+    const {width,height}=canvas.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);
+    if(canvas.width!==Math.round(width*d)||canvas.height!==Math.round(height*d)){canvas.width=Math.round(width*d);canvas.height=Math.round(height*d);}
+    const c=canvas.getContext('2d');c.setTransform(d,0,0,d,0,0);c.clearRect(0,0,width,height);
+    c.font='10px -apple-system, sans-serif';c.lineWidth=1;return {c,w:width,h:height};
+  }
+  function stateAt(time){return samples[Math.min(samples.length-1,Math.max(0,Math.round(time/.05)))].z;}
+  function format(v){return v<.001?(v===0?'0':v.toExponential(1)):v.toFixed(3);}
+  function line(c,points,color,width=1.5){if(!points.length)return;c.beginPath();c.moveTo(...points[0]);for(let i=1;i<points.length;i++)c.lineTo(...points[i]);c.strokeStyle=color;c.lineWidth=width;c.stroke();}
+  function orbits(z){
+    const {c,w,h}=ctx($('orbits')),r=Math.min(w/5.1,88),cy=h/2+2;
+    [w*.25,w*.75].forEach((cx,i)=>{
+      c.strokeStyle=grid;c.lineWidth=1;c.beginPath();c.arc(cx,cy,r,0,2*Math.PI);c.stroke();
+      c.setLineDash([2,4]);c.beginPath();c.moveTo(cx-r-12,cy);c.lineTo(cx+r+12,cy);c.moveTo(cx,cy-r-12);c.lineTo(cx,cy+r+12);c.stroke();c.setLineDash([]);
+      c.fillStyle=muted;c.textAlign='center';c.fillText(i===0?'A':'B',cx,cy-r-22);
+      c.fillStyle='#899188';c.fillText('reference amplitude = 1',cx,cy+r+23);
+      const recent=samples.filter(s=>s.t>=Math.max(0,t-2)&&s.t<=t);
+      c.globalAlpha=.5;line(c,recent.map(s=>[cx+r*s.z[i*2],cy-r*s.z[i*2+1]]),colors[i],1.8);c.globalAlpha=1;
+      const x=cx+r*z[i*2],y=cy-r*z[i*2+1];
+      line(c,[[cx,cy],[x,y]],colors[i],1.3);c.fillStyle=colors[i];c.beginPath();c.arc(x,y,4.5,0,Math.PI*2);c.fill();
+    });
+    const l=w*.25+r+18,rr=w*.75-r-18;
+    if(rr>l){c.setLineDash([3,4]);line(c,[[l,cy],[rr,cy]],'#a5afa0');c.setLineDash([]);}
+  }
+  function plot(canvas,kind){
+    const {c,w,h}=ctx(canvas),left=32,right=10,top=12,bottom=24,pw=w-left-right,ph=h-top-bottom;
+    const start=kind==='signal'?Math.max(0,t-20):0,end=kind==='signal'?Math.max(20,t):120;
+    const yMin=kind==='signal'?-1.2:0,yMax=1.2;
+    const X=time=>left+(time-start)/(end-start)*pw,Y=v=>top+(yMax-v)/(yMax-yMin)*ph;
+    c.fillStyle=muted;c.textAlign='right';
+    for(const y of kind==='signal'?[-1,0,1]:[0,.5,1]){line(c,[[left,Y(y)],[w-right,Y(y)]],grid,.8);c.fillText(String(y),left-7,Y(y)+3);}
+    c.textAlign='center';for(let j=0;j<=4;j++){const time=start+(end-start)*j/4;c.fillText(time.toFixed(0),X(time),h-6);}
+    for(let i=0;i<2;i++){
+      const data=samples.filter(s=>s.t>=start&&s.t<=Math.min(t,end));
+      c.save();c.beginPath();c.rect(left,top,pw,ph);c.clip();
+      line(c,data.map(s=>[X(s.t),Y(kind==='signal'?s.z[i*2]:M.radii(s.z)[i])]),colors[i],1.6);c.restore();
+    }
+    if(kind==='amplitude'){c.setLineDash([3,3]);line(c,[[X(t),top],[X(t),h-bottom]],'#8b9688',1);c.setLineDash([]);}
+  }
+  function prediction(){
+    const g=M.growth(k),boundary=Math.abs(k-1)<1e-9||Math.abs(k-5)<1e-9;
+    $('predictionTitle').textContent=boundary?'At a boundary':g<0?'Stable rest':'Unstable rest';
+    $('predictionCopy').textContent=boundary?'The linear growth rate is zero. Slow nonlinear decay and finite-run limits matter here.':g<0?'Small disturbances around zero decay in this model. Watch the amplitudes shrink as time passes.':k<1?'The quiet state cannot hold a small disturbance. These weakly coupled rhythms continue to drift.':'The quiet state cannot hold a small disturbance. The oscillators approach a shared rhythm with a phase offset.';
+    $('marker').style.left=`${100*k/8}%`;
+  }
+  function render(){
+    const z=stateAt(t),r=M.radii(z),p=M.phase(z);
+    $('clock').textContent=`t = ${t.toFixed(2)}`;$('timeValue').textContent=`${t.toFixed(1)} / 120`;$('time').value=String(t);
+    $('ampA').textContent=format(r[0]);$('ampB').textContent=format(r[1]);
+    $('phase').textContent=p===null?'Undefined':`${(p*180/Math.PI).toFixed(1)}°`;
+    $('phase').style.fontSize=p===null?'17px':'';
+    $('phaseHint').textContent=p===null?'amplitude below 10⁻⁶':'angle between the rhythms';
+    $('play').textContent=playing?'Pause':'Play';
+    $('playState').textContent=t>=120?'End of the bounded run · reset or explore another coupling':playing?'Playing · 120 model-time units per run':'Paused · drag the time slider to inspect the run';
+    orbits(z);plot($('signal'),'signal');plot($('amplitude'),'amplitude');
+  }
+  function restart(nextK=k,autoplay=playing){
+    k=Math.max(0,Math.min(8,nextK));samples=M.trajectory(k);t=0;playing=autoplay;last=0;
+    $('coupling').value=String(k);$('kValue').textContent=k.toFixed(2);
+    document.querySelectorAll('[data-k]').forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.k)===k)));
+    prediction();render();
+  }
+  $('coupling').addEventListener('input',event=>restart(Number(event.target.value)));
+  document.querySelectorAll('[data-k]').forEach(button=>button.addEventListener('click',()=>{restart(Number(button.dataset.k),!matchMedia('(prefers-reduced-motion: reduce)').matches);}));
+  function flushCoupling(){const next=Number($('coupling').value);if(next!==k)restart(next,false);}
+  $('play').addEventListener('click',()=>{flushCoupling();if(t>=120)t=0;playing=!playing;last=0;render();});
+  $('reset').addEventListener('click',()=>{flushCoupling();restart(k,false);});
+  $('outcome').addEventListener('click',()=>{flushCoupling();t=120;playing=false;render();});
+  $('time').addEventListener('input',event=>{const next=Number(event.target.value);flushCoupling();t=next;playing=false;render();});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){playing=false;last=0;render();}});
+  new ResizeObserver(()=>render()).observe($('orbits'));
+  function frame(now){
+    if(playing){if(last)t=Math.min(120,t+Math.min((now-last)/1000,.1)*Number($('speed').value));if(t>=120)playing=false;render();}
+    last=now;requestAnimationFrame(frame);
+  }
+  restart();requestAnimationFrame(frame);
+})();
+</script></body></html>

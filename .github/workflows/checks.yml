@@ -44,3 +44,4 @@ jobs:
           node tests/verify_spinning_disk.js
           python3 -B src/same-coin/verify.py
           node src/kelvin-wakes/verify.mjs
+          node src/oscillator-bench/test-model.cjs

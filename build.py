@@ -53,3 +53,8 @@ print('Built docs/same-coin/index.html')
 subprocess.run([sys.executable, '-B', str(base/'src/kelvin-wakes/build.py')], check=True)
 shutil.copyfile(base/'src/kelvin-wakes/index.html',base/'docs/kelvin-wakes/index.html')
 print('Built docs/kelvin-wakes/index.html')
+
+# Coupled Stuart–Landau oscillators: finite, dimensionless educational model.
+subprocess.run([sys.executable, '-B', str(base/'src/oscillator-bench/build.py')], check=True)
+shutil.copyfile(base/'src/oscillator-bench/index.html',base/'docs/oscillator-bench/index.html')
+print('Built docs/oscillator-bench/index.html')

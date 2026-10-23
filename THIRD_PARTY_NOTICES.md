@@ -80,3 +80,7 @@ The [pattern explorer](docs/same-coin/index.html) reproduces established overlap
 ## The wake you measure
 
 The [wave explorer](docs/kelvin-wakes/index.html) uses established linear deep-water wave ideas. [Primary sources](src/kelvin-wakes/SOURCES.md) and [rights](src/kelvin-wakes/COPYRIGHT.txt) accompany its original implementation and generated illustrative data. AI assistance acknowledged. No paper body, third-party image, code, font or measured-ship dataset is bundled.
+
+## Oscillator bench
+
+The [oscillator explorer](docs/oscillator-bench/index.html) implements an established coupled Stuart–Landau model. [Primary sources and limitations](src/oscillator-bench/README.md) retain author credit. Original educational implementation and explanation with AI assistance; no source paper bodies, external code, fonts, images or recordings are bundled. No new discovery or calibrated mechanical experiment is claimed.
