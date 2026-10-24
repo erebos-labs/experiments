@@ -63,3 +63,8 @@ print('Built docs/oscillator-bench/index.html')
 subprocess.run([sys.executable, '-B', str(base/'src/restart-bargain/build.py')], check=True)
 shutil.copyfile(base/'src/restart-bargain/index.html',base/'docs/restart-bargain/index.html')
 print('Built docs/restart-bargain/index.html')
+
+# Normal-incidence optical multilayer teaching model.
+subprocess.run([sys.executable, '-B', str(base/'src/mirror-window/build.py')], check=True)
+shutil.copyfile(base/'src/mirror-window/index.html',base/'docs/mirror-window/index.html')
+print('Built docs/mirror-window/index.html')

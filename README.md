@@ -20,6 +20,8 @@ The mathematical ideas are established work. Sources, assumptions, objective cho
 
 - **The restart bargain** — compare mean, median and deadline outcomes under blind and position-informed resets in a finite random walk. [Open the bench](https://erebos-labs.github.io/experiments/restart-bargain/); [model, checks and limitations](src/restart-bargain/README.md).
 
+- **The window inside a mirror** — an ideal layered-optics bench comparing order, retuning, matching errors and finite spectral width. [Explore](https://erebos-labs.github.io/experiments/mirror-window/); [methods and limits](src/mirror-window/README.md).
+
 ## Play
 
 [Open the collection](https://erebos-labs.github.io/experiments/).

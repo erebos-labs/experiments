@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "cases": 1152,
+  "seed_generator": 20261024,
+  "shuffle_xor": "0x5bf03635",
+  "same_inventory_cases": 1152,
+  "shuffled_still_palindrome": 0,
+  "boundary_peaks": 0,
+  "examples": [
+    {
+      "m": 6,
+      "error": 0.08,
+      "kind": "thickness",
+      "count": 64,
+      "mirrored_max_R": 7.031876835004933e-26,
+      "shuffled_min_R": 1.2423272582345794e-07,
+      "shuffled_median_R": 0.00025343256033296785,
+      "shuffled_max_R": 0.009106146066419947
+    },
+    {
+      "m": 6,
+      "error": 0.08,
+      "kind": "index",
+      "count": 64,
+      "mirrored_max_R": 1.1714730524318286e-25,
+      "shuffled_min_R": 1.387472784800867e-05,
+      "shuffled_median_R": 0.01852525840080728,
+      "shuffled_max_R": 0.20164966947460558
+    }
+  ],
+  "limits": "Matched multiset including actual n,d and token. Nominal H/L order held fixed; errors permuted within H and L. Finite tested ensembles; asymmetry is not a proof that exact transmission is impossible."
+}

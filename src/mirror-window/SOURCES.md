@@ -1,0 +1,12 @@
+# Sources and rights
+
+The cavity mechanism and perturbation-scaling ideas are established work. The calculations here specialize and test those ideas in an explicit ideal layer family; no priority claim is made.
+
+- Steven J. Byrnes, [Multilayer optical calculations, v5](https://arxiv.org/html/1603.02720v5): sections 2–4 excerpts, including field/Fresnel conventions, power normalization and absorption density. Not a full-paper replication.
+- Sergei V. Zhukovsky, [Perfect transmission and highly asymmetric light localization in photonic multilayers, v2](https://arxiv.org/html/0911.5448v2), Phys. Rev. A 81, 053808 (2010): sections I–IV excerpts. The (BA)^k(AB)^k cavity and reflectivity/phase matching overlap the baseline used here. The paper's capital R/T denote amplitudes; this implementation's capital R/T denote power.
+- Ioannis Kiorpelidis et al., [Robustness of perfect transmission resonances to asymmetric perturbation, v2](https://arxiv.org/html/2406.07214v2), Phys. Rev. A 111, 012218 (2025): abstract and sections I–II, III.1, V–VII excerpts. Section VI explicitly describes quartic versus quadratic transmission loss in a different periodic-potential model. This is prior evidence for the mechanism, not a claim that the layer-error ensemble reproduces that paper's system.
+- Flexcompute, [Distributed Bragg reflector and cavity](https://www.flexcompute.com/tidy3d/examples/notebooks/DistributedBraggReflectorCavity/): introduction and quarter-wave/cavity setup/results excerpts. No vendor solver or cloud job was used.
+- COMSOL, [Distributed Bragg Reflector example](https://doc.comsol.com/6.4/doc/com.comsol.help.models.roptics.distributed_bragg_reflector/distributed_bragg_reflector.html): introduction and model-result excerpts; no COMSOL run.
+- Herbert G. Winful, [The meaning of group delay in barrier tunneling](https://arxiv.org/abs/quant-ph/0601085): abstract only, used for the caution about interpreting group delay as a traversal speed. No full-paper reading or reproduction is claimed. The phase/energy identity in the included control is derived from the restricted Maxwell equations and tested directly.
+
+No full source-paper text, third-party software, external media or experimental material dataset is redistributed. Original educational implementation and explanation with AI assistance; references retain their rights. See the repository COPYRIGHT.txt and THIRD_PARTY_NOTICES.md. No express reuse license has been selected.

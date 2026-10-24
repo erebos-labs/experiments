@@ -1,0 +1,5506 @@
+[
+  {
+    "pairs": 6,
+    "seed": 2528633012,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.09269783064604832,
+    "nm_shift_per_fraction_error": 55.618698387628996,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.4192537960757323,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      1.2949962101500256
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.2745360322696797e-13,
+      -1.787459069646502e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -0.17005611202453186
+      ],
+      [
+        0.0,
+        -1.2787135856786602,
+        0.1185339754100416
+      ],
+      [
+        0.0,
+        -1.2787135856785328,
+        0.11853397541002372
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -1.4650523221745575
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 757654805,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.017496704777341564,
+    "nm_shift_per_fraction_error": 10.49802286640494,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.2721599977051171,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      1.043379121326696
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.4091839634365897e-14,
+      -1.19522447494802e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.4116685939209835
+      ],
+      [
+        0.0,
+        0.4690862750973858,
+        -0.008207464070481786
+      ],
+      [
+        0.0,
+        0.4690862750974099,
+        -0.008207464070482982
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -0.6317105274057127
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3118414722,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.3207516645116627,
+    "nm_shift_per_fraction_error": 192.4509987069976,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 22.331251039478218,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -9.451190621181697
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.0872192862952943e-14,
+      -7.993605777301127e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -6.6565552569295505
+      ],
+      [
+        0.0,
+        -1.9651768095205786,
+        0.6303337327134443
+      ],
+      [
+        0.0,
+        -1.9651768095205577,
+        0.6303337327134363
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        2.7946353642521466
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 318848809,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.11394691247250101,
+    "nm_shift_per_fraction_error": 68.36814748350061,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 7.392878535781958,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      5.43796967103788
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      7.83262343873048e-14,
+      -8.854028621385623e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        2.6041703504975877
+      ],
+      [
+        0.0,
+        0.47919617073044046,
+        -0.054602924123379165
+      ],
+      [
+        0.0,
+        0.4791961707305188,
+        -0.05460292412338802
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -2.833799320540293
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1323916375,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.10890483499244209,
+    "nm_shift_per_fraction_error": -65.34290099546526,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 12.961783397974095,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      7.200495371284977
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.4874212972415535e-13,
+      2.809905086387232e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        3.58591956068938
+      ],
+      [
+        0.0,
+        0.16928156989522994,
+        0.01843558143670156
+      ],
+      [
+        0.0,
+        0.16928156989537868,
+        0.01843558143672966
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -3.614575810595597
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2787643767,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.0476737886585776,
+    "nm_shift_per_fraction_error": -28.604273195146558,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 4.0857382734767995,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -4.042641845861095
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -4.5075054799781356e-14,
+      -4.5449755070592346e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -2.2018689838911016
+      ],
+      [
+        0.0,
+        0.6009127406879915,
+        0.028647787001805945
+      ],
+      [
+        0.0,
+        0.6009127406879464,
+        0.0286477870018014
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        1.8407728619699935
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 80655113,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.2209670583430953,
+    "nm_shift_per_fraction_error": -132.5802350058572,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 35.04083148989645,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      11.83905933592639
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.1224354778960333e-13,
+      -2.4397150966137815e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        5.498421542636811
+      ],
+      [
+        0.0,
+        0.9177234063991667,
+        0.20278664148462883
+      ],
+      [
+        0.0,
+        0.9177234063990545,
+        0.20278664148460443
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -6.340637793289579
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 822263077,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.0029473953677766197,
+    "nm_shift_per_fraction_error": 1.7684372206659718,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 19.1915655553776,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -8.761635818813197
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.7985612998927536e-14,
+      8.413408858487514e-17
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -5.1805051309151935
+      ],
+      [
+        0.0,
+        -1.264663766784352,
+        0.0037274641280151313
+      ],
+      [
+        0.0,
+        -1.26466376678437,
+        0.0037274641280152154
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        3.5811306878980034
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2259650022,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.28848211258403994,
+    "nm_shift_per_fraction_error": -173.08926755042395,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 36.156166405439606,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      12.025999568508158
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      3.7431169275237153e-13,
+      3.722022690055837e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        6.002563631742098
+      ],
+      [
+        0.0,
+        0.1444725061175816,
+        0.0416777337751105
+      ],
+      [
+        0.0,
+        0.14447250611795592,
+        0.04167773377514772
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -6.023435936766061
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3721380506,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.1745489944865852,
+    "nm_shift_per_fraction_error": 104.72939669195112,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.35781291874557947,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -1.1963493114397308
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.5677016896329405e-13,
+      1.5751289161869408e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -0.6899242896774989
+      ],
+      [
+        0.0,
+        -0.4283681453086022,
+        0.07477122903369983
+      ],
+      [
+        0.0,
+        -0.42836814530895895,
+        0.07477122903371558
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        0.5064250217622319
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3298534094,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.07532731165536799,
+    "nm_shift_per_fraction_error": -45.19638699322079,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 28.18274172217261,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      10.617484018763129
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.3167245072054357e-13,
+      -1.2725931419765857e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        4.990473422570686
+      ],
+      [
+        0.0,
+        -0.7978327980357327,
+        -0.060098599826511986
+      ],
+      [
+        0.0,
+        -0.7978327980358644,
+        -0.06009859982652471
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -5.627010596192443
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 264340311,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.2273865949929387,
+    "nm_shift_per_fraction_error": -136.43195699576322,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.5885213565154193,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      1.5343029120945046
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.270095140171179e-13,
+      -2.142730437526552e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -1.506985399194365
+      ],
+      [
+        0.0,
+        2.1326682138775035,
+        0.48494016340327784
+      ],
+      [
+        0.0,
+        2.1326682138773765,
+        0.4849401634032564
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -3.0412883112888696
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3188094291,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.2661196480135222,
+    "nm_shift_per_fraction_error": 159.67178880811335,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 24.906933294127075,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -9.981369303683152
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.0103029524088925e-13,
+      1.5931700403370996e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -5.362442942322912
+      ],
+      [
+        0.0,
+        -0.8622740753163021,
+        0.22946807341435965
+      ],
+      [
+        0.0,
+        -0.8622740753164031,
+        0.22946807341437558
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        4.61892636136024
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2810484277,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.011795518985349439,
+    "nm_shift_per_fraction_error": 7.077311391209664,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.06369504168459926,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -0.50475753262175
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.1901590823981678e-13,
+      5.863365348801608e-16
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -1.1257804272354628
+      ],
+      [
+        0.0,
+        -1.3216668724943765,
+        0.015589746686814832
+      ],
+      [
+        0.0,
+        -1.3216668724944955,
+        0.015589746686815419
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -0.6210228946137127
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2399380267,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.36614731212829427,
+    "nm_shift_per_fraction_error": -219.68838727697656,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 18.62509671541075,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      8.63136066108021
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      8.837375276016246e-14,
+      -1.1657341758564144e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        2.0585301938315825
+      ],
+      [
+        0.0,
+        2.124688276763641,
+        0.7779489016475042
+      ],
+      [
+        0.0,
+        2.124688276763729,
+        0.7779489016474925
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -6.572830467248627
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 373246173,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.116240489308639,
+    "nm_shift_per_fraction_error": -69.7442935851834,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.0005330056358137143,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      0.04617382963600547
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.6009416015094757e-13,
+      1.1143863609675009e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -0.23991701115742758
+      ],
+      [
+        0.0,
+        0.72526398776633,
+        0.08430504081589298
+      ],
+      [
+        0.0,
+        0.7252639877664901,
+        0.08430504081590412
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -0.28609084079343305
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1453966580,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.059729274434533734,
+    "nm_shift_per_fraction_error": -35.83756466072024,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 7.158351706098409,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      5.351019232295249
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.8895995879120164e-13,
+      -7.275430258246729e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        2.6613461834599894
+      ],
+      [
+        0.0,
+        -0.16830586851102258,
+        -0.010052787409237398
+      ],
+      [
+        0.0,
+        -0.16830586851121154,
+        -0.010052787409244673
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -2.68967304883526
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3768716237,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.025302448576027436,
+    "nm_shift_per_fraction_error": 15.181469145616461,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 6.772115278808122,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -5.204657636697393
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.7408297026122455e-13,
+      1.797173521111972e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -2.622811947898666
+      ],
+      [
+        0.0,
+        0.20240123295072598,
+        -0.005121246788460295
+      ],
+      [
+        0.0,
+        0.2024012329505519,
+        -0.005121246788458498
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        2.5818456887987264
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2200163928,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06891797814562521,
+    "nm_shift_per_fraction_error": 41.35078688737513,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 5.898930669744944,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -4.857542864348165
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.283417816466681e-13,
+      -4.3576253716537394e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -2.7110298724453616
+      ],
+      [
+        0.0,
+        0.7513433839080959,
+        -0.05178106691203824
+      ],
+      [
+        0.0,
+        0.7513433839082242,
+        -0.051781066912042595
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        2.1465129919028034
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3659790199,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.11995281768066438,
+    "nm_shift_per_fraction_error": 71.97169060839863,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.008259020618382778,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      0.18175830785284922
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.609823385706477e-14,
+      -1.2628786905111156e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -0.05455039813155191
+      ],
+      [
+        0.0,
+        0.5393135489823909,
+        -0.06469217981379678
+      ],
+      [
+        0.0,
+        0.5393135489823748,
+        -0.06469217981379805
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -0.23630870598440112
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3993898363,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06143557354794831,
+    "nm_shift_per_fraction_error": 36.861344128768984,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 1.640326976466042,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      2.5615050079717134
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.7930101847696278e-13,
+      -7.925951561738032e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        1.2736055234812367
+      ],
+      [
+        0.0,
+        -0.11955735447587928,
+        0.007345074644101024
+      ],
+      [
+        0.0,
+        -0.11955735447569998,
+        0.007345074644093098
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -1.2878994844904768
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2797193579,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.20665826918298769,
+    "nm_shift_per_fraction_error": 123.99496150979262,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 106.25956849464916,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -20.616456387522
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.4699352846037073e-13,
+      1.2795320358804929e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -10.785032581800364
+      ],
+      [
+        0.0,
+        -0.9765289427756834,
+        0.20180778112111555
+      ],
+      [
+        0.0,
+        -0.9765289427758304,
+        0.20180778112112835
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        9.831423805721634
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2161094691,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.10172336073870834,
+    "nm_shift_per_fraction_error": 61.034016443225006,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 2.337291644934954,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -3.057640688462236
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      9.936496070395151e-14,
+      3.039235529911366e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -1.7987880876273938
+      ],
+      [
+        0.0,
+        0.7348030258460362,
+        -0.0747466332700308
+      ],
+      [
+        0.0,
+        0.7348030258461355,
+        -0.07474663327002776
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        1.2588526008348422
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2634006486,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.019070534260321348,
+    "nm_shift_per_fraction_error": -11.442320556192808,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 65.23399669251708,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      16.153513140183108
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -8.948397578478762e-14,
+      -1.474514954580286e-16
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        8.05147285969684
+      ],
+      [
+        0.0,
+        -0.22487200979547572,
+        -0.004288429366991938
+      ],
+      [
+        0.0,
+        -0.2248720097955652,
+        -0.004288429366992086
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -8.102040280486268
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3918523556,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06736102668871675,
+    "nm_shift_per_fraction_error": 40.416616013230055,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 28.51499796105249,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -10.67988725802899
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.59015031645049e-13,
+      4.6629367034256575e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -5.6485250298012115
+      ],
+      [
+        0.0,
+        -0.785597098755593,
+        0.05291862713585396
+      ],
+      [
+        0.0,
+        -0.785597098755852,
+        0.052918627135858626
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        5.031362228227778
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1490074718,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.26906932180101617,
+    "nm_shift_per_fraction_error": -161.4415930806097,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 2.0629870038572244,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      2.872620409213319
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.2870594307278225e-14,
+      2.2593038551121936e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.7267174412494208
+      ],
+      [
+        0.0,
+        1.1912957343642312,
+        0.32054113530982725
+      ],
+      [
+        0.0,
+        1.191295734364254,
+        0.32054113530984985
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -2.1459029679638983
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1711336889,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.10487131895420075,
+    "nm_shift_per_fraction_error": -62.92279137252045,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 5.696913181894683,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -4.77364145360528
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.4313884239290928e-14,
+      -1.1581013925621164e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -2.465423947931285
+      ],
+      [
+        0.0,
+        0.3964926761711848,
+        0.041580709905752945
+      ],
+      [
+        0.0,
+        0.3964926761712091,
+        0.041580709905741364
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        2.308217505673995
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2159234236,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.09014120983027603,
+    "nm_shift_per_fraction_error": -54.084725898165615,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 1.0990847070918046,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      2.0967448171790526
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.284389261613228e-13,
+      2.031881607411634e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        1.0481073970532033
+      ],
+      [
+        0.0,
+        0.02302222996701543,
+        0.0020752516622176125
+      ],
+      [
+        0.0,
+        0.02302222996714387,
+        0.0020752516622379313
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -1.048637420125849
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 686297256,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.05795137284156139,
+    "nm_shift_per_fraction_error": 34.77082370493684,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 13.31678343408351,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      7.298433649512342
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.398081733190338e-14,
+      -2.1094237467877974e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        3.4448978975953923
+      ],
+      [
+        0.0,
+        -0.6392478817497524,
+        0.037045292333458255
+      ],
+      [
+        0.0,
+        -0.6392478817497764,
+        0.037045292333456145
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -3.853535751916949
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3253543040,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.050967972943975835,
+    "nm_shift_per_fraction_error": -30.5807837663855,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 23.09675544420373,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -9.611816778154633
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.930988785010413e-14,
+      -1.0283440765590512e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -5.638813966491994
+      ],
+      [
+        0.0,
+        1.2906630678954878,
+        0.06578248032428606
+      ],
+      [
+        0.0,
+        1.2906630678954585,
+        0.06578248032427578
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        3.97300281166264
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 748343292,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.29920254420769177,
+    "nm_shift_per_fraction_error": -179.52152652461507,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.5572466694828198,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -1.4929791284312313
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -8.770761894538737e-14,
+      -4.707345624410664e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -1.2910754060171805
+      ],
+      [
+        0.0,
+        1.0436338838899322,
+        0.3122579132812225
+      ],
+      [
+        0.0,
+        1.0436338838898445,
+        0.3122579132811754
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        0.20190372241405075
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2030783831,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.3017723055238113,
+    "nm_shift_per_fraction_error": -181.06338331428677,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 40.91215437996037,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -12.792521937438352
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -7.327471962526033e-14,
+      -3.441691376337985e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -7.851536849186887
+      ],
+      [
+        0.0,
+        1.7060339272521867,
+        0.5148337915287347
+      ],
+      [
+        0.0,
+        1.7060339272521134,
+        0.5148337915287002
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        4.940985088251463
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1867260231,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.1764167992156408,
+    "nm_shift_per_fraction_error": -105.85007952938447,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 4.853171433746391,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      4.4059829476503385
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.9968028886505635e-15,
+      6.106226635438361e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.9629247067474047
+      ],
+      [
+        0.0,
+        1.5748439713684226,
+        0.2778289326928653
+      ],
+      [
+        0.0,
+        1.5748439713684186,
+        0.2778289326928714
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -3.4430582409029338
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3853272413,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06488858575859775,
+    "nm_shift_per_fraction_error": 38.93315145515865,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 1.218284039233695,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -2.2075180988917804
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.7533531010703882e-14,
+      -5.287437154777308e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -1.1041255637875258
+      ],
+      [
+        0.0,
+        -0.02707450245769505,
+        0.0017568261745974922
+      ],
+      [
+        0.0,
+        -0.027074502457722582,
+        0.0017568261745922048
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        1.1033925351042546
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2090447729,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.3319585820053947,
+    "nm_shift_per_fraction_error": 199.1751492032368,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 4.6948840396005,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -4.333536218655845
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.2870594307278225e-13,
+      7.405187574249794e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -4.3816857985062985
+      ],
+      [
+        0.0,
+        -2.1047174105699704,
+        0.6986790071348735
+      ],
+      [
+        0.0,
+        -2.104717410570199,
+        0.6986790071349476
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -0.04814957985045343
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2504304253,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.34150789007137394,
+    "nm_shift_per_fraction_error": 204.90473404282437,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 371.8050735949508,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      38.564495256385804
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.540190280342358e-13,
+      9.658940314238862e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        17.100470433609487
+      ],
+      [
+        0.0,
+        -2.0889122502312434,
+        0.7133800151207179
+      ],
+      [
+        0.0,
+        -2.0889122502314974,
+        0.7133800151208145
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -21.464024822776317
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 4045493767,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.3477852807874695,
+    "nm_shift_per_fraction_error": -208.6711684724817,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 2.6446433323611362,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      3.252471879885289
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      9.9253938401489e-14,
+      4.474198789239381e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.3914465831791487
+      ],
+      [
+        0.0,
+        1.5714893297527965,
+        0.5465408578025885
+      ],
+      [
+        0.0,
+        1.5714893297528958,
+        0.5465408578026333
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -2.8610252967061403
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3566656367,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.09884890513068703,
+    "nm_shift_per_fraction_error": -59.30934307841222,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 2.8286629067791167,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -3.363725854928797
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -5.1514348342607263e-14,
+      1.3211653993039363e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -2.031454348225347
+      ],
+      [
+        0.0,
+        0.8361715383352162,
+        0.08265464106587844
+      ],
+      [
+        0.0,
+        0.8361715383351647,
+        0.08265464106589165
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        1.3322715067034503
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1147528836,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.30492691669716643,
+    "nm_shift_per_fraction_error": 182.95615001829987,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 26.477005828645616,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -10.291162388893806
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.2945200467129325e-13,
+      4.7351012000262926e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -5.868154538855763
+      ],
+      [
+        0.0,
+        -1.2021425409732267,
+        0.36656561844946306
+      ],
+      [
+        0.0,
+        -1.2021425409733562,
+        0.3665656184495104
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        4.423007850038042
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1091260706,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.021137746845671775,
+    "nm_shift_per_fraction_error": -12.682648107403065,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 1.0702709247526352,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      2.069077982824848
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.3444800828210646e-13,
+      -2.5830032557294658e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.9672492159399927
+      ],
+      [
+        0.0,
+        -0.36685085654093896,
+        -0.007754400535680229
+      ],
+      [
+        0.0,
+        -0.3668508565410734,
+        -0.007754400535682812
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -1.101828766884855
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1585352604,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.17268162559034023,
+    "nm_shift_per_fraction_error": 103.60897535420413,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 13.373606708860736,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -7.313988435555729
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.7119639039719914e-13,
+      1.9789725413943415e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -4.259536838223736
+      ],
+      [
+        0.0,
+        -1.097763745480583,
+        0.18956362808372756
+      ],
+      [
+        0.0,
+        -1.0977637454807543,
+        0.18956362808374735
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        3.054451597331993
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1440166681,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.04509983037509974,
+    "nm_shift_per_fraction_error": -27.059898225059847,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 22.094013920035504,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      9.400853986747268
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      3.169686735304822e-13,
+      1.3412881916252672e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        4.441364869731891
+      ],
+      [
+        0.0,
+        0.7198084795855244,
+        0.032463240331865595
+      ],
+      [
+        0.0,
+        0.7198084795858414,
+        0.03246324033187901
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -4.959489117015377
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1226162391,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06671220151059824,
+    "nm_shift_per_fraction_error": 40.027320906358945,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 2.2685683761587545,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      3.0123534826834346
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.768618667658984e-13,
+      -1.2417150641041985e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        1.4864002085040517
+      ],
+      [
+        0.0,
+        -0.19887952553087523,
+        0.013267690983547915
+      ],
+      [
+        0.0,
+        -0.19887952553059837,
+        0.013267690983535498
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -1.525953274179383
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 329228233,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.09630673003434506,
+    "nm_shift_per_fraction_error": 57.784038020607035,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 39.824486462520476,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -12.621329004906016
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      3.547162563677375e-14,
+      -8.347489366400396e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -6.35598942369378
+      ],
+      [
+        0.0,
+        -0.3010811227585201,
+        0.02899613840794226
+      ],
+      [
+        0.0,
+        -0.30108112275848464,
+        0.028996138407933914
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        6.265339581212236
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3576057669,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.18427484716009182,
+    "nm_shift_per_fraction_error": -110.5649082960551,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 6.219789907110588,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -4.987901325050682
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.6087131626818518e-13,
+      4.6601611458640946e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -2.5374327572880695
+      ],
+      [
+        0.0,
+        0.2948969133873435,
+        0.05434208364243556
+      ],
+      [
+        0.0,
+        0.29489691338750434,
+        0.054342083642482164
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        2.450468567762613
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 185803321,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.22059851147757759,
+    "nm_shift_per_fraction_error": -132.35910688654656,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 13.471149269312866,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -7.340612854336582
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.5049073098793997e-13,
+      4.2701953084645083e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -3.7649551422363112
+      ],
+      [
+        0.0,
+        0.4350832450646834,
+        0.09597871623010316
+      ],
+      [
+        0.0,
+        0.43508324506483387,
+        0.09597871623014587
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        3.5756577121002713
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3618012794,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.03337314967797979,
+    "nm_shift_per_fraction_error": -20.023889806787874,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.9571562401071482,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      1.9566872413414957
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.115496583992126e-13,
+      -1.0408340855860843e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.9478175068435547
+      ],
+      [
+        0.0,
+        -0.24708748987829451,
+        -0.008246087783264633
+      ],
+      [
+        0.0,
+        -0.24708748987840606,
+        -0.008246087783265674
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -1.0088697344979412
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1801374633,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.11502139121352796,
+    "nm_shift_per_fraction_error": -69.01283472811677,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.35983166373446673,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -1.1997194067522068
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.1041167979897182e-13,
+      7.042977312465837e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -0.6317792203747763
+      ],
+      [
+        0.0,
+        -0.25266387552912245,
+        -0.02906175047276132
+      ],
+      [
+        0.0,
+        -0.25266387552901204,
+        -0.029061750472754277
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        0.5679401863774305
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3671878752,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.026471609225370358,
+    "nm_shift_per_fraction_error": 15.882965535222215,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 8.215307091617966,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      5.732471401278149
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      4.218847493575595e-15,
+      -2.4251434194155763e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        2.8006427797147175
+      ],
+      [
+        0.0,
+        0.3621958611700531,
+        -0.009587907299940138
+      ],
+      [
+        0.0,
+        0.3621958611700573,
+        -0.009587907299942564
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -2.9318286215634313
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 259954764,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.09631272009444088,
+    "nm_shift_per_fraction_error": -57.78763205666453,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 1.61118179580658,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -2.5386467228084966
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.5298873279334657e-13,
+      3.858025010572419e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -1.2694459084552192
+      ],
+      [
+        0.0,
+        -0.01565548153088936,
+        -0.0015078220106282403
+      ],
+      [
+        0.0,
+        -0.01565548153073637,
+        -0.0015078220106243823
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        1.2692008143532771
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 604303102,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06523625174708907,
+    "nm_shift_per_fraction_error": 39.14175104825344,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 25.522188740645213,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      10.103898008322375
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      5.984102102729594e-14,
+      1.9845236565174673e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        5.038809862281826
+      ],
+      [
+        0.0,
+        -0.1621057795352734,
+        0.010575173443421224
+      ],
+      [
+        0.0,
+        -0.16210577953521355,
+        0.010575173443423208
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -5.065088146040548
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3700432338,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.019795366922585943,
+    "nm_shift_per_fraction_error": 11.877220153551566,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 28.85023978234118,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -10.742483843570104
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.419486915845482e-14,
+      -1.5404344466674047e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -6.169647644529952
+      ],
+      [
+        0.0,
+        1.263650048664518,
+        -0.02501441637505771
+      ],
+      [
+        0.0,
+        1.2636500486644837,
+        -0.025014416375059252
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        4.572836199040152
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1333669507,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.21228900835272785,
+    "nm_shift_per_fraction_error": -127.3734050116367,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 8.255059231033092,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      5.746323774739148
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.3167245072054357e-13,
+      -1.0408340855860843e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        2.5422061231379076
+      ],
+      [
+        0.0,
+        -0.8135794543026873,
+        -0.17271397557007093
+      ],
+      [
+        0.0,
+        -0.8135794543025556,
+        -0.17271397557008134
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -3.20411765160124
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3119442386,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.3390349394008716,
+    "nm_shift_per_fraction_error": 203.42096364052296,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 86.64100058732876,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -18.616229541701376
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.156053113822054e-13,
+      1.915134717478395e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -9.89711045351647
+      ],
+      [
+        0.0,
+        -1.0853531062890707,
+        0.3679726246192629
+      ],
+      [
+        0.0,
+        -1.0853531062892863,
+        0.36797262461928204
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        8.719119088184906
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2158033304,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.07047242035858695,
+    "nm_shift_per_fraction_error": -42.28345221515217,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.004897038087658965,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      0.13995768057036334
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      6.23945339839338e-14,
+      2.5868196473766147e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -0.06605713860545938
+      ],
+      [
+        0.0,
+        -0.521605174228007,
+        -0.0367587790994101
+      ],
+      [
+        0.0,
+        -0.5216051742279446,
+        -0.03675877909938423
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -0.2060148191758227
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 696722116,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.13169414260374057,
+    "nm_shift_per_fraction_error": 79.01648556224434,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 3.644704466030771,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -3.8182218196593927
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.1879386363489175e-14,
+      -1.587618925213974e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -2.0470132378047197
+      ],
+      [
+        0.0,
+        -0.5251710730324824,
+        0.06916195418329923
+      ],
+      [
+        0.0,
+        -0.5251710730324706,
+        0.06916195418328336
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        1.771208581854673
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 571015602,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.21716562459113697,
+    "nm_shift_per_fraction_error": -130.2993747546822,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 7.222973626165802,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -5.375118092159763
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.0894397323445446e-13,
+      3.6942671144402084e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -2.952053772503363
+      ],
+      [
+        0.0,
+        0.7273166111445903,
+        0.1579481661347241
+      ],
+      [
+        0.0,
+        0.7273166111447993,
+        0.15794816613476104
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        2.4230643196564006
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1159684952,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.05191604999290872,
+    "nm_shift_per_fraction_error": 31.149629995745233,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.04167401118076641,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      0.40828426950234764
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.469446951953614e-13,
+      5.079270337660091e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.014225472101254688
+      ],
+      [
+        0.0,
+        0.616306194435858,
+        -0.03199618320127132
+      ],
+      [
+        0.0,
+        0.616306194435511,
+        -0.03199618320126624
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -0.39405879740109295
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3976813316,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.1327795556539951,
+    "nm_shift_per_fraction_error": 79.66773339239707,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 25.20252616016205,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -10.04042352894778
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -7.771561172376096e-14,
+      1.2406742300186124e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -6.129843218995806
+      ],
+      [
+        0.0,
+        1.4897190705109238,
+        -0.19780423623172308
+      ],
+      [
+        0.0,
+        1.489719070510846,
+        -0.19780423623171067
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        3.9105803099519747
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 4000586097,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.27351376463963084,
+    "nm_shift_per_fraction_error": -164.1082587837785,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 24.054966152805115,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -9.809172473313968
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.7247314687551807e-13,
+      3.920475055707584e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -4.9045868686229435
+      ],
+      [
+        0.0,
+        0.0011242472542039583,
+        0.00030749709888309995
+      ],
+      [
+        0.0,
+        0.0011242472543764315,
+        0.0003074970989223047
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        4.904585604691024
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 374971635,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.07303588085464567,
+    "nm_shift_per_fraction_error": -43.8215285127874,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.49843851199934175,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      1.412003558068239
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -6.744604874597826e-14,
+      1.2580214647783805e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.5889625345765253
+      ],
+      [
+        0.0,
+        0.4838165860274162,
+        0.0353359705325998
+      ],
+      [
+        0.0,
+        0.4838165860273487,
+        0.03533597053261238
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -0.8230410234917137
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1580573816,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.0785875139593809,
+    "nm_shift_per_fraction_error": -47.15250837562854,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 14.01883867972387,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -7.488347929877156
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.0236256287043943e-13,
+      -5.2839677078253544e-15
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -3.812899772731607
+      ],
+      [
+        0.0,
+        -0.37074467708386116,
+        -0.029135902485694105
+      ],
+      [
+        0.0,
+        -0.3707446770839635,
+        -0.02913590248569939
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        3.675448157145549
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1031168469,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.12628272583384567,
+    "nm_shift_per_fraction_error": 75.7696355003074,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 2.119376177751957,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      2.9116154813106467
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.774758283725532e-14,
+      -1.3378187446733136e-14
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        0.31914241460652537
+      ],
+      [
+        0.0,
+        -1.5077568279061206,
+        0.1904036421225775
+      ],
+      [
+        0.0,
+        -1.5077568279061584,
+        0.1904036421225641
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        -2.5924730667041214
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2905902244,
+    "kind": "thickness",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.011235791382381755,
+    "nm_shift_per_fraction_error": 6.741474829429053,
+    "leading_reflectance_power": 4,
+    "leading_reflectance_coefficient": 0.12853321983281998,
+    "numerator_real_coefficients": [
+      0.0,
+      0.0,
+      -0.717030598601817
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      6.905587213168474e-14,
+      3.2959746043559335e-16
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.0,
+        -0.639484838722452
+      ],
+      [
+        0.0,
+        -0.7496259592911247,
+        0.008422640893412877
+      ],
+      [
+        0.0,
+        -0.7496259592910557,
+        0.008422640893413207
+      ],
+      [
+        1.0000000000000004,
+        0.0,
+        0.07754575987936496
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2528633012,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.09269783064604832,
+    "nm_shift_per_fraction_error": 55.618698387628996,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 2.1938082672562498,
+    "numerator_real_coefficients": [
+      0.0,
+      2.962301988154651,
+      1.1161142216765851
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.2745360322696797e-13,
+      340.98448172794036
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        1.4811509940773253,
+        0.8374070273668763
+      ],
+      [
+        0.0,
+        -1.2787135856786602,
+        0.06124022867656104
+      ],
+      [
+        0.0,
+        -1.2787135856785328,
+        341.04572195661694
+      ],
+      [
+        1.0000000000000004,
+        -1.4811509940773258,
+        -0.2787071943097089
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 757654805,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.017496704777341564,
+    "nm_shift_per_fraction_error": 10.49802286640494,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 18.35429248694037,
+    "numerator_real_coefficients": [
+      0.0,
+      -8.568381991237406,
+      3.290753691737523
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.4091839634365897e-14,
+      732.4599574200017
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -4.284190995618703,
+        10.712502122596574
+      ],
+      [
+        0.0,
+        0.4690862750973858,
+        -3.503271771958163
+      ],
+      [
+        0.0,
+        0.4690862750974099,
+        728.9566856480436
+      ],
+      [
+        1.0000000000000004,
+        4.284190995618704,
+        7.421748430859051
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3118414722,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.3207516645116627,
+    "nm_shift_per_fraction_error": 192.4509987069976,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 4.6212968796764855,
+    "numerator_real_coefficients": [
+      0.0,
+      4.299440372735264,
+      -10.35054135872356
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.0872192862952943e-14,
+      626.4184844268036
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        2.149720186367632,
+        -4.795582185862244
+      ],
+      [
+        0.0,
+        -1.9651768095205786,
+        -2.899799609465238
+      ],
+      [
+        0.0,
+        -1.9651768095205577,
+        623.5186848173383
+      ],
+      [
+        1.0000000000000004,
+        -2.149720186367632,
+        5.554959172861316
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 318848809,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.11394691247250101,
+    "nm_shift_per_fraction_error": 68.36814748350061,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 8.855335921401096,
+    "numerator_real_coefficients": [
+      0.0,
+      -5.9515832923352745,
+      8.90455485294465
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      7.83262343873048e-14,
+      164.85623407992242
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -2.975791646167639,
+        8.765130902151501
+      ],
+      [
+        0.0,
+        0.47919617073044046,
+        3.5033955314712313
+      ],
+      [
+        0.0,
+        0.4791961707305188,
+        168.35962961139364
+      ],
+      [
+        1.0000000000000004,
+        2.9757916461676355,
+        -0.13942395079314893
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1323916375,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.10890483499244209,
+    "nm_shift_per_fraction_error": -65.34290099546526,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.015434217322937049,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.24846905097365385,
+      7.282213589133635
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.4874212972415535e-13,
+      169.5780742305791
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.12423452548682712,
+        3.634495778275197
+      ],
+      [
+        0.0,
+        0.16928156989522994,
+        -0.5620356547454294
+      ],
+      [
+        0.0,
+        0.16928156989537868,
+        169.01603857583365
+      ],
+      [
+        1.0000000000000004,
+        0.12423452548682673,
+        -3.6477178108584383
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2787643767,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.0476737886585776,
+    "nm_shift_per_fraction_error": -28.604273195146558,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.21868628759977748,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.9352781139314177,
+      -4.149212102824507
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -4.5075054799781356e-14,
+      -828.9816825220317
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.4676390569657082,
+        -2.1458109685729228
+      ],
+      [
+        0.0,
+        0.6009127406879915,
+        0.3330176157598035
+      ],
+      [
+        0.0,
+        0.6009127406879464,
+        -828.648664906272
+      ],
+      [
+        1.0000000000000004,
+        0.4676390569657095,
+        2.0034011342515834
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 80655113,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.2209670583430953,
+    "nm_shift_per_fraction_error": -132.5802350058572,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.24367752567519801,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.9872740767896178,
+      14.010051852431623
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.1224354778960333e-13,
+      -9.236874783672242
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.4936370383948091,
+        6.705756563727017
+      ],
+      [
+        0.0,
+        0.9177234063991667,
+        0.9986993623343724
+      ],
+      [
+        0.0,
+        0.9177234063990545,
+        -8.23817542133787
+      ],
+      [
+        1.0000000000000004,
+        0.49363703839480866,
+        -7.304295288704607
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 822263077,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.0029473953677766197,
+    "nm_shift_per_fraction_error": 1.7684372206659718,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 5.835194990512575,
+    "numerator_real_coefficients": [
+      0.0,
+      -4.83122965320945,
+      -9.168431517899116
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.7985612998927536e-14,
+      -1020.5208767730794
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -2.4156148266047244,
+        -2.4663054852018753
+      ],
+      [
+        0.0,
+        -1.264663766784352,
+        1.1137679162826493
+      ],
+      [
+        0.0,
+        -1.26466376678437,
+        -1019.4071088567968
+      ],
+      [
+        1.0000000000000004,
+        2.4156148266047253,
+        6.70212603269724
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2259650022,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.28848211258403994,
+    "nm_shift_per_fraction_error": -173.08926755042395,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 10.257405921790841,
+    "numerator_real_coefficients": [
+      0.0,
+      6.405437041074041,
+      11.672298469313786
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      3.7431169275237153e-13,
+      -855.4721716596794
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        3.202718520537021,
+        10.954416043040334
+      ],
+      [
+        0.0,
+        0.1444725061175816,
+        2.0534128935785283
+      ],
+      [
+        0.0,
+        0.14447250611795592,
+        -853.4187587661008
+      ],
+      [
+        1.0000000000000004,
+        -3.20271852053702,
+        -0.7178824262734511
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3721380506,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.1745489944865852,
+    "nm_shift_per_fraction_error": 104.72939669195112,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.4186872788802567,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.3821731917560123,
+      -0.1492353356065037
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.5677016896329405e-13,
+      65.63281683983959
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.191086595878005,
+        0.5429763376792378
+      ],
+      [
+        0.0,
+        -0.4283681453086022,
+        1.6696086823039757
+      ],
+      [
+        0.0,
+        -0.42836814530895895,
+        67.30242552214357
+      ],
+      [
+        1.0000000000000004,
+        1.1910865958780072,
+        0.6922116732857415
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3298534094,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.07532731165536799,
+    "nm_shift_per_fraction_error": -45.19638699322079,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.4220324407437923,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.38498003408313,
+      11.71583585397072
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.3167245072054357e-13,
+      -497.28684757921224
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.1924900170415653,
+        6.2506655605464045
+      ],
+      [
+        0.0,
+        -0.7978327980357327,
+        -1.3827070753662465
+      ],
+      [
+        0.0,
+        -0.7978327980358644,
+        -498.66955465457846
+      ],
+      [
+        1.0000000000000004,
+        1.1924900170415649,
+        -5.465170293424315
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 264340311,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.2273865949929387,
+    "nm_shift_per_fraction_error": -136.43195699576322,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.9642131505742073,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.8030077777802953,
+      3.2036507034283037
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.270095140171179e-13,
+      950.062804928685
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.4015038888901472,
+        0.3097950717596296
+      ],
+      [
+        0.0,
+        2.1326682138775035,
+        -1.2278549709087405
+      ],
+      [
+        0.0,
+        2.1326682138773765,
+        948.8349499577762
+      ],
+      [
+        1.0000000000000004,
+        1.401503888890148,
+        -2.893855631668674
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3188094291,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.2661196480135222,
+    "nm_shift_per_fraction_error": 159.67178880811335,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 4.631710768250035,
+    "numerator_real_coefficients": [
+      0.0,
+      -4.304281946271659,
+      -8.42601359164352
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.0103029524088925e-13,
+      -460.5617761516856
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -2.1521409731358294,
+        -2.26890970217808
+      ],
+      [
+        0.0,
+        -0.8622740753163021,
+        2.093508426616201
+      ],
+      [
+        0.0,
+        -0.8622740753164031,
+        -458.4682677250694
+      ],
+      [
+        1.0000000000000004,
+        2.1521409731358294,
+        6.157103889465439
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2810484277,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.011795518985349439,
+    "nm_shift_per_fraction_error": 7.077311391209664,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.039773814742764,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.039386000484228,
+      -2.9562541304552683
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.1901590823981678e-13,
+      -759.963540229528
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.0196930002421147,
+        -1.8316418187808503
+      ],
+      [
+        0.0,
+        -1.3216668724943765,
+        -0.4650162073857581
+      ],
+      [
+        0.0,
+        -1.3216668724944955,
+        -760.4285564369137
+      ],
+      [
+        1.0000000000000004,
+        1.0196930002421136,
+        1.1246123116744182
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2399380267,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.36614731212829427,
+    "nm_shift_per_fraction_error": -219.68838727697656,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.088706421007634,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.0868219099938874,
+      13.00024548433085
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      8.837375276016246e-14,
+      332.8422448131634
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.0434109549969437,
+        4.787325815960721
+      ],
+      [
+        0.0,
+        2.124688276763641,
+        1.6615372064395544
+      ],
+      [
+        0.0,
+        2.124688276763729,
+        334.50378201960297
+      ],
+      [
+        1.0000000000000004,
+        1.0434109549969437,
+        -8.21291966837013
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 373246173,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.116240489308639,
+    "nm_shift_per_fraction_error": -69.7442935851834,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 10.137963620358462,
+    "numerator_real_coefficients": [
+      0.0,
+      6.3680338002741355,
+      0.5084240878405151
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.6009416015094757e-13,
+      -405.5560108886982
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        3.1840169001370677,
+        5.060189928124064
+      ],
+      [
+        0.0,
+        0.72526398776633,
+        0.5607327037979474
+      ],
+      [
+        0.0,
+        0.7252639877664901,
+        -404.99527818490026
+      ],
+      [
+        1.0000000000000004,
+        -3.1840169001370677,
+        4.551765840283549
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1453966580,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.059729274434533734,
+    "nm_shift_per_fraction_error": -35.83756466072024,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 10.21224122081541,
+    "numerator_real_coefficients": [
+      0.0,
+      -6.391319494694475,
+      7.312888298530488
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.8895995879120164e-13,
+      108.87934720565117
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -3.195659747347237,
+        8.748401326985308
+      ],
+      [
+        0.0,
+        -0.16830586851102258,
+        2.524627538055104
+      ],
+      [
+        0.0,
+        -0.16830586851121154,
+        111.40397474370627
+      ],
+      [
+        1.0000000000000004,
+        3.195659747347238,
+        1.4355130284548192
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3768716237,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.025302448576027436,
+    "nm_shift_per_fraction_error": 15.181469145616461,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 5.609653670684339,
+    "numerator_real_coefficients": [
+      0.0,
+      4.736941490322353,
+      -8.143589446659766
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.7408297026122455e-13,
+      707.3029464793871
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        2.3684707451611766,
+        -1.2874510175376892
+      ],
+      [
+        0.0,
+        0.20240123295072598,
+        1.0227853492114523
+      ],
+      [
+        0.0,
+        0.2024012329505519,
+        708.3257318285985
+      ],
+      [
+        1.0000000000000004,
+        -2.368470745161177,
+        6.856138429122076
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2200163928,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06891797814562521,
+    "nm_shift_per_fraction_error": 41.35078688737513,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 5.37115304421184,
+    "numerator_real_coefficients": [
+      0.0,
+      -4.635149639099838,
+      -4.396115450935051
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.283417816466681e-13,
+      1165.4224952319023
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -2.3175748195499186,
+        0.2052603563671025
+      ],
+      [
+        0.0,
+        0.7513433839080959,
+        -3.8401297718104326
+      ],
+      [
+        0.0,
+        0.7513433839082242,
+        1161.582365460092
+      ],
+      [
+        1.0000000000000004,
+        2.31757481954992,
+        4.601375807302154
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3659790199,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.11995281768066438,
+    "nm_shift_per_fraction_error": 71.97169060839863,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 9.288882302786691,
+    "numerator_real_coefficients": [
+      0.0,
+      -6.0955335460603255,
+      -0.8410407537103355
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.609823385706477e-14,
+      40.29208781768651
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -3.0477667730301627,
+        4.078491222480203
+      ],
+      [
+        0.0,
+        0.5393135489823909,
+        -2.5054253617174096
+      ],
+      [
+        0.0,
+        0.5393135489823748,
+        37.7866624559691
+      ],
+      [
+        1.0000000000000004,
+        3.0477667730301627,
+        4.919531976190538
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3993898363,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06143557354794831,
+    "nm_shift_per_fraction_error": 36.861344128768984,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 12.519813077310951,
+    "numerator_real_coefficients": [
+      0.0,
+      7.076669577509169,
+      4.104252086523746
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.7930101847696278e-13,
+      351.4332789484601
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        3.538334788754583,
+        8.304885601412709
+      ],
+      [
+        0.0,
+        -0.11955735447587928,
+        -0.6550593588156874
+      ],
+      [
+        0.0,
+        -0.11955735447569998,
+        350.77821958964444
+      ],
+      [
+        1.0000000000000004,
+        -3.5383347887545864,
+        4.200633514888962
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2797193579,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.20665826918298769,
+    "nm_shift_per_fraction_error": 123.99496150979262,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.019946566401493237,
+    "numerator_real_coefficients": [
+      0.0,
+      0.28246462717652443,
+      -21.35811836075934
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.4699352846037073e-13,
+      -678.9907496997226
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.1412323135882615,
+        -11.145890285218291
+      ],
+      [
+        0.0,
+        -0.9765289427756834,
+        -1.867626428375177
+      ],
+      [
+        0.0,
+        -0.9765289427758304,
+        -680.8583761280978
+      ],
+      [
+        1.0000000000000004,
+        -0.14123231358826294,
+        10.212228075541049
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2161094691,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.10172336073870834,
+    "nm_shift_per_fraction_error": 61.034016443225006,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.2553681810298745,
+    "numerator_real_coefficients": [
+      0.0,
+      2.2408642806112775,
+      -5.012330294419273
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      9.936496070395151e-14,
+      -296.7927305029476
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        1.120432140305639,
+        -2.1484488000909816
+      ],
+      [
+        0.0,
+        0.7348030258460362,
+        0.22514374162003567
+      ],
+      [
+        0.0,
+        0.7348030258461355,
+        -296.56758676132756
+      ],
+      [
+        1.0000000000000004,
+        -1.1204321403056388,
+        2.863881494328292
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2634006486,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.019070534260321348,
+    "nm_shift_per_fraction_error": -11.442320556192808,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.014474374899582655,
+    "numerator_real_coefficients": [
+      0.0,
+      0.24061899259686592,
+      17.344448003372296
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -8.948397578478762e-14,
+      126.03394831892307
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.12030949629843302,
+        8.654177478741214
+      ],
+      [
+        0.0,
+        -0.22487200979547572,
+        1.5734211556419055
+      ],
+      [
+        0.0,
+        -0.2248720097955652,
+        127.60736947456498
+      ],
+      [
+        1.0000000000000004,
+        -0.1203094962984329,
+        -8.690270524631082
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3918523556,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06736102668871675,
+    "nm_shift_per_fraction_error": 40.416616013230055,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 25.19351823259698,
+    "numerator_real_coefficients": [
+      0.0,
+      -10.038629036396749,
+      -10.452651245588115
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.59015031645049e-13,
+      -1208.5240448083823
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -5.0193145181983745,
+        7.061852092717699
+      ],
+      [
+        0.0,
+        -0.785597098755593,
+        6.8059172142529984
+      ],
+      [
+        0.0,
+        -0.785597098755852,
+        -1201.7181275941293
+      ],
+      [
+        1.0000000000000004,
+        5.0193145181983745,
+        17.514503338305815
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1490074718,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.26906932180101617,
+    "nm_shift_per_fraction_error": -161.4415930806097,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 4.054639033627712,
+    "numerator_real_coefficients": [
+      0.0,
+      4.027226854115726,
+      5.010877150307325
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.2870594307278225e-14,
+      161.83780955919718
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        2.0136134270578636,
+        3.8231653286102865
+      ],
+      [
+        0.0,
+        1.1912957343642312,
+        1.6301617110511921
+      ],
+      [
+        0.0,
+        1.191295734364254,
+        163.46797127024837
+      ],
+      [
+        1.0000000000000004,
+        -2.013613427057863,
+        -1.1877118216970386
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1711336889,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.10487131895420075,
+    "nm_shift_per_fraction_error": -62.92279137252045,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 17.47901593912496,
+    "numerator_real_coefficients": [
+      0.0,
+      8.361582610756162,
+      -6.379085975380379
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.4313884239290928e-14,
+      327.8229863563586
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        4.180791305378081,
+        5.471361760743619
+      ],
+      [
+        0.0,
+        0.3964926761711848,
+        4.6024669758643695
+      ],
+      [
+        0.0,
+        0.3964926761712091,
+        332.425453332223
+      ],
+      [
+        1.0000000000000004,
+        -4.180791305378081,
+        11.850447736123998
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2159234236,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.09014120983027603,
+    "nm_shift_per_fraction_error": -54.084725898165615,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 2.0235607512049776,
+    "numerator_real_coefficients": [
+      0.0,
+      2.8450383134186277,
+      2.3894543696935737
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.284389261613228e-13,
+      1327.6857258811654
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        1.4225191567093138,
+        2.2062425489129502
+      ],
+      [
+        0.0,
+        0.02302222996701543,
+        0.11672127823642055
+      ],
+      [
+        0.0,
+        0.02302222996714387,
+        1327.8024471594017
+      ],
+      [
+        1.0000000000000004,
+        -1.422519156709314,
+        -0.18321182078062365
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 686297256,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.05795137284156139,
+    "nm_shift_per_fraction_error": 34.77082370493684,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.07295418072100068,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.5402006320655343,
+      4.347173322830482
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.398081733190338e-14,
+      -454.3673212107126
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.27010031603276746,
+        2.0057448246149545
+      ],
+      [
+        0.0,
+        -0.6392478817497524,
+        -0.16355075852775455
+      ],
+      [
+        0.0,
+        -0.6392478817497764,
+        -454.53087196924037
+      ],
+      [
+        1.0000000000000004,
+        0.2701003160327668,
+        -2.3414284982155276
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3253543040,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.050967972943975835,
+    "nm_shift_per_fraction_error": -30.5807837663855,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 16.135455630707195,
+    "numerator_real_coefficients": [
+      0.0,
+      -8.033792536705736,
+      -9.980051244927646
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.930988785010413e-14,
+      152.9349890250555
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -4.016896268352867,
+        2.2447966154750922
+      ],
+      [
+        0.0,
+        1.2906630678954878,
+        -4.680908648599608
+      ],
+      [
+        0.0,
+        1.2906630678954585,
+        148.2540803764559
+      ],
+      [
+        1.0000000000000004,
+        4.016896268352868,
+        12.224847860402738
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 748343292,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.29920254420769177,
+    "nm_shift_per_fraction_error": -179.52152652461507,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 5.268531040593263,
+    "numerator_real_coefficients": [
+      0.0,
+      4.590656179934744,
+      -0.799183265419694
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -8.770761894538737e-14,
+      -1663.400008306597
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        2.295328089967371,
+        1.6900880457852403
+      ],
+      [
+        0.0,
+        1.0436338838899322,
+        0.6903754502942658
+      ],
+      [
+        0.0,
+        1.0436338838898445,
+        -1662.7096328563027
+      ],
+      [
+        1.0000000000000004,
+        -2.2953280899673723,
+        2.4892713112049343
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2030783831,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.3017723055238113,
+    "nm_shift_per_fraction_error": -181.06338331428677,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.4705222702293208,
+    "numerator_real_coefficients": [
+      0.0,
+      2.4253018535673623,
+      -14.07653556974841
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -7.327471962526033e-14,
+      799.8730115231458
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        1.2126509267836814,
+        -7.758282530227239
+      ],
+      [
+        0.0,
+        1.7060339272521867,
+        -0.053045651595085785
+      ],
+      [
+        0.0,
+        1.7060339272521134,
+        799.8199658715507
+      ],
+      [
+        1.0000000000000004,
+        -1.212650926783681,
+        6.318253039521171
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1867260231,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.1764167992156408,
+    "nm_shift_per_fraction_error": -105.85007952938447,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.04033997302549897,
+    "numerator_real_coefficients": [
+      0.0,
+      0.4016962684690958,
+      3.078436234129443
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.9968028886505635e-15,
+      -1085.364758147904
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.20084813423454817,
+        0.3193213364997005
+      ],
+      [
+        0.0,
+        1.5748439713684226,
+        0.25196120854187065
+      ],
+      [
+        0.0,
+        1.5748439713684186,
+        -1085.1127969393622
+      ],
+      [
+        1.0000000000000004,
+        -0.20084813423454762,
+        -2.7591148976297424
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3853272413,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06488858575859775,
+    "nm_shift_per_fraction_error": 38.93315145515865,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.005092373671982635,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.14272173866629617,
+      -2.043588583255902
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.7533531010703882e-14,
+      -478.76020578851274
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.07136086933314806,
+        -1.0196146191336117
+      ],
+      [
+        0.0,
+        -0.02707450245769505,
+        -0.17213022359664526
+      ],
+      [
+        0.0,
+        -0.027074502457722582,
+        -478.9323360121094
+      ],
+      [
+        1.0000000000000004,
+        0.07136086933314811,
+        1.0239739641222902
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2090447729,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.3319585820053947,
+    "nm_shift_per_fraction_error": 199.1751492032368,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 45.17747964678834,
+    "numerator_real_coefficients": [
+      0.0,
+      -13.44283893331886,
+      -4.2752332098911054
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.2870594307278225e-13,
+      278.85674405476334
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -6.72141946665943,
+        18.236205529270226
+      ],
+      [
+        0.0,
+        -2.1047174105699704,
+        1.2506101889426304
+      ],
+      [
+        0.0,
+        -2.104717410570199,
+        280.10735424370597
+      ],
+      [
+        1.0000000000000004,
+        6.721419466659431,
+        22.51143873916133
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2504304253,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.34150789007137394,
+    "nm_shift_per_fraction_error": 204.90473404282437,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 14.267468781521826,
+    "numerator_real_coefficients": [
+      0.0,
+      -7.554460611194376,
+      36.51863806491886
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.540190280342358e-13,
+      -133.4474305612515
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -3.777230305597188,
+        23.211276228636972
+      ],
+      [
+        0.0,
+        -2.0889122502312434,
+        -1.2510574218106434
+      ],
+      [
+        0.0,
+        -2.0889122502314974,
+        -134.69848798306217
+      ],
+      [
+        1.0000000000000004,
+        3.777230305597188,
+        -13.307361836281887
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 4045493767,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.3477852807874695,
+    "nm_shift_per_fraction_error": -208.6711684724817,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.0349256827452902,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.034625943750143,
+      0.9791387745902642
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      9.9253938401489e-14,
+      -295.55966390108046
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.0173129718750715,
+        -0.22775712809572868
+      ],
+      [
+        0.0,
+        1.5714893297527965,
+        0.7533953493911911
+      ],
+      [
+        0.0,
+        1.5714893297528958,
+        -294.80626855168924
+      ],
+      [
+        1.0000000000000004,
+        1.0173129718750715,
+        -1.206895902685993
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3566656367,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.09884890513068703,
+    "nm_shift_per_fraction_error": -59.30934307841222,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.4154541172173072,
+    "numerator_real_coefficients": [
+      0.0,
+      2.379457179456951,
+      -1.0483006914852302
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -5.1514348342607263e-14,
+      -434.9150882680344
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        1.1897285897284753,
+        -0.16601470789495787
+      ],
+      [
+        0.0,
+        0.8361715383352162,
+        0.4653480726353255
+      ],
+      [
+        0.0,
+        0.8361715383351647,
+        -434.4497401953991
+      ],
+      [
+        1.0000000000000004,
+        -1.189728589728476,
+        0.8822859835902722
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1147528836,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.30492691669716643,
+    "nm_shift_per_fraction_error": 182.95615001829987,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.5280002582996535,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.4722461514174947,
+      -12.257625739817723
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.2945200467129325e-13,
+      -193.11403262887498
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.2361230757087471,
+        -6.087386085167895
+      ],
+      [
+        0.0,
+        -1.2021425409732267,
+        1.0343951815598018
+      ],
+      [
+        0.0,
+        -1.2021425409733562,
+        -192.07963744731518
+      ],
+      [
+        1.0000000000000004,
+        1.2361230757087478,
+        6.170239654649827
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1091260706,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.021137746845671775,
+    "nm_shift_per_fraction_error": -12.682648107403065,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 4.600504295742033,
+    "numerator_real_coefficients": [
+      0.0,
+      4.289757240563635,
+      1.2926683478214829
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.3444800828210646e-13,
+      -665.0188173862872
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        2.144878620281817,
+        2.8792965463093125
+      ],
+      [
+        0.0,
+        -0.36685085654093896,
+        -0.5893051870600489
+      ],
+      [
+        0.0,
+        -0.3668508565410734,
+        -665.6081225733473
+      ],
+      [
+        1.0000000000000004,
+        -2.1448786202818173,
+        1.5866281984878297
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1585352604,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.17268162559034023,
+    "nm_shift_per_fraction_error": 103.60897535420413,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 26.694879391036242,
+    "numerator_real_coefficients": [
+      0.0,
+      -10.333417516201742,
+      -5.088040771402532
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.7119639039719914e-13,
+      -383.7543519206335
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -5.16670875810087,
+        10.200876689370974
+      ],
+      [
+        0.0,
+        -1.097763745480583,
+        4.431883775833806
+      ],
+      [
+        0.0,
+        -1.0977637454807543,
+        -379.3224681447997
+      ],
+      [
+        1.0000000000000004,
+        5.166708758100871,
+        15.288917460773506
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1440166681,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.04509983037509974,
+    "nm_shift_per_fraction_error": -27.059898225059847,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 3.3680342934918346,
+    "numerator_real_coefficients": [
+      0.0,
+      3.670441005378964,
+      11.427694151441319
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      3.169686735304822e-13,
+      -231.9094139665543
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        1.8352205026894817,
+        7.138802098824839
+      ],
+      [
+        0.0,
+        0.7198084795855244,
+        1.4976689851120275
+      ],
+      [
+        0.0,
+        0.7198084795858414,
+        -230.41174498144227
+      ],
+      [
+        1.0000000000000004,
+        -1.8352205026894821,
+        -4.288892052616481
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1226162391,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06671220151059824,
+    "nm_shift_per_fraction_error": 40.027320906358945,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 2.970976947757473,
+    "numerator_real_coefficients": [
+      0.0,
+      -3.44730442389846,
+      1.693605358093231
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.768618667658984e-13,
+      250.62156908841976
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.7236522119492297,
+        2.3125146200876854
+      ],
+      [
+        0.0,
+        -0.19887952553087523,
+        -0.5017896420044052
+      ],
+      [
+        0.0,
+        -0.19887952553059837,
+        250.11977944641535
+      ],
+      [
+        1.0000000000000004,
+        1.7236522119492301,
+        0.6189092619944543
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 329228233,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.09630673003434506,
+    "nm_shift_per_fraction_error": 57.784038020607035,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.022918507787885498,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.3027771972119796,
+      -13.010272884957509
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      3.547162563677375e-14,
+      775.999831672971
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.1513885986059893,
+        -6.5390021098255815
+      ],
+      [
+        0.0,
+        -0.3010811227585201,
+        0.7071724434375204
+      ],
+      [
+        0.0,
+        -0.30108112275848464,
+        776.7070041164086
+      ],
+      [
+        1.0000000000000004,
+        0.1513885986059903,
+        6.471270775131927
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3576057669,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.18427484716009182,
+    "nm_shift_per_fraction_error": -110.5649082960551,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 9.101038743613854,
+    "numerator_real_coefficients": [
+      0.0,
+      6.033585581928495,
+      -5.850027228016602
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.6087131626818518e-13,
+      569.9822738296771
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        3.016792790964247,
+        1.5820236630359104
+      ],
+      [
+        0.0,
+        0.2948969133873435,
+        2.7575596769464594
+      ],
+      [
+        0.0,
+        0.29489691338750434,
+        572.7398335066235
+      ],
+      [
+        1.0000000000000004,
+        -3.016792790964248,
+        7.432050891052512
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 185803321,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.22059851147757759,
+    "nm_shift_per_fraction_error": -132.35910688654656,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 11.774596867011434,
+    "numerator_real_coefficients": [
+      0.0,
+      -6.8628264926373985,
+      -8.79293195285785
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.5049073098793997e-13,
+      781.1891233660007
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -3.431413246318699,
+        1.3961837420087537
+      ],
+      [
+        0.0,
+        0.4350832450646834,
+        1.173665505994253
+      ],
+      [
+        0.0,
+        0.43508324506483387,
+        782.3627888719949
+      ],
+      [
+        1.0000000000000004,
+        3.4314132463186997,
+        10.189115694866604
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3618012794,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.03337314967797979,
+    "nm_shift_per_fraction_error": -20.023889806787874,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 2.6958360295173445,
+    "numerator_real_coefficients": [
+      0.0,
+      -3.2838002555072343,
+      1.0608526171122068
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.115496583992126e-13,
+      -879.7304417028631
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.641900127753617,
+        1.847818209487579
+      ],
+      [
+        0.0,
+        -0.24708748987829451,
+        1.8045394013274125
+      ],
+      [
+        0.0,
+        -0.24708748987840606,
+        -877.9259023015358
+      ],
+      [
+        1.0000000000000004,
+        1.6419001277536174,
+        0.7869655923753722
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1801374633,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.11502139121352796,
+    "nm_shift_per_fraction_error": -69.01283472811677,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 25.113054951687406,
+    "numerator_real_coefficients": [
+      0.0,
+      10.022585485130552,
+      -2.5929101396613454
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.1041167979897182e-13,
+      88.8838841504134
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        5.011292742565275,
+        11.22815288901435
+      ],
+      [
+        0.0,
+        -0.25266387552912245,
+        -5.741553649584716
+      ],
+      [
+        0.0,
+        -0.25266387552901204,
+        83.14233050082868
+      ],
+      [
+        1.0000000000000004,
+        -5.011292742565276,
+        13.821063028675695
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3671878752,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.026471609225370358,
+    "nm_shift_per_fraction_error": 15.882965535222215,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.2076774299606035,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.9114327840507023,
+      3.397665891075637
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      4.218847493575595e-15,
+      145.24272731948076
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.4557163920253504,
+        1.7370787395937664
+      ],
+      [
+        0.0,
+        0.3621958611700531,
+        -0.1368932630583164
+      ],
+      [
+        0.0,
+        0.3621958611700573,
+        145.10583405642245
+      ],
+      [
+        1.0000000000000004,
+        0.45571639202535186,
+        -1.660587151481871
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 259954764,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.09631272009444088,
+    "nm_shift_per_fraction_error": -57.78763205666453,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.07975814425818535,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.5648296885192398,
+      -0.595458156404659
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.5298873279334657e-13,
+      234.79329138255284
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.28241484425962005,
+        -0.25797255312423584
+      ],
+      [
+        0.0,
+        -0.01565548153088936,
+        -0.7137095395272153
+      ],
+      [
+        0.0,
+        -0.01565548153073637,
+        234.07958184302564
+      ],
+      [
+        1.0000000000000004,
+        0.2824148442596197,
+        0.3374856032804232
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 604303102,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.06523625174708907,
+    "nm_shift_per_fraction_error": 39.14175104825344,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.6776649506073534,
+    "numerator_real_coefficients": [
+      0.0,
+      -1.6464081518352045,
+      10.296732478255741
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      5.984102102729594e-14,
+      794.5436655462132
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.8232040759176024,
+        5.474059572552183
+      ],
+      [
+        0.0,
+        -0.1621057795352734,
+        0.3862148975528069
+      ],
+      [
+        0.0,
+        -0.16210577953521355,
+        794.929880443766
+      ],
+      [
+        1.0000000000000004,
+        0.8232040759176021,
+        -4.822672905703558
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3700432338,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.019795366922585943,
+    "nm_shift_per_fraction_error": 11.877220153551566,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.39093693656884615,
+    "numerator_real_coefficients": [
+      0.0,
+      1.250498998910189,
+      -11.948477518600168
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.419486915845482e-14,
+      36.25330403186738
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.6252494994550941,
+        -6.577176013760565
+      ],
+      [
+        0.0,
+        1.263650048664518,
+        -0.8010860016579893
+      ],
+      [
+        0.0,
+        1.2636500486644837,
+        35.45221803020939
+      ],
+      [
+        1.0000000000000004,
+        -0.6252494994550948,
+        5.371301504839602
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1333669507,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.21228900835272785,
+    "nm_shift_per_fraction_error": -127.3734050116367,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.5295473309008938,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.4734973870217805,
+      6.536577945967901
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.3167245072054357e-13,
+      806.7501740767201
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.2367486935108905,
+        3.7021068742027254
+      ],
+      [
+        0.0,
+        -0.8135794543026873,
+        -1.5822961542478242
+      ],
+      [
+        0.0,
+        -0.8135794543025556,
+        805.1678779224723
+      ],
+      [
+        1.0000000000000004,
+        1.23674869351089,
+        -2.8344710717651758
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3119442386,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.3390349394008716,
+    "nm_shift_per_fraction_error": 203.42096364052296,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.019680452491041743,
+    "numerator_real_coefficients": [
+      0.0,
+      0.2805740721523765,
+      -17.78805599835618
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -2.156053113822054e-13,
+      966.3309711104581
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.14028703607618853,
+        -9.473183455598358
+      ],
+      [
+        0.0,
+        -1.0853531062890707,
+        -0.8917193122679071
+      ],
+      [
+        0.0,
+        -1.0853531062892863,
+        965.4392517981902
+      ],
+      [
+        1.0000000000000004,
+        -0.14028703607618798,
+        8.314872542757824
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2158033304,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.07047242035858695,
+    "nm_shift_per_fraction_error": -42.28345221515217,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 4.013183628095733,
+    "numerator_real_coefficients": [
+      0.0,
+      4.006586391478778,
+      -0.5526183657660295
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      6.23945339839338e-14,
+      -1270.0533451605627
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        2.003293195739389,
+        1.5942466522742553
+      ],
+      [
+        0.0,
+        -0.521605174228007,
+        0.9754722562711652
+      ],
+      [
+        0.0,
+        -0.5216051742279446,
+        -1269.0778729042916
+      ],
+      [
+        1.0000000000000004,
+        -2.003293195739389,
+        2.146865018040285
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 696722116,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.13169414260374057,
+    "nm_shift_per_fraction_error": 79.01648556224434,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.005977880093999185,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.15463350340723947,
+      -5.273476116877964
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.1879386363489175e-14,
+      273.9944121638448
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.07731675170361973,
+        -2.771651446367004
+      ],
+      [
+        0.0,
+        -0.5251710730324824,
+        0.5406920557066819
+      ],
+      [
+        0.0,
+        -0.5251710730324706,
+        274.5351042195515
+      ],
+      [
+        1.0000000000000004,
+        0.07731675170361973,
+        2.5018246705109597
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 571015602,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.21716562459113697,
+    "nm_shift_per_fraction_error": -130.2993747546822,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.3123537576961864,
+    "numerator_real_coefficients": [
+      0.0,
+      -1.1177723519504075,
+      -4.723204163961464
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      2.0894397323445446e-13,
+      290.96021520757284
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.558886175975204,
+        -2.4699199295561165
+      ],
+      [
+        0.0,
+        0.7273166111445903,
+        0.20280124145380185
+      ],
+      [
+        0.0,
+        0.7273166111447993,
+        291.16301644902666
+      ],
+      [
+        1.0000000000000004,
+        0.5588861759752036,
+        2.253284234405347
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1159684952,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.05191604999290872,
+    "nm_shift_per_fraction_error": 31.149629995745233,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 2.3429959252434926,
+    "numerator_real_coefficients": [
+      0.0,
+      -3.061369579285384,
+      -0.7547353729303936
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.469446951953614e-13,
+      430.3117945073675
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.5306847896426918,
+        0.6042136135066154
+      ],
+      [
+        0.0,
+        0.616306194435858,
+        1.462868165033775
+      ],
+      [
+        0.0,
+        0.616306194435511,
+        431.7746626724013
+      ],
+      [
+        1.0000000000000004,
+        1.5306847896426925,
+        1.358948986437009
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 3976813316,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.1327795556539951,
+    "nm_shift_per_fraction_error": 79.66773339239707,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 15.228763034522451,
+    "numerator_real_coefficients": [
+      0.0,
+      -7.80480955168605,
+      -6.663755546386442
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -7.771561172376096e-14,
+      -1507.2814502266565
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -3.902404775843024,
+        3.1728722895461274
+      ],
+      [
+        0.0,
+        1.4897190705109238,
+        -3.341392664182143
+      ],
+      [
+        0.0,
+        1.489719070510846,
+        -1510.6228428908387
+      ],
+      [
+        1.0000000000000004,
+        3.902404775843026,
+        9.83662783593257
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 4000586097,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.27351376463963084,
+    "nm_shift_per_fraction_error": -164.1082587837785,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 6.594134058320138,
+    "numerator_real_coefficients": [
+      0.0,
+      -5.135809209197763,
+      -9.811709317751518
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      1.7247314687551807e-13,
+      -866.6606086592683
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -2.567904604598881,
+        -1.6087882616816644
+      ],
+      [
+        0.0,
+        0.0011242472542039583,
+        -0.9269360993603011
+      ],
+      [
+        0.0,
+        0.0011242472543764315,
+        -867.5875447586286
+      ],
+      [
+        1.0000000000000004,
+        2.5679046045988816,
+        8.202921056069854
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 374971635,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.07303588085464567,
+    "nm_shift_per_fraction_error": -43.8215285127874,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 12.269045729730493,
+    "numerator_real_coefficients": [
+      0.0,
+      7.0054395236074924,
+      1.5117691436641048
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -6.744604874597826e-14,
+      141.89696764482738
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        3.5027197618037467,
+        6.773368192239704
+      ],
+      [
+        0.0,
+        0.4838165860274162,
+        2.6959709012744337
+      ],
+      [
+        0.0,
+        0.4838165860273487,
+        144.5929385461018
+      ],
+      [
+        1.0000000000000004,
+        -3.5027197618037462,
+        5.261599048575599
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1580573816,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": -0.0785875139593809,
+    "nm_shift_per_fraction_error": -47.15250837562854,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.09005510256935487,
+    "numerator_real_coefficients": [
+      0.0,
+      -0.6001836471259605,
+      -5.799846803054364
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -1.0236256287043943e-13,
+      1004.0725998412461
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -0.3000918235629806,
+        -2.923621658035534
+      ],
+      [
+        0.0,
+        -0.37074467708386116,
+        -0.021832473882835768
+      ],
+      [
+        0.0,
+        -0.3707446770839635,
+        1004.0507673673633
+      ],
+      [
+        1.0000000000000004,
+        0.30009182356297986,
+        2.87622514501883
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 1031168469,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.12628272583384567,
+    "nm_shift_per_fraction_error": 75.7696355003074,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 0.1360716999479292,
+    "numerator_real_coefficients": [
+      0.0,
+      0.7377579547464851,
+      3.7279933083755665
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      -3.774758283725532e-14,
+      -677.846139794164
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        0.36887897737324327,
+        0.7953671781129614
+      ],
+      [
+        0.0,
+        -1.5077568279061206,
+        -0.7978933655384848
+      ],
+      [
+        0.0,
+        -1.5077568279061584,
+        -678.6440331597024
+      ],
+      [
+        1.0000000000000004,
+        -0.3688789773732418,
+        -2.932626130262605
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  },
+  {
+    "pairs": 6,
+    "seed": 2905902244,
+    "kind": "index",
+    "mode": "independent",
+    "fractional_shift_coefficient": 0.011235791382381755,
+    "nm_shift_per_fraction_error": 6.741474829429053,
+    "leading_reflectance_power": 2,
+    "leading_reflectance_coefficient": 1.7264152441032399,
+    "numerator_real_coefficients": [
+      0.0,
+      -2.6278624348342436,
+      -1.760249102700444
+    ],
+    "numerator_imag_coefficients": [
+      0.0,
+      6.905587213168474e-14,
+      -158.30137460561826
+    ],
+    "matrix_coefficients": [
+      [
+        1.0000000000000004,
+        -1.3139312174171212,
+        -0.2978864687201477
+      ],
+      [
+        0.0,
+        -0.7496259592911247,
+        0.6417779615938635
+      ],
+      [
+        0.0,
+        -0.7496259592910557,
+        -157.6595966440244
+      ],
+      [
+        1.0000000000000004,
+        1.3139312174171227,
+        1.4623626339802964
+      ]
+    ],
+    "scope": "local Taylor expansion; equal exterior indices=1; coherent lossless nondispersive quarter-wave family; generic nonzero leading coefficient"
+  }
+]

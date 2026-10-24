@@ -88,3 +88,7 @@ The [oscillator explorer](docs/oscillator-bench/index.html) implements an establ
 ## The restart bargain
 
 The [finite search bench](docs/restart-bargain/index.html) illustrates established stochastic-resetting and quantile-objective ideas. [Primary sources, assumptions and limitations](src/restart-bargain/README.md) retain attribution. Original educational implementation and explanation with AI assistance; no third-party paper bodies, code, fonts, images or external datasets bundled. No scientific novelty or real-world search recommendation claimed.
+
+## The window inside a mirror
+
+An original educational implementation with AI assistance of established resonant-transmission and perturbation ideas. [Primary references and reading scope](src/mirror-window/SOURCES.md) retain credit; [methods and limits](src/mirror-window/README.md) distinguish synthetic calculations from physical measurements. No paper bodies, third-party code, external media or measured material dataset bundled. No scientific discovery or universal fabrication claim.

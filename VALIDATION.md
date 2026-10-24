@@ -88,3 +88,7 @@ The dependency-free verifier checks embedded/source data parity, finite profile 
 ## The restart bargain
 
 `python3 -B src/restart-bargain/verify.py` runs 19 Python methods, 640 cross-language comparisons and exact small-certificate/source-generated parity checks. The page uses finite L = 40, deterministic probability propagation and full mean equations. Quantiles beyond 10,000 ticks remain censored; grid search is not a global-optimum proof. Selective resetting requires position information and its order guarantee excludes return delay. Browser controls and narrow layouts received Chromium checks; physical-device, cross-engine, assistive-technology and empirical validity are untested.
+
+## The window inside a mirror
+
+`python3 -B src/mirror-window/verify.py` runs 28 Python groups, 9,102 JavaScript checks, separate loss/delay controls and generated-page parity. The model is ideal, coherent, normal-incidence and nondispersive; the main UI is lossless. Peak search and error ensembles are bounded; finite log-log fits are not universal laws. Gaussian bandwidth and absorption controls are separate calculations. Chromium desktop and narrow layouts/controls received checks; physical devices, other engines and assistive technology remain untested.
