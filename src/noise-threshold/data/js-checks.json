@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "checks": 2433,
+  "max_simulation_absolute_error": 0.0001220703125,
+  "max_theory_absolute_error": 2.1807385286454206e-8,
+  "notes": "JS uses erfc approximation; Python math.erfc reference. MSE at sigma 1e6 compared by absolute tolerance .001 (relative error near machine precision); all other scalar simulation metrics tolerance1e-12."
+}

@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "checks": 46,
+  "scope": "Pure Node VM with minimal DOM stubs. Does not execute a browser or test layout, pixels, accessibility tree, actual downloads, browser console or navigation."
+}

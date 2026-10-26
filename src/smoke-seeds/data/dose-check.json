@@ -1,0 +1,41 @@
+{
+  "source": "https://www.nature.com/articles/s41598-025-30823-7",
+  "kind": "unit_conversion_only",
+  "smoke_water": [
+    {
+      "dilution_factor": 1,
+      "KAR1_nM": "5.5",
+      "reported_plus_minus_scaled_nM": "0.23"
+    },
+    {
+      "dilution_factor": 10,
+      "KAR1_nM": "0.55",
+      "reported_plus_minus_scaled_nM": "0.023"
+    },
+    {
+      "dilution_factor": 100,
+      "KAR1_nM": "0.055",
+      "reported_plus_minus_scaled_nM": "0.0023"
+    },
+    {
+      "dilution_factor": 1000,
+      "KAR1_nM": "0.0055",
+      "reported_plus_minus_scaled_nM": "0.00023"
+    }
+  ],
+  "pure_tested_nM": [
+    "1.000",
+    "10.00",
+    "100.0",
+    "1000",
+    "10000"
+  ],
+  "one_uM_divided_by_smoke_stock": "181.8181818181818181818181818",
+  "checks_passed": 5,
+  "limits": [
+    "Reported plus/minus is scaled, not a confidence interval.",
+    "Dilution assumes ideal mixing and no chemical loss.",
+    "No fitted threshold, dose-response, significance test or replication of germination.",
+    "Whole smoke contains other compounds; KAR1-equivalent is not biological equivalence."
+  ]
+}

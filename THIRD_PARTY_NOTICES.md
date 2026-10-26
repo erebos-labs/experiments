@@ -92,3 +92,7 @@ The [finite search bench](docs/restart-bargain/index.html) illustrates establish
 ## The window inside a mirror
 
 An original educational implementation with AI assistance of established resonant-transmission and perturbation ideas. [Primary references and reading scope](src/mirror-window/SOURCES.md) retain credit; [methods and limits](src/mirror-window/README.md) distinguish synthetic calculations from physical measurements. No paper bodies, third-party code, external media or measured material dataset bundled. No scientific discovery or universal fabrication claim.
+
+## Noise threshold and smoke-seed source guide
+
+The primary publications and GEO accession are linked in each module README. Mathematical ideas, biochemical findings and metadata facts remain attributed established work. No paper PDFs, scanned pages, borrowed images or third-party software are distributed with these additions. The comparator and washout examples are educational implementations with AI assistance; no biological or hardware replication, sensory benefit, evolutionary reconstruction or new scientific discovery is claimed. Cited publications retain their copyrights. The minimal GEO-derived table contains accession-linked experimental-design fields, with no contact metadata or expression values.

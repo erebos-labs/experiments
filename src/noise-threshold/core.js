@@ -1,0 +1,22 @@
+/* Discrete sampled comparator. Independent Gaussian noise per sample. */
+(function(root){
+'use strict';
+const PERIOD=64, KEYS=['crossing_rate','phase_hit','phase_false','balanced_accuracy','phase_mi','projection','magnitude','mse'];
+function validate(a,t,s,n){if(![a,t,s].every(Number.isFinite)||a<0||a>2||t< -2||t>2||s<0||s>1e6||!Number.isInteger(n)||n<64||n>4096||n%64)throw Error('Parameters outside finite model bounds');}
+class RNG{constructor(seed){if(!Number.isInteger(seed)||seed<0||seed>4294967295)throw Error('Seed must be unsigned 32-bit integer');this.state=seed;}uniform(){let t=this.state=(this.state+0x6D2B79F5)>>>0;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296;}normal(){const u=(Math.floor(this.uniform()*4294967296)+.5)/4294967296;return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*this.uniform());}}
+const wave=n=>Array.from({length:n},(_,i)=>Math.sin(2*Math.PI*((i%64)+.5)/64));
+const entropy=p=>p<=0||p>=1?0:-p*Math.log2(p)-(1-p)*Math.log2(1-p);
+const information=(h,f)=>Math.max(0,entropy((h+f)/2)-(entropy(h)+entropy(f))/2);
+function measure(y,w,e){let hit=0,falseRate=0,s=0,c=0,count=0,mse=0;const n=y.length;for(let i=0;i<n;i++){count+=y[i];if(w[i]>0)hit+=y[i];else falseRate+=y[i];s+=y[i]*w[i];c+=y[i]*Math.cos(2*Math.PI*((i%64)+.5)/64);if(e)mse+=e[i]*e[i];}hit*=2/n;falseRate*=2/n;s*=2/n;c*=2/n;return {crossing_rate:count/n,phase_hit:hit,phase_false:falseRate,balanced_accuracy:(1+hit-falseRate)/2,phase_mi:information(hit,falseRate),projection:s,magnitude:Math.hypot(s,c),mse:mse/n};}
+function simulate(a=.25,t=1,s=.8,seed=20261025,n=256,keep=false){validate(a,t,s,n);const rng=new RNG(seed),w=wave(n),e=w.map(()=>s*rng.normal()),clean=w.map(x=>a*x),noisy=clean.map((x,i)=>x+e[i]),outputs=noisy.map(x=>+(x>t));const r=measure(outputs,w,e);if(keep)Object.assign(r,{wave:w,clean,noisy,outputs});return r;}
+// Numerical Recipes erfc approximation: absolute error around 1.2e-7.
+function erfc(x){const z=Math.abs(x),t=1/(1+.5*z),r=t*Math.exp(-z*z-1.26551223+t*(1.00002368+t*(.37409196+t*(.09678418+t*(-.18628806+t*(.27886807+t*(-1.13520398+t*(1.48851587+t*(-.82215223+t*.17087277)))))))));return x>=0?r:2-r;}
+const exceedance=(x,t,s)=>s===0?+(x>t):.5*erfc((t-x)/(Math.SQRT2*s));
+function theory(a,t,s,n=256){validate(a,t,s,n);const w=wave(64),q=w.map(x=>exceedance(a*x,t,s)),r=measure(q,w);r.magnitude_of_mean=r.magnitude;delete r.magnitude;r.mse=s*s;r.null_crossing=exceedance(0,t,s);return r;}
+const familySeed=(base,family,index)=>(base+family*1000003+index*7919)>>>0;
+function summarize(v){const n=v.length,m=v.reduce((a,b)=>a+b,0)/n,sd=Math.sqrt(v.reduce((a,b)=>a+(b-m)**2,0)/(n-1)),se=sd/Math.sqrt(n),sorted=[...v].sort((a,b)=>a-b);return {mean:m,sd,se,lo95_mean:m-1.96*se,hi95_mean:m+1.96*se,p10:sorted[Math.floor(.1*(n-1))],p90:sorted[Math.floor(.9*(n-1))]};}
+function ensemble(a,t,s,base=20261025,n=256,batches=32){validate(a,t,s,n);if(!Number.isInteger(batches)||batches<2||batches>512)throw Error('Batch bounds');const signal=[],nil=[];for(let i=0;i<batches;i++){signal.push(simulate(a,t,s,familySeed(base,1,i),n));nil.push(simulate(0,t,s,familySeed(base,2,i),n));}const result={signal:{},null:{}};for(const k of KEYS){result.signal[k]=summarize(signal.map(x=>x[k]));result.null[k]=summarize(nil.map(x=>x[k]));}return result;}
+function wilson(k,n){const z=1.959963984540054,p=k/n,d=1+z*z/n,m=(p+z*z/(2*n))/d,h=z*Math.sqrt(p*(1-p)/n+z*z/(4*n*n))/d;return {count:k,total:n,rate:p,lo95:m-h,hi95:m+h};}
+function detection(a,t,s,base=20261025,n=256,train=64,test=128){validate(a,t,s,n);if(!Number.isInteger(train)||!Number.isInteger(test)||train<20||train>512||test<20||test>512)throw Error('Batch bounds');const cal=[],nil=[],sig=[];for(let i=0;i<train;i++)cal.push(simulate(0,t,s,familySeed(base,3,i),n).projection);cal.sort((a,b)=>a-b);const cutoff=cal[Math.ceil(.95*train)-1];for(let i=0;i<test;i++){nil.push(simulate(0,t,s,familySeed(base,4,i),n).projection);sig.push(simulate(a,t,s,familySeed(base,5,i),n).projection);}return {cutoff,target_training_pfa:.05,training_false:cal.filter(x=>x>cutoff).length/train,false_alarm:wilson(nil.filter(x=>x>cutoff).length,test),power:wilson(sig.filter(x=>x>cutoff).length,test)};}
+const api={PERIOD,KEYS,RNG,validate,wave,entropy,information,measure,simulate,theory,exceedance,familySeed,summarize,ensemble,detection,wilson};if(typeof module!=='undefined')module.exports=api;else root.NoiseLab=api;
+})(typeof globalThis!=='undefined'?globalThis:this);

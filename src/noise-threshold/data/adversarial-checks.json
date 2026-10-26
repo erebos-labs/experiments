@@ -1,0 +1,270 @@
+{
+  "huge_noise_limit": {
+    "sigma": 1000000.0,
+    "np_false_alarm": 0.05,
+    "np_power": 0.05000005734620106,
+    "presence_information": 5.740279792376181e-14
+  },
+  "constant_offset_equals_threshold_retuning": true,
+  "compressed_probability_crosscheck": [
+    {
+      "sigma": 0.2,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 6.938893903907228e-18,
+        "projection_power": 6.938893903907228e-18,
+        "presence_information": 8.008188296521057e-17,
+        "mass0": 8.881784197001252e-16,
+        "mass1": 4.440892098500626e-16
+      }
+    },
+    {
+      "sigma": 0.3,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 0.0,
+        "projection_power": 1.3877787807814457e-17,
+        "presence_information": 1.5785983631388945e-16,
+        "mass0": 6.661338147750939e-16,
+        "mass1": 0.0
+      }
+    },
+    {
+      "sigma": 0.4,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 1.6930901125533637e-15,
+        "projection_power": 0.0,
+        "presence_information": 6.938893903907228e-18,
+        "mass0": 2.220446049250313e-16,
+        "mass1": 2.220446049250313e-16
+      }
+    },
+    {
+      "sigma": 0.5,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 2.7755575615628914e-16,
+        "projection_power": 0.0,
+        "presence_information": 1.1102230246251565e-16,
+        "mass0": 2.220446049250313e-16,
+        "mass1": 4.440892098500626e-16
+      }
+    },
+    {
+      "sigma": 0.6,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 1.1102230246251565e-16,
+        "projection_power": 0.0,
+        "presence_information": 8.326672684688674e-17,
+        "mass0": 2.220446049250313e-16,
+        "mass1": 2.220446049250313e-16
+      }
+    },
+    {
+      "sigma": 0.7,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 3.885780586188048e-16,
+        "projection_power": 2.7755575615628914e-17,
+        "presence_information": 6.938893903907228e-18,
+        "mass0": 1.1102230246251565e-16,
+        "mass1": 2.220446049250313e-16
+      }
+    },
+    {
+      "sigma": 0.8,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 3.0531133177191805e-16,
+        "projection_power": 2.7755575615628914e-17,
+        "presence_information": 2.7755575615628914e-17,
+        "mass0": 7.771561172376096e-16,
+        "mass1": 0.0
+      }
+    },
+    {
+      "sigma": 1,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 1.249000902703301e-16,
+        "projection_power": 1.3877787807814457e-17,
+        "presence_information": 1.3877787807814457e-17,
+        "mass0": 3.3306690738754696e-16,
+        "mass1": 0.0
+      }
+    },
+    {
+      "sigma": 1.5,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 4.3021142204224816e-16,
+        "projection_power": 0.0,
+        "presence_information": 6.938893903907228e-18,
+        "mass0": 1.1102230246251565e-15,
+        "mass1": 0.0
+      }
+    },
+    {
+      "sigma": 2,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 1.3877787807814457e-17,
+        "projection_power": 1.3877787807814457e-17,
+        "presence_information": 5.204170427930421e-18,
+        "mass0": 9.992007221626409e-16,
+        "mass1": 1.1102230246251565e-16
+      }
+    },
+    {
+      "sigma": 3,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 2.914335439641036e-16,
+        "projection_power": 1.3877787807814457e-17,
+        "presence_information": 1.734723475976807e-18,
+        "mass0": 2.220446049250313e-16,
+        "mass1": 0.0
+      }
+    },
+    {
+      "sigma": 4,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 5.551115123125783e-17,
+        "projection_power": 1.3877787807814457e-17,
+        "presence_information": 0.0,
+        "mass0": 0.0,
+        "mass1": 4.440892098500626e-16
+      }
+    },
+    {
+      "sigma": 8,
+      "compressed_count_states": 6561,
+      "errors": {
+        "np_power": 4.85722573273506e-17,
+        "projection_power": 1.3877787807814457e-17,
+        "presence_information": 2.3852447794681098e-18,
+        "mass0": 1.1102230246251565e-15,
+        "mass1": 2.220446049250313e-16
+      }
+    }
+  ],
+  "maximum_crosscheck_error": 1.6930901125533637e-15,
+  "prng_stream_audits": {
+    "main_families_max_n": {
+      "seed_count": 2560,
+      "distinct_seed_count": 2560,
+      "uniforms_per_record": 8192,
+      "minimum_start_separation_uniforms": 184181,
+      "overlapping_substreams": 0,
+      "scope": "Exact state-overlap check for this bounded schedule; not a proof of statistical independence or PRNG quality."
+    },
+    "paired_measurements": {
+      "seed_count": 4096,
+      "distinct_seed_count": 4096,
+      "uniforms_per_record": 512,
+      "minimum_start_separation_uniforms": 377029,
+      "overlapping_substreams": 0,
+      "scope": "Exact state-overlap check for this bounded schedule; not a proof of statistical independence or PRNG quality."
+    },
+    "calibration_replicates": {
+      "seed_count": 18432,
+      "distinct_seed_count": 18432,
+      "uniforms_per_record": 512,
+      "minimum_start_separation_uniforms": 26735,
+      "overlapping_substreams": 0,
+      "scope": "Exact state-overlap check for this bounded schedule; not a proof of statistical independence or PRNG quality."
+    }
+  },
+  "retuned_negative_controls": [
+    {
+      "amplitude": 0.01,
+      "monotone_decrease_under_threshold_zero": {
+        "balanced_accuracy": true,
+        "phase_mi": true,
+        "projection": true
+      },
+      "initial_accuracy": 1.0,
+      "initial_information": 1.0
+    },
+    {
+      "amplitude": 0.25,
+      "monotone_decrease_under_threshold_zero": {
+        "balanced_accuracy": true,
+        "phase_mi": true,
+        "projection": true
+      },
+      "initial_accuracy": 1.0,
+      "initial_information": 1.0
+    },
+    {
+      "amplitude": 1.5,
+      "monotone_decrease_under_threshold_zero": {
+        "balanced_accuracy": true,
+        "phase_mi": true,
+        "projection": true
+      },
+      "initial_accuracy": 1.0,
+      "initial_information": 1.0
+    }
+  ],
+  "raw_information_tail_bounds": [
+    {
+      "sigma": 0.2,
+      "absolute_information_tail_bound_bits": 2.545505600190525e-31
+    },
+    {
+      "sigma": 0.3,
+      "absolute_information_tail_bound_bits": 1.6376546716152442e-31
+    },
+    {
+      "sigma": 0.4,
+      "absolute_information_tail_bound_bits": 1.2104263107997128e-31
+    },
+    {
+      "sigma": 0.5,
+      "absolute_information_tail_bound_bits": 9.626323674214689e-32
+    },
+    {
+      "sigma": 0.6,
+      "absolute_information_tail_bound_bits": 8.009960189655874e-32
+    },
+    {
+      "sigma": 0.7,
+      "absolute_information_tail_bound_bits": 6.87284968662626e-32
+    },
+    {
+      "sigma": 0.8,
+      "absolute_information_tail_bound_bits": 6.029551489165518e-32
+    },
+    {
+      "sigma": 1,
+      "absolute_information_tail_bound_bits": 4.862663951648992e-32
+    },
+    {
+      "sigma": 1.5,
+      "absolute_information_tail_bound_bits": 3.331731198200925e-32
+    },
+    {
+      "sigma": 2,
+      "absolute_information_tail_bound_bits": 2.5769436628657353e-32
+    },
+    {
+      "sigma": 3,
+      "absolute_information_tail_bound_bits": 1.829275355123108e-32
+    },
+    {
+      "sigma": 4,
+      "absolute_information_tail_bound_bits": 1.4581109115990052e-32
+    },
+    {
+      "sigma": 8,
+      "absolute_information_tail_bound_bits": 9.047013842468646e-33
+    }
+  ],
+  "maximum_raw_information_tail_bound": 2.545505600190525e-31,
+  "seconds": 0.36227679101284593,
+  "status": "PASS"
+}

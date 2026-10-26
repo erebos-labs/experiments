@@ -14,7 +14,7 @@ jobs:
       - name: Build and check generated pages
         run: |
           python3 build.py
-          git diff --exit-code -- docs src/phantom/index.html src/flower-evidence/index.html src/route-learning/index.html src/same-coin/index.html src/kelvin-wakes/index.html src/mirror-window/index.html
+          git diff --exit-code -- docs src/phantom/index.html src/flower-evidence/index.html src/route-learning/index.html src/same-coin/index.html src/kelvin-wakes/index.html src/mirror-window/index.html src/noise-threshold/index.html src/smoke-seeds/index.html
       - name: Model, sequence, and audio lifecycle checks
         run: |
           node tests/test_clocks.js
@@ -47,3 +47,5 @@ jobs:
           node src/oscillator-bench/test-model.cjs
           python3 -B src/restart-bargain/verify.py
           python3 -B src/mirror-window/verify.py
+          python3 -B src/noise-threshold/verify.py
+          python3 -B src/smoke-seeds/verify.py

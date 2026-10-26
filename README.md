@@ -153,3 +153,8 @@ python3 -B tests/check_additions.py
 python3 -B tests/verify_spinning_disk.py
 node tests/verify_spinning_disk.js
 ```
+
+- **Can noise help a detector?** — a fixed comparator, matched-null controls and an optimal raw-data reference. [Explore](https://erebos-labs.github.io/experiments/noise-threshold/); [source and limits](src/noise-threshold/README.md).
+- **What does smoke tell a seed?** — established plant-signaling evidence and constructed washout identifiability examples. [Read](https://erebos-labs.github.io/experiments/smoke-seeds/); [code and limits](src/smoke-seeds/README.md).
+
+Check the additions with `python3 -B src/noise-threshold/verify.py` and `python3 -B src/smoke-seeds/verify.py`. Source/Node checks do not establish rendered-browser behavior for these two additions.

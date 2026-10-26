@@ -1,0 +1,60 @@
+{
+  "kind": "metadata_design_audit_not_expression_reanalysis",
+  "records": 28,
+  "comparison_groups": 7,
+  "two_channel_arrays": 28,
+  "group_orientation_counts": [
+    {
+      "time": "10 h",
+      "treatment": "0.1 \u00b5M karrikin treated",
+      "treated_ch2": 2,
+      "treated_ch1": 2
+    },
+    {
+      "time": "10 h",
+      "treatment": "10 \u00b5M inhibitor treated",
+      "treated_ch2": 2,
+      "treated_ch1": 2
+    },
+    {
+      "time": "2 h",
+      "treatment": "0.1 \u00b5M karrikin treated",
+      "treated_ch2": 2,
+      "treated_ch1": 2
+    },
+    {
+      "time": "2 h",
+      "treatment": "0.1 \u00b5M karrikine and 10 \u00b5M inhibitor treated",
+      "treated_ch2": 2,
+      "treated_ch1": 2
+    },
+    {
+      "time": "2 h",
+      "treatment": "10 \u00b5M inhibitor treated",
+      "treated_ch2": 2,
+      "treated_ch1": 2
+    },
+    {
+      "time": "24 h",
+      "treatment": "0.1 \u00b5M karrikin treated",
+      "treated_ch1": 2,
+      "treated_ch2": 2
+    },
+    {
+      "time": "24 h",
+      "treatment": "10 \u00b5M inhibitor treated",
+      "treated_ch2": 2,
+      "treated_ch1": 2
+    }
+  ],
+  "checks": "PASS: IDs agree with series; unique records; two channels; same time; one control; dyes; two hand-checked orientations; seven balanced groups; common protocol; no expression table.",
+  "observations": [
+    "Deposited protocol specifies two biological replicates plus two dye-swaps; four arrays per comparison do not mean four independent biological replicates.",
+    "At 24 h, equal amounts of RNA from germinated and nongerminated achenes were pooled according to the deposited hybridization protocol."
+  ],
+  "limits": [
+    "Metadata only; no expression values, normalized contrasts, differential-expression p-values, or raw quality metrics examined.",
+    "Cannot separate 24 h seed states from these pooled array samples.",
+    "Biological-sample identity shared across dye-swap arrays was not independently reconstructed; do not infer pairing from rep numbers alone."
+  ]
+}

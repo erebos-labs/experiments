@@ -1,0 +1,25 @@
+{
+  "kind": "constructed_equivalence_not_biological_data",
+  "checks": {
+    "cases": 96,
+    "max_mass_error": 1.1102230246251565e-16,
+    "max_curve_difference": 0.0,
+    "rk4_steps": 2000,
+    "independent_retention_integration_max_error": 3.9621084191310274e-15,
+    "independent_commitment_integration_max_error": 2.6957602816679582e-15,
+    "independent_numeric_curve_difference": 8.326672684688674e-16,
+    "invalid_inputs_rejected": 4
+  },
+  "parameters": {
+    "a": 1,
+    "b": 0.5,
+    "pulse": 1,
+    "time_units": "dimensionless"
+  },
+  "claim": "These constructed mechanisms give identical germination curves with nonzero chemical loss.",
+  "limits": [
+    "Responsive fraction and rate in commitment model are assigned to match retention model.",
+    "No empirical model selection, seed data fitting, receptor model, or biological prediction.",
+    "Mass conservation and numerical agreement do not validate the biological assumptions."
+  ]
+}

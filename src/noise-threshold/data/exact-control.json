@@ -1,0 +1,535 @@
+{
+  "amplitude": 0.25,
+  "threshold": 1,
+  "n": 16,
+  "samples_per_cycle": 16,
+  "cycles": 1,
+  "alpha": 0.05,
+  "enumerated_records_per_noise": 65536,
+  "rows": [
+    {
+      "sigma": 0,
+      "n": 16,
+      "threshold": 1,
+      "output_information_bits": 0,
+      "raw_information_bits": 1.0,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.05,
+        "boundary": {
+          "fraction": 0.05
+        }
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.05,
+        "boundary": {
+          "fraction": 0.05
+        }
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 1.0
+      },
+      "mass0": 1,
+      "mass1": 1,
+      "note": "Comparator is identically zero; independent randomized final decision sets PFA=PD=alpha. Raw deterministic classes are perfectly separable when A>0."
+    },
+    {
+      "sigma": 0.2,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 0.9999999999999993,
+      "mass1": 1.0000000000000004,
+      "output_information_bits": 0.00012108861347950219,
+      "raw_information_bits": 0.856128599820513,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.050239216595210544,
+        "boundary": {
+          "score": -0.00024960543047595964,
+          "fraction": 0.04999793610463978,
+          "null_mass": 0.9999954135847096,
+          "signal_mass": 0.9997458404477286
+        },
+        "score_groups": 9098
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.050239216595100215,
+        "boundary": {
+          "score": 0.0,
+          "fraction": 0.04999793610424536,
+          "null_mass": 0.9999954135860243,
+          "signal_mass": 0.9997458404484375
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.9706664817215229
+      },
+      "output_kl_nats": 0.0010780135422254072,
+      "raw_kl_nats": 6.249999999999999
+    },
+    {
+      "sigma": 0.3,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 1.0000000000000009,
+      "mass1": 1.0,
+      "output_information_bits": 0.00838900015329726,
+      "raw_information_bits": 0.5965189500972348,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.07116576160907612,
+        "boundary": {
+          "score": -0.01966949500903162,
+          "fraction": 0.046901683131589225,
+          "null_mass": 0.9931570816301439,
+          "signal_mass": 0.9738130506919309
+        },
+        "score_groups": 10638
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.07116566800469445,
+        "boundary": {
+          "score": 0.0,
+          "fraction": 0.04690080580437264,
+          "null_mass": 0.9931600094740206,
+          "signal_mass": 0.9738151829451855
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.7618199274499506
+      },
+      "output_kl_nats": 0.03686139875802029,
+      "raw_kl_nats": 2.7777777777777777
+    },
+    {
+      "sigma": 0.4,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 0.9999999999999998,
+      "mass1": 1.0000000000000002,
+      "output_information_bits": 0.030543011906063507,
+      "raw_information_bits": 0.40917370983049706,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.1474682559079138,
+        "boundary": {
+          "score": -0.07525795414893938,
+          "fraction": 0.003313059427172321,
+          "null_mass": 0.9051411253975276,
+          "signal_mass": 0.8395221971283269
+        },
+        "score_groups": 12178
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.14746619690289325,
+        "boundary": {
+          "score": 0.0,
+          "fraction": 0.0031504122562847382,
+          "null_mass": 0.9057066989700688,
+          "signal_mass": 0.8399685912359537
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.5489121334941259
+      },
+      "output_kl_nats": 0.10343682336151153,
+      "raw_kl_nats": 1.5624999999999998
+    },
+    {
+      "sigma": 0.5,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 1.0,
+      "mass1": 1.0000000000000002,
+      "output_information_bits": 0.04711266118086098,
+      "raw_information_bits": 0.2904801133608492,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.15236569723327387,
+        "boundary": {
+          "score": 0.8296298240625568,
+          "fraction": 0.24769990663320862,
+          "null_mass": 0.03221797368917539,
+          "signal_mass": 0.07385873704643561
+        },
+        "score_groups": 12186
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.1523534228332491,
+        "boundary": {
+          "score": 0.10393370153781815,
+          "fraction": 0.2452520817649202,
+          "null_mass": 0.032445556078088564,
+          "signal_mass": 0.07433785624400512
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.4087972197938709
+      },
+      "output_kl_nats": 0.14546207403299932,
+      "raw_kl_nats": 1.0
+    },
+    {
+      "sigma": 0.6,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 1.0000000000000002,
+      "mass1": 0.9999999999999997,
+      "output_information_bits": 0.05287681428909906,
+      "raw_information_bits": 0.21435336962019014,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.14379360852081208,
+        "boundary": {
+          "score": 0.7108640254934315,
+          "fraction": 0.3633153879064467,
+          "null_mass": 0.04585206385446182,
+          "signal_mass": 0.09334331324094118
+        },
+        "score_groups": 15225
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.14373813072012448,
+        "boundary": {
+          "score": 0.1225981600504038,
+          "fraction": 0.3502985054262921,
+          "null_mass": 0.04737196768568169,
+          "signal_mass": 0.0962978939240206
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.3204852437649264
+      },
+      "output_kl_nats": 0.1572482288796545,
+      "raw_kl_nats": 0.6944444444444444
+    },
+    {
+      "sigma": 0.7,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 0.9999999999999998,
+      "mass1": 1.0,
+      "output_information_bits": 0.05193034480243513,
+      "raw_information_bits": 0.16367023783955037,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.1429096415098209,
+        "boundary": {
+          "score": 0.6924244086934155,
+          "fraction": 0.2514983729028578,
+          "null_mass": 0.005765864039837812,
+          "signal_mass": 0.011523396282404204
+        },
+        "score_groups": 14586
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.14288151390449616,
+        "boundary": {
+          "score": 0.14698445030241983,
+          "fraction": 0.38475595397960677,
+          "null_mass": 0.0082291530693776,
+          "signal_mass": 0.016405316161393048
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.262811693794912
+      },
+      "output_kl_nats": 0.15156528281594162,
+      "raw_kl_nats": 0.5102040816326532
+    },
+    {
+      "sigma": 0.8,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 0.9999999999999996,
+      "mass1": 1.0,
+      "output_information_bits": 0.04802687913280226,
+      "raw_information_bits": 0.12860078427196042,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.1354731500681896,
+        "boundary": {
+          "score": 0.7360059522660627,
+          "fraction": 0.7841767823289476,
+          "null_mass": 0.0002761879897588489,
+          "signal_mass": 0.0005765647842127761
+        },
+        "score_groups": 13372
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.1354687148548785,
+        "boundary": {
+          "score": 0.18348111282362028,
+          "fraction": 0.017980335539136395,
+          "null_mass": 0.0006245863276587454,
+          "signal_mass": 0.0012993723894016377
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.22333744814496242
+      },
+      "output_kl_nats": 0.13860956062762664,
+      "raw_kl_nats": 0.39062499999999994
+    },
+    {
+      "sigma": 1,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 0.9999999999999996,
+      "mass1": 1.0,
+      "output_information_bits": 0.03842038750153669,
+      "raw_information_bits": 0.0849434057941858,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.12012040077237666,
+        "boundary": {
+          "score": 0.6756937036077167,
+          "fraction": 0.36283752237454453,
+          "null_mass": 0.002958852030876288,
+          "signal_mass": 0.005815315666200778
+        },
+        "score_groups": 13386
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.1201064926764029,
+        "boundary": {
+          "score": 0.2164307294298701,
+          "fraction": 0.24291448854929829,
+          "null_mass": 0.004294164644539172,
+          "signal_mass": 0.008409987285683297
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.17418726161793238
+      },
+      "output_kl_nats": 0.10944570949711713,
+      "raw_kl_nats": 0.25
+    },
+    {
+      "sigma": 1.5,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 1.0000000000000009,
+      "mass1": 1.0,
+      "output_information_bits": 0.021320543705435208,
+      "raw_information_bits": 0.039000324024107136,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.0965743577651886,
+        "boundary": {
+          "score": 0.508015502901254,
+          "fraction": 0.9948024614995155,
+          "null_mass": 0.0007324492875090348,
+          "signal_mass": 0.001217323176286618
+        },
+        "score_groups": 14295
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.09656294974411703,
+        "boundary": {
+          "score": 0.25091815184023797,
+          "fraction": 0.43352574408841194,
+          "null_mass": 0.0059531003456076165,
+          "signal_mass": 0.009872208708611394
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.1203078773578014
+      },
+      "output_kl_nats": 0.059892298489151126,
+      "raw_kl_nats": 0.1111111111111111
+    },
+    {
+      "sigma": 2,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 0.999999999999999,
+      "mass1": 0.9999999999999999,
+      "output_information_bits": 0.012969267693528776,
+      "raw_information_bits": 0.022196957943718787,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.08400545218244475,
+        "boundary": {
+          "score": 0.40969773178540225,
+          "fraction": 0.837405804609447,
+          "null_mass": 0.00048522808317992734,
+          "signal_mass": 0.000730929335472067
+        },
+        "score_groups": 13878
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.08400400328835461,
+        "boundary": {
+          "score": 0.2715918504636562,
+          "fraction": 0.9244335318829028,
+          "null_mass": 0.003580980383793136,
+          "signal_mass": 0.005405554619970938
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.09829979435798715
+      },
+      "output_kl_nats": 0.0362346089871285,
+      "raw_kl_nats": 0.0625
+    },
+    {
+      "sigma": 3,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 1.0,
+      "mass1": 1.0,
+      "output_information_bits": 0.006097001491370846,
+      "raw_information_bits": 0.009949774482156393,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.07171415880726498,
+        "boundary": {
+          "score": 0.28514895096427123,
+          "fraction": 0.38425455874150516,
+          "null_mass": 0.00015159299777250517,
+          "signal_mass": 0.00020161264032774937
+        },
+        "score_groups": 13669
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.07171401820865168,
+        "boundary": {
+          "score": 0.2796837425111755,
+          "fraction": 0.2107790899772858,
+          "null_mass": 0.0013232384079638144,
+          "signal_mass": 0.0017594246925442404
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.07939520740033053
+      },
+      "output_kl_nats": 0.016963790785176756,
+      "raw_kl_nats": 0.027777777777777776
+    },
+    {
+      "sigma": 4,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 1.0,
+      "mass1": 1.0000000000000004,
+      "output_information_bits": 0.003497802563866137,
+      "raw_information_bits": 0.005613627277378241,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.06585045637670446,
+        "boundary": {
+          "score": 0.22038895015762486,
+          "fraction": 0.1501098851280555,
+          "null_mass": 0.0002718347888439599,
+          "signal_mass": 0.0003388587784895665
+        },
+        "score_groups": 13073
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.06585031073550505,
+        "boundary": {
+          "score": 0.2858770085573204,
+          "fraction": 0.3308585663164798,
+          "null_mass": 0.0013858786664948414,
+          "signal_mass": 0.0017274903745303572
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.07104166345495641
+      },
+      "output_kl_nats": 0.009717302969649738,
+      "raw_kl_nats": 0.015625
+    },
+    {
+      "sigma": 8,
+      "n": 16,
+      "threshold": 1,
+      "mass0": 0.9999999999999991,
+      "mass1": 0.9999999999999999,
+      "output_information_bits": 0.0008912465824893735,
+      "raw_information_bits": 0.001407507801791552,
+      "np": {
+        "false_alarm": 0.05,
+        "power": 0.05756166046927701,
+        "boundary": {
+          "score": 0.11504790971322833,
+          "fraction": 0.41881152504446106,
+          "null_mass": 0.00016910224203129615,
+          "signal_mass": 0.0001897204028011309
+        },
+        "score_groups": 14663
+      },
+      "projection": {
+        "false_alarm": 0.05,
+        "power": 0.05756165563068126,
+        "boundary": {
+          "score": 0.29396890060483966,
+          "fraction": 0.5577149571996397,
+          "null_mass": 0.0005349859642686316,
+          "signal_mass": 0.0006002195489546061
+        },
+        "score_groups": 625
+      },
+      "raw_lrt": {
+        "false_alarm": 0.05,
+        "power": 0.05979874638098675
+      },
+      "output_kl_nats": 0.002472304225092109,
+      "raw_kl_nats": 0.00390625
+    }
+  ],
+  "checks": {
+    "mass_conservation_max_error": 9.992007221626409e-16,
+    "false_alarm_max_error": 0.0,
+    "raw_dominates_output_np": true,
+    "np_dominates_projection": true,
+    "raw_information_dominates": true,
+    "raw_information_monotone": true,
+    "output_kl_bounded": true,
+    "quadrature_refinement_error": 3.6637359812630166e-15,
+    "projection_exact_symmetry_groups": true,
+    "null_power_minus_false_alarm": 1.3877787807814457e-17,
+    "null_information": -1.9682947639635177e-17
+  },
+  "seconds": 4.402191667002626,
+  "limits": "Different N=16 budget, equal within each comparison; randomized boundary decisions achieve exact alpha. Direct probability products; exact integer symmetry classes group projection ties. Uses direct products and exact integer symmetry groups. No frequency search. Raw MI uses refined Simpson quadrature, not symbolic integration."
+}

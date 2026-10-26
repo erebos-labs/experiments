@@ -1,0 +1,16 @@
+{
+  "kind": "constructed_counterexample_not_fitted",
+  "checks": {
+    "property_checks_passed": 10,
+    "grid_points": 101,
+    "negative_inputs_rejected": 3,
+    "max_endpoint_difference": 0.0
+  },
+  "conclusion": "An endpoint washout assay alone cannot distinguish these constructed mechanisms.",
+  "distinguishing_observable": "Chemical retained after washing differs; endpoint does not.",
+  "limits": [
+    "Assumes retained chemical has negligible loss over the readout window.",
+    "No biological experiment, parameter estimation, prediction, or historical reconstruction.",
+    "Other observations can distinguish models; equality is deliberately constructed."
+  ]
+}

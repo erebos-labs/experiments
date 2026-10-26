@@ -1,0 +1,367 @@
+{
+  "weak_signal_optima_sigma_over_threshold": {
+    "projection_per_amplitude": 1.0000000116067325,
+    "accuracy_gain_per_amplitude": 1.0000000095698125,
+    "phase_information_per_amplitude_squared": 0.6349060168752221,
+    "deflection_per_NA2": 0.6349060182548238
+  },
+  "exact_finite_amplitude_optima": [
+    {
+      "amplitude": 0.001,
+      "projection": {
+        "sigma": 0.9999998838967088,
+        "value": 0.00024197072451914383
+      },
+      "balanced_accuracy": {
+        "sigma": 1.0000004197909806,
+        "value": 0.5001541052280319
+      },
+      "phase_mi": {
+        "sigma": 0.6349052599193024,
+        "value": 1.780145398866395e-07
+      }
+    },
+    {
+      "amplitude": 0.01,
+      "projection": {
+        "sigma": 0.9999874750095605,
+        "value": 0.002419707245317476
+      },
+      "balanced_accuracy": {
+        "sigma": 0.9999890329058905,
+        "value": 0.5015410522803725
+      },
+      "phase_mi": {
+        "sigma": 0.6349145920792125,
+        "value": 1.7800772604714687e-05
+      }
+    },
+    {
+      "amplitude": 0.05,
+      "projection": {
+        "sigma": 0.9996873151323993,
+        "value": 0.012098536620118254
+      },
+      "balanced_accuracy": {
+        "sigma": 0.9997222062716133,
+        "value": 0.5077052615678654
+      },
+      "phase_mi": {
+        "sigma": 0.6351019314871098,
+        "value": 0.0004446076412012445
+      }
+    },
+    {
+      "amplitude": 0.25,
+      "projection": {
+        "sigma": 0.9920729118645781,
+        "value": 0.06049393816374841
+      },
+      "balanced_accuracy": {
+        "sigma": 0.9929789325604765,
+        "value": 0.5385268345495752
+      },
+      "phase_mi": {
+        "sigma": 0.6387857363730538,
+        "value": 0.01087588531677941
+      }
+    },
+    {
+      "amplitude": 0.5,
+      "projection": {
+        "sigma": 0.966770211447461,
+        "value": 0.12102840137174803
+      },
+      "balanced_accuracy": {
+        "sigma": 0.9708864379442608,
+        "value": 0.5770703568318591
+      },
+      "phase_mi": {
+        "sigma": 0.6416033897911735,
+        "value": 0.04115145078477578
+      }
+    },
+    {
+      "amplitude": 0.9,
+      "projection": {
+        "sigma": 0.8706821925730284,
+        "value": 0.2188238286785895
+      },
+      "balanced_accuracy": {
+        "sigma": 0.8926074036155429,
+        "value": 0.6390943465415467
+      },
+      "phase_mi": {
+        "sigma": 0.6062012499818883,
+        "value": 0.11987588020404633
+      }
+    }
+  ],
+  "null_plugin_bias": [
+    {
+      "n": 64,
+      "sigma": 0,
+      "null_crossing": 0.0,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0,
+      "large_n_bias_bits": 0.011271055006945026
+    },
+    {
+      "n": 64,
+      "sigma": 0.2,
+      "null_crossing": 2.8665157187919555e-07,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 2.899312295438994e-07,
+      "large_n_bias_bits": 0.011271055006945026
+    },
+    {
+      "n": 64,
+      "sigma": 0.4,
+      "null_crossing": 0.006209665325776144,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.005182724322301782,
+      "large_n_bias_bits": 0.011271055006945026
+    },
+    {
+      "n": 64,
+      "sigma": 0.8,
+      "null_crossing": 0.10564977366685532,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.01271103659316758,
+      "large_n_bias_bits": 0.011271055006945026
+    },
+    {
+      "n": 64,
+      "sigma": 1,
+      "null_crossing": 0.15865525393145705,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.012054098739003094,
+      "large_n_bias_bits": 0.011271055006945026
+    },
+    {
+      "n": 64,
+      "sigma": 4,
+      "null_crossing": 0.4012936743170763,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.011567069630067373,
+      "large_n_bias_bits": 0.011271055006945026
+    },
+    {
+      "n": 256,
+      "sigma": 0,
+      "null_crossing": 0.0,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0,
+      "large_n_bias_bits": 0.0028177637517362566
+    },
+    {
+      "n": 256,
+      "sigma": 0.2,
+      "null_crossing": 2.8665157187919555e-07,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 2.8745194047255623e-07,
+      "large_n_bias_bits": 0.0028177637517362566
+    },
+    {
+      "n": 256,
+      "sigma": 0.4,
+      "null_crossing": 0.006209665325776144,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.003042380918115102,
+      "large_n_bias_bits": 0.0028177637517362566
+    },
+    {
+      "n": 256,
+      "sigma": 0.8,
+      "null_crossing": 0.10564977366685532,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0028752675022078455,
+      "large_n_bias_bits": 0.0028177637517362566
+    },
+    {
+      "n": 256,
+      "sigma": 1,
+      "null_crossing": 0.15865525393145705,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0028553546742944302,
+      "large_n_bias_bits": 0.0028177637517362566
+    },
+    {
+      "n": 256,
+      "sigma": 4,
+      "null_crossing": 0.4012936743170763,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0028354162434343078,
+      "large_n_bias_bits": 0.0028177637517362566
+    },
+    {
+      "n": 1024,
+      "sigma": 0,
+      "null_crossing": 0.0,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0,
+      "large_n_bias_bits": 0.0007044409379340642
+    },
+    {
+      "n": 1024,
+      "sigma": 0.2,
+      "null_crossing": 2.8665157187919555e-07,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 2.8681163165109506e-07,
+      "large_n_bias_bits": 0.0007044409379340642
+    },
+    {
+      "n": 1024,
+      "sigma": 0.4,
+      "null_crossing": 0.006209665325776144,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0008048666571705415,
+      "large_n_bias_bits": 0.0007044409379340642
+    },
+    {
+      "n": 1024,
+      "sigma": 0.8,
+      "null_crossing": 0.10564977366685532,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0007078025267193144,
+      "large_n_bias_bits": 0.0007044409379340642
+    },
+    {
+      "n": 1024,
+      "sigma": 1,
+      "null_crossing": 0.15865525393145705,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0007067007945511516,
+      "large_n_bias_bits": 0.0007044409379340642
+    },
+    {
+      "n": 1024,
+      "sigma": 4,
+      "null_crossing": 0.4012936743170763,
+      "true_phase_information": 0,
+      "expected_plugin_bits": 0.0007055324455905732,
+      "large_n_bias_bits": 0.0007044409379340642
+    }
+  ],
+  "phase_probability_quadrature": [
+    {
+      "quadrature_bins": 16,
+      "accuracy": 0.5367871515716054,
+      "projection": 0.05745873836123333,
+      "note": "Probability quadrature only. No synthetic extra measurement or independent noise sample generated."
+    },
+    {
+      "quadrature_bins": 32,
+      "accuracy": 0.5366111068542125,
+      "projection": 0.05745873836123335,
+      "note": "Probability quadrature only. No synthetic extra measurement or independent noise sample generated."
+    },
+    {
+      "quadrature_bins": 64,
+      "accuracy": 0.5365672705193886,
+      "projection": 0.05745873836123336,
+      "note": "Probability quadrature only. No synthetic extra measurement or independent noise sample generated."
+    },
+    {
+      "quadrature_bins": 128,
+      "accuracy": 0.5365563223457703,
+      "projection": 0.057458738361233344,
+      "note": "Probability quadrature only. No synthetic extra measurement or independent noise sample generated."
+    },
+    {
+      "quadrature_bins": 256,
+      "accuracy": 0.5365535859839532,
+      "projection": 0.057458738361233344,
+      "note": "Probability quadrature only. No synthetic extra measurement or independent noise sample generated."
+    },
+    {
+      "quadrature_bins": 512,
+      "accuracy": 0.5365529019360935,
+      "projection": 0.057458738361233344,
+      "note": "Probability quadrature only. No synthetic extra measurement or independent noise sample generated."
+    },
+    {
+      "quadrature_bins": 1024,
+      "accuracy": 0.5365527309267908,
+      "projection": 0.057458738361233344,
+      "note": "Probability quadrature only. No synthetic extra measurement or independent noise sample generated."
+    }
+  ],
+  "copying_is_not_new_data": [
+    {
+      "copies_per_observation": 1,
+      "distinct_independent_observations": 256,
+      "wrong_assumption_independent_count": 256,
+      "actual_any_active_pfa": 0.7970164878916631,
+      "incorrect_if_copies_treated_as_iid": 0.7970164878916631
+    },
+    {
+      "copies_per_observation": 2,
+      "distinct_independent_observations": 256,
+      "wrong_assumption_independent_count": 512,
+      "actual_any_active_pfa": 0.7970164878916631,
+      "incorrect_if_copies_treated_as_iid": 0.9587976938121646
+    },
+    {
+      "copies_per_observation": 4,
+      "distinct_independent_observations": 256,
+      "wrong_assumption_independent_count": 1024,
+      "actual_any_active_pfa": 0.7970164878916631,
+      "incorrect_if_copies_treated_as_iid": 0.9983023699648038
+    },
+    {
+      "copies_per_observation": 8,
+      "distinct_independent_observations": 256,
+      "wrong_assumption_independent_count": 2048,
+      "actual_any_active_pfa": 0.7970164878916631,
+      "incorrect_if_copies_treated_as_iid": 0.9999971180522635
+    },
+    {
+      "copies_per_observation": 16,
+      "distinct_independent_observations": 256,
+      "wrong_assumption_independent_count": 4096,
+      "actual_any_active_pfa": 0.7970164878916631,
+      "incorrect_if_copies_treated_as_iid": 0.9999999999916944
+    }
+  ],
+  "expansion_checks": [
+    {
+      "sigma": 0.4,
+      "projection_relative_error": 4.101563435622376e-06,
+      "accuracy_relative_error": 3.6443679126204633e-06,
+      "information_relative_error": 3.2391006835182734e-07
+    },
+    {
+      "sigma": 0.6,
+      "projection_relative_error": 6.172837392641867e-07,
+      "accuracy_relative_error": 5.48475449760204e-07,
+      "information_relative_error": 4.166372549753966e-07
+    },
+    {
+      "sigma": 0.8,
+      "projection_relative_error": 1.0986323197257087e-07,
+      "accuracy_relative_error": 9.761670878900455e-08,
+      "information_relative_error": 2.657902746604364e-07
+    },
+    {
+      "sigma": 1,
+      "projection_relative_error": 1.6976537964567242e-14,
+      "accuracy_relative_error": 7.888727900345206e-14,
+      "information_relative_error": 1.760789915137912e-07
+    },
+    {
+      "sigma": 2,
+      "projection_relative_error": 2.343754691124032e-08,
+      "accuracy_relative_error": 2.0824674862659476e-08,
+      "information_relative_error": 4.4230685077937423e-08
+    }
+  ],
+  "checks": {
+    "expansion_max_relative_error": 4.101563435622376e-06,
+    "projection_optimum_equals_threshold_error": 1.1606732464031211e-08,
+    "phase_grid_projection_spread": 2.7755575615628914e-17,
+    "bias_nonnegative": true,
+    "bias_null_boundary_zero": true
+  },
+  "seconds": 0.04715395800303668
+}

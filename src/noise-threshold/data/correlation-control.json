@@ -1,0 +1,175 @@
+{
+  "parameters": {
+    "a": 0.25,
+    "threshold": 1,
+    "noise_sd": 0.8,
+    "n": 256,
+    "base_seed": 20261025,
+    "calibration_batches": 512,
+    "test_batches_per_class": 512
+  },
+  "rows": [
+    {
+      "rho": 0,
+      "expected_marginal_variance": 0.64,
+      "observed_null_mean_squared_noise": 0.6399424706347296,
+      "lag1_correlation_from_second_moments": 0.0012399917359969355,
+      "iid_cutoff": 0.046410912291514804,
+      "correctly_calibrated_cutoff": 0.046410912291514804,
+      "using_iid_null_calibration": {
+        "power": {
+          "count": 316,
+          "total": 512,
+          "rate": 0.6171875,
+          "lo95": 0.5743596305655564,
+          "hi95": 0.658269984499393
+        },
+        "false_alarm": {
+          "count": 27,
+          "total": 512,
+          "rate": 0.052734375,
+          "lo95": 0.036492305788731,
+          "hi95": 0.07563799671337895
+        }
+      },
+      "using_matched_correlated_null": {
+        "power": {
+          "count": 316,
+          "total": 512,
+          "rate": 0.6171875,
+          "lo95": 0.5743596305655564,
+          "hi95": 0.658269984499393
+        },
+        "false_alarm": {
+          "count": 27,
+          "total": 512,
+          "rate": 0.052734375,
+          "lo95": 0.036492305788731,
+          "hi95": 0.07563799671337895
+        }
+      }
+    },
+    {
+      "rho": 0.5,
+      "expected_marginal_variance": 0.64,
+      "observed_null_mean_squared_noise": 0.6415811774225607,
+      "lag1_correlation_from_second_moments": 0.5019306673082894,
+      "iid_cutoff": 0.046410912291514804,
+      "correctly_calibrated_cutoff": 0.061488939042020394,
+      "using_iid_null_calibration": {
+        "power": {
+          "count": 288,
+          "total": 512,
+          "rate": 0.5625,
+          "lo95": 0.5192225235093373,
+          "hi95": 0.6048466045253025
+        },
+        "false_alarm": {
+          "count": 55,
+          "total": 512,
+          "rate": 0.107421875,
+          "lo95": 0.08346452814467004,
+          "hi95": 0.13722626138774963
+        }
+      },
+      "using_matched_correlated_null": {
+        "power": {
+          "count": 220,
+          "total": 512,
+          "rate": 0.4296875,
+          "lo95": 0.38748873972239056,
+          "hi95": 0.47293349123863987
+        },
+        "false_alarm": {
+          "count": 20,
+          "total": 512,
+          "rate": 0.0390625,
+          "lo95": 0.0254270798652394,
+          "hi95": 0.05956310087929313
+        }
+      }
+    },
+    {
+      "rho": 0.9,
+      "expected_marginal_variance": 0.64,
+      "observed_null_mean_squared_noise": 0.650235257614455,
+      "lag1_correlation_from_second_moments": 0.901600864045114,
+      "iid_cutoff": 0.046410912291514804,
+      "correctly_calibrated_cutoff": 0.11954684053420611,
+      "using_iid_null_calibration": {
+        "power": {
+          "count": 267,
+          "total": 512,
+          "rate": 0.521484375,
+          "lo95": 0.4782160044018836,
+          "hi95": 0.5644327583600238
+        },
+        "false_alarm": {
+          "count": 111,
+          "total": 512,
+          "rate": 0.216796875,
+          "lo95": 0.18328405527165026,
+          "hi95": 0.2545277083213888
+        }
+      },
+      "using_matched_correlated_null": {
+        "power": {
+          "count": 92,
+          "total": 512,
+          "rate": 0.1796875,
+          "lo95": 0.14885579401060237,
+          "hi95": 0.2152899248118694
+        },
+        "false_alarm": {
+          "count": 23,
+          "total": 512,
+          "rate": 0.044921875,
+          "lo95": 0.030117718759024466,
+          "hi95": 0.06650394273875553
+        }
+      }
+    },
+    {
+      "rho": 0.98,
+      "expected_marginal_variance": 0.64,
+      "observed_null_mean_squared_noise": 0.6544703997082048,
+      "lag1_correlation_from_second_moments": 0.9803623877799321,
+      "iid_cutoff": 0.046410912291514804,
+      "correctly_calibrated_cutoff": 0.12387008662291858,
+      "using_iid_null_calibration": {
+        "power": {
+          "count": 218,
+          "total": 512,
+          "rate": 0.42578125,
+          "lo95": 0.3836604467898356,
+          "hi95": 0.4690074636690298
+        },
+        "false_alarm": {
+          "count": 84,
+          "total": 512,
+          "rate": 0.1640625,
+          "lo95": 0.13450830634082706,
+          "hi95": 0.19862013047298477
+        }
+      },
+      "using_matched_correlated_null": {
+        "power": {
+          "count": 87,
+          "total": 512,
+          "rate": 0.169921875,
+          "lo95": 0.13987724473920465,
+          "hi95": 0.20488267282785466
+        },
+        "false_alarm": {
+          "count": 21,
+          "total": 512,
+          "rate": 0.041015625,
+          "lo95": 0.02698094895608158,
+          "hi95": 0.061886392039533444
+        }
+      }
+    }
+  ],
+  "seconds": 2.3428719170042314,
+  "scope": "Additional model stress test only; IID comparator results are unchanged. Stationary initialization preserves variance; correlated samples are not extra independent observations."
+}

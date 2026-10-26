@@ -1,0 +1,29 @@
+accession,title,time,treated,treated_channel,Cy3_treatment,Cy5_treatment
+GSM852502,control vs karrikine 24h rep1,24 h,0.1 µM karrikin treated,1,0.1 µM karrikin treated,control
+GSM852503,control vs karrikine 24h rep2,24 h,0.1 µM karrikin treated,1,0.1 µM karrikin treated,control
+GSM852504,control vs karrikine 24h rep3,24 h,0.1 µM karrikin treated,2,control,0.1 µM karrikin treated
+GSM852505,control vs karrikine 24h rep4,24 h,0.1 µM karrikin treated,2,control,0.1 µM karrikin treated
+GSM852506,control vs karrikine 2h rep1,2 h,0.1 µM karrikin treated,2,control,0.1 µM karrikin treated
+GSM852507,control vs karrikine 2h rep2,2 h,0.1 µM karrikin treated,1,0.1 µM karrikin treated,control
+GSM852508,control vs karrikine 2h rep3,2 h,0.1 µM karrikin treated,2,control,0.1 µM karrikin treated
+GSM852509,control vs karrikine 2h rep4,2 h,0.1 µM karrikin treated,1,0.1 µM karrikin treated,control
+GSM852510,control vs inhibitor 2h rep1,2 h,10 µM inhibitor treated,2,control,10 µM inhibitor treated
+GSM852511,control vs inhibitor 2h rep2,2 h,10 µM inhibitor treated,1,10 µM inhibitor treated,control
+GSM852512,control vs inhibitor 2h rep3,2 h,10 µM inhibitor treated,2,control,10 µM inhibitor treated
+GSM852513,control vs inhibitor 2h rep4,2 h,10 µM inhibitor treated,1,10 µM inhibitor treated,control
+GSM852514,control vs inhibitor karrikine 2h rep1,2 h,0.1 µM karrikine and 10 µM inhibitor treated,2,control,0.1 µM karrikine and 10 µM inhibitor treated
+GSM852515,control vs inhibitor karrikine 2h rep2,2 h,0.1 µM karrikine and 10 µM inhibitor treated,1,0.1 µM karrikine and 10 µM inhibitor treated,control
+GSM852516,control vs inhibitor karrikine 2h rep3,2 h,0.1 µM karrikine and 10 µM inhibitor treated,2,control,0.1 µM karrikine and 10 µM inhibitor treated
+GSM852517,control vs inhibitor karrikine 2h rep4,2 h,0.1 µM karrikine and 10 µM inhibitor treated,1,0.1 µM karrikine and 10 µM inhibitor treated,control
+GSM852518,control vs inhibitor 24h rep1,24 h,10 µM inhibitor treated,2,control,10 µM inhibitor treated
+GSM852519,control vs inhibitor 24h rep2,24 h,10 µM inhibitor treated,1,10 µM inhibitor treated,control
+GSM852520,control vs inhibitor 24h rep3,24 h,10 µM inhibitor treated,2,control,10 µM inhibitor treated
+GSM852521,control vs inhibitor 24h rep4,24 h,10 µM inhibitor treated,1,10 µM inhibitor treated,control
+GSM852522,control vs karrikine 10h rep1,10 h,0.1 µM karrikin treated,2,control,0.1 µM karrikin treated
+GSM852523,control vs karrikine 10h rep2,10 h,0.1 µM karrikin treated,1,0.1 µM karrikin treated,control
+GSM852524,control vs karrikine 10h rep3,10 h,0.1 µM karrikin treated,2,control,0.1 µM karrikin treated
+GSM852525,control vs karrikine 10h rep4,10 h,0.1 µM karrikin treated,1,0.1 µM karrikin treated,control
+GSM852526,control vs inhibitor 10h rep1,10 h,10 µM inhibitor treated,2,control,10 µM inhibitor treated
+GSM852527,control vs inhibitor 10h rep2,10 h,10 µM inhibitor treated,1,10 µM inhibitor treated,control
+GSM852528,control vs inhibitor 10h rep3,10 h,10 µM inhibitor treated,2,control,10 µM inhibitor treated
+GSM852529,control vs inhibitor 10h rep4,10 h,10 µM inhibitor treated,1,10 µM inhibitor treated,control
