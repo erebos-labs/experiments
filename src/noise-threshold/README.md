@@ -19,7 +19,7 @@ python3 -B build.py
 python3 -B verify.py
 ```
 
-The verifier runs 17 Python unit tests, cross-language numerical fixtures, a pure Node DOM-stub control check, static package checks and selected saved-result replays. DOM stubs do not establish rendered layout, accessibility-tree behavior, real downloads or browser-console correctness. Rendered layout, accessibility-tree behavior, real downloads and browser-console correctness require separate browser tests.
+The verifier runs 17 Python unit tests, cross-language numerical fixtures, a pure Node DOM-stub control check, static package checks and selected saved-result replays. Saved finite floating-point references use absolute and relative tolerances of 1e-12 for platform math-library rounding; structure, keys and integer counts remain exact. Negative controls reject changed results, nonfinite values, extra keys and changed counts. DOM stubs do not establish rendered layout, accessibility-tree behavior, real downloads or browser-console correctness. Rendered layout, accessibility-tree behavior, real downloads and browser-console correctness require separate browser tests.
 
 To recompute the complete saved numerical study, run `run_study.py`, `controls.py`, `exact_control.py`, `analysis_controls.py`, `correlation_control.py`, `noisy_measurement_control.py`, then `adversarial_checks.py` with `python3 -B`. These bounded scripts write only `data/` and can take several minutes. Rebuild afterward. Runtime measurements can vary. No physical data is collected.
 
