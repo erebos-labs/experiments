@@ -1,0 +1,228 @@
+{
+  "rows": [
+    {
+      "width": 0.02,
+      "alpha": 1e-05,
+      "orders": 64,
+      "infidelity_stable": 2.380740747364674e-12,
+      "one_minus_direct_fidelity": 2.3807622540061857e-12,
+      "quartic_moment_prediction": 2.380740676794096e-12,
+      "gaussian_continuum_prediction": 2.380740676794096e-12,
+      "observed_to_quartic": 1.0000000296422784,
+      "discrete_to_continuum": 1.0
+    },
+    {
+      "width": 0.02,
+      "alpha": 3e-05,
+      "orders": 64,
+      "infidelity_stable": 1.9284004568781683e-10,
+      "one_minus_direct_fidelity": 1.9284018826226657e-10,
+      "quartic_moment_prediction": 1.9283999482032172e-10,
+      "gaussian_continuum_prediction": 1.9283999482032175e-10,
+      "observed_to_quartic": 1.0000002637808363,
+      "discrete_to_continuum": 0.9999999999999999
+    },
+    {
+      "width": 0.02,
+      "alpha": 0.0001,
+      "orders": 64,
+      "infidelity_stable": 2.380746751895928e-08,
+      "one_minus_direct_fidelity": 2.380746755292762e-08,
+      "quartic_moment_prediction": 2.3807406767940958e-08,
+      "gaussian_continuum_prediction": 2.3807406767940958e-08,
+      "observed_to_quartic": 1.000002551769662,
+      "discrete_to_continuum": 1.0
+    },
+    {
+      "width": 0.02,
+      "alpha": 0.0003,
+      "orders": 64,
+      "infidelity_stable": 1.928386390696552e-06,
+      "one_minus_direct_fidelity": 1.92838639057058e-06,
+      "quartic_moment_prediction": 1.928399948203216e-06,
+      "gaussian_continuum_prediction": 1.928399948203216e-06,
+      "observed_to_quartic": 0.9999929695566125,
+      "discrete_to_continuum": 1.0
+    },
+    {
+      "width": 0.02,
+      "alpha": 0.001,
+      "orders": 64,
+      "infidelity_stable": 0.0002371644689924364,
+      "one_minus_direct_fidelity": 0.0002371644689919128,
+      "quartic_moment_prediction": 0.00023807406767940956,
+      "gaussian_continuum_prediction": 0.0002380740676794096,
+      "observed_to_quartic": 0.9961793457983924,
+      "discrete_to_continuum": 0.9999999999999999
+    },
+    {
+      "width": 0.025,
+      "alpha": 1e-05,
+      "orders": 64,
+      "infidelity_stable": 3.9942201333092355e-13,
+      "one_minus_direct_fidelity": 3.994582442601313e-13,
+      "quartic_moment_prediction": 3.9942200574560716e-13,
+      "gaussian_continuum_prediction": 3.9942200574560726e-13,
+      "observed_to_quartic": 1.0000000189907323,
+      "discrete_to_continuum": 0.9999999999999998
+    },
+    {
+      "width": 0.025,
+      "alpha": 3e-05,
+      "orders": 64,
+      "infidelity_stable": 3.2353187978808274e-11,
+      "one_minus_direct_fidelity": 3.235323120520661e-11,
+      "quartic_moment_prediction": 3.235318246539417e-11,
+      "gaussian_continuum_prediction": 3.235318246539418e-11,
+      "observed_to_quartic": 1.0000001704133468,
+      "discrete_to_continuum": 0.9999999999999998
+    },
+    {
+      "width": 0.025,
+      "alpha": 0.0001,
+      "orders": 64,
+      "infidelity_stable": 3.994227366386093e-09,
+      "one_minus_direct_fidelity": 3.994227393278038e-09,
+      "quartic_moment_prediction": 3.994220057456071e-09,
+      "gaussian_continuum_prediction": 3.994220057456072e-09,
+      "observed_to_quartic": 1.0000018298766509,
+      "discrete_to_continuum": 0.9999999999999998
+    },
+    {
+      "width": 0.025,
+      "alpha": 0.0003,
+      "orders": 64,
+      "infidelity_stable": 3.235355246265512e-07,
+      "one_minus_direct_fidelity": 3.2353552459341017e-07,
+      "quartic_moment_prediction": 3.235318246539416e-07,
+      "gaussian_continuum_prediction": 3.235318246539416e-07,
+      "observed_to_quartic": 1.0000114361936836,
+      "discrete_to_continuum": 1.0
+    },
+    {
+      "width": 0.025,
+      "alpha": 0.001,
+      "orders": 64,
+      "infidelity_stable": 3.9921912675535726e-05,
+      "one_minus_direct_fidelity": 3.992191267565559e-05,
+      "quartic_moment_prediction": 3.994220057456071e-05,
+      "gaussian_continuum_prediction": 3.994220057456072e-05,
+      "observed_to_quartic": 0.9994920685707561,
+      "discrete_to_continuum": 0.9999999999999997
+    },
+    {
+      "width": 0.04,
+      "alpha": 1e-05,
+      "orders": 64,
+      "infidelity_stable": 9.299768337738867e-15,
+      "one_minus_direct_fidelity": 9.325873406851315e-15,
+      "quartic_moment_prediction": 9.299768268726937e-15,
+      "gaussian_continuum_prediction": 9.299768268726937e-15,
+      "observed_to_quartic": 1.0000000074208224,
+      "discrete_to_continuum": 1.0
+    },
+    {
+      "width": 0.04,
+      "alpha": 3e-05,
+      "orders": 64,
+      "infidelity_stable": 7.532812800677544e-13,
+      "one_minus_direct_fidelity": 7.532863222081687e-13,
+      "quartic_moment_prediction": 7.532812297668817e-13,
+      "gaussian_continuum_prediction": 7.532812297668818e-13,
+      "observed_to_quartic": 1.0000000667756883,
+      "discrete_to_continuum": 0.9999999999999999
+    },
+    {
+      "width": 0.04,
+      "alpha": 0.0001,
+      "orders": 64,
+      "infidelity_stable": 9.299775154941468e-11,
+      "one_minus_direct_fidelity": 9.299772063542378e-11,
+      "quartic_moment_prediction": 9.299768268726937e-11,
+      "gaussian_continuum_prediction": 9.299768268726937e-11,
+      "observed_to_quartic": 1.000000740471626,
+      "discrete_to_continuum": 1.0
+    },
+    {
+      "width": 0.04,
+      "alpha": 0.0003,
+      "orders": 64,
+      "infidelity_stable": 7.532861615789145e-09,
+      "one_minus_direct_fidelity": 7.532861667769453e-09,
+      "quartic_moment_prediction": 7.532812297668813e-09,
+      "gaussian_continuum_prediction": 7.532812297668813e-09,
+      "observed_to_quartic": 1.0000065471059656,
+      "discrete_to_continuum": 1.0
+    },
+    {
+      "width": 0.04,
+      "alpha": 0.001,
+      "orders": 64,
+      "infidelity_stable": 9.300307073271954e-07,
+      "one_minus_direct_fidelity": 9.300307073356606e-07,
+      "quartic_moment_prediction": 9.299768268726936e-07,
+      "gaussian_continuum_prediction": 9.299768268726937e-07,
+      "observed_to_quartic": 1.0000579374162288,
+      "discrete_to_continuum": 0.9999999999999999
+    },
+    {
+      "width": 0.08,
+      "alpha": 1e-05,
+      "orders": 64,
+      "infidelity_stable": 3.6327219867316743e-17,
+      "one_minus_direct_fidelity": 0.0,
+      "quartic_moment_prediction": 3.632721979992081e-17,
+      "gaussian_continuum_prediction": 3.63272197997146e-17,
+      "observed_to_quartic": 1.000000001855246,
+      "discrete_to_continuum": 1.0000000000056766
+    },
+    {
+      "width": 0.08,
+      "alpha": 3e-05,
+      "orders": 64,
+      "infidelity_stable": 2.942504852925075e-15,
+      "one_minus_direct_fidelity": 2.886579864025407e-15,
+      "quartic_moment_prediction": 2.942504803793585e-15,
+      "gaussian_continuum_prediction": 2.942504803776882e-15,
+      "observed_to_quartic": 1.0000000166971654,
+      "discrete_to_continuum": 1.0000000000056763
+    },
+    {
+      "width": 0.08,
+      "alpha": 0.0001,
+      "orders": 64,
+      "infidelity_stable": 3.632722653928512e-13,
+      "one_minus_direct_fidelity": 3.6337599595981374e-13,
+      "quartic_moment_prediction": 3.632721979992081e-13,
+      "gaussian_continuum_prediction": 3.6327219799714596e-13,
+      "observed_to_quartic": 1.000000185518307,
+      "discrete_to_continuum": 1.0000000000056766
+    },
+    {
+      "width": 0.08,
+      "alpha": 0.0003,
+      "orders": 64,
+      "infidelity_stable": 2.942509715450952e-11,
+      "one_minus_direct_fidelity": 2.9425240022362686e-11,
+      "quartic_moment_prediction": 2.942504803793584e-11,
+      "gaussian_continuum_prediction": 2.94250480377688e-11,
+      "observed_to_quartic": 1.0000016692096345,
+      "discrete_to_continuum": 1.0000000000056768
+    },
+    {
+      "width": 0.08,
+      "alpha": 0.001,
+      "orders": 64,
+      "infidelity_stable": 3.6327891462845433e-09,
+      "one_minus_direct_fidelity": 3.6327892916077076e-09,
+      "quartic_moment_prediction": 3.6327219799920805e-09,
+      "gaussian_continuum_prediction": 3.6327219799714598e-09,
+      "observed_to_quartic": 1.0000184892465849,
+      "discrete_to_continuum": 1.0000000000056763
+    }
+  ],
+  "checks": "PASS: all 12 alpha<=1e-4 cases within 1e-5 relative error of moment prediction; all 20 moment/continuum coefficients within 1e-8",
+  "method": "1-F = 4 sum_{j<k} w_j w_k sin^2((delta_j-delta_k)/2), normalized w; no cancellation by subtraction from 1",
+  "derivation": "delta_n = -(pi/2) alpha^2 n^4 + O(alpha^4 n^6). Hence 1-F ~ (pi^2/4) alpha^4 Var_w(n^4). Gaussian continuum w(n) proportional to exp(-4 pi^2 sigma^2 n^2) has Var(n^4)=96/(8 pi^2 sigma^2)^4, giving 3 alpha^4/(512 pi^6 sigma^8).",
+  "limits": "Asymptotic fixed-spectrum, alpha -> 0. Continuum Gaussian approximation, not universal slit-width law; no finite aperture, sharp-edge or material prediction. Established quartic phase mechanism; algebra and checks performed here without originality claim."
+}

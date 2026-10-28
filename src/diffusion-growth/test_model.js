@@ -1,0 +1,26 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const {Growth,Probe,random}=require('./model.js');const out=path.join(__dirname,'output');fs.mkdirSync(out,{recursive:true});const checks=[];
+function check(name,fn){const detail=fn();checks.push({name,status:'PASS',detail});}
+function digest(m){return crypto.createHash('sha256').update(JSON.stringify(m.snapshot())).digest('hex');}
+function run(o,budgets=[50000]){const m=new Growth(o);let i=0;while(!m.reason)m.advance(budgets[i++%budgets.length]);return m;}
+function invariant(m){const s=new Set();let edges=0;for(const [x,y]of m.points){const key=x+','+y;assert(!s.has(key));if(s.size)assert([[x+1,y],[x-1,y],[x,y+1],[x,y-1]].some(p=>s.has(p.join(','))));s.add(key);}for(const [x,y]of m.points)edges+=Number(s.has((x+1)+','+y))+Number(s.has(x+','+(y+1)));assert.equal(edges,m.metrics().edges);assert.equal(m.grid.reduce((s,x)=>s+x,0),m.points.length);const frontier=new Set();for(const [x,y]of m.points)for(const [dx,dy]of[[1,0],[-1,0],[0,1],[0,-1]])if(Math.abs(x+dx)<m.options.half&&Math.abs(y+dy)<m.options.half&&!s.has((x+dx)+','+(y+dy)))frontier.add(m.key(x+dx,y+dy));assert.deepEqual(new Set(m.frontier.map(p=>p.key)),frontier);assert.equal(m.frontierIndex.size,frontier.size);return {mass:s.size,edges,cycleRank:edges-s.size+1};}
+check('Seed replay survives frame budgets',()=>{const results=[];for(const mode of['dla','eden'])for(const sticking of[1,.1]){const o={mode,sticking,target:240,seed:0};const a=run(o),b=run(o,[1,7,53,10000]);assert.equal(digest(a),digest(b));results.push({mode,sticking,sha256:digest(a),...invariant(a)});}return results;});
+check('Several seeds + all boundaries + three growth choices satisfy independent occupancy/frontier invariants',()=>{let cases=0;for(const seed of[1,1981,4294967295])for(const boundary of['near','far','tight'])for(const choice of[{mode:'dla',sticking:1},{mode:'dla',sticking:.1},{mode:'eden'}]){const m=run({seed,boundary,target:350,...choice});assert.equal(m.reason,'target');invariant(m);cases++;}return {cases};});
+check('Seed changes the result',()=>{assert.notEqual(digest(run({target:100,seed:1})),digest(run({target:100,seed:2})));});
+check('Invalid inputs are rejected',()=>{const bad=[{seed:-1},{seed:1.1},{seed:4294967296},{seed:NaN},{target:0},{target:5001},{sticking:0},{sticking:NaN},{sticking:1.1},{boundary:'wrap'},{mode:'ballistic'},{walkerCap:0},{totalCap:Infinity},{half:10}];for(const o of bad)assert.throws(()=>new Growth(o),RangeError);for(const b of[0,-1,NaN,1.2])assert.throws(()=>new Growth().advance(b),RangeError);return {cases:bad.length+4};});
+check('Mass-one has a defined target stop and finite metrics',()=>{const m=run({target:1});assert.equal(m.points.length,1);assert.equal(m.metrics().rg,0);assert.equal(m.stats.iterations,0);return m.metrics();});
+check('Work cap and domain cap stop without pretending target completion',()=>{const w=run({totalCap:20,target:1000});assert.equal(w.reason,'work-cap');assert.equal(w.stats.moves,20);const d=run({half:32,boundary:'far',target:1200});assert.equal(d.reason,'domain');assert(d.points.length<1200);return {workMass:w.points.length,domainMass:d.points.length};});
+check('Lifetime cap relaunch is distinct from work cap',()=>{const m=run({walkerCap:1,totalCap:10000,target:1200});assert.equal(m.reason,'work-cap');assert(m.stats.lifetimeExpired>0);return m.stats;});
+check('Rejected partial-stick encounters preserve the walker and obey geometric contact accounting',()=>{const m=run({sticking:.1,target:500});assert(m.stats.rejected>0);assert.equal(m.stats.contacts,m.stats.rejected+m.points.length-1);assert(m.stats.launched<m.stats.contacts);assert.equal(m.stats.lifetimeExpired,0);assert.equal(m.stats.launched,m.stats.escaped+m.points.length-1);return m.stats;});
+check('Probe does not change growth state and is independently reproducible across budgets',()=>{const m=run({target:400}),before=digest(m),p=new Probe(m,{hits:600}),q=new Probe(m,{hits:600});while(!p.reason)p.advance(50000);while(!q.reason)q.advance(29);assert.deepEqual(p.summary(),q.summary());assert.equal(digest(m),before);for(const[k]of p.counts)assert(m.frontierIndex.has(k));const s=p.summary();delete s.counts;return s;});
+check('Probe work cap is visible',()=>{const m=run({target:200}),p=new Probe(m,{hits:1000,totalCap:20});while(!p.reason)p.advance(31);assert.equal(p.reason,'work-cap');assert.equal(p.model.stats.moves,20);return {hits:p.hits,reason:p.reason};});
+
+
+const {solve}=require('./access_solver.js');
+for(const [points,radii,settings]of [
+ [[],{launch:5,kill:30},{}],[[[0,0]],{launch:5,kill:NaN},{}],[[[0,0]],{launch:-1,kill:30},{}],[[[0,0]],{launch:5,kill:1e8},{}],
+ [[[0,0]],{launch:5,kill:30},{sourceSamples:0}],[[[0,0]],{launch:5,kill:30},{maxSweeps:Infinity}],[[[0,0]],{launch:5,kill:30},{omega:2}],[[[0,0]],{launch:5,kill:30},{tolerance:0}]
+])assert.throws(()=>solve(points,radii,settings),RangeError);
+checks.push({name:'Finite-grid reference rejects invalid or unbounded parameters',status:'PASS',detail:{negativeCases:8}});
+fs.writeFileSync(path.join(out,'model-tests.json'),JSON.stringify({status:'PASS',checks},null,2)+'\n');console.log(JSON.stringify({status:'PASS',checks:checks.length},null,2));

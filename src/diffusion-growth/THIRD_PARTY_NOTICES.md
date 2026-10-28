@@ -1,0 +1,1 @@
+The cited publications retain their own rights. No paper PDF, copied research figure, font binary or third-party runtime code is bundled. Generated figures/data and implementation are authored educational adaptations. See SOURCES.md and COPYRIGHT.txt.

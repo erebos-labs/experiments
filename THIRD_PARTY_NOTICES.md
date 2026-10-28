@@ -96,3 +96,8 @@ An original educational implementation with AI assistance of established resonan
 ## Noise threshold and smoke-seed source guide
 
 The primary publications and GEO accession are linked in each module README. Mathematical ideas, biochemical findings and metadata facts remain attributed established work. No paper PDFs, scanned pages, borrowed images or third-party software are distributed with these additions. The comparator and washout examples are educational implementations with AI assistance; no biological or hardware replication, sensory benefit, evolutionary reconstruction or new scientific discovery is claimed. Cited publications retain their copyrights. The minimal GEO-derived table contains accession-linked experimental-design fields, with no contact metadata or expression values.
+
+
+## Knot coloring, Talbot imaging and lattice growth
+
+See `src/knot-colorings/SOURCES.md`, `src/talbot-revivals/SOURCES.md` and `src/diffusion-growth/SOURCES.md` for primary references, version-specific scope, diagram provenance and limits. Knot Atlas supplies small factual diagram inputs; images were not copied. Eisermann's coloring examples, Fox coloring, scalar Talbot propagation, coherence averaging and DLA/Eden mechanisms are established work. The implementations and computed figures are authored educational adaptations with AI assistance. No cited paper, source illustration, third-party code or font file is redistributed. Existing copyright statements remain in force; no new reuse license is asserted.

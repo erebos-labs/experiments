@@ -92,3 +92,8 @@ The dependency-free verifier checks embedded/source data parity, finite profile 
 ## The window inside a mirror
 
 `python3 -B src/mirror-window/verify.py` runs 28 Python groups, 9,102 JavaScript checks, separate loss/delay controls and generated-page parity. The model is ideal, coherent, normal-incidence and nondispersive; the main UI is lossless. Peak search and error ensembles are bounded; finite log-log fits are not universal laws. Gaussian bandwidth and absorption controls are separate calculations. Chromium desktop and narrow layouts/controls received checks; physical devices, other engines and assistive technology remain untested.
+
+
+## Added knot, Talbot and diffusion modules
+
+Bounded builds, numerical checks, exact certificates, reference comparisons and synthetic controller checks accompany the added source modules. They do not establish physical behavior, general theorem correctness, real browser layout, device support or assistive-technology accessibility. Run the commands declared in each module README and the addition CI step. The Talbot finite-array graphic uses a shared absolute intensity scale and illustrates a specified scalar Gaussian-input model; coherence and finite illumination are separate calculations.

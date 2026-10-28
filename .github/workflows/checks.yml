@@ -14,7 +14,7 @@ jobs:
       - name: Build and check generated pages
         run: |
           python3 build.py
-          git diff --exit-code -- docs src/phantom/index.html src/flower-evidence/index.html src/route-learning/index.html src/same-coin/index.html src/kelvin-wakes/index.html src/mirror-window/index.html src/noise-threshold/index.html src/smoke-seeds/index.html
+          git diff --exit-code -- docs src/phantom/index.html src/flower-evidence/index.html src/route-learning/index.html src/same-coin/index.html src/kelvin-wakes/index.html src/mirror-window/index.html src/noise-threshold/index.html src/smoke-seeds/index.html src/knot-colorings/index.html src/talbot-revivals/index.html src/diffusion-growth/index.html
       - name: Model, sequence, and audio lifecycle checks
         run: |
           node tests/test_clocks.js
@@ -49,3 +49,24 @@ jobs:
           python3 -B src/mirror-window/verify.py
           python3 -B src/noise-threshold/verify.py
           python3 -B src/smoke-seeds/verify.py
+
+      - name: Knot, Talbot and diffusion checks
+        run: |
+          python3 -B -m unittest discover -s src/knot-colorings -p 'test_*.py' -v
+          python3 -B src/knot-colorings/verify_certificates.py
+          node src/knot-colorings/test_engine.js
+          python3 -B src/talbot-revivals/study.py
+          python3 -B src/talbot-revivals/scaling.py
+          python3 -B src/talbot-revivals/verify.py
+          node src/talbot-revivals/verify.js
+          node src/talbot-revivals/ui_smoke.js
+          python3 -B src/talbot-revivals/coherence.py
+          python3 -B src/talbot-revivals/verify_coherence.py
+          python3 -B src/talbot-revivals/finite_array.py
+          python3 -B src/talbot-revivals/verify_finite_array.py
+          node src/diffusion-growth/test_model.js
+          node src/diffusion-growth/reference_growth.js
+          node src/diffusion-growth/test_solver.js
+          node src/diffusion-growth/test_ui.js
+          node src/diffusion-growth/verify_access.js
+          python3 -B src/diffusion-growth/verify_fixtures.py

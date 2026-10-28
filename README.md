@@ -158,3 +158,12 @@ node tests/verify_spinning_disk.js
 - **What does smoke tell a seed?** — established plant-signaling evidence and constructed washout identifiability examples. [Read](https://erebos-labs.github.io/experiments/smoke-seeds/); [code and limits](src/smoke-seeds/README.md).
 
 Check the additions with `python3 -B src/noise-threshold/verify.py` and `python3 -B src/smoke-seeds/verify.py`. Source/Node checks do not establish rendered-browser behavior for these two additions.
+
+
+## Knot coloring, Talbot imaging and finite lattice growth
+
+- `knot-colorings/`: Fox and finite-group coloring counts, integer certificates and published reference cases. Counts are compared only within the same rule; agreement does not establish knot equivalence.
+- `talbot-revivals/`: finite-spectrum scalar wave propagation, plus separate incoherent-ensemble and finite Gaussian-array studies. Normalized shape, field overlap and absolute contrast measure different properties. The models do not establish laboratory performance or a new physical result.
+- `diffusion-growth/`: seeded square-lattice DLA and Eden models with finite source/escape circles, explicit caps and finite-grid access checks. The partial-stick convention continues rejected walkers locally. No certified fractal dimension, physical clock or material prediction.
+
+Each source module includes reproduction commands, primary references, copyright notices and limits. No paper bodies, third-party images, font binaries or extra runtime libraries are bundled. The finite-array figure is an authored numerical illustration. Build with `python3 -B build.py`; the workflow runs the added numerical and controller checks. Synthetic DOM tests are not evidence of browser rendering or assistive-technology support.

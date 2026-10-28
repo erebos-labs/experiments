@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "fixture_sha256": {
+    "data/ensemble.json": "64782a815411432385958eb564935ef3af4cba0d90e2fce2e7404b77877ad3ef",
+    "data/samples.json": "ca879a2bb7c50e1cc1e5d61366e64d296ae1eea6ab75792b18e8d0bc438fc6bf"
+  },
+  "scope": "Authored educational square-lattice model; established source mechanisms, no physical calibration or universal theorem.",
+  "expected_page_sha256": "5f35cebe6e308c3f15e19cd90d634c97056b4e91db4fd8e630dc45fe7f80c875",
+  "source_file_sha256": {
+    "build.py": "43fe42d3beecffbc4563954090411393768d10de89e6fd3fb8844e37ca5d3c11",
+    "ui.js": "d3581a709c0837a704b956e23de9fd7248416e36e9d10f1e49c1fece8439e592",
+    "index.html": "5f35cebe6e308c3f15e19cd90d634c97056b4e91db4fd8e630dc45fe7f80c875",
+    "COPYRIGHT.txt": "aec2af079eaa192a66e2171862a25bee023e464cdf60f18899f55eba2b3eca91",
+    "verify_fixtures.py": "faf4cbc34893c6d31de65e4d4fb0f878666f45382e4a2711b10c66ef76ef9e5a",
+    "test_ui.js": "0d37b4ad3b8d0463fc52feeb8730259dc7a9ed4ff979ca636ab68f866b23dc32",
+    "SOURCES.md": "b007e34e090c46ea8a60a94cb81cf396a928ec79361e19c38c9467dd064eb0c6",
+    "test_model.js": "09b79535165cf645658b21160f2892a5438c7ef4260a6889dcf72aa2d6bf298a",
+    "THIRD_PARTY_NOTICES.md": "112b5cc1841b2384609bb7e25ff0a11ee54a1498bb5fa69b22c1d459636beb86",
+    "README.md": "2873dcc376329e6543193eaf44de508d21dbe22a00efaa381e68d49271ad01c5",
+    "reference_growth.js": "74f21ea97db588f8fe2ca03d8c5cf5c4359e4ba3a00759eb4e8d143b71004f2e",
+    ".gitignore": "efadcdf9f4d9f44d936e09f006eac19fe3f77d7a5e46ba7d9fdf0180691ae91b",
+    "VALIDATION.json": "ade61b54f33fed8745849e711ed0867edc677aa283db4968d68d51793d29be05",
+    "style.css": "5dda184bfa10c8fb64e30c6ea2e76534362430051b69e072047a177ec0275cd7",
+    "template.html": "db1795dedeca12588b2b7d604a0d11dc143e9ff1bbe0eea89a138bb05a675f2f",
+    "access_solver.js": "1ab558a581bdfd93a7b62ef910651cf9cb746d701f2ba6b0da630f48b9b72f33",
+    "verify_access.js": "853f519b6bfa5281f61f4dba8b781348890d203208e2bb9103d9bad4931bb626",
+    "model.js": "08918e828754664db3c5711d7e73785ce56093043fb44e4886118ac1a6791b12",
+    "ensemble.js": "7ce09b328f914d4a2fd6f330fee2eeeeaae20654687c9482e2a73f651e0349b2",
+    "test_solver.js": "c0fde2607b4854eacad2f56fb7ac1707e46027ae17bbbebebadcf5f291109ea9",
+    "data/samples.json": "ca879a2bb7c50e1cc1e5d61366e64d296ae1eea6ab75792b18e8d0bc438fc6bf",
+    "data/ensemble.json": "64782a815411432385958eb564935ef3af4cba0d90e2fce2e7404b77877ad3ef"
+  }
+}

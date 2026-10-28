@@ -1,0 +1,332 @@
+{
+  "references": [
+    {
+      "key": "unknot",
+      "name": "Unknot with a curl",
+      "strands": 2,
+      "word": [
+        1
+      ],
+      "counts": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15,
+        "16": 16,
+        "17": 17,
+        "18": 18,
+        "19": 19,
+        "20": 20,
+        "21": 21,
+        "22": 22,
+        "23": 23,
+        "24": 24,
+        "25": 25,
+        "26": 26,
+        "27": 27,
+        "28": 28,
+        "29": 29,
+        "30": 30,
+        "31": 31
+      },
+      "determinant": 1
+    },
+    {
+      "key": "trefoil",
+      "name": "Trefoil",
+      "strands": 2,
+      "word": [
+        1,
+        1,
+        1
+      ],
+      "counts": {
+        "2": 2,
+        "3": 9,
+        "4": 4,
+        "5": 5,
+        "6": 18,
+        "7": 7,
+        "8": 8,
+        "9": 27,
+        "10": 10,
+        "11": 11,
+        "12": 36,
+        "13": 13,
+        "14": 14,
+        "15": 45,
+        "16": 16,
+        "17": 17,
+        "18": 54,
+        "19": 19,
+        "20": 20,
+        "21": 63,
+        "22": 22,
+        "23": 23,
+        "24": 72,
+        "25": 25,
+        "26": 26,
+        "27": 81,
+        "28": 28,
+        "29": 29,
+        "30": 90,
+        "31": 31
+      },
+      "determinant": 3
+    },
+    {
+      "key": "figure8",
+      "name": "Figure-eight",
+      "strands": 3,
+      "word": [
+        1,
+        -2,
+        1,
+        -2
+      ],
+      "counts": {
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 25,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 50,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 75,
+        "16": 16,
+        "17": 17,
+        "18": 18,
+        "19": 19,
+        "20": 100,
+        "21": 21,
+        "22": 22,
+        "23": 23,
+        "24": 24,
+        "25": 125,
+        "26": 26,
+        "27": 27,
+        "28": 28,
+        "29": 29,
+        "30": 150,
+        "31": 31
+      },
+      "determinant": 5
+    },
+    {
+      "key": "nine_twists",
+      "name": "Nine-twist torus knot T(2,9)",
+      "strands": 2,
+      "word": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "counts": {
+        "2": 2,
+        "3": 9,
+        "4": 4,
+        "5": 5,
+        "6": 18,
+        "7": 7,
+        "8": 8,
+        "9": 81,
+        "10": 10,
+        "11": 11,
+        "12": 36,
+        "13": 13,
+        "14": 14,
+        "15": 45,
+        "16": 16,
+        "17": 17,
+        "18": 162,
+        "19": 19,
+        "20": 20,
+        "21": 63,
+        "22": 22,
+        "23": 23,
+        "24": 72,
+        "25": 25,
+        "26": 26,
+        "27": 243,
+        "28": 28,
+        "29": 29,
+        "30": 90,
+        "31": 31
+      },
+      "determinant": 9
+    },
+    {
+      "key": "double_trefoil",
+      "name": "Connected pair of trefoils",
+      "strands": 3,
+      "word": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "counts": {
+        "2": 2,
+        "3": 27,
+        "4": 4,
+        "5": 5,
+        "6": 54,
+        "7": 7,
+        "8": 8,
+        "9": 81,
+        "10": 10,
+        "11": 11,
+        "12": 108,
+        "13": 13,
+        "14": 14,
+        "15": 135,
+        "16": 16,
+        "17": 17,
+        "18": 162,
+        "19": 19,
+        "20": 20,
+        "21": 189,
+        "22": 22,
+        "23": 23,
+        "24": 216,
+        "25": 25,
+        "26": 26,
+        "27": 243,
+        "28": 28,
+        "29": 29,
+        "30": 270,
+        "31": 31
+      },
+      "determinant": 9
+    }
+  ],
+  "involutory_nulls": [
+    {
+      "rule": "S4 transpositions",
+      "labels": 6,
+      "counts": {
+        "trefoil": {
+          "total": 30,
+          "constant": 6,
+          "seed_assignments": 36
+        },
+        "figure8": {
+          "total": 6,
+          "constant": 6,
+          "seed_assignments": 36
+        },
+        "conway": {
+          "total": 6,
+          "constant": 6,
+          "seed_assignments": 216
+        }
+      }
+    },
+    {
+      "rule": "A5 double transpositions",
+      "labels": 15,
+      "counts": {
+        "trefoil": {
+          "total": 75,
+          "constant": 15,
+          "seed_assignments": 225
+        },
+        "figure8": {
+          "total": 135,
+          "constant": 15,
+          "seed_assignments": 225
+        },
+        "conway": {
+          "total": 15,
+          "constant": 15,
+          "seed_assignments": 3375
+        }
+      }
+    }
+  ],
+  "label_class_controls": [
+    {
+      "order": 2,
+      "labels": 21,
+      "conway": 21,
+      "kinoshita_terasaka": 21
+    },
+    {
+      "order": 3,
+      "labels": 56,
+      "conway": 728,
+      "kinoshita_terasaka": 392
+    },
+    {
+      "order": 7,
+      "labels": 24,
+      "conway": 360,
+      "kinoshita_terasaka": 360
+    }
+  ],
+  "conway_fox_certificate": {
+    "determinant": -1,
+    "file": "conway-certificate.json",
+    "all_moduli": true
+  },
+  "group_counts": {
+    "trefoil": {
+      "normalized_count": 7,
+      "total": 392,
+      "constant": 56,
+      "nonconstant": 336,
+      "assignments": 56
+    },
+    "figure8": {
+      "normalized_count": 7,
+      "total": 392,
+      "constant": 56,
+      "nonconstant": 336,
+      "assignments": 56
+    },
+    "conway": {
+      "normalized_count": 13,
+      "total": 728,
+      "constant": 56,
+      "nonconstant": 672,
+      "assignments": 3136
+    },
+    "kinoshita_terasaka": {
+      "normalized_count": 7,
+      "total": 392,
+      "constant": 56,
+      "nonconstant": 336,
+      "assignments": 3136
+    }
+  },
+  "limits": [
+    "Small chosen diagrams; not arbitrary knot recognition",
+    "No claim of a new invariant or new mathematical result",
+    "Fox and general conjugation are different coloring rules",
+    "Mirror labels not assigned; no longitude or smooth-sliceness calculation"
+  ]
+}

@@ -75,3 +75,12 @@ for name in ('noise-threshold','smoke-seeds'):
     (base/'docs'/name).mkdir(exist_ok=True)
     shutil.copyfile(base/'src'/name/'index.html',base/'docs'/name/'index.html')
     print('Built docs/'+name+'/index.html')
+
+# Bounded knot, Talbot and lattice-growth educational additions.
+for name in ('knot-colorings','talbot-revivals','diffusion-growth'):
+    subprocess.run([sys.executable,'-B',str(base/'src'/name/'build.py')],check=True)
+    (base/'docs'/name).mkdir(exist_ok=True)
+    shutil.copyfile(base/'src'/name/'index.html',base/'docs'/name/'index.html')
+shutil.copyfile(base/'src/talbot-revivals/study.html',base/'docs/talbot-revivals/study.html')
+(base/'docs/talbot-revivals/data').mkdir(exist_ok=True)
+shutil.copyfile(base/'src/talbot-revivals/data/finite-array-center-edge.png',base/'docs/talbot-revivals/data/finite-array-center-edge.png')

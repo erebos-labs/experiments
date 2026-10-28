@@ -1,0 +1,23 @@
+# Where the walkers land
+
+Open index.html: two initially paused seeded square-lattice clusters at common scale. Growth, pause, probe cancellation and JSON export stay local. No external assets or automatic requests. Run `python3 -B build.py` to rebuild from included data fixtures. Python 3.10 or later, Node.js 18 or later and a current evergreen browser are the declared baseline; actual toolchain and browser results are recorded in VALIDATION.json.
+
+Run `node test_model.js`, `node reference_growth.js` and `node verify_access.js`. They cover 10 invariant groups, 12 independently represented whole-walker comparisons and six finite Poisson/Monte Carlo cases. The latter requires zero observed walker-lifetime expirations and compares the outer-quarter hit aggregate plus solver invariants; it does not validate every displayed probe statistic or an infinite-domain distribution. Outputs go to output/.
+
+`node ensemble.js` runs 108 growth executions and six selected seed-1981 frozen-shape probes. Eden ignores diffusion boundaries: its 36 executions repeat 12 seed trajectories. DLA responds to those circle settings. The bundled table is descriptive, not 108 independent observations. The six probe outputs are generated under output/, not bundled in data/. Run `python3 -B verify_fixtures.py` for fixture hashes, adding `--replay` to regenerate and compare numerical fields under the tested toolchain. PROVENANCE.json records fixture identity and generated page bytes. VALIDATION.json records bounded checks on this module. Exact trajectories are not promised across JavaScript engines because trigonometric rounding can differ.
+
+## Model and UI limits
+
+Finite launch/escape circles, lattice anisotropy and step/lifetime caps define this toy. Tight escape radius is max(R+13, 1.25R+10); far is max(R+25, 3R+24). Storage spans ±512 in the interactive grid, but occupied sites must be within ±511. The seed-disk fill proxy is n/[π(R+0.5)²], not an enclosing-square-cell area or universal density.
+
+Probe mode changes the canvas descriptions and legend to first-hit frequency. Returning to attachment order restores age labels. Idle frames are not scheduled, and the Pause control cancels a running probe. Per-call model/probe work is capped at 100,000 iterations and total move caps at 100 million; no battery or older-device responsiveness guarantee is made.
+
+Constant-p independent rejection/relaunch thins the same conditional first-hit law. The partial-sticking implementation instead continues rejected walkers locally. Zero sampled hits does not establish zero probability. No physical clock, material calibration or certified fractal dimension. AI assistance is acknowledged; existing copyright and source rights apply. No empirical mechanism validation, novel discovery or human referee review of this implementation is claimed.
+
+Probe access is available only after both clusters complete the same selected mass. Frozen masses are displayed; growth or reset discards old probes before JSON export. Frame progress is visual text; a separate polite live region announces user actions and completion rather than every frame. test_ui.js exercises the actual model/UI code with a stub DOM; it is not a browser or screen-reader test. VALIDATION.json distinguishes actual native browser checks from this harness.
+
+Probe exports include the requested hit target, a status and a completion flag. A running sample is partial; Pause or Return to age marks unfinished samples cancelled while retaining their counts. Completed samples remain complete when changing the display. Run `node test_solver.js` for rounded-source and flux-accounting regression checks, and `node test_ui.js` for interrupted, live and completed export states.
+
+The Poisson solve is a numerical finite-grid reference with 65,536 angular source bins and finite convergence tolerance. Zero observed probe lifetime expirations is not a deterministic lifetime-tail or quadrature-error bound. solve() rejects invalid or unbounded inputs: nonempty up-to-5,000 integer points, 0 < launch < kill <= 256, 1..262,144 angular samples, 1..20,000 sweeps, 0 < omega < 2 and tolerance 1e-14..1e-4. Upper limits are resource bounds, not latency guarantees; the included six cases are much smaller. Python fixture verification rejects optimization; build-token failures are always on.
+
+Every rounded angular source cell must also be unoccupied and within the kill circle; incompatible launch/cluster geometry raises RangeError before iteration rather than silently losing injected probability. Immediate perimeter launches are valid hits. Flux conservation checks apply to converged solves; a caller that stops at maxSweeps must still check residual and convergence.

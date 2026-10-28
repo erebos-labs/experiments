@@ -1,0 +1,144 @@
+{
+  "assumptions": {
+    "transverse_extent": "infinite periodic",
+    "orders_default": 32,
+    "field": "scalar, monochromatic, coherent, carrier removed",
+    "exact_scope": "forward propagating Helmholtz modes; no evanescent/polarization/finite aperture",
+    "normalization": "mean intensity per period = 1",
+    "grid_samples": 512,
+    "seed": "none; deterministic"
+  },
+  "default": {
+    "width": 0.025,
+    "alpha": 0.01,
+    "paraxial_field_return_error": 6.17841610550168e-14,
+    "paraxial_half_shift_error": 3.08920805275084e-14,
+    "exact_full_return_fidelity": 0.8775258463746841,
+    "exact_full_return_peak_intensity": 14.744155936094943,
+    "input_peak_intensity": 22.567568825819578
+  },
+  "retuning": {
+    "pulse": {
+      "t": 0.9976796424388127,
+      "fidelity": 0.9592898914703314,
+      "interval": [
+        0.98,
+        1.0
+      ],
+      "grid_points": 257,
+      "golden_steps": 64,
+      "scope": "best found after refining the bracket of the best grid point; no global optimality claim"
+    },
+    "three_order_reference": {
+      "t": 0.9999749993749687,
+      "fidelity": 1.0
+    }
+  },
+  "small_angle_example": {
+    "order": 10,
+    "alpha": 0.01,
+    "angle_degrees": 5.739170477266787,
+    "exact_residual_radians": -1.5786997420232822,
+    "quartic_estimate_radians": -1.5707963267948966
+  },
+  "twins": {
+    "chirp_plus_minus": 0.06,
+    "max_initial_intensity_difference": 0.0,
+    "comparison_distance": 0.06,
+    "plus_center_intensity": 22.567568825819578,
+    "minus_center_intensity": 2.0532729667307064,
+    "max_propagated_intensity_difference": 20.51429585908887
+  },
+  "replica_controls": [
+    {
+      "width": 0.08,
+      "chirp": 0,
+      "p": 1,
+      "q": 4,
+      "max_coherent_field_residual": 9.550499576785472e-16,
+      "max_coherent_minus_mixture_intensity": 2.220446049250313e-15
+    },
+    {
+      "width": 0.12,
+      "chirp": 0,
+      "p": 1,
+      "q": 3,
+      "max_coherent_field_residual": 7.711855592701269e-16,
+      "max_coherent_minus_mixture_intensity": 0.4549942258211386
+    },
+    {
+      "width": 0.025,
+      "chirp": 0.06,
+      "p": 1,
+      "q": 4,
+      "max_coherent_field_residual": 8.478499276892386e-15,
+      "max_coherent_minus_mixture_intensity": 0.3180627402512965
+    },
+    {
+      "width": 0.025,
+      "chirp": 0,
+      "p": 1,
+      "q": 8,
+      "max_coherent_field_residual": 5.515211669797333e-15,
+      "max_coherent_minus_mixture_intensity": 2.7354255571765407e-06
+    }
+  ],
+  "order_convergence": [
+    {
+      "width": 0.02,
+      "orders": 16,
+      "fidelity": 0.7446707334741408,
+      "max_intensity_error_vs_M64": 0.44821875400448796
+    },
+    {
+      "width": 0.02,
+      "orders": 24,
+      "fidelity": 0.7415098904934113,
+      "max_intensity_error_vs_M64": 0.035454753788474846
+    },
+    {
+      "width": 0.02,
+      "orders": 32,
+      "fidelity": 0.7415050918127721,
+      "max_intensity_error_vs_M64": 0.00048733258813449254
+    },
+    {
+      "width": 0.02,
+      "orders": 48,
+      "fidelity": 0.7415050743501346,
+      "max_intensity_error_vs_M64": 3.894809985638403e-08
+    },
+    {
+      "width": 0.025,
+      "orders": 16,
+      "fidelity": 0.877787626584045,
+      "max_intensity_error_vs_M64": 0.10411339918621287
+    },
+    {
+      "width": 0.025,
+      "orders": 24,
+      "fidelity": 0.8775258630494583,
+      "max_intensity_error_vs_M64": 0.002445572786610839
+    },
+    {
+      "width": 0.025,
+      "orders": 32,
+      "fidelity": 0.8775258463746841,
+      "max_intensity_error_vs_M64": 5.087819245019887e-06
+    },
+    {
+      "width": 0.025,
+      "orders": 48,
+      "fidelity": 0.8775258463732958,
+      "max_intensity_error_vs_M64": 8.562039965909207e-13
+    }
+  ],
+  "sweep_rows": 28,
+  "fixture_rows": 60,
+  "limits": [
+    "Fidelity is a complex-field overlap, not percent transmitted power.",
+    "No physical measurement or finite grating simulation.",
+    "Gaussian inputs are smooth finite Fourier series; carpet is not evidence of a mathematical fractal.",
+    "Reported errors and maxima refer to stated finite grids."
+  ]
+}

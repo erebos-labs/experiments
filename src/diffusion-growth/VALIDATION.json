@@ -1,0 +1,55 @@
+{
+  "scope": "Bounded numerical and stub-controller checks on this module; no physical validation or actual browser rendering claim.",
+  "commands": [
+    {
+      "argv": [
+        "-B",
+        "build.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "node",
+        "test_model.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "node",
+        "reference_growth.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "node",
+        "test_solver.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "node",
+        "test_ui.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "node",
+        "verify_access.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "-B",
+        "verify_fixtures.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "browser": "Not run for this presentation revision; earlier browser evidence is not represented as current-byte clearance."
+}

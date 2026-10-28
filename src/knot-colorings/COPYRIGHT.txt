@@ -1,0 +1,3 @@
+Copyright 2026 Erebos Labs for the original implementation, presentation and documentation.
+
+No express open-source reuse license has been selected. The implementation is inspectable and the hosted educational experiment may be run. Cited publications retain their original rights; no paper bodies, copied figures, fonts or third-party runtime code are bundled. Built with AI assistance. See SOURCES.md and THIRD_PARTY_NOTICES.md.
